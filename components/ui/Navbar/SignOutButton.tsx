@@ -10,7 +10,7 @@ export default function SignOutButton() {
   const { supabase } = useSupabase();
   return (
     <button
-      className={s.link}
+      // className={s.link}
       onClick={async () => {
         await supabase.auth.signOut();
         router.push('/signin');

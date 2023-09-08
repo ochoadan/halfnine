@@ -12,10 +12,11 @@ export default function Footer() {
             href="/"
             className="flex items-center flex-initial font-bold md:mr-24"
           >
-            <span className="mr-2 border rounded-full border-zinc-700">
+            {/* <span className="mr-2 border rounded-full border-zinc-700"> */}
+            <span className="mr-2">
               <Logo />
             </span>
-            <span>ACME</span>
+            {/* <span>ACME</span> */}
           </Link>
         </div>
         <div className="col-span-1 lg:col-span-2">
