@@ -28,6 +28,6 @@ body {
 
 .min-height-screen {
   /* height: calc(100vh - 80px); */
-  height: calc(100vh);
+  min-height: calc(100vh);
   padding-top: 80px;
 }
