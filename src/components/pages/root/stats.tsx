@@ -1,3 +1,5 @@
+import { FadeIn, FadeInStagger } from "@/components/FadeIn";
+
 const stats = [
   {
     id: 1,
@@ -24,7 +26,7 @@ const stats = [
 const StatsComponent = () => (
   <div className="mx-auto max-w-7xl">
     <div className="mx-auto max-w-2xl lg:max-w-none">
-      <div className="text-center">
+      <FadeIn className="text-center">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Benefits from Our Development Services
         </h2>
@@ -32,10 +34,10 @@ const StatsComponent = () => (
           We offer our expertise, competitive pricing, quick updates, and
           continuous innovation.
         </p>
-      </div>
-      <dl className="mt-8 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
+      </FadeIn>
+      <FadeInStagger faster as="dl" className="mt-8 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
         {stats.map((stat) => (
-          <div
+          <FadeIn
             key={stat.id}
             className="flex flex-col bg-zinc-500/5 p-8 hover:bg-zinc-500/10 transition-colors duration-200"
           >
@@ -45,9 +47,9 @@ const StatsComponent = () => (
             <dt className="text-sm leading-2 text-gray-600 mt-2">
               {stat.name}
             </dt>
-          </div>
+          </FadeIn>
         ))}
-      </dl>
+      </FadeInStagger>
     </div>
   </div>
 );

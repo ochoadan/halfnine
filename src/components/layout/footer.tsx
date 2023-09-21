@@ -58,7 +58,7 @@ export default function Example() {
           <Link
             href="https://www.linkedin.com/company/halfnineus/"
             target="_blank"
-            className="text-gray-400 hover:text-[#0077B5] scale-95 hover:scale-100"
+            className="text-gray-400 hover:text-[#0077B5] scale-95 hover:scale-{1.02}"
           >
             <span className="sr-only">LinkedIn</span>
             <FaLinkedin className="h-6 w-6" aria-hidden="true" />
@@ -66,7 +66,7 @@ export default function Example() {
           <Link
             href="https://x.com/halfnine"
             target="_blank"
-            className="text-gray-400 hover:text-black scale-100 hover:scale-105"
+            className="text-gray-400 hover:text-black scale-100 hover:scale-{1.02}"
           >
             <span className="sr-only">XTwitter</span>
             <FaXTwitter className="h-6 w-6" aria-hidden="true" />
@@ -74,7 +74,7 @@ export default function Example() {
           <Link
             href="https://www.facebook.com/halfnineus"
             target="_blank"
-            className="text-gray-400 hover:text-[#4267B2] scale-100 hover:scale-105"
+            className="text-gray-400 hover:text-[#4267B2] scale-100 hover:scale-{1.02}"
           >
             <span className="sr-only">Facebook</span>
             <FaFacebook className="h-6 w-6" aria-hidden="true" />
@@ -82,7 +82,7 @@ export default function Example() {
           <Link
             href="https://github.com/halfnineus"
             target="_blank"
-            className="text-gray-400 hover:text-black scale-100 hover:scale-105"
+            className="text-gray-400 hover:text-black scale-100 hover:scale-{1.02}"
           >
             <span className="sr-only">Github</span>
             <FaGithub className="h-6 w-6" aria-hidden="true" />

@@ -1,3 +1,4 @@
+import { FadeIn, FadeInStagger } from "@/components/FadeIn";
 import { FaGears, FaClipboardCheck, FaUserLock } from "react-icons/fa6";
 
 
@@ -28,7 +29,7 @@ const features = [
 export default function RootFeature() {
   return (
     <>
-      <div className="mx-auto max-w-3xl lg:text-center">
+      <FadeIn className="mx-auto max-w-3xl lg:text-center">
         {/* <h2 className="text-base font-semibold leading-7 text-sky-600">
           Deploy faster
         </h2> */}
@@ -39,11 +40,11 @@ export default function RootFeature() {
           Our skilled team ensures a seamless experience for complex systems
           with strong security and regulatory compliance.
         </p>
-      </div>
-      <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+      </FadeIn>
+      <FadeInStagger className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
         <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
           {features.map((feature) => (
-            <div key={feature.name} className="flex flex-col">
+            <FadeIn key={feature.name} className="flex flex-col">
               <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
                 <feature.icon
                   className="h-5 w-5 flex-none text-sky-600"
@@ -62,10 +63,10 @@ export default function RootFeature() {
                   </a>
                 </p> */}
               </dd>
-            </div>
+            </FadeIn>
           ))}
         </dl>
-      </div>
+      </FadeInStagger>
     </>
   );
 }
