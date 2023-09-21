@@ -1,7 +1,6 @@
 import { FadeIn, FadeInStagger } from "@/components/FadeIn";
 import { FaGears, FaClipboardCheck, FaUserLock } from "react-icons/fa6";
 
-
 const features = [
   {
     name: "Simplicity in Complexity",
@@ -28,7 +27,7 @@ const features = [
 
 export default function RootFeature() {
   return (
-    <>
+    <FadeInStagger>
       <FadeIn className="mx-auto max-w-3xl lg:text-center">
         {/* <h2 className="text-base font-semibold leading-7 text-sky-600">
           Deploy faster
@@ -41,7 +40,7 @@ export default function RootFeature() {
           with strong security and regulatory compliance.
         </p>
       </FadeIn>
-      <FadeInStagger className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+      <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
         <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
           {features.map((feature) => (
             <FadeIn key={feature.name} className="flex flex-col">
@@ -66,7 +65,7 @@ export default function RootFeature() {
             </FadeIn>
           ))}
         </dl>
-      </FadeInStagger>
-    </>
+      </div>
+    </FadeInStagger>
   );
 }
