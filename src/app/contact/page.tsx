@@ -52,7 +52,7 @@ const Page = () => {
               We want to hear from you!
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Take the first step and reach out to us today.{" "}
+              Take the first step and reach out to us today.
             </p>
             <dl className="mt-10 space-y-4 text-base leading-7 text-gray-600">
               <div className="flex gap-x-4">

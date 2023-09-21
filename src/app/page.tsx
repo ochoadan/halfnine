@@ -3,8 +3,9 @@ import {
   RootStats,
   RootNewsLetter,
   RootFeature,
+  RootClientLogoCloud,
+  RootDevProcess,
 } from "@/components/pages/root";
-import { ClientLogoCloud } from "@/components/pages/root/logocloud";
 
 const Page = () => {
   return (
@@ -23,11 +24,13 @@ const Page = () => {
       {/* <div className="bg-gray-50 py-16 md:py-28"> */}
       <div className="bg-gray-50 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <ClientLogoCloud />
+          <RootClientLogoCloud />
         </div>
       </div>
       <div className="bg-white py-16 md:py-28">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8"></div>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <RootDevProcess />
+        </div>
       </div>
       <div className="bg-gray-50 py-16 md:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-8"></div>
