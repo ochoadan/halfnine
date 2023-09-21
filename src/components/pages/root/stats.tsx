@@ -35,7 +35,7 @@ const StatsComponent = () => (
           continuous innovation.
         </p>
       </FadeIn>
-      <FadeInStagger faster as="dl" className="mt-8 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
+      <FadeInStagger faster className="mt-8 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
         {stats.map((stat) => (
           <FadeIn
             key={stat.id}
