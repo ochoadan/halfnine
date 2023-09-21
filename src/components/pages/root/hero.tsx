@@ -1,15 +1,17 @@
 const RootHeading = () => {
   return (
-    <>
-      <div className="relative">
-        <img
-          alt="Background Image"
-          src="/img/index/indxbg.png"
-          loading="lazy"
-          className="absolute opacity-[0.03] -z-10"
-        />
-      </div>
-      <div className="max-w-6xl mx-auto pt-12">
+    <div className="relative">
+      <img
+        className="absolute -z-10"
+        // className="absolute opacity-[0.1] -z-10"
+        src="/img/index/indxbg.png"
+        style={{
+          // transition: "opacity 1.5s",
+          opacity: 0,
+          animation: "pointonefadein 1.5s forwards",
+        }}
+      />
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-12">
         <div className="text-center">
           <h1 className="text-3xl md:text-5xl font-bold space-y-2">
             {`INFORMATION TECHNOLOGY DEVELOPMENT`}
@@ -25,7 +27,7 @@ const RootHeading = () => {
           and businesses.
         </p>
       </div>
-    </>
+    </div>
   );
 };
 

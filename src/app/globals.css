@@ -25,6 +25,10 @@ body {
     )
     rgb(var(--background-start-rgb));
 } */
+@keyframes pointonefadein {
+  from { opacity: 0; }
+  to   { opacity: 0.1; }
+}
 
 .min-height-screen {
   /* height: calc(100vh - 80px); */

@@ -89,7 +89,7 @@ export default function Example() {
           </Link>
         </div>
         <p className="mt-10 text-center text-xs leading-5 text-gray-500">
-          &copy; 2020 HalfNine LLC. All rights reserved.
+          &copy; {new Date().getFullYear()} <Link href="https://www.halfnine.com" target="_blank">HalfNine</Link> LLC. All rights reserved.
         </p>
       </div>
     </footer>

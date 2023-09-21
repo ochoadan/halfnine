@@ -6,7 +6,7 @@ const features = [
   {
     name: "Simplicity in Complexity",
     description:
-      "Complex applications can be challenging to modify or for user education. Yet, by leveraging proven technologies and frameworks, we can simplify the user experience.",
+      "Complex applications can be challenging to modify or to educate users. Yet, by leveraging proven technologies and frameworks, we can simplify the user experience.",
     href: "#",
     icon: FaGears,
   },

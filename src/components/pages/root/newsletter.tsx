@@ -1,9 +1,10 @@
+import { FadeIn, FadeInStagger } from "@/components/FadeIn";
 import { CalendarDaysIcon, HandRaisedIcon } from "@heroicons/react/24/outline";
 
 export default function NewsLetter() {
   return (
-    <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
-      <div className="max-w-xl lg:max-w-lg">
+    <FadeInStagger className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
+      <FadeIn className="max-w-xl lg:max-w-lg">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
           Subscribe to our newsletter.
         </h2>
@@ -31,9 +32,9 @@ export default function NewsLetter() {
             Subscribe
           </button>
         </div>
-      </div>
+      </FadeIn>
       <dl className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
-        <div className="flex flex-col items-start">
+        <FadeIn className="flex flex-col items-start">
           <div className="rounded-md bg-black/5 p-2 ring-1 ring-black/10">
             <CalendarDaysIcon
               className="h-6 w-6"
@@ -45,8 +46,8 @@ export default function NewsLetter() {
             Non laboris consequat cupidatat laborum magna. Eiusmod non irure
             cupidatat duis commodo amet.
           </dd>
-        </div>
-        <div className="flex flex-col items-start">
+        </FadeIn>
+        <FadeIn className="flex flex-col items-start">
           <div className="rounded-md bg-black/5 p-2 ring-1 ring-black/10">
             <HandRaisedIcon className="h-6 w-6" aria-hidden="true" />
           </div>
@@ -55,8 +56,8 @@ export default function NewsLetter() {
             Officia excepteur ullamco ut sint duis proident non adipisicing.
             Voluptate incididunt anim.
           </dd>
-        </div>
+        </FadeIn>
       </dl>
-    </div>
+    </FadeInStagger>
   );
 }
