@@ -73,7 +73,8 @@ export default function Example() {
   const pathname = usePathname();
 
   const isRootPage = pathname === "/";
-  const isShadowPage = pathname === "/" || pathname === "/contact";
+  // const isShadowPage = pathname === "/" || pathname === "/contact";
+  const isShadowPage = pathname === "/";
   return (
     // <header className="relative isolate z-10 bg-white">
     <header
