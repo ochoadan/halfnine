@@ -2,10 +2,11 @@ import type { TurnstileServerValidationResponse } from "@marsidev/react-turnstil
 import nodemailer from 'nodemailer';
 
 const verifyEndpoint = "https://challenges.cloudflare.com/turnstile/v0/siteverify";
-const secret = process.env.TURNSTILE_KEY || '0x4AAAAAAAEUIZr0ccnKjH16';
+const secret = '0x4AAAAAAAEUIZr0ccnKjH16';
 
 export async function POST(request: Request) {
-  const { token } = (await request.json()) as { token: string };
+  const body = await request.json();
+  const token = body.token;
 
   const res = await fetch(verifyEndpoint, {
     method: "POST",
@@ -19,7 +20,6 @@ export async function POST(request: Request) {
 
   if (data.success) {
     // If Turnstile validation is successful, send an email
-    const body = await request.json();
     const { name, email, phone, company, message } = body;
     const senderIp = request.headers.get('x-forwarded-for');
     const userAgent = request.headers.get('user-agent');
