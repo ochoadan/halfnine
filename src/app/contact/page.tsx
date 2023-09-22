@@ -26,12 +26,6 @@ export default function Contact() {
   const formRef = React.useRef<HTMLFormElement>(null);
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-
-    // const name = event.target.elements.name.value;
-    // const email = event.target.elements.email.value;
-    // const phone = event.target.elements.phone.value;
-    // const company = event.target.elements.company.value;
-    // const message = event.target.elements.message.value;
     const formData = new FormData(formRef.current!);
     const token = formData.get("cf-turnstile-response");
     const requestBody = {
@@ -75,7 +69,7 @@ export default function Contact() {
         <div className="bg-slate-50 rounded-xl p-5 lg:p-10 shadow-sm">
           <h2 className="pb-2 text-2xl md:text-3xl font-bold">Contact Form:</h2>
           {/* <form action={'submit'} onSubmit={handleSubmit}> */}
-          <form ref={formRef} action="submit" onSubmit={handleSubmit}>
+          <form ref={formRef} onSubmit={handleSubmit}>
             <div className="space-y-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full">
                 <div className="space-y-1">
