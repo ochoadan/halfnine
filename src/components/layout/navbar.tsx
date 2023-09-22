@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { Logo } from "@/components";
 import { Fragment, useState } from "react";
@@ -109,9 +109,9 @@ export default function Example() {
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <Popover.Group className="hidden lg:flex lg:gap-x-12">
+        {/* <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <Popover>
-            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
+            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-600 hover:text-gray-900">
               Product
               <ChevronDownIcon
                 className="h-5 w-5 flex-none text-gray-400"
@@ -173,27 +173,28 @@ export default function Example() {
                 </div>
               </Popover.Panel>
             </Transition>
-          </Popover>
-
+          </Popover> */}
+        <div className="hidden lg:flex lg:gap-x-12">
           <Link
-            href="#"
-            className="text-sm font-semibold leading-6 text-gray-900"
+            href="/process"
+            className="font-semibold leading-6 text-gray-500 hover:text-gray-900"
           >
-            Features
+            Process
           </Link>
           <Link
-            href="#"
-            className="text-sm font-semibold leading-6 text-gray-900"
+            href="/pricing"
+            className="font-semibold leading-6 text-gray-500 hover:text-gray-900"
           >
-            Marketplace
+            Pricing
           </Link>
           <Link
-            href="#"
-            className="text-sm font-semibold leading-6 text-gray-900"
+            href="/about"
+            className="font-semibold leading-6 text-gray-500 hover:text-gray-900"
           >
-            Company
+            About
           </Link>
-        </Popover.Group>
+        </div>
+        {/* </Popover.Group> */}
         {/* <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
           Log in <span aria-hidden="true">&rarr;</span>

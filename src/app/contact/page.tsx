@@ -1,6 +1,7 @@
 "use client";
 
 import { Turnstile } from "@marsidev/react-turnstile";
+import React from "react";
 import { useState } from "react";
 import {
   FaRegUser,
@@ -21,56 +22,53 @@ export default function Contact() {
   const onTurnstileSolved = (token: any) => {
     setTurnstileSolved(true);
   };
+  
+  const formRef = React.useRef()
 
-  const handleSubmit = (e: any) => {
-    const regex =
-      /^([a-z0-9!#$%&'*+\-/=?^_`{|}~]+(?:\.[a-zA-Z0-9!#$%&'*+\-/=?^_`{|}~]+)*)@((?:[a-z0-9]+(?:[a-z-0-9-]*)\.)+[a-z]{2,})$/gi;
-    if (name === "" || !regex.test(email)) {
-      // toast.closeAll();
-      // toast({
-      //   description:
-      //     "Something went wrong while submitting the form, Please try again later.",
-      //   isClosable: true,
-      //   status: "error",
-      // });
-    } else {
-      e.preventDefault();
-      const data = { name, email, message, phone, company };
-      setSubmitted(true);
-      fetch("/api/contact", {
+  async function handleSubmit(event: any) {
+    event.preventDefault();
+
+    // const name = event.target.elements.name.value;
+    // const email = event.target.elements.email.value;
+    // const phone = event.target.elements.phone.value;
+    // const company = event.target.elements.company.value;
+    // const message = event.target.elements.message.value;
+    const formData = new FormData(formRef.current);
+    const token = formData.get("cf-turnstile-response");
+    const requestBody = {
+      token: "your-token-here",
+      name,
+      email,
+      phone,
+      company,
+      message,
+    };
+
+    try {
+      const response = await fetch("/api/contactform", {
         method: "POST",
         headers: {
-          Accept: "application/json, text/plain, */*",
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
-      }).then((res) => {
-        if (res.status === 200) {
-          console.log("Response succeeded!");
-          // toast.closeAll();
-          // toast({
-          //   description: "Message sent! We will contact you shortly.",
-          //   isClosable: true,
-          //   status: "success",
-          //   containerStyle: {
-          //     width: "auto",
-          //     maxWidth: "100%",
-          //     paddingBottom: "auto",
-          //   },
-          // });
-        } else {
-          // toast.closeAll();
-          // toast({
-          //   description:
-          //     "Something went wrong while submitting the form, Please try again later.",
-          //   isClosable: true,
-          //   status: "error",
-          // });
-        }
-        setSubmitted(false);
+        body: JSON.stringify(requestBody),
       });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      if (data.status === "success") {
+        alert("Email sent successfully!");
+      } else {
+        alert("Failed to send email.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("An error occurred. Please try again.");
     }
-  };
+  }
 
   return (
     <div className="py-16 md:py-24">
@@ -78,7 +76,7 @@ export default function Contact() {
         <div className="bg-slate-50 rounded-xl p-5 lg:p-10 shadow-sm">
           <h2 className="pb-2 text-2xl md:text-3xl font-bold">Contact Form:</h2>
           {/* <form action={'submit'} onSubmit={handleSubmit}> */}
-          <form action="submit">
+          <form ref={formRef} action="submit">
             <div className="space-y-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full">
                 <div className="space-y-1">
@@ -163,7 +161,7 @@ export default function Contact() {
               </div>
               <div className="mt-2.5 space-y-1">
                 <label>
-                  Message
+                  Detail your project or any questions you might have
                   <span className="text-red-600 ml-1 select-none">*</span>
                 </label>
                 <textarea
@@ -177,7 +175,7 @@ export default function Contact() {
                   defaultValue=""
                 />
               </div>
-              {/* {!turnstileSolved && (
+              {!turnstileSolved && (
                 <>
                   <div
                     // pl={1}
@@ -194,20 +192,20 @@ export default function Contact() {
                   />
                 </>
               )}
-              {turnstileSolved && ( */}
-              <button
-                // colorScheme={"blue"}
-                type={"submit"}
-                // isLoading={submitted}
-                // loadingText={"Submitting"}
-                className="rounded-md bg-sky-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
-                onClick={(e: any) => {
-                  handleSubmit(e);
-                }}
-              >
-                Submit Message
-              </button>
-              {/* )} */}
+              {turnstileSolved && (
+                <button
+                  // colorScheme={"blue"}
+                  type={"submit"}
+                  // isLoading={submitted}
+                  // loadingText={"Submitting"}
+                  className="rounded-md bg-sky-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
+                  onClick={(e: any) => {
+                    handleSubmit(e);
+                  }}
+                >
+                  Submit Message
+                </button>
+              )}
             </div>
           </form>
         </div>
