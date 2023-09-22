@@ -75,7 +75,7 @@ export default function Contact() {
         <div className="bg-slate-50 rounded-xl p-5 lg:p-10 shadow-sm">
           <h2 className="pb-2 text-2xl md:text-3xl font-bold">Contact Form:</h2>
           {/* <form action={'submit'} onSubmit={handleSubmit}> */}
-          <form ref={formRef} action="submit">
+          <form ref={formRef} action="submit" onSubmit={handleSubmit}>
             <div className="space-y-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full">
                 <div className="space-y-1">
