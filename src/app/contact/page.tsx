@@ -1,7 +1,7 @@
 "use client";
 
 import { Turnstile } from "@marsidev/react-turnstile";
-import React from "react";
+import React, { useRef } from "react";
 import { useState } from "react";
 import {
   FaRegUser,
@@ -23,9 +23,8 @@ export default function Contact() {
     setTurnstileSolved(true);
   };
 
-  const formRef = React.useRef();
-
-  async function handleSubmit(event: any) {
+  const formRef = React.useRef<HTMLFormElement>(null);
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     // const name = event.target.elements.name.value;
@@ -33,7 +32,7 @@ export default function Contact() {
     // const phone = event.target.elements.phone.value;
     // const company = event.target.elements.company.value;
     // const message = event.target.elements.message.value;
-    const formData = new FormData(formRef.current);
+    const formData = new FormData(formRef.current!);
     const token = formData.get("cf-turnstile-response");
     const requestBody = {
       token,
