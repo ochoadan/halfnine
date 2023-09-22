@@ -26,7 +26,8 @@ export default function DevProcess() {
                 Discovery
               </p>
               <p className="mt-2 text-base leading-7 text-gray-600">
-                This phase includes strategy and planning
+                This involves gathering essentials, crafting designs, and
+                developing prototypes
               </p>
             </div>
           </FadeIn>
@@ -39,7 +40,8 @@ export default function DevProcess() {
                 Development
               </p>
               <p className="mt-2 text-base leading-7 text-gray-400">
-                Eu duis porta aliquam ornare. Elementum eget magna egestas.
+                This involves developing reliable technology, ready for
+                deployment post rigorous testing
               </p>
             </div>
           </FadeIn>
@@ -52,8 +54,8 @@ export default function DevProcess() {
                 Maintenance
               </p>
               <p className="mt-2 text-base leading-7 text-sky-200">
-                This includes ongoing enhancements and upgrades to the platform
-                as well as support to the current applications
+                Our software is dynamic, able to evolve with regular design
+                updates, or new features.
               </p>
             </div>
           </FadeIn>
