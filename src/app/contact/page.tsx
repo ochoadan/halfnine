@@ -22,8 +22,8 @@ export default function Contact() {
   const onTurnstileSolved = (token: any) => {
     setTurnstileSolved(true);
   };
-  
-  const formRef = React.useRef()
+
+  const formRef = React.useRef();
 
   async function handleSubmit(event: any) {
     event.preventDefault();
@@ -36,7 +36,7 @@ export default function Contact() {
     const formData = new FormData(formRef.current);
     const token = formData.get("cf-turnstile-response");
     const requestBody = {
-      token: "your-token-here",
+      token,
       name,
       email,
       phone,
