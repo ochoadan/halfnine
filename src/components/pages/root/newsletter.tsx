@@ -9,8 +9,8 @@ export default function NewsLetter() {
           Subscribe to our newsletter.
         </h2>
         <p className="mt-4 text-lg leading-8 text-gray-700">
-          Nostrud amet eu ullamco nisi aute in ad minim nostrud adipisicing
-          velit quis. Duis tempor incididunt dolore.
+          Join us on a journey of discovery and innovation. Immerse yourself in
+          the world of technology and learn with us.
         </p>
         <div className="mt-6 flex max-w-md gap-x-4">
           <label htmlFor="email-address" className="sr-only">
@@ -36,15 +36,12 @@ export default function NewsLetter() {
       <dl className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
         <FadeIn className="flex flex-col items-start">
           <div className="rounded-md bg-black/5 p-2 ring-1 ring-black/10">
-            <CalendarDaysIcon
-              className="h-6 w-6"
-              aria-hidden="true"
-            />
+            <CalendarDaysIcon className="h-6 w-6" aria-hidden="true" />
           </div>
-          <dt className="mt-4 font-semibold">Weekly articles</dt>
+          <dt className="mt-4 font-semibold">Monthly articles</dt>
           <dd className="mt-2 leading-7 text-gray-400">
-            Non laboris consequat cupidatat laborum magna. Eiusmod non irure
-            cupidatat duis commodo amet.
+            Explore technology trends. And Stay updated with the latest
+            breakthroughs shaping our digital future.
           </dd>
         </FadeIn>
         <FadeIn className="flex flex-col items-start">
@@ -53,8 +50,8 @@ export default function NewsLetter() {
           </div>
           <dt className="mt-4 font-semibold">No spam</dt>
           <dd className="mt-2 leading-7 text-gray-400">
-            Officia excepteur ullamco ut sint duis proident non adipisicing.
-            Voluptate incididunt anim.
+            We only send you content that matters, hand crafted, insightful and
+            thought-provoking articles.
           </dd>
         </FadeIn>
       </dl>

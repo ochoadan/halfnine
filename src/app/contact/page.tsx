@@ -1,5 +1,6 @@
 "use client";
 
+import BackgroundwImage from "@/components/layout/background-image";
 import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/24/outline";
 import { Turnstile } from "@marsidev/react-turnstile";
 import clsx from "clsx";
@@ -102,32 +103,11 @@ const Contact = () => {
 
   return (
     <>
-      <div className="relative sm:overflow-hidden bg-gray-100">
-        <Image
-          src="/img/svg/hero-pattern.svg"
-          layout="fill"
-          objectFit="cover"
-          alt="Background pattern"
-          style={{
-            // transition: "opacity 1.5s",
-            opacity: 0,
-            animation: "pointonefadein 1.5s forwards",
-          }}
-        />
-        <div className="relative px-6 py-8 sm:py-12 lg:px-16 lg:py-20">
-          <h1 className="text-center text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl">
-            {/* <span className="block">Interested? We want to hear from you!</span> */}
-            <span className="block">Contact HalfNine</span>
-            {/* <span className="block text-sky-200">customer support</span> */}
-          </h1>
-          <p className="mx-auto mt-6 max-w-lg text-center text-xl text-gray-900 sm:max-w-3xl">
-            {/* <p className="mx-auto mt-6 max-w-lg text-center text-xl text-sky-200 sm:max-w-3xl"> */}
-            Seeking to enhance an existing software, or bring a new concept to
-            life? Let’s talk!
-          </p>
-        </div>
-      </div>
-      <div className="py-12 md:py-16">
+      <BackgroundwImage
+        heading="Contact HalfNine"
+        description="Looking to upgrade your software or kickstart a new idea? Let's discuss it!"
+      />
+      <div className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="bg-gray-50 rounded-xl p-5 lg:p-10 shadow-md">
             <h2 className="pb-2 text-2xl md:text-3xl font-bold">
