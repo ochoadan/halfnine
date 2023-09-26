@@ -1,30 +1,23 @@
-"use client";
-
 import BackgroundwImage from "@/components/layout/background-image";
 
-import { Disclosure } from "@headlessui/react";
-import { MinusSmallIcon, PlusSmallIcon } from "@heroicons/react/24/outline";
-import Image from "next/image";
 import Link from "next/link";
-import { Build, Deliver, Discover } from "@/components/pages/process/01";
+import {
+  Discover,
+  Define,
+  Develop,
+  Deliver,
+} from "@/components/pages/process/01";
+import LifeCycle from "@/components/pages/process/lifecycle";
+import Faq from "@/components/pages/process/faq";
+import { Metadata } from "next";
 
-const faqs = [
-  {
-    question: "What's the best thing about Switzerland?",
-    answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+export const metadata: Metadata = {
+  title: "The HalfNine Approach: Leveraging Technology for Problem-Solution Lifecycle",
+  description: "Learn how we utilize technology to solve problems effectively. Explore our comprehensive Development Lifecycle.",
+  alternates: {
+    canonical: "https://www.halfnine.com/process",
   },
-  {
-    question: "What's the best thing about Switzerland?",
-    answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
-  },
-  {
-    question: "What's the best thing about Switzerland?",
-    answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
-  },
-];
+};
 
 const Page = () => {
   return (
@@ -33,67 +26,37 @@ const Page = () => {
         heading="The HalfNine Development Lifecycle"
         description="Here we explain how we leverage technology from problem to solution."
       />
-      <div className="overflow-hidden bg-white py-24 sm:py-28">
+      <div className="overflow-hidden bg-white py-8 sm:py-12">
+        <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
+          <LifeCycle />
+        </div>
+      </div>
+      <div className="overflow-hidden bg-gray-100 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
           <Discover />
         </div>
       </div>
-
-      <div className="overflow-hidden bg-gray-100 py-24 sm:py-32">
+      <div className="overflow-hidden bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-7xl md:px-6 lg:px-8 [counter-reset:reversed]">
           <div className="sr-only" />
-          <Build />
+          <Define />
         </div>
       </div>
-
-      <div className="overflow-hidden bg-white py-24 sm:py-32">
+      <div className="overflow-hidden bg-gray-100 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
+          <Develop />
+        </div>
+      </div>
+      <div className="overflow-hidden bg-white py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl md:px-6 lg:px-8 [counter-reset:reversed]">
+          <div className="sr-only" />
           <Deliver />
         </div>
       </div>
 
       <div className="bg-gray-100">
         <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
-          <div className="mx-auto max-w-4xl divide-y divide-gray-900/10">
-            <h2 className="text-2xl font-bold leading-10 tracking-tight text-gray-900">
-              Frequently asked questions
-            </h2>
-            <dl className="mt-10 divide-y divide-gray-900/10">
-              {faqs.map((faq) => (
-                <Disclosure as="div" key={faq.question}>
-                  {({ open }) => (
-                    <>
-                      <dt>
-                        <Disclosure.Button className="py-6 flex w-full items-start justify-between text-left text-gray-900">
-                          <span className="text-base font-semibold leading-7">
-                            {faq.question}
-                          </span>
-                          <span className="ml-6 flex h-7 items-center">
-                            {open ? (
-                              <MinusSmallIcon
-                                className="h-6 w-6"
-                                aria-hidden="true"
-                              />
-                            ) : (
-                              <PlusSmallIcon
-                                className="h-6 w-6"
-                                aria-hidden="true"
-                              />
-                            )}
-                          </span>
-                        </Disclosure.Button>
-                      </dt>
-                      <Disclosure.Panel as="dd" className="mt-2 pr-12">
-                        <p className="text-base leading-7 text-gray-600">
-                          {faq.answer}
-                        </p>
-                      </Disclosure.Panel>
-                    </>
-                  )}
-                </Disclosure>
-              ))}
-            </dl>
-          </div>
+          <Faq />
         </div>
       </div>
 
@@ -114,12 +77,6 @@ const Page = () => {
               >
                 Lets Talk!
               </Link>
-              {/* <a
-                href="#"
-                className="text-sm font-semibold leading-6 text-white"
-              >
-                Learn more <span aria-hidden="true">→</span>
-              </a> */}
             </div>
             <svg
               viewBox="0 0 1024 1024"

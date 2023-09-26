@@ -4,11 +4,21 @@ import BackgroundwImage from "@/components/layout/background-image";
 import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/24/outline";
 import { Turnstile } from "@marsidev/react-turnstile";
 import clsx from "clsx";
+// import { Metadata } from "next";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaRegBuilding, FaRegEnvelope, FaRegUser } from "react-icons/fa6";
 import { SlPhone, SlEnvolope } from "react-icons/sl";
+
+// export const metadata: Metadata = {
+//   title:
+//     "Contact HalfNine: Software Upgrades and New Idea Kickstarts",
+//   description: "Contact us for anything from software upgrades to new idea kickstarts. Let's discuss your needs and make it happen!",
+//   alternates: {
+//     canonical: "https://www.halfnine.com/contact",
+//   },
+// };
 
 const Contact = () => {
   const [formData, setFormData] = useState({
