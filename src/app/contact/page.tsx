@@ -8,6 +8,7 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaRegBuilding, FaRegEnvelope, FaRegUser } from "react-icons/fa6";
+import { SlPhone, SlEnvolope } from "react-icons/sl";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -107,7 +108,7 @@ const Contact = () => {
         heading="Contact HalfNine"
         description="Looking to upgrade your software or kickstart a new idea? Let's discuss it!"
       />
-      <div className="py-16 md:py-24">
+      <div className="py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="bg-gray-50 rounded-xl p-5 lg:p-10 shadow-md">
             <h2 className="pb-2 text-2xl md:text-3xl font-bold">
