@@ -31,8 +31,8 @@ const Faq = () => {
       </FadeIn>
       <dl className="mt-10 divide-y divide-gray-900/10">
         {faqs.map((faq) => (
-          <FadeIn>
-            <Disclosure as="div" key={faq.question}>
+          <FadeIn key={faq.question}>
+            <Disclosure as="div">
               {({ open }) => (
                 <>
                   <dt>

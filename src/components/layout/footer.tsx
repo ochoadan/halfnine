@@ -56,7 +56,7 @@ export default function Example() {
             </Link>
           ))} */}
           <Link
-            href="https://www.linkedin.com/company/halfnineus/"
+            href="https://www.linkedin.com/company/halfnine-llc/"
             target="_blank"
             className="text-gray-400 hover:text-[#0077B5] scale-95 hover:scale-{1.02}"
           >

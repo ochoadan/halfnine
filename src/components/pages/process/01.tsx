@@ -4,7 +4,7 @@ import { StylizedImage } from "@/components/StylizedImage";
 import { TagList, TagListItem } from "@/components/TagList";
 
 import imageDiscover from "@/images/edited-pexels-alexander-suhorucov-6457525.jpg";
-import imageDefine from "@/images/edited-pexels-alexander-suhorucov-6457576.jpg";
+import imageDefine from "@/images/pexels-fauxels-3184292.jpg";
 import imageDevelop from "@/images/pexels-christina-morillo-1181263.jpg";
 import imageDeliver from "@/images/pexels-cottonbro-studio-7438102.jpg";
 
@@ -80,48 +80,38 @@ export function Discover() {
   return (
     <Section title="Discover" image={{ src: imageDiscover }}>
       {/* <div className="space-y-6 text-base text-neutral-600"> */}
-      <div className="text-base text-neutral-600">
-        <FadeIn>
-          {/* <h2 className="text-base font-semibold leading-7 text-sky-600">
-            Discover
-          </h2> */}
-          <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Discover
-            <hr className="border-sky-600 opacity-90 border-b-[2px] w-12 my-2" />
-          </h2>
-          <p className="mt-6 text-md leading-7 text-gray-600">
-            Engage in a dialogue with us to delve into your specific objectives.
-            We’ll discuss your budget constraints and timeline expectations to
-            ascertain whether a custom software solution is the most effective
-            approach for your unique situation. Our team is committed to
-            understanding your needs and providing a tailored solution that
-            aligns with your goals.
-            <br />
-            <br />
-            We encourage you to learn more about our collaborative process,
-            which is designed to ensure a seamless partnership. Our initial
-            questionnaire is a critical tool that helps us gain a comprehensive
-            understanding of your project, enabling us to provide the most
-            suitable solution.
-            {/* <br />
-            <br />
-            Furthermore, we invite you to familiarize yourself with the typical
-            tech stacks our team utilizes. Our expertise spans a wide range of
-            technologies, allowing us to select the most appropriate tools for
-            your project. We look forward to embarking on this journey with you
-            and delivering a solution that exceeds your expectations. */}
-          </p>
-        </FadeIn>{" "}
-      </div>
+      <FadeIn className="text-base text-neutral-600">
+        <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          Discover
+          <hr className="border-sky-600 opacity-90 border-b-[2px] w-12 my-2" />
+        </h2>
+        <p className="mt-6 text-md leading-7 text-gray-600">
+          Initiate the journey by understanding your vision and requirements. We
+          conduct comprehensive research to understand the market trends, user
+          needs, and the competitive landscape. This helps us to align our
+          development strategy with your business goals.
+          <br />
+          <br />
+          We also identify potential challenges and opportunities that may arise
+          during the development process. This proactive approach allows us to
+          anticipate and plan for various scenarios, ensuring a smooth
+          development process from start to finish.
+        </p>
+      </FadeIn>
       <FadeIn className="mt-12 font-display text-base font-semibold text-neutral-950">
         <h3>Included in this phase</h3>
       </FadeIn>
       <TagList className="mt-4">
-        <TagListItem>Feasibility studies</TagListItem>
+        {/* <TagListItem>Feasibility studies</TagListItem>
         <TagListItem>In-depth questionnaires</TagListItem>
         <TagListItem>Technology Assessment</TagListItem>
         <TagListItem>Competitive Analysis</TagListItem>
-        <TagListItem>Proofs-of-concept</TagListItem>
+        <TagListItem>Proofs-of-concept</TagListItem> */}
+        <TagListItem>Vision understanding</TagListItem>
+        <TagListItem>Market research</TagListItem>
+        <TagListItem>User needs</TagListItem>
+        <TagListItem>Strategy alignment</TagListItem>
+        <TagListItem>Challenge identification</TagListItem>
       </TagList>
     </Section>
   );
@@ -130,38 +120,40 @@ export function Discover() {
 export function Define() {
   return (
     <Section title="Build" image={{ src: imageDefine, shape: 1 }}>
-      <div className="text-base text-neutral-600">
-        <FadeIn>
-          <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Define
-            <hr className="border-sky-600 opacity-90 border-b-[2px] w-12 my-2" />
-          </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-            impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
-            ratione.
-          </p>
-        </FadeIn>
-        <dl className="mt-10 max-w-xl space-y-6 text-base leading-7 text-gray-600 lg:max-w-none">
-          {features.map((feature) => (
-            <FadeIn key={feature.name} className="relative pl-9">
-              <dt className="inline font-semibold text-gray-900">
-                <feature.icon
-                  className="absolute left-1 top-1 h-5 w-5 text-sky-600"
-                  aria-hidden="true"
-                />
-                {feature.name}
-              </dt>{" "}
-              <dd className="inline">{feature.description}</dd>
-            </FadeIn>
-          ))}
-        </dl>
-      </div>
+      <FadeIn className="text-base text-neutral-600">
+        <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          Define
+          <hr className="border-sky-600 opacity-90 border-b-[2px] w-12 my-2" />
+        </h2>
+        <p className="mt-6 text-md leading-7 text-gray-600">
+          Delving deeper into your project’s specifics. We conduct detailed
+          sessions to understand your software product’s unique requirements and
+          objectives. We strategize the user experience, identifying core and
+          non-core features that will drive your product’s success.
+          <br />
+          <br />
+          We also provide a comprehensive project estimate, outlining the
+          resources and timeline required for development. For existing software
+          products, we conduct a technical audit or feasibility study to ensure
+          that our proposed solutions align with your current systems and
+          processes.
+        </p>
+      </FadeIn>
       <FadeIn className="mt-12 font-display text-base font-semibold text-neutral-950">
         <h3>Included in this phase</h3>
       </FadeIn>
       <TagList className="mt-4">
-        <TagListItem>Security & Compliance</TagListItem>
+        {/* <TagListItem>Compliance Assurance</TagListItem>
+        <TagListItem>Methodology Selection</TagListItem>
+        <TagListItem>Requirements Categorization</TagListItem>
+        <TagListItem>SRS Drafting</TagListItem>
+        <TagListItem>Rapid Application Development</TagListItem> */}
+        <TagListItem>Detail sessions</TagListItem>
+        <TagListItem>UI/UX strategy</TagListItem>
+        <TagListItem>Identifying features</TagListItem>
+        <TagListItem>Project estimate</TagListItem>
+        <TagListItem>Technical Audit</TagListItem>
+        <TagListItem>Feasibility Study</TagListItem>
       </TagList>
     </Section>
   );
@@ -170,41 +162,38 @@ export function Define() {
 export function Develop() {
   return (
     <Section title="Deliver" image={{ src: imageDevelop, shape: 2 }}>
-      <div className="text-base text-neutral-600">
-        <FadeIn>
-          <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Develop
-            <hr className="border-sky-600 opacity-90 border-b-[2px] w-12 my-2" />
-          </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-            impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
-            ratione.
-          </p>
-        </FadeIn>
-        <dl className="mt-10 max-w-xl space-y-6 text-base leading-7 text-gray-600 lg:max-w-none">
-          {features.map((feature) => (
-            <FadeIn key={feature.name} className="relative pl-9">
-              <dt className="inline font-semibold text-gray-900">
-                <feature.icon
-                  className="absolute left-1 top-1 h-5 w-5 text-sky-600"
-                  aria-hidden="true"
-                />
-                {feature.name}
-              </dt>{" "}
-              <dd className="inline">{feature.description}</dd>
-            </FadeIn>
-          ))}
-        </dl>
-      </div>
+      <FadeIn className="text-base text-neutral-600">
+        <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          Develop
+          <hr className="border-sky-600 opacity-90 border-b-[2px] w-12 my-2" />
+        </h2>
+        <p className="mt-6 text-md leading-7 text-gray-600">
+          We transform your vision into reality. Our team of experts begins by
+          constructing a robust architecture for your software product. We
+          prioritize core features and develop them first, ensuring they
+          function seamlessly.
+          <br />
+          <br />
+          Once the core features are established, we proceed to develop non-core
+          features. Throughout this process, we maintain a rigorous testing
+          regime to ensure the software’s reliability and performance. For
+          existing products, enhancements are integrated carefully to preserve
+          the integrity of the software.
+        </p>
+      </FadeIn>
       <FadeIn className="mt-12 font-display text-base font-semibold text-neutral-950">
         <h3>Included in this phase</h3>
       </FadeIn>
       <TagList className="mt-4">
-        <TagListItem>UI/UX Design</TagListItem>
+        {/* <TagListItem>UI/UX Design</TagListItem>
         <TagListItem>Software Development</TagListItem>
         <TagListItem>Integration & Interoperability</TagListItem>
-        <TagListItem>Dynamic Software Updating</TagListItem>
+        <TagListItem>Dynamic Software Updating</TagListItem> */}
+        <TagListItem>Architecture construction</TagListItem>
+        <TagListItem>Core development</TagListItem>
+        <TagListItem>Non-core development</TagListItem>
+        <TagListItem>Rigorous testing</TagListItem>
+        <TagListItem>Enhancement integration</TagListItem>
       </TagList>
     </Section>
   );
@@ -213,41 +202,35 @@ export function Develop() {
 export function Deliver() {
   return (
     <Section title="Deliver" image={{ src: imageDeliver }}>
-      <div className="text-base text-neutral-600">
-        <FadeIn>
-          <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Deliver
-            <hr className="border-sky-600 opacity-90 border-b-[2px] w-12 my-2" />
-          </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-            impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
-            ratione.
-          </p>
-        </FadeIn>
-        <dl className="mt-10 max-w-xl space-y-6 text-base leading-7 text-gray-600 lg:max-w-none">
-          {features.map((feature) => (
-            <FadeIn key={feature.name} className="relative pl-9">
-              <dt className="inline font-semibold text-gray-900">
-                <feature.icon
-                  className="absolute left-1 top-1 h-5 w-5 text-sky-600"
-                  aria-hidden="true"
-                />
-                {feature.name}
-              </dt>{" "}
-              <dd className="inline">{feature.description}</dd>
-            </FadeIn>
-          ))}
-        </dl>
-      </div>
+      <FadeIn className="text-base text-neutral-600">
+        <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          Deliver
+          <hr className="border-sky-600 opacity-90 border-b-[2px] w-12 my-2" />
+        </h2>
+        <p className="mt-6 text-md leading-7 text-gray-600">
+          We ensure that the software product is ready for deployment. We
+          conduct a final round of rigorous testing to guarantee optimal
+          performance and reliability. Any identified issues are addressed
+          promptly, ensuring the software meets your expectations.
+          <br />
+          <br />
+          Upon successful testing, we proceed with the deployment of the
+          software. We also provide comprehensive documentation and support to
+          ensure a smooth transition. For existing products, we ensure seamless
+          integration of new features with minimal disruption to your
+          operations.
+        </p>
+      </FadeIn>
       <FadeIn className="mt-12 font-display text-base font-semibold text-neutral-950">
         <h3>Included in this phase</h3>
       </FadeIn>
       <TagList className="mt-4">
-          <TagListItem>.</TagListItem>
-          <TagListItem>.</TagListItem>
-          <TagListItem>.</TagListItem>
-          <TagListItem>.</TagListItem>
+        {/* <TagListItem>State Management</TagListItem> */}
+        <TagListItem>Final testing</TagListItem>
+        <TagListItem>Issue resolution</TagListItem>
+        <TagListItem>Software deployment</TagListItem>
+        <TagListItem>Documentation provision</TagListItem>
+        <TagListItem>Feature integration</TagListItem>
       </TagList>
     </Section>
   );
