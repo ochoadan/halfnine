@@ -3,7 +3,7 @@ import BackgroundwImage from "@/components/layout/background-image";
 const Page = () => {
   return (
     <BackgroundwImage
-      heading="About HalfNine"
+      heading="About Halfnine"
       description="This page is under construction."
     />
   );

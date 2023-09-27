@@ -79,7 +79,11 @@ export default function Example() {
     // <header className="relative isolate z-10 bg-white">
     <header
       className={`isolate w-full fixed bg-white z-50 ${
-        isShadowPage ? (scrollPosition > 20 ? "shadow-md" : "") : "shadow-md"
+        isShadowPage || mobileMenuOpen
+          ? scrollPosition > 20
+            ? "shadow-md"
+            : ""
+          : "shadow-md"
       }`}
     >
       <nav
@@ -91,7 +95,7 @@ export default function Example() {
             <Logo />
           ) : (
             <Link href={"/"} className="-m-1.5 p-1.5">
-              <span className="sr-only">HalfNine LLC</span>
+              <span className="sr-only">Halfnine LLC</span>
               <Logo />
             </Link>
           )}
@@ -107,7 +111,11 @@ export default function Example() {
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+            {mobileMenuOpen ? (
+              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+            ) : (
+              <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+            )}
           </button>
         </div>
         {/* <Popover.Group className="hidden lg:flex lg:gap-x-12">
@@ -222,16 +230,12 @@ export default function Example() {
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}
       >
-        <div className="fixed inset-0 z-10" />
+        <div className="fixed inset-0 z-51" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=sky&shade=600"
-                alt=""
-              />
+              <img className="h-8 w-auto" src="" alt="" />
             </a>
             <button
               type="button"
@@ -245,7 +249,7 @@ export default function Example() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <Disclosure as="div" className="-mx-3">
+                {/* <Disclosure as="div" className="-mx-3">
                   {({ open }) => (
                     <>
                       <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
@@ -272,32 +276,32 @@ export default function Example() {
                       </Disclosure.Panel>
                     </>
                   )}
-                </Disclosure>
+                </Disclosure> */}
                 <a
-                  href="#"
+                  href="/process"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Features
+                  Process
                 </a>
                 <a
-                  href="#"
+                  href="/pricing"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Marketplace
+                  Pricing
                 </a>
                 <a
-                  href="#"
+                  href="/about"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Company
+                  About
                 </a>
               </div>
               <div className="py-6">
                 <a
-                  href="#"
+                  href="/contact"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Log in
+                  Contact Us
                 </a>
               </div>
             </div>

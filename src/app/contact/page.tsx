@@ -4,10 +4,21 @@ import BackgroundwImage from "@/components/layout/background-image";
 import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/24/outline";
 import { Turnstile } from "@marsidev/react-turnstile";
 import clsx from "clsx";
+// import { Metadata } from "next";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaRegBuilding, FaRegEnvelope, FaRegUser } from "react-icons/fa6";
+import { SlPhone, SlEnvolope } from "react-icons/sl";
+
+// export const metadata: Metadata = {
+//   title:
+//     "Contact Halfnine: Software Upgrades and New Idea Kickstarts",
+//   description: "Contact us for anything from software upgrades to new idea kickstarts. Let's discuss your needs and make it happen!",
+//   alternates: {
+//     canonical: "https://www.halfnine.com/contact",
+//   },
+// };
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -104,10 +115,10 @@ const Contact = () => {
   return (
     <>
       <BackgroundwImage
-        heading="Contact HalfNine"
+        heading="Contact Halfnine"
         description="Looking to upgrade your software or kickstart a new idea? Let's discuss it!"
       />
-      <div className="py-16 md:py-24">
+      <div className="py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="bg-gray-50 rounded-xl p-5 lg:p-10 shadow-md">
             <h2 className="pb-2 text-2xl md:text-3xl font-bold">

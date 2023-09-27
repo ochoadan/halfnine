@@ -3,9 +3,12 @@ import type { Metadata } from "next";
 import { Footer, Navbar } from "@/components";
 
 export const metadata: Metadata = {
-  title: "HalfNine - Information Technology Development Company",
+  title: "Halfnine - Empowering Digital Success: IT Development Solutions",
   description:
-    "We provide scalable and secure software solutions for any System, Browser and Device. Contact us for custom IT solutions that perfectly fit your needs.",
+    "Unlock future potential with our powerful and flexible digital solutions. Experience efficiency, cost-effectiveness, speed, and innovation with us.",
+  alternates: {
+    canonical: "https://www.halfnine.com",
+  },
 };
 
 export default function RootLayout({
