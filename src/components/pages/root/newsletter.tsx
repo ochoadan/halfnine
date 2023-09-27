@@ -40,7 +40,7 @@ export default function NewsLetter() {
           </div>
           <dt className="mt-4 font-semibold">Monthly articles</dt>
           <dd className="mt-2 leading-7 text-gray-400">
-            Explore technology trends. And Stay updated with the latest
+            Discover technology trends. And Stay updated with the latest
             breakthroughs shaping our digital future.
           </dd>
         </FadeIn>

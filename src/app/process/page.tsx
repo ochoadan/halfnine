@@ -12,8 +12,8 @@ import Faq from "@/components/pages/process/faq";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The HalfNine Approach: Leveraging Technology for Problem-Solution Lifecycle",
-  description: "Learn how we utilize technology to solve problems effectively. Explore our comprehensive Development Lifecycle.",
+  title: "The Halfnine Approach: Leveraging Technology for Problem-Solution Lifecycle",
+  description: "Learn how we utilize technology to solve problems effectively. Discover our comprehensive Development Lifecycle.",
   alternates: {
     canonical: "https://www.halfnine.com/process",
   },
@@ -23,7 +23,7 @@ const Page = () => {
   return (
     <>
       <BackgroundwImage
-        heading="The HalfNine Development Lifecycle"
+        heading="The Halfnine Development Lifecycle"
         description="Here we explain how we leverage technology from problem to solution."
       />
       <div className="overflow-hidden bg-white py-8 sm:py-12">

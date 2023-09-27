@@ -3,7 +3,7 @@ import { FadeIn, FadeInStagger } from "@/components/FadeIn";
 import { StylizedImage } from "@/components/StylizedImage";
 import { TagList, TagListItem } from "@/components/TagList";
 
-import imageExplore from "@/images/edited-pexels-alexander-suhorucov-6457525.jpg";
+import imageDiscover from "@/images/edited-pexels-alexander-suhorucov-6457525.jpg";
 import imageDefine from "@/images/edited-pexels-alexander-suhorucov-6457576.jpg";
 import imageDevelop from "@/images/pexels-christina-morillo-1181263.jpg";
 import imageDeliver from "@/images/pexels-cottonbro-studio-7438102.jpg";
@@ -16,19 +16,19 @@ import {
 
 const features = [
   {
-    name: "Push to deploy.",
+    name: "Push to deploy",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
     icon: CloudArrowUpIcon,
   },
   {
-    name: "SSL certificates.",
+    name: "SSL certificates",
     description:
       "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
     icon: LockClosedIcon,
   },
   {
-    name: "Database backups.",
+    name: "Database backups",
     description:
       "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
     icon: ServerIcon,
@@ -78,49 +78,51 @@ function Section({
 
 export function Discover() {
   return (
-    <Section title="Discover" image={{ src: imageExplore }}>
+    <Section title="Discover" image={{ src: imageDiscover }}>
       {/* <div className="space-y-6 text-base text-neutral-600"> */}
       <div className="text-base text-neutral-600">
         <FadeIn>
           {/* <h2 className="text-base font-semibold leading-7 text-sky-600">
-            Explore
+            Discover
           </h2> */}
           <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Explore
+            Discover
             <hr className="border-sky-600 opacity-90 border-b-[2px] w-12 my-2" />
           </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-            impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
-            ratione.
+          <p className="mt-6 text-md leading-7 text-gray-600">
+            Engage in a dialogue with us to delve into your specific objectives.
+            We’ll discuss your budget constraints and timeline expectations to
+            ascertain whether a custom software solution is the most effective
+            approach for your unique situation. Our team is committed to
+            understanding your needs and providing a tailored solution that
+            aligns with your goals.
+            <br />
+            <br />
+            We encourage you to learn more about our collaborative process,
+            which is designed to ensure a seamless partnership. Our initial
+            questionnaire is a critical tool that helps us gain a comprehensive
+            understanding of your project, enabling us to provide the most
+            suitable solution.
+            {/* <br />
+            <br />
+            Furthermore, we invite you to familiarize yourself with the typical
+            tech stacks our team utilizes. Our expertise spans a wide range of
+            technologies, allowing us to select the most appropriate tools for
+            your project. We look forward to embarking on this journey with you
+            and delivering a solution that exceeds your expectations. */}
           </p>
-        </FadeIn>
-        <dl className="mt-10 max-w-xl space-y-6 text-base leading-7 text-gray-600 lg:max-w-none">
-          {features.map((feature) => (
-            <FadeIn key={feature.name} className="relative pl-9">
-              <dt className="inline font-semibold text-gray-900">
-                <feature.icon
-                  className="absolute left-1 top-1 h-5 w-5 text-sky-600"
-                  aria-hidden="true"
-                />
-                {feature.name}
-              </dt>
-              <dd className="inline">{feature.description}</dd>
-            </FadeIn>
-          ))}
-        </dl>
+        </FadeIn>{" "}
       </div>
-      {/* <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
-        Included in this phase
-        </h3>
-        <TagList className="mt-4">
-        <TagListItem>In-depth questionnaires</TagListItem>
+      <FadeIn className="mt-12 font-display text-base font-semibold text-neutral-950">
+        <h3>Included in this phase</h3>
+      </FadeIn>
+      <TagList className="mt-4">
         <TagListItem>Feasibility studies</TagListItem>
-        <TagListItem>Blood samples</TagListItem>
-        <TagListItem>Employee surveys</TagListItem>
+        <TagListItem>In-depth questionnaires</TagListItem>
+        <TagListItem>Technology Assessment</TagListItem>
+        <TagListItem>Competitive Analysis</TagListItem>
         <TagListItem>Proofs-of-concept</TagListItem>
-        <TagListItem>Forensic audit</TagListItem>
-      </TagList> */}
+      </TagList>
     </Section>
   );
 }
@@ -140,15 +142,27 @@ export function Define() {
             ratione.
           </p>
         </FadeIn>
+        <dl className="mt-10 max-w-xl space-y-6 text-base leading-7 text-gray-600 lg:max-w-none">
+          {features.map((feature) => (
+            <FadeIn key={feature.name} className="relative pl-9">
+              <dt className="inline font-semibold text-gray-900">
+                <feature.icon
+                  className="absolute left-1 top-1 h-5 w-5 text-sky-600"
+                  aria-hidden="true"
+                />
+                {feature.name}
+              </dt>{" "}
+              <dd className="inline">{feature.description}</dd>
+            </FadeIn>
+          ))}
+        </dl>
       </div>
-
-      {/* <Blockquote
-        author={{ name: "Debra Fiscal", role: "CEO of Unseal" }}
-        className="mt-12"
-        >
-        Studio were so regular with their progress updates we almost began to
-        think they were automated!
-      </Blockquote> */}
+      <FadeIn className="mt-12 font-display text-base font-semibold text-neutral-950">
+        <h3>Included in this phase</h3>
+      </FadeIn>
+      <TagList className="mt-4">
+        <TagListItem>Security & Compliance</TagListItem>
+      </TagList>
     </Section>
   );
 }
@@ -168,25 +182,30 @@ export function Develop() {
             ratione.
           </p>
         </FadeIn>
+        <dl className="mt-10 max-w-xl space-y-6 text-base leading-7 text-gray-600 lg:max-w-none">
+          {features.map((feature) => (
+            <FadeIn key={feature.name} className="relative pl-9">
+              <dt className="inline font-semibold text-gray-900">
+                <feature.icon
+                  className="absolute left-1 top-1 h-5 w-5 text-sky-600"
+                  aria-hidden="true"
+                />
+                {feature.name}
+              </dt>{" "}
+              <dd className="inline">{feature.description}</dd>
+            </FadeIn>
+          ))}
+        </dl>
       </div>
-
-      <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
-        Included in this phase
-      </h3>
-      {/* <List className="mt-8">
-        <ListItem title="Testing">
-        Our projects always have 100% test coverage, which would be impressive
-        if our tests weren’t as porous as a sieve.
-        </ListItem>
-        <ListItem title="Infrastructure">
-        To ensure reliability we only use the best Digital Ocean droplets that
-        $4 a month can buy.
-        </ListItem>
-        <ListItem title="Support">
-        Because we hold the API keys for every critical service your business
-        uses, you can expect a lifetime of support, and invoices, from us.
-        </ListItem>
-      </List> */}
+      <FadeIn className="mt-12 font-display text-base font-semibold text-neutral-950">
+        <h3>Included in this phase</h3>
+      </FadeIn>
+      <TagList className="mt-4">
+        <TagListItem>UI/UX Design</TagListItem>
+        <TagListItem>Software Development</TagListItem>
+        <TagListItem>Integration & Interoperability</TagListItem>
+        <TagListItem>Dynamic Software Updating</TagListItem>
+      </TagList>
     </Section>
   );
 }
@@ -206,7 +225,30 @@ export function Deliver() {
             ratione.
           </p>
         </FadeIn>
+        <dl className="mt-10 max-w-xl space-y-6 text-base leading-7 text-gray-600 lg:max-w-none">
+          {features.map((feature) => (
+            <FadeIn key={feature.name} className="relative pl-9">
+              <dt className="inline font-semibold text-gray-900">
+                <feature.icon
+                  className="absolute left-1 top-1 h-5 w-5 text-sky-600"
+                  aria-hidden="true"
+                />
+                {feature.name}
+              </dt>{" "}
+              <dd className="inline">{feature.description}</dd>
+            </FadeIn>
+          ))}
+        </dl>
       </div>
+      <FadeIn className="mt-12 font-display text-base font-semibold text-neutral-950">
+        <h3>Included in this phase</h3>
+      </FadeIn>
+      <TagList className="mt-4">
+          <TagListItem>.</TagListItem>
+          <TagListItem>.</TagListItem>
+          <TagListItem>.</TagListItem>
+          <TagListItem>.</TagListItem>
+      </TagList>
     </Section>
   );
 }

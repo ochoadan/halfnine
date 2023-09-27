@@ -13,7 +13,7 @@ import { SlPhone, SlEnvolope } from "react-icons/sl";
 
 // export const metadata: Metadata = {
 //   title:
-//     "Contact HalfNine: Software Upgrades and New Idea Kickstarts",
+//     "Contact Halfnine: Software Upgrades and New Idea Kickstarts",
 //   description: "Contact us for anything from software upgrades to new idea kickstarts. Let's discuss your needs and make it happen!",
 //   alternates: {
 //     canonical: "https://www.halfnine.com/contact",
@@ -115,7 +115,7 @@ const Contact = () => {
   return (
     <>
       <BackgroundwImage
-        heading="Contact HalfNine"
+        heading="Contact Halfnine"
         description="Looking to upgrade your software or kickstart a new idea? Let's discuss it!"
       />
       <div className="py-8 md:py-12">
