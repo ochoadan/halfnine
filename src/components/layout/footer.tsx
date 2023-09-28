@@ -74,7 +74,7 @@ export default function Example() {
           <Link
             href="https://www.facebook.com/halfnineus"
             target="_blank"
-            className="text-gray-400 hover:text-[#4267B2] scale-100 hover:scale-{1.02}"
+            className="text-gray-400 hover:text-[#0165E1] scale-100 hover:scale-{1.02}"
           >
             <span className="sr-only">Facebook</span>
             <FaFacebook className="h-6 w-6" aria-hidden="true" />
