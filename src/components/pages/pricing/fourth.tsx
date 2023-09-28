@@ -34,13 +34,13 @@ export default function Fourth() {
             </p>
           </FadeIn>
         </div>
-        <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg bg-gray-100">
+        <FadeIn className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg bg-gray-100">
           <img
             src="/img/pricing/pexels-mart-production-7709085.jpg"
             alt=""
             className="object-cover object-center"
           />
-        </div>
+        </FadeIn>
       </FadeInStagger>
     </div>
   );
