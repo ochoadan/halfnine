@@ -5,7 +5,7 @@ const LifeCycle = () => {
   return (
     <FadeIn>
       <Image
-        src="/img/halfnine-project-lifecycle.png"
+        src="/img/process/halfnine-project-lifecycle.png"
         alt="Halfnine Project Lifecycle"
         width="1024"
         height="357"

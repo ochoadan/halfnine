@@ -57,7 +57,7 @@ const Page = () => {
       </div>
 
       <div className="bg-gray-100">
-        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
+        <div className="mx-auto max-w-7xl px-6 py-20 sm:py-24 lg:px-8 lg:py-28">
           <Faq />
         </div>
       </div>
