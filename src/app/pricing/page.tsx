@@ -1,9 +1,9 @@
 import BackgroundwImage from "@/components/layout/background-image";
 import CTA from "@/components/pages/pricing/cta";
 import First from "@/components/pages/pricing/first";
-import Fourth from "@/components/pages/pricing/fourth";
 import Second from "@/components/pages/pricing/second";
 import Third from "@/components/pages/pricing/third";
+import Fourth from "@/components/pages/pricing/fourth";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
