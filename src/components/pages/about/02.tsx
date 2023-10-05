@@ -1,3 +1,4 @@
+import { FadeIn, FadeInStagger } from "@/components/FadeIn";
 import { FaHandshake, FaUsers, FaChartLine, FaChess } from "react-icons/fa";
 
 const features = [
@@ -33,9 +34,8 @@ const features = [
 
 export default function AboutSecond() {
   return (
-    <>
-
-      <div className="mx-auto max-w-4xl text-center">
+    <FadeInStagger>
+      <FadeIn className="mx-auto max-w-4xl text-center">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Our Core Values
         </h2>
@@ -44,11 +44,11 @@ export default function AboutSecond() {
           As you understand our team, you’ll see we’re driven by key principles,
           enabling us to achieve significant change through unique experiences.
         </p>
-      </div>
+      </FadeIn>
       <div className="mx-auto mt-4 max-w-xl sm:mt-8 lg:mt-10 lg:max-w-none">
         <dl className="grid max-w-xl grid-cols-2 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4">
           {features.map((feature) => (
-            <div key={feature.name} className="flex flex-col">
+            <FadeIn key={feature.name} className="flex flex-col">
               <dt className="text-lg font-semibold leading-7 flex flex-col items-center justify-center">
                 <div className="mb-2 h-16 w-16 flex items-center justify-center rounded-lg bg-white ring-1 ring-gray-300">
                   <feature.icon
@@ -58,10 +58,10 @@ export default function AboutSecond() {
                 </div>
                 {feature.name}
               </dt>
-            </div>
+            </FadeIn>
           ))}
         </dl>
       </div>
-    </>
+    </FadeInStagger>
   );
 }

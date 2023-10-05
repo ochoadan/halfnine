@@ -1,9 +1,10 @@
+import { FadeIn, FadeInStagger } from "@/components/FadeIn";
 import Link from "next/link";
 
 export default function AboutThird() {
   return (
-    <>
-      <div className="relative isolate overflow-hidden bg-gray-800 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
+    <FadeInStagger>
+      <FadeIn className="relative isolate overflow-hidden bg-gray-800 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
         <svg
           viewBox="0 0 1024 1024"
           className="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
@@ -32,7 +33,7 @@ export default function AboutThird() {
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Surveyr.io is made to Schedule Laravel cron jobs. Cron jobs are the
             backbone of a Laravel application, carrying out critical tasks on
-            behalf of your customers. 
+            behalf of your customers.
             {/* Yet, often these jobs are hard to monitor
             as they run in the background. We solve this by monitoring them for
             you. */}
@@ -64,7 +65,7 @@ export default function AboutThird() {
             height={1080}
           />
         </div>
-      </div>
-    </>
+      </FadeIn>
+    </FadeInStagger>
   );
 }

@@ -1,3 +1,4 @@
+import { FadeIn, FadeInStagger } from "@/components/FadeIn";
 import {
   LifebuoyIcon,
   NewspaperIcon,
@@ -30,29 +31,32 @@ const supportLinks = [
 
 export default function AboutLast() {
   return (
-    <div className="bg-white">
+    <FadeInStagger className="bg-white">
       {/* Header */}
-      <div className="relative bg-gray-800 pb-28">
-        <div className="absolute inset-0">
-          <img
-            className="h-full w-full object-cover"
-            src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&&sat=-100"
-            alt=""
-          />
-          <div
-            className="absolute inset-0 bg-gray-800/60 mix-blend-multiply"
-            aria-hidden="true"
-          />
-        </div>
-        <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-28 lg:px-8">
-          <h1 className="text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
-            Why Choose Us
-          </h1>
-          <p className="mt-6 max-w-3xl text-xl text-gray-200">
-            Our commitment for a reliable partnership. Transparent communication
-            and Dedication to excellence for customer satisfaction.
-          </p>
-        </div>
+      <div className="bg-gray-100">
+        <FadeIn className="relative bg-gray-800 pb-28">
+          <div className="absolute inset-0">
+            <img
+              className="h-full w-full object-cover"
+              src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&&sat=-100"
+              alt=""
+            />
+            <div
+              className="absolute inset-0 bg-gray-800/60 mix-blend-multiply"
+              aria-hidden="true"
+            />
+          </div>
+          <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-28 lg:px-8">
+            <h1 className="text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
+              Why Choose Us
+            </h1>
+            <p className="mt-6 max-w-3xl text-xl text-gray-200">
+              Our commitment for a reliable partnership. Transparent
+              communication and Dedication to excellence for customer
+              satisfaction.
+            </p>
+          </div>
+        </FadeIn>
       </div>
 
       {/* Overlapping cards */}
@@ -65,7 +69,7 @@ export default function AboutLast() {
         </h2> */}
         <div className="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-0">
           {supportLinks.map((link) => (
-            <div
+            <FadeIn
               key={link.name}
               className="flex flex-col rounded-2xl bg-white shadow-xl"
             >
@@ -88,10 +92,10 @@ export default function AboutLast() {
                   Contact us<span aria-hidden="true"> &rarr;</span>
                 </a>
               </div> */}
-            </div>
+            </FadeIn>
           ))}
         </div>
       </section>
-    </div>
+    </FadeInStagger>
   );
 }
