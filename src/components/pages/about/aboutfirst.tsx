@@ -25,7 +25,7 @@ export default function AboutFirst() {
         </FadeIn>
         <FadeIn className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg bg-gray-100">
           <img
-            src="/img/about/pexels-mizuno-k-12902918.jpg"
+            src="/img/about/pexels-mizuno-k-12902918-min.jpg"
             alt=""
             className="object-cover object-center"
           />

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "Learn more about Halfnine in Central Florida. We're a crew of software developers, UX designers, project navigators and opportunity explorers.",
   alternates: {
-    canonical: "https://www.halfnine.com/pricing",
+    canonical: "https://www.halfnine.com/about",
   },
 };
 

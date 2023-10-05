@@ -46,7 +46,7 @@ export default function Second() {
         </div>
         <FadeIn className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg bg-gray-100">
           <img
-            src="/img/pricing/pexels-vlada-karpovich-7433822.jpg"
+            src="/img/pricing/pexels-vlada-karpovich-7433822-min.jpg"
             alt=""
             className="object-cover object-center"
           />

@@ -47,9 +47,9 @@ export default function AboutLast() {
             />
           </div>
           <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-28 lg:px-8">
-            <h1 className="text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
+            <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
               Why Choose Us?
-            </h1>
+            </h2>
             <p className="mt-6 max-w-3xl text-xl text-gray-200">
               We prioritize reliability and partnership in our approach to IT
               development. Our commitment to transparent communication and

@@ -13,7 +13,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "The Halfnine Approach: Leveraging Technology for Problem-Solution Lifecycle",
+    "Halfnine's Approach: Leveraging Technology for Problem-Solution Lifecycle",
   description:
     "Learn how we utilize technology to solve problems effectively. Discover our comprehensive Development Lifecycle.",
   alternates: {

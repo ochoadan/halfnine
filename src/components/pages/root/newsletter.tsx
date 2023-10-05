@@ -13,7 +13,7 @@ function NewsLetter() {
   const [subscribed, setSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubscribe = async (e) => {
+  const handleSubscribe = async (e: any) => {
     e.preventDefault();
 
     setIsLoading(true);
