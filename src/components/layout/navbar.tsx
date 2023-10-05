@@ -186,19 +186,19 @@ export default function Example() {
         <div className="hidden lg:flex lg:gap-x-12">
           <Link
             href="/process"
-            className="font-semibold leading-6 text-gray-500 hover:text-gray-900"
+            className="font-semibold leading-6 text-gray-500 hover:text-gray-900 select-none"
           >
             Process
           </Link>
           <Link
             href="/pricing"
-            className="font-semibold leading-6 text-gray-500 hover:text-gray-900"
+            className="font-semibold leading-6 text-gray-500 hover:text-gray-900 select-none"
           >
             Pricing
           </Link>
           <Link
             href="/about"
-            className="font-semibold leading-6 text-gray-500 hover:text-gray-900"
+            className="font-semibold leading-6 text-gray-500 hover:text-gray-900 select-none"
           >
             About
           </Link>
@@ -214,7 +214,7 @@ export default function Example() {
           <Link
             href={"/contact"}
             // className="hidden lg:flex lg:flex-1 lg:justify-end"
-            className="font-bold inline-flex items-center gap-x-1.5 rounded-md bg-sky-600 px-3 py-2 text-sm text-white shadow-sm hover:bg-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
+            className="select-none font-bold inline-flex items-center gap-x-1.5 rounded-md bg-sky-600 px-3 py-2 text-sm text-white shadow-sm hover:bg-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
             type="button"
           >
             {/* <button> */}

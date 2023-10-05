@@ -1,9 +1,11 @@
 import BackgroundwImage from "@/components/layout/background-image";
-import AboutFirst from "@/components/pages/about/01";
-import AboutSecond from "@/components/pages/about/02";
-import AboutThird from "@/components/pages/about/03";
-import AboutLast from "@/components/pages/about/last";
 import { Metadata } from "next";
+import {
+  AboutFirst,
+  AboutSecond,
+  AboutThird,
+  AboutLast,
+} from "@/components/pages/about";
 
 export const metadata: Metadata = {
   title: "Halfnine - The Software Developers & Designers at Halfnine",

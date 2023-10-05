@@ -7,24 +7,24 @@ import {
 
 const supportLinks = [
   {
-    name: "Concern for Workflows",
+    name: "Streamlined Workflows",
     href: "#",
     description:
-      "Smooth and efficient workflows are critical for development. That’s why we take extra care to ensure that our solutions integrate seamlessly into your existing processes.",
+      "We focus on efficient workflows, designing solutions that integrate with your processes, boosting productivity without causing disruption.",
     icon: PhoneIcon,
   },
   {
-    name: "Frequent Status Meetings",
+    name: "Open Communication",
     href: "#",
     description:
       "We believe in regular communication and transparency. That’s why we hold meetings with our clients to keep them informed about the progress of their projects.",
     icon: LifebuoyIcon,
   },
   {
-    name: "User Training",
+    name: "Empowering Users",
     href: "#",
     description:
-      "We make sure to provide guides to learn to adapt to innovation, and documentation to stay informed about new systems and upgrades to renewed methods.",
+      "Providing detailed guides and documentation to ease transition into facing new technology and keep you updated with the latest IT advancements.",
     icon: NewspaperIcon,
   },
 ];
@@ -48,12 +48,13 @@ export default function AboutLast() {
           </div>
           <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-28 lg:px-8">
             <h1 className="text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
-              Why Choose Us
+              Why Choose Us?
             </h1>
             <p className="mt-6 max-w-3xl text-xl text-gray-200">
-              Our commitment for a reliable partnership. Transparent
-              communication and Dedication to excellence for customer
-              satisfaction.
+              We prioritize reliability and partnership in our approach to IT
+              development. Our commitment to transparent communication and
+              dedication to excellence ensures your satisfaction as our valued
+              customer.
             </p>
           </div>
         </FadeIn>
