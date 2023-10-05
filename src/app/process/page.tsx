@@ -26,7 +26,7 @@ const Page = () => {
     <>
       <BackgroundwImage
         heading="The Halfnine Development Lifecycle"
-        description="Here we explain how we leverage technology from problem to solution."
+        description="Here we explain how we leverage technology from problem to solution"
       />
       <div className="overflow-hidden bg-white py-8 sm:py-12">
         <div className="mx-auto max-w-7xl md:px-6 lg:px-8">

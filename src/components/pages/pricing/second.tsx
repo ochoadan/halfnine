@@ -36,7 +36,7 @@ export default function Second() {
           </FadeIn>
           <TagList className="mt-4">
             <TagListItem>Key objectives identification</TagListItem>
-            <TagListItem>Assumptions and risks recognition</TagListItem>
+            <TagListItem>Rapid Application Development</TagListItem>
             {/* <TagListItem>Defining user groups and tasks</TagListItem> */}
             {/* <TagListItem>Essential and non-essential features listing</TagListItem> */}
             <TagListItem>Project cost estimation</TagListItem>
