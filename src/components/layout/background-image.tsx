@@ -4,6 +4,7 @@ const BackgroundwImage = ({ heading, description }: any) => {
   return (
     <div className="relative sm:overflow-hidden bg-gray-100">
       <Image
+        className="select-none"
         src="/img/svg/hero-pattern.svg"
         layout="fill"
         objectFit="cover"

@@ -6,12 +6,18 @@ import {
   RootClientLogoCloud,
   RootDevProcess,
   RootFeatureGrid,
+  RootOffer,
 } from "@/components/pages/root";
 
 const Page = () => {
   return (
     <>
       <RootHero />
+      {/* <div className="bg-gray-100 mt-[4rem] md:mt-[8rem] py-16 md:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <RootOffer />
+        </div>
+      </div> */}
       <div className="bg-gray-50 mt-[4rem] md:mt-[8rem] py-16 md:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <RootStats />

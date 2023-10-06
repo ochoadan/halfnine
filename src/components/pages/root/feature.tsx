@@ -19,7 +19,7 @@ const features = [
   {
     name: "Robust Security",
     description:
-      "Given daily vulnerabilities, updating IT assets, protecting accounts, and guarding users against social engineering is vital. Our developer team is skilled and security-aware, a key factor for any app.",
+      "Given daily vulnerabilities, updating software assets, protecting accounts, and guarding users against social engineering is vital. Our developer team is skilled and security-aware, a key factor for any app.",
     href: "#",
     icon: FaUserLock,
   },

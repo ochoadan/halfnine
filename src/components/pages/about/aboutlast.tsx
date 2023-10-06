@@ -24,7 +24,7 @@ const supportLinks = [
     name: "Empowering Users",
     href: "#",
     description:
-      "Providing detailed guides and documentation to ease transition into facing new technology and keep you updated with the latest IT advancements.",
+      "Providing detailed guides and documentation to ease transition into facing new technology and keep you updated with the latest software advancements.",
     icon: NewspaperIcon,
   },
 ];
@@ -51,10 +51,10 @@ export default function AboutLast() {
               Why Choose Us?
             </h2>
             <p className="mt-6 max-w-3xl text-xl text-gray-200">
-              We prioritize reliability and partnership in our approach to IT
-              development. Our commitment to transparent communication and
-              dedication to excellence ensures your satisfaction as our valued
-              customer.
+              We prioritize reliability and partnership in our approach to
+              software development. Our commitment to transparent communication
+              and dedication to excellence ensures your satisfaction as our
+              valued customer.
             </p>
           </div>
         </FadeIn>

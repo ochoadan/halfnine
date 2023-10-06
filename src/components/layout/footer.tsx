@@ -5,7 +5,7 @@ import { FaLinkedin, FaXTwitter, FaFacebook, FaGithub } from "react-icons/fa6";
 const navigation = {
   main: [
     { name: "About", href: "/about" },
-    { name: "Blog", href: "/blog" },
+    { name: "Contact", href: "/contact" },
     // { name: "Jobs", href: "/careers" },
     // { name: "Press", href: "#" },
     // { name: "Accessibility", href: "#" },

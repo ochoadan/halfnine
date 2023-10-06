@@ -14,9 +14,9 @@ const RootHeading = () => {
       {/* <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-12"> */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-24">
         <div className="text-center">
-          <h1 className="text-3xl md:text-5xl font-bold space-y-2">
-            {`INFORMATION TECHNOLOGY DEVELOPMENT`}
-            <div className="mt-2">{`MADE FOR DIGITAL SUCCESS`}</div>
+          <h1 className="text-3xl md:text-5xl font-bold space-y-2 uppercase">
+            {`Software Consulting And Development`}
+            <div className="mt-2">{`For your Digital Success`}</div>
           </h1>
         </div>
       </div>
