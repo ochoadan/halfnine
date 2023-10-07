@@ -237,7 +237,7 @@ const Contact = () => {
                 </div>
                 {submitted &&
                   (formErrors.name || formErrors.email || formErrors.message ? (
-                    <div className="rounded-md bg-red-50 border-red-200 border-[1px]  px-4 py-3">
+                    <div className="rounded-md bg-red-50 border-red-200 border-[1px] px-4 py-3">
                       <div className="flex">
                         <div className="flex-shrink-0">
                           <XCircleIcon

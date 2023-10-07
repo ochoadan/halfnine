@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 import { Footer, Navbar } from "@/components";
 
 export const metadata: Metadata = {
-  title: "Halfnine - Empowering Digital Success: Software Development Solutions",
+  title:
+    "Halfnine - Empowering Digital Success: Software Development Solutions",
   description:
     "Unlock future potential with our powerful and flexible digital solutions. Experience efficiency, cost-effectiveness, speed, and innovation with us.",
   alternates: {

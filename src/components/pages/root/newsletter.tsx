@@ -1,6 +1,6 @@
 "use client";
 
-import { FadeIn } from "@/components/FadeIn";
+import { FadeIn, FadeInStagger } from "@/components/FadeIn";
 import {
   CalendarDaysIcon,
   CheckCircleIcon,
@@ -49,8 +49,8 @@ function NewsLetter() {
   };
 
   return (
-    <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
-      <div className="max-w-xl lg:max-w-lg">
+    <FadeInStagger className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
+      <FadeIn className="max-w-xl lg:max-w-lg">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
           {subscribed
             ? "Thank you for subscribing!"
@@ -103,7 +103,7 @@ function NewsLetter() {
             )}
           </button>
         </form>
-      </div>
+      </FadeIn>
       <dl className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
         <FadeIn className="flex flex-col items-start">
           <div className="rounded-md bg-black/5 p-2 ring-1 ring-black/10">
@@ -126,7 +126,7 @@ function NewsLetter() {
           </dd>
         </FadeIn>
       </dl>
-    </div>
+    </FadeInStagger>
   );
 }
 
