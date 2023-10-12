@@ -8,7 +8,7 @@ const GlobalCTA = () => {
         Ready to get started?
       </h2>
       <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-700">
-        Let's turn your opportunities and ideas into reality. Together, we can
+        Let&apos;s turn your opportunities and ideas into reality. Together, we can
         create a future that aligns with your vision and aspirations.
       </p>
       <div className="mt-10 flex items-center justify-center gap-x-6">
