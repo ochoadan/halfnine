@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const GlobalCTA = () => {
   return (
-    <FadeIn className="relative isolate overflow-hidden bg-gray-100 px-6 py-16 text-center shadow-md sm:rounded-3xl sm:px-16">
+    <FadeIn className="relative isolate overflow-hidden bg-gray-100 mx-4 lg:mx-0 px-6 py-8 lg:py-16 text-center shadow-md sm:rounded-3xl sm:px-16">
       <h2 className="mx-auto max-w-2xl text-3xl font-bold tracking-tight sm:text-4xl">
         Ready to get started?
       </h2>
