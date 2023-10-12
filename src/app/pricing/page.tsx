@@ -1,5 +1,5 @@
 import BackgroundwImage from "@/components/layout/background-image";
-import CTA from "@/components/pages/pricing/cta";
+import GlobalCTA from "@/components/cta";
 import First from "@/components/pages/pricing/first";
 import Second from "@/components/pages/pricing/second";
 import Third from "@/components/pages/pricing/third";
@@ -45,7 +45,7 @@ const Page = () => {
       </div>
       <div className="overflow-hidden bg-white py-16 sm:py-28">
         <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
-          <CTA />
+          <GlobalCTA />
         </div>
       </div>
     </>
