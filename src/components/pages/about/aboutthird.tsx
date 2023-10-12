@@ -31,9 +31,8 @@ export default function AboutThird() {
             Start using our app today. */}
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            We made Surveyr.io to help others monitor their scheduled Laravel
-            cron jobs. Cron jobs are the backbone of an application,
-            carrying out critical tasks on the backend.
+            Surveyr.io was created to monitor Laravel cron jobs. These cron
+            jobs, critical for backend tasks, are the application’s backbone.
             {/* Yet, often these jobs are hard to monitor
             as they run in the background. We solve this by monitoring them for
             you. */}
