@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Footer, Navbar } from "@/components";
+import { Footer, GoogleAnalytics, Navbar } from "@/components";
 
 export const metadata: Metadata = {
   title:
@@ -20,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <GoogleAnalytics />
         <Navbar />
         <div className="min-height-screen">{children}</div>
         <Footer />
