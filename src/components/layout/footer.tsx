@@ -64,7 +64,7 @@ export default function Example() {
             <FaLinkedin className="h-6 w-6" aria-hidden="true" />
           </Link>
           <Link
-            href="https://x.com/halfnine"
+            href="https://twitter.com/halfnine"
             target="_blank"
             className="text-gray-400 hover:text-black scale-100 hover:scale-{1.02}"
           >
