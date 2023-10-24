@@ -2,7 +2,7 @@
 
 import BackgroundwImage from "@/components/layout/background-image";
 import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/24/outline";
-import { Turnstile } from "@marsidev/react-turnstile";
+// import { Turnstile } from "@marsidev/react-turnstile";
 import clsx from "clsx";
 // import { Metadata } from "next";
 import Image from "next/image";
@@ -39,10 +39,10 @@ const Contact = () => {
   const [messageSuccess, setMessageSuccess] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const [turnstileSolved, setTurnstileSolved] = useState(false);
-  const onTurnstileSolved = (token: any) => {
-    setTurnstileSolved(true);
-  };
+  // const [turnstileSolved, setTurnstileSolved] = useState(false);
+  // const onTurnstileSolved = (token: any) => {
+  //   setTurnstileSolved(true);
+  // };
 
   const emailRegex =
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -289,7 +289,7 @@ const Contact = () => {
                       </div>
                     )
                   ))}
-                {!turnstileSolved && (
+                {/* {!turnstileSolved && (
                   <>
                     <div color={"slate.600"}>
                       Solve the Challenge to Submit the Form
@@ -300,7 +300,7 @@ const Contact = () => {
                     />
                   </>
                 )}
-                {turnstileSolved && (
+                {turnstileSolved && ( */}
                   <button
                     type="submit"
                     disabled={awaitingResponse}
@@ -339,7 +339,7 @@ const Contact = () => {
                     )}
                     {awaitingResponse ? "Submitting..." : "Submit Message"}
                   </button>
-                )}
+                {/* )} */}
               </div>
             </form>
           </div>
