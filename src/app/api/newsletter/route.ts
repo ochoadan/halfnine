@@ -15,7 +15,7 @@ export async function POST(request: Request, response: Response) {
 
   let mailOptions = {
     from: 'contact-form@halfnine.com',
-    to: 'diogamb@gmail.com',
+    to: "dan@halfnine.tech, paris@halfnine.tech",
     subject: `Newsletter Sub ${email}`,
     text: "Sent from: " + email,
     html: `<div>${email}</div>`,
