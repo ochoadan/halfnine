@@ -22,7 +22,8 @@ export default function RootLayout({
       <body>
         <GoogleAnalytics />
         <Navbar />
-        <div className="min-height-screen">{children}</div>
+        {/* <div className="pt-20 lg:pt-24 min-h-screen">{children}</div> */}
+        <div className="pt-24 min-h-screen">{children}</div>
         <Footer />
       </body>
     </html>
