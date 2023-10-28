@@ -87,8 +87,8 @@ export default function Example() {
         : "shadow-md"
         }`}
     >
-      <div className="bg-gray-100 h-6">
-        <div className="hidden lg:flex mx-auto max-w-7xl text-center justify-end px-4 text-xs font-small lg:px-8 gap-x-5 rounded-md py-1">
+      <div className="bg-gray-100 h-6 hidden lg:block">
+        <div className="flex mx-auto max-w-7xl text-center justify-end px-4 text-xs font-small lg:px-8 gap-x-5 rounded-md py-1">
           <Link href="tel:+16606318718" className="hover:text-blue-800">
             🇺🇸 +1 (660) 631-8718
           </Link>
