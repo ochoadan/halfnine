@@ -2,7 +2,7 @@ const RootHeading = () => {
   return (
     <div className="relative">
       <img
-        className="absolute -z-10 select-none hidden md:block"
+        className="absolute -z-10 select-none hidden lg:block"
         // className="absolute opacity-[0.1] -z-10"
         src="/img/index/indxbg.png"
         style={{

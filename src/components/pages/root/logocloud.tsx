@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function RootClientLogoCloud() {
   return (
     <FadeInStagger>
-      <FadeIn className="mb-16 flex justify-center">
+      <FadeIn className="mb-10 flex justify-center">
         <p className="relative rounded-full bg-white px-4 py-1.5 text-sm leading-6 text-gray-600 ring-1 ring-inset ring-gray-900/10">
           Join over 20+ Businesses improving with us.
         </p>
