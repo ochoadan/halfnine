@@ -18,11 +18,12 @@ import {
   PlayCircleIcon,
   RectangleGroupIcon,
 } from "@heroicons/react/20/solid";
-import { BiEnvelope } from "react-icons/bi";
+import { HiOutlineEnvelope } from "react-icons/hi2";
 import { PiPhone } from "react-icons/pi";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const products = [
   {
@@ -89,12 +90,18 @@ export default function Example() {
     >
       <div className="bg-stone-50 h-6 hidden lg:block">
         <div className="flex mx-auto max-w-7xl text-center justify-end px-4 text-xs font-small lg:px-8 gap-x-5 rounded-md py-1">
-          <Link href="tel:+16606318718" className="hover:text-blue-800">
-            🇺🇸 +1 (660) 631-8718
+          <Link href="tel:+16606318718" className="hover:text-blue-800 inline-flex gap-x-1.5">
+            <Image src='/img/en.svg' width={16} height={16} className="" alt='' aria-hidden="true" />
+            <span className="leading-tight">
+              +1 (660) 631-8718
+            </span>
+            {/* +1 (660) 631-8718 */}
           </Link>
-          <Link href="mailto:contact@halfnine.com" className="hover:text-blue-800 inline-flex">
-            <BiEnvelope className="h-4 w-4 mr-1 text-gray-800" aria-hidden="true" />
-            contact@halfnine.com
+          <Link href="mailto:contact@halfnine.com" className="hover:text-blue-800 inline-flex gap-x-1.5">
+            <HiOutlineEnvelope className="h-4 w-4 text-gray-800" aria-hidden="true" />
+            <span className="leading-tight">
+              contact@halfnine.com
+            </span>
           </Link>
         </div>
       </div>
@@ -114,18 +121,12 @@ export default function Example() {
           {/* <Link href="#" className="-m-1.5 p-1.5">
  <span className="sr-only">Your Company</span>
  <Logo className="h-8 w-auto" />
- </Link> */}
+</Link> */}
         </div>
-
         <div className="flex lg:hidden gap-x-5">
-          <Link href="tel:+16606318718">
-            <button
-              type="button"
-              className="hidden md:inline-flex mr-6 items-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 hover:text-blue-600"
-            >
-              {/* <CheckCircleIcon className="-ml-0.5 h-5 w-5" aria-hidden="true" /> */}
-              🇺🇸 +1 (660) 631-8718
-            </button>
+          <Link type="button" href="tel:+16606318718" className="hidden md:inline-flex items-center gap-x-1.5 rounded-md px-3 py-2 text-xs font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 hover:text-blue-600">
+            <Image src='/img/en.svg' width={20} height={20} className="-ml-0.5" alt='' aria-hidden="true" />
+            +1 (660) 631-8718
             <PiPhone className="h-6 w-6 flex md:hidden hover:text-blue-800" />
           </Link>
           <button
