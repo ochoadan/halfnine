@@ -22,8 +22,8 @@ export default function RootLayout({
       <body>
         <GoogleAnalytics />
         <Navbar />
-        {/* <div className="pt-20 lg:pt-24 min-h-screen">{children}</div> */}
-        <div className="pt-24 min-h-screen">{children}</div>
+        <div className="pt-[64px] lg:pt-[92px] min-h-screen">{children}</div>
+        {/* <div className="pt-24 min-h-screen">{children}</div> */}
         <Footer />
       </body>
     </html>

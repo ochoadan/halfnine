@@ -87,7 +87,7 @@ export default function Example() {
         : "shadow-md"
         }`}
     >
-      <div className="bg-gray-100 h-6 hidden lg:block">
+      <div className="bg-stone-50 h-6 hidden lg:block">
         <div className="flex mx-auto max-w-7xl text-center justify-end px-4 text-xs font-small lg:px-8 gap-x-5 rounded-md py-1">
           <Link href="tel:+16606318718" className="hover:text-blue-800">
             🇺🇸 +1 (660) 631-8718
@@ -117,7 +117,7 @@ export default function Example() {
  </Link> */}
         </div>
 
-        <div className="flex lg:hidden">
+        <div className="flex lg:hidden gap-x-5">
           <Link href="tel:+16606318718">
             <button
               type="button"
@@ -126,7 +126,7 @@ export default function Example() {
               {/* <CheckCircleIcon className="-ml-0.5 h-5 w-5" aria-hidden="true" /> */}
               🇺🇸 +1 (660) 631-8718
             </button>
-            <PiPhone className="h-6 w-6 mr-5 flex md:hidden hover:text-blue-800" />
+            <PiPhone className="h-6 w-6 flex md:hidden hover:text-blue-800" />
           </Link>
           <button
             type="button"
