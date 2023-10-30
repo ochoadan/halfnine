@@ -22,7 +22,7 @@ const Page = () => {
     <>
       <BackgroundwImage
         heading="About Halfnine"
-        description="Our Highest Commitment is Customer Satisfaction"
+        description="Our Highest Commitment is Our Customer's Success"
         // description="Committed to driving change through exceptional experiences"
       />
       {/* <div className="overflow-hidden bg-white py-16 sm:py-28"> */}
