@@ -3,22 +3,22 @@ import { FadeIn, FadeInStagger } from "@/components/FadeIn";
 const stats = [
   {
     id: 1,
-    name: "Our expertise effectively minimizes trial and error processes.",
+    name: "Our experience effectively minimizes trial and error processes.",
     value: "Efficiency",
   },
   {
     id: 2,
-    name: "We utilize offshore models for competitive pricing",
+    name: "We leverage offshore partnerships for competitive pricing",
     value: "Cost-effectiveness",
   },
   {
     id: 3,
-    name: "Our Agile methodologies enable swift and timely updates.",
+    name: "Our preffered methodologies enable swift and timely updates.",
     value: "Speed",
   },
   {
     id: 4,
-    name: "We incorporate cutting-edge technologies constantly to stay ahead",
+    name: "We incorporate proven and new technologies constantly to stay ahead",
     value: "Innovation",
   },
 ];
