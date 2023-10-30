@@ -1,7 +1,8 @@
+import GlobalContactForm from "@/components/pages/GlobalContactForm";
+import GlobalFAQ from "@/components/pages/GlobalFAQ";
 import {
   RootHero,
   RootStats,
-  RootNewsLetter,
   RootFeature,
   RootClientLogoCloud,
   RootDevProcess,
@@ -50,12 +51,12 @@ const Page = () => {
       </div>
       <div className="bg-gray-50 py-16 md:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <RootFrequentlyAsked />
+          <GlobalFAQ />
         </div>
       </div>
       <div className="bg-white py-16 md:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <RootNewsLetter />
+          <GlobalContactForm />
         </div>
       </div>
       {/* <div className="bg-gray-50 py-16 md:py-28">

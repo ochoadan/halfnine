@@ -50,27 +50,18 @@ function Section({
         faster
         className="lg:flex lg:items-center lg:justify-end lg:gap-x-8 lg:group-even/section:justify-start xl:gap-x-20"
       >
-        <div className="lg:flex justify-center hidden">
-          <FadeIn className="w-[33.75rem] flex-none lg:w-[35rem]">
+        <FadeIn className="lg:flex justify-center hidden">
+          <div className="w-[33.75rem] flex-none lg:w-[35rem]">
             <StylizedImage
               {...image}
               sizes="(min-width: 1024px) 41rem, 31rem"
               className="justify-center lg:justify-end lg:group-even/section:justify-start"
             />
-          </FadeIn>
-        </div>
-        <div className="mt-12 lg:mt-0 lg:w-[37rem] lg:flex-none lg:group-even/section:order-first">
-          {/* <FadeIn>
-            <div
-            className="font-display text-base font-semibold before:text-neutral-300 before:content-['/_'] after:text-neutral-950 after:content-[counter(section,decimal-leading-zero)]"
-            aria-hidden="true"
-            />
-            <h2 className="mt-2 font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
-            {title}
-          </h2> */}
-          <div className="mt-6">{children}</div>
-          {/* </FadeIn> */}
-        </div>
+          </div>
+        </FadeIn>
+        <FadeIn className="mt-12 lg:mt-0 lg:w-[37rem] lg:flex-none lg:group-even/section:order-first">
+          {children}
+        </FadeIn>
       </FadeInStagger>
     </Container>
   );
@@ -80,7 +71,7 @@ export function Discover() {
   return (
     <Section title="Discover" image={{ src: imageDiscover }}>
       {/* <div className="space-y-6 text-base text-neutral-600"> */}
-      <FadeIn className="text-base text-neutral-600">
+      <div className="text-base text-neutral-600">
         <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Discover
           <hr className="border-sky-600 opacity-90 border-b-[2px] w-12 my-2" />
@@ -97,10 +88,10 @@ export function Discover() {
           anticipate and plan for various scenarios, ensuring a smooth
           development process from start to finish.
         </p>
-      </FadeIn>
-      <FadeIn className="mt-12 font-display text-base font-semibold text-neutral-950">
-        <h3>Included in this phase</h3>
-      </FadeIn>
+      </div>
+      <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
+        Included in this phase
+      </h3>
       <TagList className="mt-4">
         {/* <TagListItem>Feasibility studies</TagListItem>
         <TagListItem>In-depth questionnaires</TagListItem>
@@ -120,7 +111,7 @@ export function Discover() {
 export function Define() {
   return (
     <Section title="Build" image={{ src: imageDefine, shape: 1 }}>
-      <FadeIn className="text-base text-neutral-600">
+      <div className="text-base text-neutral-600">
         <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Define
           <hr className="border-sky-600 opacity-90 border-b-[2px] w-12 my-2" />
@@ -138,10 +129,10 @@ export function Define() {
           that our proposed solutions align with your current systems and
           processes.
         </p>
-      </FadeIn>
-      <FadeIn className="mt-12 font-display text-base font-semibold text-neutral-950">
-        <h3>Included in this phase</h3>
-      </FadeIn>
+      </div>
+      <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
+        Included in this phase
+      </h3>
       <TagList className="mt-4">
         {/* <TagListItem>Compliance Assurance</TagListItem>
         <TagListItem>Methodology Selection</TagListItem>
@@ -162,7 +153,7 @@ export function Define() {
 export function Develop() {
   return (
     <Section title="Deliver" image={{ src: imageDevelop, shape: 2 }}>
-      <FadeIn className="text-base text-neutral-600">
+      <div className="text-base text-neutral-600">
         <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Develop
           <hr className="border-sky-600 opacity-90 border-b-[2px] w-12 my-2" />
@@ -180,10 +171,10 @@ export function Develop() {
           existing products, enhancements are integrated carefully to preserve
           the integrity of the software.
         </p>
-      </FadeIn>
-      <FadeIn className="mt-12 font-display text-base font-semibold text-neutral-950">
-        <h3>Included in this phase</h3>
-      </FadeIn>
+      </div>
+      <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
+        Included in this phase
+      </h3>
       <TagList className="mt-4">
         {/* <TagListItem>UI/UX Design</TagListItem>
         <TagListItem>Software Development</TagListItem>
@@ -202,7 +193,7 @@ export function Develop() {
 export function Deliver() {
   return (
     <Section title="Deliver" image={{ src: imageDeliver }}>
-      <FadeIn className="text-base text-neutral-600">
+      <div className="text-base text-neutral-600">
         <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Deliver
           <hr className="border-sky-600 opacity-90 border-b-[2px] w-12 my-2" />
@@ -220,10 +211,10 @@ export function Deliver() {
           integration of new features with minimal disruption to your
           operations.
         </p>
-      </FadeIn>
-      <FadeIn className="mt-12 font-display text-base font-semibold text-neutral-950">
-        <h3>Included in this phase</h3>
-      </FadeIn>
+      </div>
+      <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
+        Included in this phase
+      </h3>
       <TagList className="mt-4">
         {/* <TagListItem>State Management</TagListItem> */}
         <TagListItem>Final testing</TagListItem>

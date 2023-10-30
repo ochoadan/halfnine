@@ -8,9 +8,9 @@ import {
   Deliver,
 } from "@/components/pages/process/01";
 import LifeCycle from "@/components/pages/process/lifecycle";
-import Faq from "@/components/pages/process/faq";
 import { Metadata } from "next";
-import GlobalCTA from "@/components/cta";
+import GlobalFAQ from "@/components/pages/GlobalFAQ";
+import GlobalContactForm from "@/components/pages/GlobalContactForm";
 
 export const metadata: Metadata = {
   title:
@@ -56,15 +56,14 @@ const Page = () => {
           <Deliver />
         </div>
       </div>
-
-      <div className="bg-gray-100">
+      {/* <div className="bg-gray-100">
         <div className="mx-auto max-w-7xl px-6 py-20 sm:py-24 lg:px-8 lg:py-28">
-          <Faq />
+          <GlobalFAQ />
         </div>
-      </div>
-      <div className="overflow-hidden bg-white py-16 sm:py-28">
+      </div> */}
+      <div className="overflow-hidden bg-gray-100 py-16 sm:py-28">
         <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
-          <GlobalCTA />
+          <GlobalContactForm />
         </div>
       </div>
     </>

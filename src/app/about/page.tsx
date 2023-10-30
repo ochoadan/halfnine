@@ -6,6 +6,7 @@ import {
   AboutThird,
   AboutLast,
 } from "@/components/pages/about";
+import GlobalContactForm from "@/components/pages/GlobalContactForm";
 
 export const metadata: Metadata = {
   title: "Halfnine - The Software Developers & Designers at Halfnine",
@@ -42,6 +43,11 @@ const Page = () => {
         </div>
       </div>
       <AboutLast />
+      <div className="overflow-hidden bg-white py-16 sm:py-28">
+        <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
+          <GlobalContactForm />
+        </div>
+      </div>
     </>
   );
 };

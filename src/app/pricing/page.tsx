@@ -1,10 +1,10 @@
 import BackgroundwImage from "@/components/layout/background-image";
-import GlobalCTA from "@/components/cta";
 import First from "@/components/pages/pricing/first";
 import Second from "@/components/pages/pricing/second";
 import Third from "@/components/pages/pricing/third";
 import Fourth from "@/components/pages/pricing/fourth";
 import { Metadata } from "next";
+import GlobalContactForm from "@/components/pages/GlobalContactForm";
 
 export const metadata: Metadata = {
   title: "Halfnine - Pricing: How much does it cost to develop an app?",
@@ -45,7 +45,7 @@ const Page = () => {
       </div>
       <div className="overflow-hidden bg-white py-16 sm:py-28">
         <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
-          <GlobalCTA />
+          <GlobalContactForm />
         </div>
       </div>
     </>

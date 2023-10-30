@@ -13,7 +13,7 @@ import { FaRegBuilding, FaRegEnvelope, FaRegUser } from "react-icons/fa6";
 
 import clsx from "clsx";
 
-function NewsLetter() {
+function GlobalContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -317,4 +317,4 @@ function NewsLetter() {
   );
 }
 
-export default NewsLetter;
+export default GlobalContactForm;
