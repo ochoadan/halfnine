@@ -101,7 +101,7 @@ function NewsLetter() {
   };
 
   return (
-    <FadeIn>
+    <FadeIn className="bg-gray-50 rounded-xl p-5 lg:p-10 shadow-md">
       <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
         Your Success is Our Priority
         <hr className="border-sky-600 opacity-90 border-b-[2px] w-24 my-2" />

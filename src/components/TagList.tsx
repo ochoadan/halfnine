@@ -9,11 +9,9 @@ export function TagList({
   className?: string;
 }) {
   return (
-    <FadeIn>
-      <ul role="list" className={clsx(className, "flex flex-wrap gap-4")}>
-        {children}
-      </ul>
-    </FadeIn>
+    <ul role="list" className={clsx(className, "flex flex-wrap gap-4")}>
+      {children}
+    </ul>
   );
 }
 

@@ -24,9 +24,11 @@ const RootHeading = () => {
       <hr className="border-sky-600 opacity-90 border-b-[3px] mx-auto w-40 my-4" />
       <div className="max-w-5xl mx-auto text-center">
         <p className="px-4 lg:px-24 my-4 text-lg md:text-xl text-gray-700">
-          Our digital solutions are powerful and flexible, meeting the demands
+          {/* Our digital solutions are powerful and flexible, meeting the demands
           of the present while unlocking future potential for countless users
-          and businesses.
+          and businesses. */}
+          We empower businesses to thrive by providing flexible and scalable
+          solutions that meet the needs of the present and the future.
         </p>
       </div>
     </div>
