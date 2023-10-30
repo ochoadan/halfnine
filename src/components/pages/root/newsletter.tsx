@@ -101,8 +101,7 @@ function NewsLetter() {
   };
 
   return (
-    <>
-      {/* <FadeIn className="mx-auto max-w-2xl lg:mx-0"> */}
+    <FadeIn>
       <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
         Your Success is Our Priority
         <hr className="border-sky-600 opacity-90 border-b-[2px] w-24 my-2" />
@@ -314,7 +313,7 @@ function NewsLetter() {
           {/* )} */}
         </div>
       </form>
-    </>
+    </FadeIn>
   );
 }
 
