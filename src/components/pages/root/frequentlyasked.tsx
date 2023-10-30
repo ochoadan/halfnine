@@ -1,5 +1,6 @@
 "use client";
 
+import { FadeIn } from "@/components/FadeIn";
 import { Disclosure } from "@headlessui/react";
 import { MinusSmallIcon, PlusSmallIcon } from "@heroicons/react/24/outline";
 
@@ -29,8 +30,7 @@ const faqs = [
 const RootFrequentlyAsked = () => {
   return (
     <>
-      {/* <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40"> */}
-      <div className="mx-auto max-w-5xl divide-y divide-gray-900/10">
+      <FadeIn className="mx-auto max-w-5xl divide-y divide-gray-900/10">
         <h2 className="text-2xl font-bold leading-10 tracking-tight text-gray-900">
           Frequently asked questions
         </h2>
@@ -69,7 +69,7 @@ const RootFrequentlyAsked = () => {
             </Disclosure>
           ))}
         </dl>
-      </div>
+      </FadeIn>
       {/* </div> */}
     </>
   );
