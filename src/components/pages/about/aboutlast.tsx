@@ -11,21 +11,21 @@ const supportLinks = [
     name: "Streamlined Workflows",
     href: "#",
     description:
-      "We focus on efficient workflows, designing solutions that integrate with your processes, boosting productivity without causing disruption.",
+      "With an emphasis on streamlining workflows, We create solutions that integrate with your processes, to boost productivity without disruption.",
     icon: PhoneIcon,
   },
   {
     name: "Open Communication",
     href: "#",
     description:
-      "We believe in regular communication and transparency. That’s why we hold meetings with our clients to keep them informed about the progress of their projects.",
+      "We prioritize regular communication and transparency. This is why we hold regular meetings to keep clients informed on the progress of their projects.",
     icon: LifebuoyIcon,
   },
   {
     name: "Empowering Users",
     href: "#",
     description:
-      "Providing detailed guides and documentation to ease transition into facing new technology and keep you updated with the latest software advancements.",
+      "Supporting user's transition to new technologies with clear and concise guides, documentation, and regular updates on the latest software advancements",
     icon: NewspaperIcon,
   },
 ];

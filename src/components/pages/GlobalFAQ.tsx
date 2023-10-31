@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { FadeIn, FadeInStagger } from "@/components/FadeIn";
 import { Disclosure } from "@headlessui/react";
@@ -46,47 +46,49 @@ const GlobalFAQ = () => {
       </FadeIn>
       <dl className="mt-10 divide-y divide-gray-900/10">
         {faqs.map((faq) => (
-          <FadeIn key={faq.question}>
-            <Disclosure as="div">
-              {({ open }) => (
-                <>
-                  <dt>
-                    <Disclosure.Button
-                      className={clsx(
-                        "flex w-full items-start justify-between text-left text-gray-700 hover:text-black",
-                        {
-                          "pt-6 pb-4": open,
-                          "py-6": !open,
-                        }
-                      )}
-                    >
-                      <span className="text-base font-semibold leading-7">
-                        {faq.question}
-                      </span>
-                      <span className="ml-6 flex h-7 items-center">
-                        {open ? (
-                          <MinusSmallIcon
-                            className="h-6 w-6"
-                            aria-hidden="true"
-                          />
-                        ) : (
-                          <PlusSmallIcon
-                            className="h-6 w-6"
-                            aria-hidden="true"
-                          />
+          <dl key={faq.question}>
+            <FadeIn>
+              <Disclosure as="div">
+                {({ open }) => (
+                  <>
+                    <dt>
+                      <Disclosure.Button
+                        className={clsx(
+                          "flex w-full items-start justify-between text-left text-gray-700 hover:text-black",
+                          {
+                            "pt-6 pb-4": open,
+                            "py-6": !open,
+                          }
                         )}
-                      </span>
-                    </Disclosure.Button>
-                  </dt>
-                  <Disclosure.Panel as="dd" className="pr-12 mb-6">
-                    <p className="text-base leading-7 text-gray-600">
-                      {faq.answer}
-                    </p>
-                  </Disclosure.Panel>
-                </>
-              )}
-            </Disclosure>
-          </FadeIn>
+                      >
+                        <span className="text-base font-semibold leading-7">
+                          {faq.question}
+                        </span>
+                        <span className="ml-6 flex h-7 items-center">
+                          {open ? (
+                            <MinusSmallIcon
+                              className="h-6 w-6"
+                              aria-hidden="true"
+                            />
+                          ) : (
+                            <PlusSmallIcon
+                              className="h-6 w-6"
+                              aria-hidden="true"
+                            />
+                          )}
+                        </span>
+                      </Disclosure.Button>
+                    </dt>
+                    <Disclosure.Panel as="dd" className="pr-12 mb-6">
+                      <p className="text-base leading-7 text-gray-600">
+                        {faq.answer}
+                      </p>
+                    </Disclosure.Panel>
+                  </>
+                )}
+              </Disclosure>
+            </FadeIn>
+          </dl>
         ))}
       </dl>
     </FadeInStagger>
