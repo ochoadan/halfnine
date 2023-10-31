@@ -4,6 +4,7 @@ const RootHeading = () => {
       <img
         className="absolute -z-10 select-none hidden lg:block"
         // className="absolute opacity-[0.1] -z-10"
+        alt="Background"
         src="/img/index/indxbg.png"
         style={{
           // transition: "opacity 1.5s",

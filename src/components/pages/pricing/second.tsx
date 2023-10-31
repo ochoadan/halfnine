@@ -1,5 +1,6 @@
 import { FadeIn, FadeInStagger } from "@/components/FadeIn";
 import { TagList, TagListItem } from "@/components/TagList";
+import Image from "next/image";
 
 export default function Second() {
   return (
@@ -13,7 +14,11 @@ export default function Second() {
           Cost: $15,000+
         </p>
         <p className="mt-4 text-gray-500">
-          Our service is tailored to meet the unique requirements of your
+          We help you define your project's unique goals, assess feasibility,
+          and create a plan to achieve the best possible user experience. We'll
+          work with you to distinguish between essential and non-essential
+          features, and provide a project cost estimate.
+          {/* Our service is tailored to meet the unique requirements of your
           project. We assist you in defining your problem statement, pinpointing
           crucial objectives, and assessing feasibility by designing specific
           tasks that provide clarity on the necessary steps.
@@ -21,7 +26,7 @@ export default function Second() {
           <br />
           Together, we strategize to create the best possible user experience,
           distinguishing between essential and non-essential features.
-          Additionally, we offer a project cost estimate.
+          Additionally, we offer a project cost estimate. */}
         </p>
         <h3 className="mt-8 font-display text-base font-semibold text-neutral-950">
           Typical Deliverables include:
@@ -37,10 +42,11 @@ export default function Second() {
         </TagList>
       </FadeIn>
       <FadeIn className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg bg-gray-100">
-        <img
+        <Image
           src="/img/pricing/pexels-vlada-karpovich-7433822-min.jpg"
           alt=""
           className="object-cover object-center"
+          fill
         />
       </FadeIn>
     </FadeInStagger>

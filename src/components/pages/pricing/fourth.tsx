@@ -1,4 +1,5 @@
 import { FadeIn, FadeInStagger } from "@/components/FadeIn";
+import Image from "next/image";
 
 export default function Fourth() {
   return (
@@ -27,10 +28,11 @@ export default function Fourth() {
         </p>
       </FadeIn>
       <FadeIn className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg bg-gray-100">
-        <img
+        <Image
           src="/img/pricing/pexels-mart-production-7709085-min.jpg"
           alt=""
           className="object-cover object-center"
+          fill
         />
       </FadeIn>
     </FadeInStagger>

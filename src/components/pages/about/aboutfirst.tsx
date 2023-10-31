@@ -1,4 +1,5 @@
 import { FadeIn, FadeInStagger } from "@/components/FadeIn";
+import Image from "next/image";
 
 export default function AboutFirst() {
   return (
@@ -24,10 +25,11 @@ export default function AboutFirst() {
           </p>
         </FadeIn>
         <FadeIn className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg bg-gray-100">
-          <img
+          <Image
             src="/img/about/pexels-mizuno-k-12902918-min.jpg"
             alt=""
             className="object-cover object-center"
+            fill
           />
         </FadeIn>
       </FadeInStagger>

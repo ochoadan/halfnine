@@ -4,11 +4,10 @@ const BackgroundwImage = ({ heading, description }: any) => {
   return (
     <div className="relative sm:overflow-hidden bg-gray-100">
       <Image
-        className="select-none"
+        className="select-none object-cover"
         src="/img/svg/hero-pattern.svg"
-        layout="fill"
-        objectFit="cover"
-        alt="Background pattern"
+        fill
+        alt="Background"
         style={{
           opacity: 0,
           animation: "pointonefadein 1.5s forwards",

@@ -79,7 +79,7 @@ export default function Example() {
   const isShadowPage = pathname === "/";
   return (
     <header
-      className={`isolate w-full fixed bg-white z-50  ${
+      className={`isolate w-full fixed bg-white z-50 shadow-stone-200 ${
         isShadowPage || mobileMenuOpen
           ? scrollPosition > 20
             ? "shadow-md"

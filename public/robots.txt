@@ -1,5 +1,7 @@
 User-agent: *
 Disallow: /contact
+Disallow: /img/index/indxbg.png
+Disallow: /img/svg/hero-pattern.svg
 
 # Begin block Bad-Robots from robots.txt
 User-agent: asterias
