@@ -13,7 +13,7 @@ const stats = [
   },
   {
     id: 3,
-    name: "Our preffered methodologies enable swift and timely updates.",
+    name: "Our preferred methodologies enable swift and timely updates.",
     value: "Speed",
   },
   {
