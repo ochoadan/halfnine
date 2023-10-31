@@ -14,8 +14,8 @@ export default function Second() {
           Cost: $15,000+
         </p>
         <p className="mt-4 text-gray-500">
-          We help you define your project's unique goals, assess feasibility,
-          and create a plan to achieve the best possible user experience. We'll
+          We help you define your project&apos;s unique goals, assess feasibility,
+          and create a plan to achieve the best possible user experience. We&apos;ll
           work with you to distinguish between essential and non-essential
           features, and provide a project cost estimate.
           {/* Our service is tailored to meet the unique requirements of your
