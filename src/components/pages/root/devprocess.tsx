@@ -4,7 +4,7 @@ export default function DevProcess() {
   return (
     <>
       <FadeInStagger>
-        <FadeIn className="mx-auto max-w-2xl lg:mx-0">
+        <FadeIn className="mx-auto lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Development Process and Costs
             <hr className="border-sky-600 opacity-90 border-b-[2px] w-24 my-2" />
@@ -16,7 +16,7 @@ export default function DevProcess() {
             software applications, or enhancements to existing platforms.
           </p>
         </FadeIn>
-        <div className="mx-auto mt-16 flex max-w-2xl flex-col gap-8 lg:mx-0 lg:mt-20 lg:max-w-none lg:flex-row lg:items-end">
+        <div className="mx-auto mt-16 flex flex-col gap-8 lg:mx-0 lg:mt-20 lg:flex-row lg:items-end">
           <FadeIn className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-gray-100 p-8 sm:w-3/4 sm:max-w-md sm:flex-row-reverse sm:items-end lg:w-72 lg:max-w-none lg:flex-none lg:flex-col lg:items-start">
             <p className="flex-none text-3xl font-bold tracking-tight text-gray-900">
               $15k+
@@ -26,8 +26,8 @@ export default function DevProcess() {
                 Discovery
               </p>
               <p className="mt-2 text-base leading-7 text-gray-600">
-                This involves gathering essentials, crafting designs, and
-                developing prototypes
+                Gathering the essential elements, crafting designs, and building
+                prototypes
               </p>
             </div>
           </FadeIn>
@@ -40,8 +40,8 @@ export default function DevProcess() {
                 Development
               </p>
               <p className="mt-2 text-base leading-7 text-gray-400">
-                This involves developing reliable technology, ready for
-                deployment post rigorous testing
+                Designing technology that is both reliable and ready for
+                deployment after testing
               </p>
             </div>
           </FadeIn>
@@ -54,8 +54,8 @@ export default function DevProcess() {
                 Maintenance
               </p>
               <p className="mt-2 text-base leading-7 text-sky-200">
-                Our software is dynamic, able to evolve with regular design
-                updates, or new features.
+                Our software is dynamic and adaptable, with regular updates and
+                new features
               </p>
             </div>
           </FadeIn>

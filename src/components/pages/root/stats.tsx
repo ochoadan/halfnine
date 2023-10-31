@@ -24,7 +24,7 @@ const stats = [
 ];
 
 const StatsComponent = () => (
-  <FadeInStagger faster className="mx-auto max-w-2xl lg:max-w-none">
+  <FadeInStagger faster className="mx-auto">
     <FadeIn className="text-center">
       <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
         Benefits from Our Development Services

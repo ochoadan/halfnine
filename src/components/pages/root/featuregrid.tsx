@@ -36,7 +36,7 @@ const features = [
 export default function FeatureGrid() {
   return (
     <FadeInStagger>
-      <FadeIn className="mx-auto max-w-2xl lg:text-center">
+      <FadeIn className="mx-auto lg:text-center">
         <h2 className=" text-base font-semibold leading-7 text-sky-600">
           Our Driving Forces
         </h2>
@@ -49,8 +49,8 @@ export default function FeatureGrid() {
           efficiency, and designing impactful solutions.
         </p>
       </FadeIn>
-      <div className="mx-auto mt-12 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-7xl">
-        <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+      <div className="mx-auto mt-12 max-w-3xl sm:mt-20 lg:mt-24 lg:max-w-7xl">
+        <dl className="grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
           {features.map((feature) => (
             <FadeIn key={feature.name} className="relative pl-16">
               <dt className="text-base font-semibold leading-7 text-gray-900">

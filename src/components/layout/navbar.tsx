@@ -1,65 +1,16 @@
 "use client";
 
 import { Logo } from "@/components";
-import { Fragment, useState } from "react";
+import { useState } from "react";
 
-import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
-import {
-  Bars3Icon,
-  ChartPieIcon,
-  CheckCircleIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
-import {
-  PhoneIcon,
-  PlayCircleIcon,
-  RectangleGroupIcon,
-} from "@heroicons/react/20/solid";
+import { Dialog } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import { PiPhone } from "react-icons/pi";
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 import Image from "next/image";
-
-const products = [
-  {
-    name: "Analytics",
-    description: "Get a better understanding where your traffic is coming from",
-    href: "#",
-    icon: ChartPieIcon,
-  },
-  {
-    name: "Engagement",
-    description: "Speak directly to your customers with our engagement tool",
-    href: "#",
-    icon: CursorArrowRaysIcon,
-  },
-  {
-    name: "Security",
-    description: "Your customers’ data will be safe and secure",
-    href: "#",
-    icon: FingerPrintIcon,
-  },
-  {
-    name: "Integrations",
-    description: "Your customers’ data will be safe and secure",
-    href: "#",
-    icon: SquaresPlusIcon,
-  },
-];
-const callsToAction = [
-  { name: "Watch demo", href: "#", icon: PlayCircleIcon },
-  { name: "Contact sales", href: "#", icon: PhoneIcon },
-  { name: "View all products", href: "#", icon: RectangleGroupIcon },
-];
-
-function classNames(...classes: any) {
-  return classes.filter(Boolean).join(" ");
-}
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -76,11 +27,10 @@ export default function Example() {
   const pathname = usePathname();
 
   const isRootPage = pathname === "/";
-  const isShadowPage = pathname === "/";
   return (
     <header
-      className={`isolate w-full fixed bg-white z-50 shadow-stone-200 ${
-        isShadowPage || mobileMenuOpen
+      className={`isolate w-full fixed filter bg-white z-[100] h-[64px] lg:h-[92px] ${
+        isRootPage || mobileMenuOpen
           ? scrollPosition > 20
             ? "shadow-md"
             : ""
@@ -116,7 +66,7 @@ export default function Example() {
         </div>
       </div>
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8 z-[51]"
+        className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">

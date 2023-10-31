@@ -1,12 +1,12 @@
-import "./globals.css";
-import type { Metadata } from "next";
-import { Footer, GoogleAnalytics, Navbar } from "@/components";
+import "./globals.css"
+import type { Metadata } from "next"
+import { Footer, GoogleAnalytics, Navbar } from "@/components"
 
 export const metadata: Metadata = {
   title:
-    "Halfnine - Empowering Digital Success: Software Development Solutions",
+    "Software Development Solutions - Halfnine",
   description:
-    "Unlock future potential with our powerful and flexible digital solutions. Experience efficiency, cost-effectiveness, speed, and innovation with us.",
+    "Unlock future potential with our digital solutions. Experience efficiency, cost-effectiveness, speed, and innovation with us.",
   alternates: {
     canonical: "https://www.halfnine.com",
   },

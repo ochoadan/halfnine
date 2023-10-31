@@ -16,9 +16,6 @@ const Page = () => {
   return (
     <>
       <RootHero />
-      <div className="max-w-7xl py-16 md:py-20 mx-auto px-6 lg:px-8">
-        <RootClientLogoCloud />
-      </div>
       {/* <div className="bg-gray-50 mt-[2rem] md:mt-[6rem] py-16 md:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <RootOffering />
