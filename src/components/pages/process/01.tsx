@@ -122,7 +122,7 @@ export function Define() {
           <hr className="border-sky-600 opacity-90 border-b-[2px] w-12 my-2" />
         </h2>
         <p className="mt-6 text-md leading-7 text-gray-600">
-          We collaborate closely with you to understand your software product's
+          We collaborate closely with you to understand your software product&apos;s
           unique requirements and objectives, including the core and non-core
           features that will drive its success. We then develop a comprehensive
           project plan that outlines the resources, timeline, and costs required
@@ -177,7 +177,7 @@ export function Develop() {
           features are established, we move on to non-core features. Throughout
           the process, we rigorously test the software to ensure its reliability
           and performance. For existing products, we carefully integrate
-          enhancements to preserve the software's integrity.
+          enhancements to preserve the software&apos;s integrity.
           {/* We transform your vision into reality. Our team of experts begins by
           constructing a robust architecture for your software product. We
           prioritize core features and develop them first, ensuring they
