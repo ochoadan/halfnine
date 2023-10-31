@@ -4,7 +4,7 @@
 // module.exports = nextConfig
 module.exports = {
   images: {
-    domains: ["tailwindui.com"],
+    domains: ["tailwindui.com", "images.unsplash.com"],
     dangerouslyAllowSVG: true,
   },
 };

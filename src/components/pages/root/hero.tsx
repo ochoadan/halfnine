@@ -28,7 +28,7 @@ const RootHeading = () => {
           of the present while unlocking future potential for countless users
           and businesses. */}
           We empower businesses to thrive by providing flexible and scalable
-          solutions that meet the needs of the present and the future.
+          solutions that meet their needs of the present and the future.
         </p>
       </div>
     </div>

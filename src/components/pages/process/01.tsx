@@ -77,7 +77,12 @@ export function Discover() {
           <hr className="border-sky-600 opacity-90 border-b-[2px] w-12 my-2" />
         </h2>
         <p className="mt-6 text-md leading-7 text-gray-600">
-          Initiate the journey by understanding your vision and requirements. We
+          We start by understanding your vision and requirements. Conducting
+          comprehensive research to ensure that our development strategy aligns
+          with your business goals and meets the needs of your users and the
+          market. We also identify potential challenges and opportunities, so we
+          can plan ahead and ensure a smooth development process.
+          {/* Initiate the journey by understanding your vision and requirements. We
           conduct comprehensive research to understand the market trends, user
           needs, and the competitive landscape. This helps us to align our
           development strategy with your business goals.
@@ -86,7 +91,7 @@ export function Discover() {
           We also identify potential challenges and opportunities that may arise
           during the development process. This proactive approach allows us to
           anticipate and plan for various scenarios, ensuring a smooth
-          development process from start to finish.
+          development process from start to finish. */}
         </p>
       </div>
       <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
@@ -117,7 +122,14 @@ export function Define() {
           <hr className="border-sky-600 opacity-90 border-b-[2px] w-12 my-2" />
         </h2>
         <p className="mt-6 text-md leading-7 text-gray-600">
-          Delving deeper into your project’s specifics. We conduct detailed
+          We collaborate closely with you to understand your software product's
+          unique requirements and objectives, including the core and non-core
+          features that will drive its success. We then develop a comprehensive
+          project plan that outlines the resources, timeline, and costs required
+          for development. For existing software products, we conduct a
+          technical audit or feasibility study to ensure that our proposed
+          solutions align with your current systems and processes.
+          {/* Delving deeper into your project’s specifics. We conduct detailed
           sessions to understand your software product’s unique requirements and
           objectives. We strategize the user experience, identifying core and
           non-core features that will drive your product’s success.
@@ -127,7 +139,7 @@ export function Define() {
           resources and timeline required for development. For existing software
           products, we conduct a technical audit or feasibility study to ensure
           that our proposed solutions align with your current systems and
-          processes.
+          processes. */}
         </p>
       </div>
       <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
@@ -159,7 +171,14 @@ export function Develop() {
           <hr className="border-sky-600 opacity-90 border-b-[2px] w-12 my-2" />
         </h2>
         <p className="mt-6 text-md leading-7 text-gray-600">
-          We transform your vision into reality. Our team of experts begins by
+          We turn your vision into reality by building robust and reliable
+          software products. Our team of experts prioritizes core features and
+          develops them first, ensuring they function seamlessly. Once the core
+          features are established, we move on to non-core features. Throughout
+          the process, we rigorously test the software to ensure its reliability
+          and performance. For existing products, we carefully integrate
+          enhancements to preserve the software's integrity.
+          {/* We transform your vision into reality. Our team of experts begins by
           constructing a robust architecture for your software product. We
           prioritize core features and develop them first, ensuring they
           function seamlessly.
@@ -169,7 +188,7 @@ export function Develop() {
           features. Throughout this process, we maintain a rigorous testing
           regime to ensure the software’s reliability and performance. For
           existing products, enhancements are integrated carefully to preserve
-          the integrity of the software.
+          the integrity of the software. */}
         </p>
       </div>
       <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
@@ -199,7 +218,13 @@ export function Deliver() {
           <hr className="border-sky-600 opacity-90 border-b-[2px] w-12 my-2" />
         </h2>
         <p className="mt-6 text-md leading-7 text-gray-600">
-          We ensure that the software product is ready for deployment. We
+          We ensure the smooth and successful deployment of your software
+          product. We conduct rigorous testing to guarantee optimal performance,
+          reliability, and compliance with your expectations. Any identified
+          issues are promptly resolved. We provide comprehensive documentation
+          and support to ensure a seamless transition. For existing products, we
+          integrate new features with minimal disruption to your operations.
+          {/* We ensure that the software product is ready for deployment. We
           conduct a final round of rigorous testing to guarantee optimal
           performance and reliability. Any identified issues are addressed
           promptly, ensuring the software meets your expectations.
@@ -209,7 +234,7 @@ export function Deliver() {
           software. We also provide comprehensive documentation and support to
           ensure a smooth transition. For existing products, we ensure seamless
           integration of new features with minimal disruption to your
-          operations.
+          operations. */}
         </p>
       </div>
       <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
