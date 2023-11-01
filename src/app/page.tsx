@@ -9,7 +9,6 @@ import {
   RootFeatureGrid,
   RootOffer,
   RootOffering,
-  RootFrequentlyAsked,
 } from "@/components/pages/root";
 
 const Page = () => {

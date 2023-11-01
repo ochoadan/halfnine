@@ -1,20 +1,70 @@
 "use client";
 
 import { Logo } from "@/components";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 
-import { Dialog } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
+import {
+  Bars3Icon,
+  XMarkIcon,
+  ChartPieIcon,
+  CursorArrowRaysIcon,
+  FingerPrintIcon,
+  SquaresPlusIcon,
+} from "@heroicons/react/24/outline";
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import { PiPhone } from "react-icons/pi";
+
+import {
+  ChevronDownIcon,
+  PhoneIcon,
+  PlayCircleIcon,
+  RectangleGroupIcon,
+} from "@heroicons/react/20/solid";
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 
+const products = [
+  {
+    name: "Strategy and Planning",
+    description: "Crafting and executing technical roadmaps and architectures",
+    href: "#",
+    icon: ChartPieIcon,
+  },
+  {
+    name: "Development and Integration",
+    // name: "Systems Development and Integration",
+    description:
+      "Developing and integrating custom software applications or products",
+    href: "#",
+    icon: CursorArrowRaysIcon,
+  },
+  {
+    name: "Support and Maintenance",
+    description:
+      "Asset and vendor management, with user training and help desk support",
+    href: "#",
+    icon: FingerPrintIcon,
+  },
+  {
+    name: "Managed Services",
+    // description: "Systems, network and security administration with recovery and continuity",
+    description:
+      "Systems, network and cybersecurity administration with continuity",
+    href: "#",
+    icon: SquaresPlusIcon,
+  },
+];
+const callsToAction = [
+  // { name: "Watch demo", href: "#", icon: PlayCircleIcon },
+  { name: "Contact sales", href: "#", icon: PhoneIcon },
+  { name: "View all services", href: "#", icon: RectangleGroupIcon },
+];
+
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleScroll = () => {
@@ -24,9 +74,10 @@ export default function Example() {
   if (typeof window !== "undefined") {
     window.addEventListener("scroll", handleScroll, { passive: true });
   }
-  const pathname = usePathname();
 
+  const pathname = usePathname();
   const isRootPage = pathname === "/";
+
   return (
     <header
       className={`isolate w-full fixed filter bg-white z-[100] h-[64px] lg:h-[92px] ${
@@ -111,6 +162,70 @@ export default function Example() {
             )}
           </button>
         </div>
+        {/* <Popover.Group className="hidden lg:flex lg:gap-x-12">
+          <Popover>
+            <Popover.Button className="flex items-center gap-x-1 font-semibold leading-6 text-gray-500 hover:text-gray-900">
+              Solutions
+              <ChevronDownIcon
+                className="h-5 w-5 flex-none text-gray-400"
+                aria-hidden="true"
+              />
+            </Popover.Button>
+            <Transition
+              as={Fragment}
+              enter="transition ease-out duration-200"
+              enterFrom="opacity-0 -translate-y-1"
+              enterTo="opacity-100 translate-y-0"
+              leave="transition ease-in duration-150"
+              leaveFrom="opacity-100 translate-y-0"
+              leaveTo="opacity-0 -translate-y-1"
+            >
+              <Popover.Panel className="absolute inset-x-0 top-0 -z-10 bg-white pt-14 shadow-lg ring-1 ring-gray-900/5">
+                <div className="mx-auto grid max-w-7xl grid-cols-4 gap-x-4 px-6 py-10 lg:px-8 xl:gap-x-8">
+                  {products.map((item) => (
+                    <div
+                      key={item.name}
+                      className="group relative rounded-lg p-6 text-sm leading-6 hover:bg-gray-50"
+                    >
+                      <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                        <item.icon
+                          className="h-6 w-6 text-gray-600 group-hover:text-sky-600"
+                          aria-hidden="true"
+                        />
+                      </div>
+                      <Link
+                        href={item.href}
+                        className="mt-6 block font-semibold text-gray-900"
+                      >
+                        {item.name}
+                        <span className="absolute inset-0" />
+                      </Link>
+                      <p className="mt-1 text-gray-600">{item.description}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="bg-gray-50">
+                  <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                    <div className="grid grid-cols-2 divide-x divide-gray-900/5 border-x border-gray-900/5">
+                      {callsToAction.map((item) => (
+                        <Link
+                          key={item.name}
+                          href={item.href}
+                          className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
+                        >
+                          <item.icon
+                            className="h-5 w-5 flex-none text-gray-400"
+                            aria-hidden="true"
+                          />
+                          {item.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </Popover.Panel>
+            </Transition>
+          </Popover> */}
         <div className="hidden lg:flex lg:gap-x-12">
           <Link
             href="/process"
@@ -131,6 +246,7 @@ export default function Example() {
             About
           </Link>
         </div>
+        {/* </Popover.Group> */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link
             href={"/contact"}

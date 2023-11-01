@@ -10,10 +10,12 @@ export default function DevProcess() {
             <hr className="border-sky-600 opacity-90 border-b-[2px] w-24 my-2" />
           </h2>
           <p className="mt-6 text-base leading-7 text-gray-600">
-            These are general estimates, covering a wide array of specialized
+            General estimates for a wide range of software development tasks,
+            including mobile apps, web apps, and platform enhancements.
+            {/* These are general estimates, covering a wide array of specialized
             tasks assigned to each process. The scope of potential applications
             to be developed may include mobile app development, custom web-based
-            software applications, or enhancements to existing platforms.
+            software applications, or enhancements to existing platforms. */}
           </p>
         </FadeIn>
         <div className="mx-auto mt-16 flex flex-col gap-8 lg:mx-0 lg:mt-20 lg:flex-row lg:items-end">
