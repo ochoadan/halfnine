@@ -20,7 +20,7 @@ const navigation = {
   ],
 };
 
-export default function GlobalFooter() {
+const GlobalFooter = () => {
   return (
     <footer className="bg-white border-gray-200 border-t-[2px]">
       <div className="mx-auto max-w-7xl overflow-hidden px-6 py-12 sm:py-16 lg:px-8">
@@ -80,3 +80,5 @@ export default function GlobalFooter() {
     </footer>
   );
 }
+
+export default GlobalFooter;

@@ -149,8 +149,7 @@ function SolutionsPopover() {
     </Popover>
   );
 }
-
-export default function GlobalNavbar() {
+const GlobalNavbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -251,7 +250,7 @@ export default function GlobalNavbar() {
             </button>
           </div>
           <Popover.Group className="hidden lg:flex lg:gap-x-10">
-            {/* <SolutionsPopover /> */}
+            <SolutionsPopover />
             {/* <div className="hidden lg:flex lg:gap-x-10"> */}
             <Link
               href="/process"
@@ -342,4 +341,6 @@ export default function GlobalNavbar() {
       </Dialog>
     </header>
   );
-}
+};
+
+export default GlobalNavbar;
