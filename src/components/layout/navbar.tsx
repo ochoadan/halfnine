@@ -149,7 +149,7 @@ function SolutionsPopover() {
     </Popover>
   );
 }
-const GlobalNavbar = () => {
+export default function GlobalNavbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -342,5 +342,3 @@ const GlobalNavbar = () => {
     </header>
   );
 };
-
-export default GlobalNavbar;
