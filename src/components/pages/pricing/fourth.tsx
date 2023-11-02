@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Fourth() {
   return (
-    <FadeInStagger className="mx-auto max-w-2xl px-4 lg:max-w-none grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2">
+    <FadeInStagger className="mx-auto max-w-2xl lg:max-w-none grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2">
       <FadeIn>
         <h2 className="text-4xl font-bold tracking-tight text-gray-900">
           Ongoing Enhancements

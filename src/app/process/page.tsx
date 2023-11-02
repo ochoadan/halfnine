@@ -32,34 +32,34 @@ const Page = () => {
         description="Here we explain how we leverage technology from problem to solution"
       />
       <div className="overflow-hidden bg-white py-8 sm:py-12">
-        <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <LifeCycle />
         </div>
       </div>
       <div className="overflow-hidden bg-gray-100 py-16 sm:py-24">
-        <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <Discover />
         </div>
       </div>
       <div className="overflow-hidden bg-white py-16 sm:py-24">
-        <div className="mx-auto max-w-7xl md:px-6 lg:px-8 [counter-reset:reversed]">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 [counter-reset:reversed]">
           <div className="sr-only" />
           <Define />
         </div>
       </div>
       <div className="overflow-hidden bg-gray-100 py-16 sm:py-24">
-        <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <Develop />
         </div>
       </div>
       <div className="overflow-hidden bg-white py-16 sm:py-24">
-        <div className="mx-auto max-w-7xl md:px-6 lg:px-8 [counter-reset:reversed]">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 [counter-reset:reversed]">
           <div className="sr-only" />
           <Deliver />
         </div>
       </div>
       <div className="overflow-hidden bg-gray-100 py-16 sm:py-24">
-        <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <FadeIn className="relative overflow-hidden rounded-lg lg:h-96">
             <div className="absolute inset-0">
               <Image
@@ -99,7 +99,7 @@ const Page = () => {
         </div>
       </div>
       <div className="overflow-hidden bg-white py-16 sm:py-28">
-        <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <GlobalContactForm />
         </div>
       </div>

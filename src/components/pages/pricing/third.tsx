@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Third() {
   return (
-    <FadeInStagger className="mx-auto max-w-2xl px-4 lg:max-w-none grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2">
+    <FadeInStagger className="mx-auto max-w-2xl lg:max-w-none grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2">
       <FadeIn className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg bg-gray-100 order-last lg:order-first">
         <Image
           src="/img/pricing/pexels-mikhail-nilov-7988079-min.jpg"

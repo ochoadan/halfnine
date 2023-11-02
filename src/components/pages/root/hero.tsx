@@ -17,15 +17,14 @@ const RootHeading = () => {
           }}
         />
         <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-16 lg:pt-32">
-          <div className="text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold space-y-2 uppercase">
-              {`Software Consulting And Development`}
-              <br />
-              <span className="mt-2">{`for your Digital Success`}</span>
-            </h1>
-          </div>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl text-center font-bold">
+            Software Consulting and Development
+          </h1>
+          <p className="text-3xl sm:text-4xl md:text-5xl text-center font-bold mt-2">
+            For your Digital Success
+          </p>
         </div>
-        <hr className="border-sky-600 opacity-90 border-b-[3px] mx-auto w-40 my-4" />
+        <hr className="border-sky-600 opacity-90 border-b-[3px] mx-auto w-40 my-6" />
         <div className="max-w-5xl mx-auto text-center">
           <p className="px-4 lg:px-24 my-4 text-lg md:text-xl text-gray-700">
             {/* Our digital solutions are powerful and flexible, meeting the demands

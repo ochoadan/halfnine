@@ -24,27 +24,27 @@ const Page = () => {
         description="Find the Pricing for custom software development"
       />
       <div className="overflow-hidden bg-white py-16 sm:py-28">
-        <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <First />
         </div>
       </div>
       <div className="overflow-hidden bg-gray-100 py-16 sm:py-28">
-        <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <Second />
         </div>
       </div>
       <div className="overflow-hidden bg-white py-16 sm:py-28">
-        <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <Third />
         </div>
       </div>
       <div className="overflow-hidden bg-gray-100 py-16 sm:py-28">
-        <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <Fourth />
         </div>
       </div>
       <div className="overflow-hidden bg-white py-16 sm:py-28">
-        <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <GlobalContactForm />
         </div>
       </div>

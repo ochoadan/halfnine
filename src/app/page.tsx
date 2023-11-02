@@ -4,11 +4,8 @@ import {
   RootHero,
   RootStats,
   RootFeature,
-  RootClientLogoCloud,
   RootDevProcess,
   RootFeatureGrid,
-  RootOffer,
-  RootOffering,
 } from "@/components/pages/root";
 
 const Page = () => {

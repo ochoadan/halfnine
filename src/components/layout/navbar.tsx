@@ -65,6 +65,91 @@ const callsToAction = [
   { name: "Contact sales", href: "/contact", icon: PhoneIcon },
 ];
 
+function SolutionsPopover() {
+  return (
+    <Popover>
+      {({ open }) => (
+        <>
+          <Popover.Button className="group flex items-center gap-x-1 font-semibold leading-6 text-gray-500 hover:text-gray-900 -mr-3 outline-none">
+            {" "}
+            {/* -mr-6 */}
+            Solutions
+            <ChevronDownIcon
+              className={`h-5 w-5 mt-1 flex-none text-gray-400 group-hover:text-gray-900 ${
+                open ? "rotate-180" : "rotate-0"
+              }`}
+              aria-hidden="true"
+            />
+          </Popover.Button>
+          <Transition
+            as={Fragment}
+            enter="transition ease-out duration-200"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="transition ease-in duration-150"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+            // enter="transition ease-out duration-200"
+            // enterFrom="opacity-0 -translate-y-1"
+            // enterTo="opacity-100 translate-y-0"
+            // leave="transition ease-in duration-150"
+            // leaveFrom="opacity-100 translate-y-0"
+            // leaveTo="opacity-0 -translate-y-1"
+          >
+            <Popover.Panel className="absolute inset-x-0 top-0 -z-10 bg-white mt-[92px] shadow-lg border-t-[1px] border-neutral-200">
+              <div className="mx-auto grid max-w-7xl grid-cols-4 gap-x-4 px-6 py-6 lg:px-8 xl:gap-x-8">
+                {products.map((item) => (
+                  <Popover.Button
+                    as={Link}
+                    href={item.href}
+                    key={item.name}
+                    className="group relative rounded-lg p-6 text-sm leading-6 hover:bg-gray-50"
+                  >
+                    <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      <item.icon
+                        className="h-6 w-6 text-gray-600 group-hover:text-sky-600"
+                        aria-hidden="true"
+                      />
+                    </div>
+                    <a
+                      // href={item.href}
+                      className="mt-6 block font-semibold text-gray-900"
+                    >
+                      {item.name}
+                      <span className="absolute inset-0" />
+                    </a>
+                    <p className="mt-1 text-gray-600">{item.description}</p>
+                  </Popover.Button>
+                ))}
+              </div>
+              <div className="bg-gray-50">
+                <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                  <div className="grid grid-cols-2 divide-x divide-gray-900/5 border-x border-gray-900/5">
+                    {callsToAction.map((item) => (
+                      <Popover.Button
+                        as={Link}
+                        key={item.name}
+                        href={item.href}
+                        className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
+                      >
+                        <item.icon
+                          className="h-5 w-5 flex-none text-gray-400"
+                          aria-hidden="true"
+                        />
+                        {item.name}
+                      </Popover.Button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </Popover.Panel>
+          </Transition>
+        </>
+      )}
+    </Popover>
+  );
+}
+
 export default function GlobalNavbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -165,99 +250,28 @@ export default function GlobalNavbar() {
               )}
             </button>
           </div>
-          <Popover.Group className="hidden lg:flex lg:gap-x-12">
-            <Popover>
-              <Popover.Button className="flex items-center gap-x-1 font-semibold leading-6 text-gray-500 hover:text-gray-900">
-                Solutions
-                <ChevronDownIcon
-                  className="h-5 w-5 flex-none text-gray-400"
-                  aria-hidden="true"
-                />
-              </Popover.Button>
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-200"
-                enterFrom="opacity-0"
-                enterTo="opacity-100"
-                leave="transition ease-in duration-150"
-                leaveFrom="opacity-100"
-                leaveTo="opacity-0"
-                // enter="transition ease-out duration-200"
-                // enterFrom="opacity-0 -translate-y-1"
-                // enterTo="opacity-100 translate-y-0"
-                // leave="transition ease-in duration-150"
-                // leaveFrom="opacity-100 translate-y-0"
-                // leaveTo="opacity-0 -translate-y-1"
-              >
-                <Popover.Panel className="absolute inset-x-0 top-0 -z-10 bg-white mt-[92px] shadow-lg border-t-[1px] border-neutral-200">
-                  <div className="mx-auto grid max-w-7xl grid-cols-4 gap-x-4 px-6 py-6 lg:px-8 xl:gap-x-8">
-                    {products.map((item) => (
-                      <Popover.Button
-                        as={Link}
-                        href={item.href}
-                        key={item.name}
-                        className="group relative rounded-lg p-6 text-sm leading-6 hover:bg-gray-50"
-                      >
-                        <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                          <item.icon
-                            className="h-6 w-6 text-gray-600 group-hover:text-sky-600"
-                            aria-hidden="true"
-                          />
-                        </div>
-                        <a
-                          // href={item.href}
-                          className="mt-6 block font-semibold text-gray-900"
-                        >
-                          {item.name}
-                          <span className="absolute inset-0" />
-                        </a>
-                        <p className="mt-1 text-gray-600">{item.description}</p>
-                      </Popover.Button>
-                    ))}
-                  </div>
-                  <div className="bg-gray-50">
-                    <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                      <div className="grid grid-cols-2 divide-x divide-gray-900/5 border-x border-gray-900/5">
-                        {callsToAction.map((item) => (
-                          <Popover.Button
-                            as={Link}
-                            key={item.name}
-                            href={item.href}
-                            className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
-                          >
-                            <item.icon
-                              className="h-5 w-5 flex-none text-gray-400"
-                              aria-hidden="true"
-                            />
-                            {item.name}
-                          </Popover.Button>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </Popover.Panel>
-              </Transition>
-            </Popover>
-            <div className="hidden lg:flex lg:gap-x-12">
-              <Link
-                href="/process"
-                className="font-semibold leading-6 text-gray-500 hover:text-gray-900 select-none"
-              >
-                Process
-              </Link>
-              <Link
-                href="/pricing"
-                className="font-semibold leading-6 text-gray-500 hover:text-gray-900 select-none"
-              >
-                Pricing
-              </Link>
-              <Link
-                href="/about"
-                className="font-semibold leading-6 text-gray-500 hover:text-gray-900 select-none"
-              >
-                About
-              </Link>
-            </div>
+          <Popover.Group className="hidden lg:flex lg:gap-x-10">
+            {/* <SolutionsPopover /> */}
+            {/* <div className="hidden lg:flex lg:gap-x-10"> */}
+            <Link
+              href="/process"
+              className="font-semibold leading-6 text-gray-500 hover:text-gray-900 select-none"
+            >
+              Process
+            </Link>
+            <Link
+              href="/pricing"
+              className="font-semibold leading-6 text-gray-500 hover:text-gray-900 select-none"
+            >
+              Pricing
+            </Link>
+            <Link
+              href="/about"
+              className="font-semibold leading-6 text-gray-500 hover:text-gray-900 select-none"
+            >
+              About
+            </Link>
+            {/* </div> */}
           </Popover.Group>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Link
