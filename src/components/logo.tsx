@@ -12,7 +12,8 @@ const Logo = ({ className = "", ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     data-name="Layer 1"
-    viewBox="0 0 398.04 78.28"
+    // viewBox="0 0 398.04 78.28"
+    viewBox="0 0 398.04 80"
     width="163"
     height="32"
     className={className}

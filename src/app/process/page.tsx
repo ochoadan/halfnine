@@ -1,4 +1,4 @@
-import BackgroundwImage from "@/components/layout/background-image";
+import BackgroundwImage from "@/components/Layout/BackgroundwImage";
 
 import Link from "next/link";
 import {

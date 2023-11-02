@@ -6,10 +6,6 @@ const navigation = {
   main: [
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
-    // { name: "Jobs", href: "/careers" },
-    // { name: "Press", href: "#" },
-    // { name: "Accessibility", href: "#" },
-    // { name: "Partners", href: "#" },
   ],
   social: [
     {
@@ -24,7 +20,7 @@ const navigation = {
   ],
 };
 
-export default function Example() {
+export default function GlobalFooter() {
   return (
     <footer className="bg-white border-gray-200 border-t-[2px]">
       <div className="mx-auto max-w-7xl overflow-hidden px-6 py-12 sm:py-16 lg:px-8">
@@ -44,17 +40,6 @@ export default function Example() {
           ))}
         </nav>
         <div className="mt-10 flex justify-center space-x-10">
-          {/* {navigation.social.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              target={"_blank"}
-              className="text-gray-400 hover:text-gray-500"
-            >
-              <span className="sr-only">{item.name}</span>
-              <item.icon className="h-6 w-6" aria-hidden="true" />
-            </Link>
-          ))} */}
           <Link
             href="https://www.linkedin.com/company/halfnine-llc/"
             target="_blank"
