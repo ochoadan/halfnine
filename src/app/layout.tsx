@@ -1,8 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import GoogleAnalytics from "@/components/Providers/GoogleAnalytics";
 import GlobalNavbar from "@/components/Global/Navbar";
 import GlobalFooter from "@/components/Global/Footer";
+import { Providers } from '@/app/providers'
 
 export const metadata: Metadata = {
   title: "Software Development Solutions - Halfnine",
@@ -21,12 +21,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <GoogleAnalytics />
-        <div className="min-h-screen">
-          <GlobalNavbar />
-          {children}
-          <GlobalFooter />
-        </div>
+        <Providers>
+          <div className="min-h-screen">
+            <GlobalNavbar />
+            {children}
+            <GlobalFooter />
+          </div>
+        </Providers>
       </body>
     </html>
   );
