@@ -1,4 +1,4 @@
-import { FadeIn, FadeInStagger } from "@/components/FadeIn";
+import { FadeIn, FadeInStagger } from "@/components/Global/FadeIn";
 import { FaHandshake, FaUsers, FaChartLine, FaChess } from "react-icons/fa";
 
 const features = [

@@ -1,4 +1,4 @@
-import { FadeIn, FadeInStagger } from "@/components/FadeIn";
+import { FadeIn, FadeInStagger } from "@/components/Global/FadeIn";
 import Image from "next/image";
 
 export default function RootClientLogoCloud() {

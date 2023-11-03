@@ -16,7 +16,7 @@ import {
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "@/components/Logo";
+import Logo from "@/components/Global/Logo";
 import {
   FaCode,
   FaHeadset,

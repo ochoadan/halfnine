@@ -1,5 +1,5 @@
-import { FadeIn, FadeInStagger } from "@/components/FadeIn";
-import { TagList, TagListItem } from "@/components/TagList";
+import { FadeIn, FadeInStagger } from "@/components/Global/FadeIn";
+import { TagList, TagListItem } from "@/components/Global/TagList";
 import Image from "next/image";
 
 export default function Second() {

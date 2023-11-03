@@ -1,6 +1,6 @@
 "use client";
 
-import { FadeIn, FadeInStagger } from "@/components/FadeIn";
+import { FadeIn, FadeInStagger } from "@/components/Global/FadeIn";
 import {
   CalendarDaysIcon,
   CheckCircleIcon,

@@ -1,4 +1,4 @@
-import BackgroundwImage from "@/components/BackgroundwImage";
+import BackgroundwImage from "@/components/Global/BackgroundwImage";
 import { Metadata } from "next";
 import {
   AboutFirst,

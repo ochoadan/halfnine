@@ -1,7 +1,7 @@
-import { Container } from "@/components/Container";
-import { FadeIn, FadeInStagger } from "@/components/FadeIn";
-import { StylizedImage } from "@/components/StylizedImage";
-import { TagList, TagListItem } from "@/components/TagList";
+import { Container } from "@/components/Global/Container";
+import { FadeIn, FadeInStagger } from "@/components/Global/FadeIn";
+import { StylizedImage } from "@/components/Global/StylizedImage";
+import { TagList, TagListItem } from "@/components/Global/TagList";
 
 import imageDiscover from "@/images/edited-pexels-alexander-suhorucov-6457525.jpg";
 import imageDefine from "@/images/pexels-fauxels-3184292.jpg";

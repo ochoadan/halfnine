@@ -1,4 +1,4 @@
-import { FadeInStagger, FadeIn } from "@/components/FadeIn";
+import { FadeInStagger, FadeIn } from "@/components/Global/FadeIn";
 import { CheckCircleIcon } from "@heroicons/react/24/outline";
 
 import Image from "next/image";

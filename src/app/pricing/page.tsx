@@ -1,4 +1,4 @@
-import BackgroundwImage from "@/components/BackgroundwImage";
+import BackgroundwImage from "@/components/Global/BackgroundwImage";
 import First from "@/components/pages/pricing/first";
 import Second from "@/components/pages/pricing/second";
 import Third from "@/components/pages/pricing/third";

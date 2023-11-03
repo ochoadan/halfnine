@@ -1,4 +1,4 @@
-import BackgroundwImage from "@/components/BackgroundwImage";
+import BackgroundwImage from "@/components/Global/BackgroundwImage";
 
 import Link from "next/link";
 import {
@@ -12,7 +12,7 @@ import { Metadata } from "next";
 import GlobalFAQ from "@/components/pages/GlobalFAQ";
 import GlobalContactForm from "@/components/pages/GlobalContactForm";
 import Image from "next/image";
-import { FadeIn } from "@/components/FadeIn";
+import { FadeIn } from "@/components/Global/FadeIn";
 
 export const metadata: Metadata = {
   title:

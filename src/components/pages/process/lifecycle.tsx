@@ -1,4 +1,4 @@
-import { FadeIn } from "@/components/FadeIn";
+import { FadeIn } from "@/components/Global/FadeIn";
 import Image from "next/image";
 
 const LifeCycle = () => {

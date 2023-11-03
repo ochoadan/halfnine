@@ -1,4 +1,4 @@
-import { FadeIn, FadeInStagger } from "@/components/FadeIn";
+import { FadeIn, FadeInStagger } from "@/components/Global/FadeIn";
 import { FaGears, FaClipboardCheck, FaUserLock } from "react-icons/fa6";
 
 const features = [
