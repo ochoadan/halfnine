@@ -1,6 +1,6 @@
 "use client";
 
-import BackgroundwImage from "@/components/Layout/BackgroundwImage";
+import BackgroundwImage from "@/components/BackgroundwImage";
 import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/24/outline";
 // import { Turnstile } from "@marsidev/react-turnstile";
 import clsx from "clsx";

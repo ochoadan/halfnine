@@ -1,8 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import GoogleAnalytics from "@/components/Providers/GoogleAnalytics";
-import GlobalNavbar from "@/components/Layout/Navbar";
-import GlobalFooter from "@/components/Layout/Footer";
+import GlobalNavbar from "@/components/Navbar";
+import GlobalFooter from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Software Development Solutions - Halfnine",
