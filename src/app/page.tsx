@@ -6,18 +6,16 @@ import {
   RootFeature,
   RootDevProcess,
   RootFeatureGrid,
+  RootOffering,
+  RootOffer,
 } from "@/components/pages/root";
 
 const Page = () => {
   return (
     <>
       <RootHero />
-      {/* <div className="bg-gray-50 mt-[2rem] md:mt-[6rem] py-16 md:py-28">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <RootOffering />
-        </div>
-      </div>
-      <div className="bg-white py-16 md:py-28">
+      {/* <RootOffering /> */}
+      {/* <div className="bg-gray-50 py-16 md:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <RootOffer />
         </div>

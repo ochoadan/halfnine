@@ -61,7 +61,7 @@ const products = [
 
 const callsToAction = [
   // { name: "Watch demo", href: "#", icon: PlayCircleIcon },
-  { name: "View all services", href: "#", icon: RectangleGroupIcon },
+  { name: "View all services", href: "/services", icon: RectangleGroupIcon },
   { name: "Contact sales", href: "/contact", icon: PhoneIcon },
 ];
 
@@ -250,9 +250,8 @@ export default function GlobalNavbar() {
               )}
             </button>
           </div>
-          {/* <Popover.Group className="hidden lg:flex lg:gap-x-10"> */}
-          {/* <SolutionsPopover /> */}
-          <div className="hidden lg:flex lg:gap-x-10">
+          <Popover.Group className="hidden lg:flex lg:gap-x-10">
+            {/* <SolutionsPopover /> */}
             <Link
               href="/process"
               className="font-semibold leading-6 text-gray-500 hover:text-gray-900 select-none"
@@ -271,8 +270,7 @@ export default function GlobalNavbar() {
             >
               About
             </Link>
-          </div>
-          {/* </Popover.Group> */}
+          </Popover.Group>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Link
               href={"/contact"}

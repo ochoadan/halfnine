@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import GlobalNavbar from "@/components/Global/Navbar";
 import GlobalFooter from "@/components/Global/Footer";
-import { Providers } from '@/app/providers'
+import { Providers } from "@/app/providers";
 
 export const metadata: Metadata = {
   title: "Software Development Solutions - Halfnine",
@@ -25,8 +25,8 @@ export default function RootLayout({
           <div className="min-h-screen">
             <GlobalNavbar />
             {children}
-            <GlobalFooter />
           </div>
+          <GlobalFooter />
         </Providers>
       </body>
     </html>
