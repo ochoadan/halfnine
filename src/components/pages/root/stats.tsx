@@ -18,15 +18,16 @@ const stats = [
   },
   {
     id: 4,
-    name: "Incorporating proven and new technologies constantly to stay ahead",
+    // name: "Incorporating proven and new technologies constantly to stay ahead",
+    name: "Implementing proven and innovative technologies to stay ahead",
     value: "Innovation",
   },
 ];
 
 const StatsComponent = () => (
-  <FadeInStagger faster className="mx-auto">
+  <FadeInStagger faster>
     <FadeIn className="text-center">
-      <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+      <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
         {/* How we aim to help you succeed */}
         How we aim to stay ahead
       </h2>
@@ -41,7 +42,7 @@ const StatsComponent = () => (
           key={stat.id}
           className="flex flex-col bg-zinc-500/5 p-8 hover:bg-zinc-500/10 transition-colors duration-200"
         >
-          <dd className="order-first text-2xl font-semibold tracking-tight text-gray-900">
+          <dd className="order-first text-2xl font-semibold text-gray-900">
             {stat.value}
           </dd>
           <dt className="text-sm leading-2 text-gray-600 mt-2">{stat.name}</dt>

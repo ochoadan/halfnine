@@ -14,7 +14,7 @@ export default function Third() {
         />
       </FadeIn>
       <FadeIn className="order-first lg:order-last">
-        <h2 className="text-4xl font-bold tracking-tight text-gray-900">
+        <h2 className="text-4xl font-bold text-gray-900">
           Software Development
           <hr className="border-sky-600 opacity-90 border-b-[2px] w-20 my-2" />
         </h2>

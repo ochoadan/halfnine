@@ -40,7 +40,7 @@ export default function FeatureGrid() {
         <h2 className=" text-base font-semibold leading-7 text-sky-600">
           Our Driving Forces
         </h2>
-        <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <p className="mt-2 text-3xl font-bold text-gray-900 sm:text-4xl">
           {/* Everything you need to deploy your app */}
           What we are passionate for
         </p>

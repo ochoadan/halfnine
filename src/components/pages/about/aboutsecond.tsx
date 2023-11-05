@@ -36,7 +36,7 @@ export default function AboutSecond() {
   return (
     <FadeInStagger>
       <FadeIn className="mx-auto max-w-4xl text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
           Our Core Values
         </h2>
         <hr className="border-sky-600 opacity-90 border-b-[2px] mx-auto w-28 my-4" />

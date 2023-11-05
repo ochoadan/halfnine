@@ -8,7 +8,7 @@ const Panel = ({ panel }: any) => (
   <Tab.Panel className="bg-white py-8 sm:py-12 outline-none">
     <div className="mx-auto max-w-7xl px-6 lg:px-8">
       <div className="mx-auto lg:mx-0">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
           {panel.name}
           <hr className="border-sky-600 opacity-90 border-b-[2px] w-20 my-2" />
         </h2>

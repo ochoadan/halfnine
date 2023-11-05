@@ -4,6 +4,13 @@ import GlobalNavbar from "@/components/Global/Navbar";
 import GlobalFooter from "@/components/Global/Footer";
 import { Providers } from "@/app/providers";
 
+import { Gantari } from 'next/font/google'
+// Fonts:
+// REM: TOO THICK
+// Mulish: Similar
+
+const as = Gantari({ subsets: ['latin']})
+
 export const metadata: Metadata = {
   title: "Software Development Solutions - Halfnine",
   description:
@@ -20,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className={as.className}>
         <Providers>
           <div className="min-h-screen">
             <GlobalNavbar />

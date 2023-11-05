@@ -102,8 +102,8 @@ function GlobalContactForm() {
 
   return (
     <FadeIn className="bg-gray-50 rounded-xl p-5 lg:p-10 shadow-md">
-      <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-        Your Success is Our Priority
+      <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+        <span className="tracking-widest -mr-1">Yo</span>ur Success is Our Priority
         <hr className="border-sky-600 opacity-90 border-b-[2px] w-24 my-2" />
       </h2>
       <p className="mt-4 leading-8 text-gray-700">

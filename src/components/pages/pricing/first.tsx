@@ -33,7 +33,7 @@ export default function First() {
   return (
     <>
       <FadeIn className="mx-auto max-w-4xl lg:text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
           What&apos;s the app development cost?
         </h2>
         <p className="mt-4 text-base font-semibold leading-7 text-sky-600">

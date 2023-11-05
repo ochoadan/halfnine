@@ -72,7 +72,7 @@ export function Discover() {
     <Section title="Discover" image={{ src: imageDiscover }}>
       {/* <div className="space-y-6 text-base text-neutral-600"> */}
       <div className="text-base text-neutral-600">
-        <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <h2 className="mt-2 text-3xl font-bold text-gray-900 sm:text-4xl">
           Discover
           <hr className="border-sky-600 opacity-90 border-b-[2px] w-12 my-2" />
         </h2>
@@ -117,7 +117,7 @@ export function Define() {
   return (
     <Section title="Build" image={{ src: imageDefine, shape: 1 }}>
       <div className="text-base text-neutral-600">
-        <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <h2 className="mt-2 text-3xl font-bold text-gray-900 sm:text-4xl">
           Define
           <hr className="border-sky-600 opacity-90 border-b-[2px] w-12 my-2" />
         </h2>
@@ -166,7 +166,7 @@ export function Develop() {
   return (
     <Section title="Deliver" image={{ src: imageDevelop, shape: 2 }}>
       <div className="text-base text-neutral-600">
-        <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <h2 className="mt-2 text-3xl font-bold text-gray-900 sm:text-4xl">
           Develop
           <hr className="border-sky-600 opacity-90 border-b-[2px] w-12 my-2" />
         </h2>
@@ -213,7 +213,7 @@ export function Deliver() {
   return (
     <Section title="Deliver" image={{ src: imageDeliver }}>
       <div className="text-base text-neutral-600">
-        <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <h2 className="mt-2 text-3xl font-bold text-gray-900 sm:text-4xl">
           Deliver
           <hr className="border-sky-600 opacity-90 border-b-[2px] w-12 my-2" />
         </h2>

@@ -5,7 +5,7 @@ export default function DevProcess() {
     <>
       <FadeInStagger>
         <FadeIn className="mx-auto lg:mx-0">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
             Development Process and Costs
             <hr className="border-sky-600 opacity-90 border-b-[2px] w-24 my-2" />
           </h2>
@@ -20,11 +20,11 @@ export default function DevProcess() {
         </FadeIn>
         <div className="mx-auto mt-16 flex flex-col gap-8 lg:mx-0 lg:mt-20 lg:flex-row lg:items-end">
           <FadeIn className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-gray-100 p-8 sm:w-3/4 sm:max-w-md sm:flex-row-reverse sm:items-end lg:w-72 lg:max-w-none lg:flex-none lg:flex-col lg:items-start">
-            <p className="flex-none text-3xl font-bold tracking-tight text-gray-900">
+            <p className="flex-none text-3xl font-bold text-gray-900">
               $15k+
             </p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
-              <p className="text-2xl font-semibold tracking-tight text-gray-900">
+              <p className="text-2xl font-semibold text-gray-900">
                 Discovery
               </p>
               <p className="mt-2 text-base leading-7 text-gray-600">
@@ -34,11 +34,11 @@ export default function DevProcess() {
             </div>
           </FadeIn>
           <FadeIn className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-gray-900 p-8 sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-sm lg:flex-auto lg:flex-col lg:items-start lg:gap-y-44">
-            <p className="flex-none text-3xl font-bold tracking-tight text-white">
+            <p className="flex-none text-3xl font-bold text-white">
               $20k - $1M+
             </p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
-              <p className="text-2xl font-semibold tracking-tight text-white">
+              <p className="text-2xl font-semibold text-white">
                 Development
               </p>
               <p className="mt-2 text-base leading-7 text-gray-400">
@@ -48,11 +48,11 @@ export default function DevProcess() {
             </div>
           </FadeIn>
           <FadeIn className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-sky-600 p-8 sm:w-11/12 sm:max-w-xl sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-none lg:flex-auto lg:flex-col lg:items-start lg:gap-y-28">
-            <p className="flex-none text-3xl font-bold tracking-tight text-white">
+            <p className="flex-none text-3xl font-bold text-white">
               $5k - 10k+ / month
             </p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
-              <p className="text-2xl font-semibold tracking-tight text-white">
+              <p className="text-2xl font-semibold text-white">
                 Maintenance
               </p>
               <p className="mt-2 text-base leading-7 text-sky-200">

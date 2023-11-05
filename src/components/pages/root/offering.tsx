@@ -54,7 +54,7 @@ export default function RootOffering() {
 
 /* <FadeInStagger className="mx-auto max-w-2xl px-4 lg:max-w-none grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-5">
 <FadeIn className="lg:col-span-3">
-<h2 className="text-4xl font-bold tracking-tight text-gray-900">
+<h2 className="text-4xl font-bold text-gray-900">
 Your IT ecosystem, in good hands.
 <hr className="border-sky-600 opacity-90 border-b-[2px] w-20 my-2" />
 </h2>

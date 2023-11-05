@@ -26,7 +26,7 @@ export default function AboutThird() {
           </defs>
         </svg>
         <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
-          <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
+          <h2 className="text-2xl font-bold text-white sm:text-3xl">
             Cron Monitoring For Laravel
             {/* <br />
             Start using our app today. */}

@@ -11,6 +11,8 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { FaRegBuilding, FaRegEnvelope, FaRegUser } from "react-icons/fa6";
 import { SlPhone, SlEnvolope } from "react-icons/sl";
 
+import Cal from "@calcom/embed-react";
+
 // export const metadata: Metadata = {
 //   title:
 //     "Contact Halfnine: Software Upgrades and New Idea Kickstarts",
@@ -120,7 +122,7 @@ const Contact = () => {
       />
       <div className="py-8 md:py-12 max-w-7xl mx-auto px-6 lg:px-8">
         <div className="bg-gray-50 rounded-xl p-5 lg:p-10 shadow-md">
-          <h2 className="pb-2 text-2xl md:text-3xl font-bold">Contact Form:</h2>
+          <h2 className="pb-4 text-2xl md:text-3xl font-bold text-center">Contact Form:</h2>
           <form onSubmit={handleSubmit}>
             <div className="space-y-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full">
@@ -334,6 +336,14 @@ const Contact = () => {
               {/* )} */}
             </div>
           </form>
+        </div>
+        <div className="py-8 md:py-12 max-w-7xl mx-auto">
+          <div className="bg-gray-50 rounded-xl p-5 lg:p-10 shadow-md">
+            <h2 className="pb-4 text-2xl md:text-3xl font-bold text-center">
+              Schedule a meeting:
+            </h2>
+            <Cal calLink="halfnine/30min"></Cal>
+          </div>
         </div>
       </div>
     </>
