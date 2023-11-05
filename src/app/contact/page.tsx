@@ -11,7 +11,8 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { FaRegBuilding, FaRegEnvelope, FaRegUser } from "react-icons/fa6";
 import { SlPhone, SlEnvolope } from "react-icons/sl";
 
-import Cal from "@calcom/embed-react";
+// @ts-expect-error
+import Cal, { getCalApi } from "@calcom/embed-react";
 
 // export const metadata: Metadata = {
 //   title:
@@ -113,6 +114,16 @@ const Contact = () => {
       return;
     }
   };
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi();
+      cal("ui", {
+        styles: { branding: { brandColor: "#0284c7" } },
+        hideEventTypeDetails: false,
+        layout: "month_view",
+      });
+    })();
+  }, []);
 
   return (
     <>
@@ -122,7 +133,9 @@ const Contact = () => {
       />
       <div className="py-8 md:py-12 max-w-7xl mx-auto px-6 lg:px-8">
         <div className="bg-gray-50 rounded-xl p-5 lg:p-10 shadow-md">
-          <h2 className="pb-4 text-2xl md:text-3xl font-bold text-center">Contact Form:</h2>
+          <h2 className="pb-4 text-2xl md:text-3xl font-bold text-center">
+            Contact Form:
+          </h2>
           <form onSubmit={handleSubmit}>
             <div className="space-y-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full">
@@ -342,7 +355,12 @@ const Contact = () => {
             <h2 className="pb-4 text-2xl md:text-3xl font-bold text-center">
               Schedule a meeting:
             </h2>
-            <Cal calLink="halfnine/30min"></Cal>
+            {/* <Cal calLink="halfnine/30min"></Cal> */}
+            <Cal
+              calLink="halfnine/30min"
+              style={{ width: "100%", height: "100%", overflow: "scroll" }}
+              config={{ layout: "month_view" }}
+            />
           </div>
         </div>
       </div>
