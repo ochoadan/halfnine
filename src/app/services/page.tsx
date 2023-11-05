@@ -1,11 +1,11 @@
-import { ContentLayout } from "@/components/Content-Layout";
+// import { ContentLayout } from "@/components/Content-Layout";
 import Hero1 from "@/components/Hero-1";
 
 const Page = () => {
   return (
     <div>
       <Hero1 />
-      <ContentLayout>
+      {/* <ContentLayout> */}
         a - a<br />
         a - a<br />
         a - a<br />
@@ -13,7 +13,7 @@ const Page = () => {
         a - a<br />
         a - a<br />
         a - a<br />
-      </ContentLayout>
+      {/* </ContentLayout> */}
     </div>
   );
 };
