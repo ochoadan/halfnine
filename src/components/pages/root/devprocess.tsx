@@ -29,7 +29,7 @@ export default function DevProcess() {
               </p>
               <p className="mt-2 text-base leading-7 text-gray-600">
                 Gathering the essential elements and building
-                MVP's
+                MVP&apos;s
               </p>
             </div>
           </FadeIn>
