@@ -102,13 +102,13 @@ function GlobalContactForm() {
 
   return (
     <FadeIn className="bg-gray-50 rounded-xl p-5 lg:p-10 shadow-md">
-      <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-        <span className="tracking-widest -mr-1">Yo</span>ur Success is Our Priority
+      <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+        Your Success is Our Priority
         <hr className="border-sky-600 opacity-90 border-b-[2px] w-24 my-2" />
       </h2>
       <p className="mt-4 leading-8 text-gray-700">
         Our team is available 24/7 to answer your questions and help you find
-        the best solution for your needs.
+        the best solution for your needs
       </p>
       <form onSubmit={handleSubmit}>
         <div className="space-y-5 mt-8">
@@ -204,7 +204,7 @@ function GlobalContactForm() {
               value={formData.message}
               onChange={handleInputChange}
               placeholder="Message"
-              className={`block w-full min-h-[100px] shadow-sm sm:text-sm rounded-md ${
+              className={`block w-full min-h-[80px] shadow-sm sm:text-sm rounded-md ${
                 submitted && formErrors.message
                   ? "border-red-300 focus:ring-red-500"
                   : "border-slate-200 focus:ring-sky-500"

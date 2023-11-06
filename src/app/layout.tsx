@@ -4,15 +4,19 @@ import GlobalNavbar from "@/components/Global/Navbar";
 import GlobalFooter from "@/components/Global/Footer";
 import { Providers } from "@/app/providers";
 
-import { Gantari } from 'next/font/google'
+import { Mulish } from 'next/font/google'
 // Fonts:
+// Gantari: Best (broken)
+// Montserrat: Too Wide
+
 // REM: TOO THICK
 // Mulish: Similar
+// Raleway: Odd
 
-const as = Gantari({ subsets: ['latin']})
+const fontSource = Mulish({ subsets: ['latin']})
 
 export const metadata: Metadata = {
-  title: "Software Development Solutions - Halfnine",
+  title: "Software Development and Consulting Solutions - Halfnine",
   description:
     "Unlock future potential with our digital solutions. Experience efficiency, cost-effectiveness, speed, and innovation with us.",
   alternates: {
@@ -27,7 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={as.className}>
+      <body className={fontSource.className}>
         <Providers>
           <div className="min-h-screen">
             <GlobalNavbar />

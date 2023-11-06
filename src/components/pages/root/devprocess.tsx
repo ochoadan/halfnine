@@ -5,13 +5,13 @@ export default function DevProcess() {
     <>
       <FadeInStagger>
         <FadeIn className="mx-auto lg:mx-0">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
             Development Process and Costs
             <hr className="border-sky-600 opacity-90 border-b-[2px] w-24 my-2" />
           </h2>
           <p className="mt-6 text-base leading-7 text-gray-600">
             General estimates for a wide range of software development tasks,
-            including mobile apps, web apps, and platform enhancements.
+            including mobile apps, web apps, and platform enhancements
             {/* These are general estimates, covering a wide array of specialized
             tasks assigned to each process. The scope of potential applications
             to be developed may include mobile app development, custom web-based
@@ -24,12 +24,12 @@ export default function DevProcess() {
               $15k+
             </p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
-              <p className="text-2xl font-semibold text-gray-900">
+              <p className="text-2xl font-bold text-gray-900">
                 Discovery
               </p>
               <p className="mt-2 text-base leading-7 text-gray-600">
-                Gathering the essential elements, crafting designs, and building
-                prototypes
+                Gathering the essential elements and building
+                MVP's
               </p>
             </div>
           </FadeIn>
@@ -38,7 +38,7 @@ export default function DevProcess() {
               $20k - $1M+
             </p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
-              <p className="text-2xl font-semibold text-white">
+              <p className="text-2xl font-bold text-white">
                 Development
               </p>
               <p className="mt-2 text-base leading-7 text-gray-400">
@@ -52,7 +52,7 @@ export default function DevProcess() {
               $5k - 10k+ / month
             </p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
-              <p className="text-2xl font-semibold text-white">
+              <p className="text-2xl font-bold text-white">
                 Maintenance
               </p>
               <p className="mt-2 text-base leading-7 text-sky-200">

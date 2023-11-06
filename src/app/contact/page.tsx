@@ -118,6 +118,7 @@ const Contact = () => {
     (async function () {
       const cal = await getCalApi();
       cal("ui", {
+        theme: "light",
         styles: { branding: { brandColor: "#0284c7" } },
         hideEventTypeDetails: false,
         layout: "month_view",
@@ -240,7 +241,7 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleInputChange}
                   placeholder="Message"
-                  className={`block min-h-[100px] w-full shadow-sm sm:text-sm rounded-md ${
+                  className={`block min-h-[80px] w-full shadow-sm sm:text-sm rounded-md ${
                     submitted && formErrors.message
                       ? "border-red-300 focus:ring-red-500"
                       : "border-slate-200 focus:ring-sky-500"

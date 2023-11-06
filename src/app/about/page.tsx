@@ -9,15 +9,16 @@ import {
 import GlobalContactForm from "@/components/pages/GlobalContactForm";
 
 export const metadata: Metadata = {
-  title: "Halfnine - The Software Developers & Designers at Halfnine",
+  title: "Learn about how we empower your vision - Halfnine",
   description:
-    "Learn more about Halfnine in Central Florida. We're a crew of software developers, UX designers, project navigators and opportunity explorers.",
+    "Halfnine was born out of a desire to help businesses to transform their opportunities and ideas through innovative technology solutions.",
   alternates: {
     canonical: "https://www.halfnine.com/about",
   },
 };
 
 const Page = () => {
+
   return (
     <>
       <BackgroundwImage
@@ -25,8 +26,6 @@ const Page = () => {
         description="Our Highest Commitment is Our Customer's Success"
         // description="Committed to driving change through exceptional experiences"
       />
-      {/* <div className="overflow-hidden bg-white py-16 sm:py-28"> */}
-      {/* <div className="mx-auto max-w-7xl px-6 lg:px-8"> */}
       <div className="overflow-hidden bg-white py-16 sm:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <AboutFirst />

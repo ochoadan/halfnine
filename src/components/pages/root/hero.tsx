@@ -17,10 +17,10 @@ const RootHeading = () => {
           }}
         />
         <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-16 lg:pt-32">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl text-center font-bold">
-            Software Consulting and Development
+          <h1 className="text-3xl sm:text-4xl md:text-5xl text-center font-extrabold">
+          Software Consulting and Development
           </h1>
-          <p className="text-3xl sm:text-4xl md:text-5xl text-center font-bold mt-2">
+          <p className="text-3xl sm:text-4xl md:text-5xl text-center font-extrabold mt-2">
             For your Digital Success
           </p>
         </div>

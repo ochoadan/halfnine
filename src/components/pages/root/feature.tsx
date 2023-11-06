@@ -5,21 +5,21 @@ const features = [
   {
     name: "Simplicity in Complexity",
     description:
-      "Complex applications can be challenging to modify or to educate users. Yet, by leveraging proven technologies and frameworks, we can simplify the user experience.",
+      "Complex applications can be challenging to modify or to educate users. Yet, by leveraging proven technologies and frameworks, we can simplify the user experience",
     href: "#",
     icon: FaGears,
   },
   {
     name: "Regulatory Adherence",
     description:
-      "Compliance with regulations like GDPR, CCPA, SOC 2, HIPAA, PCI, ISO 27001 is crucial in app development. Non-compliance risks penalties. We prioritize regulatory compliance in our technology.",
+      "Compliance with regulations like GDPR, CCPA, SOC 2, HIPAA, PCI, ISO 27001 is crucial in app development. Non-compliance risks penalties. We prioritize regulatory compliance in our technology",
     href: "#",
     icon: FaClipboardCheck,
   },
   {
     name: "Robust Security",
     description:
-      "Given daily vulnerabilities, updating software assets, protecting accounts, and guarding users against social engineering is vital. Our developer team is skilled and security-aware, a key factor for any app.",
+      "Given daily vulnerabilities, updating software assets, protecting accounts, guarding users against social engineering is vital. Our developer team is skilled and security-aware, a key factor for any app",
     href: "#",
     icon: FaUserLock,
   },
@@ -32,15 +32,15 @@ export default function RootFeature() {
         {/* <h2 className="text-base font-semibold leading-7 text-sky-600">
           Deploy faster
         </h2> */}
-        <p className="mt-2 text-3xl font-bold text-gray-900 sm:text-4xl">
+        <p className="mt-2 text-3xl font-extrabold text-gray-900 sm:text-4xl">
           Experience Confidence with Us
         </p>
         <p className="mt-6 text-lg leading-8 text-gray-600">
           Our skilled team ensures a seamless experience for complex systems
-          with strong security and regulatory compliance.
+          with strong security and regulatory compliance
         </p>
       </FadeIn>
-      <div className="mx-auto mt-16 max-w-3xl sm:mt-20 lg:mt-24 lg:max-w-none">
+      <div className="mx-auto mt-16 max-w-3xl sm:mt-20 lg:max-w-none">
         <dl className="grid grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
           {features.map((feature) => (
             <FadeIn key={feature.name} className="flex flex-col">

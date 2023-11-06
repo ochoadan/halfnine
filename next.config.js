@@ -1,10 +1,12 @@
 // /** @type {import('next').NextConfig} */
-// const nextConfig = {}
+const withMDX = require("@next/mdx")();
 
-// module.exports = nextConfig
-module.exports = {
+const nextConfig = {
+  pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
   images: {
     domains: ["tailwindui.com", "images.unsplash.com"],
     dangerouslyAllowSVG: true,
   },
 };
+
+module.exports = withMDX(nextConfig);
