@@ -251,7 +251,7 @@ export default function GlobalNavbar() {
             </button>
           </div>
           <Popover.Group className="hidden lg:flex lg:gap-x-10">
-            <SolutionsPopover />
+            {/* <SolutionsPopover /> */}
             <Link
               href="/process"
               className="font-semibold leading-6 text-gray-500 hover:text-gray-900 select-none"
@@ -277,7 +277,7 @@ export default function GlobalNavbar() {
               className="select-none font-bold inline-flex items-center gap-x-1.5 rounded-md bg-sky-600 px-3 py-2 text-sm text-white shadow-sm hover:bg-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
               type="button"
             >
-              Contact Us
+              Contact us
             </Link>
           </div>
         </nav>
@@ -331,7 +331,7 @@ export default function GlobalNavbar() {
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Contact Us
+                  Contact us
                 </Link>
               </div>
             </div>

@@ -6,7 +6,7 @@ export default function DevProcess() {
       <FadeInStagger>
         <FadeIn className="mx-auto lg:mx-0">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            Development Process and Costs
+            Custom Software/Product Costs
             <hr className="border-sky-600 opacity-90 border-b-[2px] w-24 my-2" />
           </h2>
           <p className="mt-4 text-base leading-7 text-gray-600">
@@ -20,16 +20,11 @@ export default function DevProcess() {
         </FadeIn>
         <div className="mx-auto mt-16 flex flex-col gap-8 lg:mx-0 lg:mt-20 lg:flex-row lg:items-end">
           <FadeIn className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-gray-100 p-8 sm:w-3/4 sm:max-w-md sm:flex-row-reverse sm:items-end lg:w-72 lg:max-w-none lg:flex-none lg:flex-col lg:items-start">
-            <p className="flex-none text-3xl font-bold text-gray-900">
-              $15k+
-            </p>
+            <p className="flex-none text-3xl font-bold text-gray-900">$15k+</p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
-              <p className="text-2xl font-bold text-gray-900">
-                Discovery
-              </p>
+              <p className="text-2xl font-bold text-gray-900">Discovery</p>
               <p className="mt-2 text-base leading-7 text-gray-600">
-                Gathering the essential elements and building
-                MVP&apos;s
+                Gathering the essential elements and building MVP&apos;s
               </p>
             </div>
           </FadeIn>
@@ -38,9 +33,7 @@ export default function DevProcess() {
               $20k - $1M+
             </p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
-              <p className="text-2xl font-bold text-white">
-                Development
-              </p>
+              <p className="text-2xl font-bold text-white">Development</p>
               <p className="mt-2 text-base leading-7 text-gray-400">
                 Designing technology that is both reliable and ready for
                 deployment after testing
@@ -52,9 +45,7 @@ export default function DevProcess() {
               $5k - 10k+ / month
             </p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
-              <p className="text-2xl font-bold text-white">
-                Maintenance
-              </p>
+              <p className="text-2xl font-bold text-white">Maintenance</p>
               <p className="mt-2 text-base leading-7 text-sky-200">
                 Our software is dynamic and adaptable, with regular updates and
                 new features
