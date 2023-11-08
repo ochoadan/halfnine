@@ -71,7 +71,7 @@ function SolutionsPopover() {
       {({ open }) => (
         <>
           <Popover.Button className="group flex items-center gap-x-1 font-semibold leading-6 text-gray-500 hover:text-gray-900 -mr-3 outline-none">
-            {" "}
+            
             {/* -mr-6 */}
             Solutions
             <ChevronDownIcon
@@ -251,7 +251,7 @@ export default function GlobalNavbar() {
             </button>
           </div>
           <Popover.Group className="hidden lg:flex lg:gap-x-10">
-            {/* <SolutionsPopover /> */}
+            <SolutionsPopover />
             <Link
               href="/process"
               className="font-semibold leading-6 text-gray-500 hover:text-gray-900 select-none"

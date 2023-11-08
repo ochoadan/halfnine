@@ -4,7 +4,11 @@ const withMDX = require("@next/mdx")();
 const nextConfig = {
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
   images: {
-    domains: ["tailwindui.com", "images.unsplash.com"],
+    domains: [
+      "tailwindui.com",
+      "images.unsplash.com",
+      "raw.githubusercontent.com",
+    ],
     dangerouslyAllowSVG: true,
   },
 };

@@ -35,7 +35,7 @@ const RootHeading = () => {
           </p>
         </div>
       </div>
-      <FadeInStagger className="max-w-7xl pt-16 mx-auto px-6 lg:px-8 pb-20 lg:pb-40">
+      <FadeInStagger faster className="max-w-7xl pt-16 mx-auto px-6 lg:px-8 pb-20 lg:pb-40">
         <FadeIn className="mb-10 flex justify-center">
           <p className="relative rounded-full bg-white px-4 py-1.5 text-sm leading-6 text-gray-600 ring-1 ring-inset ring-gray-900/10">
             Join over 20+ Businesses improving with us.

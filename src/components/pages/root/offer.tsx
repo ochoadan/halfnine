@@ -1,63 +1,50 @@
-"use client";
+import { FadeIn, FadeInStagger } from "@/components/Global/FadeIn";
+import { FaRegCompass, FaCode, FaHeadset, FaRegIdCard } from "react-icons/fa";
 
-import { Tab } from "@headlessui/react";
-import { CheckCircleIcon } from "@heroicons/react/20/solid";
-import { panels } from "./offerdata";
-
-const Panel = ({ panel }: any) => (
-  <Tab.Panel className="bg-white py-8 sm:py-12 outline-none">
-    <div className="mx-auto max-w-7xl px-6 lg:px-8">
-      <div className="mx-auto lg:mx-0">
-        <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-          {panel.name}
-          <hr className="border-sky-600 opacity-90 border-b-[2px] w-20 my-2" />
-        </h2>
-        <p className="mt-4 text-lg leading-8 text-gray-600">
-          {panel.description}
-        </p>
-        <ul
-          role="list"
-          className="mt-10 grid grid-cols-1 gap-x-8 gap-y-3 text-base leading-7 sm:grid-cols-2"
-        >
-          {panel.features.map((feature: any) => (
-            <li key={feature.name} className="flex gap-x-3">
-              <CheckCircleIcon
-                className="h-7 w-5 flex-none text-sky-600"
-                aria-hidden="true"
-              />
-              {feature.name}
-            </li>
-          ))}
-        </ul>
-      </div>
+const StatsComponent = () => (
+  <FadeInStagger faster>
+    <FadeIn className="text-center">
+      <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+        {/* How we aim to help you succeed */}
+        {/* Solve it with Halfnine */}
+        Solve and Build with Halfnine
+      </h2>
+    </FadeIn>
+    <div className="mt-10 grid grid-cols-1 gap-8 overflow-hidden sm:grid-cols-2 lg:grid-cols-4">
+      <FadeIn className="flex flex-col p-5 transition-colors duration-200 rounded-2xl border-2 gap-1 bg-white border-sky-400">
+        <FaRegCompass className="h-5 w-5 text-sky-500" aria-hidden="true" />
+        <dd className="text-lg font-bold text-sky-900">Strategizing</dd>
+        <dt className="text-sm text-gray-600">
+          Crafting and executing technical strategies and plans, roadmaps and
+          architectures
+        </dt>
+      </FadeIn>
+      <FadeIn className="flex flex-col p-5 transition-colors duration-200 rounded-2xl border-2 gap-1 bg-white border-cyan-400">
+        <FaCode className="h-5 w-5 text-cyan-500" aria-hidden="true" />
+        <dd className="text-lg font-bold text-cyan-900">Development</dd>
+        <dt className="text-sm text-gray-600">
+          Developing, Deploying and Integrating custom software applications or
+          products
+        </dt>
+      </FadeIn>
+      <FadeIn className="flex flex-col p-5 transition-colors duration-200 rounded-2xl border-2 gap-1 bg-white border-teal-400">
+        <FaHeadset className="h-5 w-5 text-teal-500" aria-hidden="true" />
+        <dd className="text-lg font-bold text-teal-900">Upkeep</dd>
+        <dt className="text-sm text-gray-600">
+          {/* Support and Digital asset management, with user training and help desk */}
+          Support and Digital asset managing, with user training and help desk
+        </dt>
+      </FadeIn>
+      <FadeIn className="flex flex-col p-5 transition-colors duration-200 rounded-2xl border-2 gap-1 bg-white border-sky-400">
+        <FaRegIdCard className="h-5 w-5 text-sky-500" aria-hidden="true" />
+        <dd className="text-lg font-bold text-emerald-900">Management</dd>
+        <dt className="text-sm text-gray-600">
+          Cybersecurity, and Systems Administration. Preventing problems before
+          they start
+        </dt>
+      </FadeIn>
     </div>
-  </Tab.Panel>
+  </FadeInStagger>
 );
 
-const Offer = () => (
-  <Tab.Group>
-    <div className="flex">
-      <Tab.List className="flex-col w-64 grid grid-rows-1 lg:grid-rows-2">
-        {panels.map((panel, index) => (
-          <Tab
-            key={index}
-            className={({ selected }) =>
-              `text-left font-semibold p-2 outline-none ${
-                selected ? "bg-sky-200" : "bg-slate-200"
-              }`
-            }
-          >
-            {panel.name}
-          </Tab>
-        ))}
-      </Tab.List>
-      <Tab.Panels>
-        {panels.map((panel, index) => (
-          <Panel key={index} panel={panel} />
-        ))}
-      </Tab.Panels>
-    </div>
-  </Tab.Group>
-);
-
-export default Offer;
+export default StatsComponent;

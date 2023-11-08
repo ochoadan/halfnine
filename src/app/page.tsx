@@ -14,10 +14,10 @@ import {
 const Page = () => {
   const section = (
     Component: React.ComponentType,
-    bgColor: string
-    // paddingTop: string
+    bgColor: string,
+    paddingY: string
   ) => (
-    <div className={`bg-${bgColor} py-16 md:py-28`}>
+    <div className={`bg-${bgColor} ${paddingY}`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <Component />
       </div>
@@ -27,12 +27,14 @@ const Page = () => {
   return (
     <>
       <RootHero />
-      {section(RootStats, "gray-50")}
-      {section(RootFeature, "white")}
-      {section(RootDevProcess, "gray-50")}
-      {section(RootFeatureGrid, "white")}
-      {section(GlobalFAQ, "gray-50")}
-      {section(GlobalContactForm, "white")}
+      {section(RootOffer, "gray-50", "py-16 md:py-28")}
+      {section(RootOffering, "white", "py-16 md:py-28")}
+      {section(RootDevProcess, "gray-50", "py-16 md:py-28")}
+      {section(RootFeature, "white", "py-16 md:py-28")}
+      {section(RootStats, "gray-50", "py-16 md:py-28")}
+      {section(RootFeatureGrid, "white", "py-16 md:py-28")}
+      {section(GlobalFAQ, "gray-50", "py-16 md:py-28")}
+      {section(GlobalContactForm, "white", "py-16 md:py-28")}
     </>
   );
 };
