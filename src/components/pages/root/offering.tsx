@@ -39,19 +39,14 @@ export default function DevProcess() {
             </FadeIn>
           ))}
         </div>
-        <FadeIn className="py-4 sm:py-8 md:flex md:items-center gap-20">
-          <h3 className="text-lg font-bold tracking-tight text-gray-900 sm:text-xl">
-            Find a solution not listed here?
-            <br />
-            <span>
-              We might work with it!
+        <FadeIn className="pt-4 sm:pt-6 md:flex md:items-center">
+          <h3 className="text-lg font-bold text-gray-900 sm:text-xl">
+            Find a solution not listed here? <span>We might work with it! </span><span>
+              <Link href="/contact" className="text-sky-600 hover:text-sky-500 hover:underline">
+                Contact us<span aria-hidden="true"> →</span>
+              </Link>
             </span>
           </h3>
-          <div className="group mt-2 flex items-center gap-x-6 md:mt-0 md:flex-shrink-0">
-            <Link href="/contact" className="rounded-md bg-sky-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">
-              Contact us<span aria-hidden="true" className="ml-1">→</span>
-            </Link>
-          </div>
         </FadeIn>
         {/* Find a solution not listed here? We might work with it! Contact us today. */}
       </FadeInStagger >
