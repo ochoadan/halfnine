@@ -10,7 +10,7 @@ const StatsComponent = () => (
         Solve and Build with Halfnine
       </h2>
     </FadeIn>
-    <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2">
+    <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
       <FadeIn className="flex flex-col p-5 transition-colors duration-200 rounded-2xl border-2 gap-1 bg-white border-sky-400">
         <FaRegCompass className="h-5 w-5 text-sky-500" aria-hidden="true" />
         <dd className="text-lg font-bold text-sky-900">Strategizing</dd>
@@ -45,7 +45,7 @@ const StatsComponent = () => (
         <FaRegIdCard className="h-5 w-5 text-sky-500" aria-hidden="true" />
         <dd className="text-lg font-bold text-emerald-900">Management</dd>
         <dt className="text-sm text-gray-600">
-          We administer your systems and ensure they are operating
+          We administer your IT systems and ensure they are operating
           efficiently and securely.
           {/* Cybersecurity, and Systems Administration. Preventing problems before
           they start */}
