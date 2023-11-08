@@ -27,14 +27,14 @@ const Page = () => {
   return (
     <>
       <RootHero />
-      {section(RootOffer, "gray-50", "py-16 md:py-28")}
-      {section(RootOffering, "white", "py-16 md:py-28")}
-      {section(RootDevProcess, "gray-50", "py-16 md:py-28")}
-      {section(RootFeature, "white", "py-16 md:py-28")}
-      {section(RootStats, "gray-50", "py-16 md:py-28")}
-      {section(RootFeatureGrid, "white", "py-16 md:py-28")}
-      {section(GlobalFAQ, "gray-50", "py-16 md:py-28")}
-      {section(GlobalContactForm, "white", "py-16 md:py-28")}
+      {section(RootOffer, "gray-50", "py-16 md:py-32")}
+      {section(RootOffering, "white", "py-16 md:py-32")}
+      {section(RootDevProcess, "gray-50", "py-16 md:py-32")}
+      {section(RootFeature, "white", "py-16 md:py-32")}
+      {section(RootStats, "gray-50", "py-16 md:py-32")}
+      {section(RootFeatureGrid, "white", "py-16 md:py-32")}
+      {section(GlobalFAQ, "gray-50", "py-16 md:py-32")}
+      {section(GlobalContactForm, "white", "py-16 md:py-32")}
     </>
   );
 };
