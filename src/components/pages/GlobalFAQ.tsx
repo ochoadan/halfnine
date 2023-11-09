@@ -46,8 +46,8 @@ const GlobalFAQ = () => {
       </FadeIn>
       <dl className="mt-10 divide-y divide-gray-900/10">
         {faqs.map((faq) => (
-          <dl key={faq.question}>
-            <FadeIn>
+          <FadeIn key={faq.question}>
+            <dl>
               <Disclosure as="div">
                 {({ open }) => (
                   <>
@@ -87,8 +87,8 @@ const GlobalFAQ = () => {
                   </>
                 )}
               </Disclosure>
-            </FadeIn>
-          </dl>
+            </dl>
+          </FadeIn>
         ))}
       </dl>
     </FadeInStagger>
