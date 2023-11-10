@@ -1,5 +1,5 @@
 // import { ContentLayout } from "@/components/Content-Layout";
-import Hero1 from "@/components/Hero-1";
+import Hero1 from "@/components/Global/Hero-1";
 
 const Page = () => {
   return (

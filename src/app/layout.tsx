@@ -3,25 +3,14 @@ import type { Metadata } from "next";
 import GlobalNavbar from "@/components/Global/Navbar";
 import GlobalFooter from "@/components/Global/Footer";
 import { Providers } from "@/app/providers";
-
 import { Mulish } from 'next/font/google'
-// Fonts:
-// Gantari: Best (broken)
-// Montserrat: Too Wide
 
-// REM: TOO THICK
-// Mulish: Similar
-// Raleway: Odd
-
-const fontSource = Mulish({ subsets: ['latin']})
+const fontSource = Mulish({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: "Software Development and Consulting Solutions - Halfnine",
-  description:
-    "Unlock future potential with our digital solutions. Experience efficiency, cost-effectiveness, speed, and innovation with us.",
-  alternates: {
-    canonical: "https://www.halfnine.com",
-  },
+  description: "Unlock future potential with our digital solutions. Experience efficiency, cost-effectiveness, speed, and innovation with us.",
+  alternates: { canonical: "https://www.halfnine.com", },
 };
 
 export default function RootLayout({
