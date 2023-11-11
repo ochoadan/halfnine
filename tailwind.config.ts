@@ -19,6 +19,9 @@ const config: Config = {
       transitionDuration: {
         "500": "500ms",
       },
+      maxWidth: {
+        '8xl': '88rem',
+      },
     },
   },
   plugins: [

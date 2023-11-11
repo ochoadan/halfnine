@@ -28,11 +28,13 @@ function GoogleAnalytics() {
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <IntercomProvider appId={INTERCOM_APP_ID} autoBoot>
+    <>
+      {/* <IntercomProvider appId={INTERCOM_APP_ID} autoBoot> */}
       <GoogleAnalytics />
       {/* <ThemeProvider attribute="class" disableTransitionOnChange> */}
       {children}
       {/* </ThemeProvider> */}
-    </IntercomProvider>
+      {/* </IntercomProvider> */}
+    </>
   );
 }
