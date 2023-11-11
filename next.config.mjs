@@ -3,6 +3,7 @@ import withMarkdoc from '@markdoc/next.js'
 import withSearch from './src/markdoc/search.mjs'
 
 const nextConfig = {
+  output: 'standalone',
   pageExtensions: ['md', 'mdoc', 'js', 'jsx', 'ts', 'tsx'],
   images: {
     remotePatterns: [

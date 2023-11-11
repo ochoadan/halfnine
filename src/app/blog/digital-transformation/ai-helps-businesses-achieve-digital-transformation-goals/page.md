@@ -5,7 +5,7 @@ nextjs:
     title: How AI Helps Businesses Achieve Digital Transformation Goals  - Halfnine
     description: AI revolutionizes businesses in the digital age, driving digital transformation and helping businesses achieve their goals.
     alternates:
-      canonicalUrl: https://halfnine.com/how-ai-helps-businesses-achieve-digital-transformation-goals
+      canonical: https://www.halfnine.com/blog/digital-transformation/ai-helps-businesses-achieve-digital-transformation-goals
 ---
 
 Artificial intelligence (AI) is revolutionizing the way businesses operate in the digital age. It is playing a pivotal role in driving digital transformation initiatives and helping businesses of all sizes and industries to achieve their goals.
