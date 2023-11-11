@@ -9,7 +9,7 @@ import { Hero } from '@/components/Hero'
 import { Logo, Logomark } from '@/components/Logo'
 import { MobileNavigation } from '@/components/MobileNavigation'
 import { Navigation } from '@/components/Navigation'
-import { Search } from '@/components/Search'
+// import { Search } from '@/components/Search'
 import { ThemeSelector } from '@/components/ThemeSelector'
 
 function GitHubIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
@@ -53,7 +53,7 @@ function Header() {
         </Link>
       </div>
       <div className="-my-5 mr-6 sm:mr-8 md:mr-0">
-        <Search />
+        {/* <Search /> */}
       </div>
       <div className="relative flex basis-0 justify-end gap-6 sm:gap-8 md:flex-grow">
         <ThemeSelector className="relative z-10" />
@@ -75,7 +75,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
       {isHomePage && <Hero />}
 
-      <div className="relative mx-auto flex w-full max-w-8xl flex-auto justify-center sm:px-2 lg:px-8 xl:px-12">
+      <div className="relative mx-auto flex w-full max-w-7xl flex-auto justify-center sm:px-2 lg:px-8 xl:px-12">
         <div className="hidden lg:relative lg:block lg:flex-none">
           <div className="absolute inset-y-0 right-0 w-[50vw] bg-slate-50 dark:hidden" />
           <div className="absolute bottom-0 right-0 top-16 hidden h-12 w-px bg-gradient-to-t from-slate-800 dark:block" />

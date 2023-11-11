@@ -10,6 +10,13 @@ import {
   RootOffer,
   RootOffering,
 } from "@/components/pages/root";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Software Development and Consulting Solutions - Halfnine",
+  description: "Unlock future potential with our digital solutions. Experience efficiency, cost-effectiveness, speed, and innovation with us.",
+  alternates: { canonical: "https://www.halfnine.com", },
+};
 
 const Page = () => {
   const section = (
