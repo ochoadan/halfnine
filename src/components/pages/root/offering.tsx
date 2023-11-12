@@ -43,7 +43,7 @@ export default function DevProcess() {
           <h3 className="text-lg font-bold text-gray-900 sm:text-xl">
             Find a solution not listed here? <span>We might work with it! </span><span>
               <Link href="/contact" className="text-sky-600 hover:text-sky-500 hover:underline">
-                Contact us<span aria-hidden="true"> →</span>
+                Contact us
               </Link>
             </span>
           </h3>
