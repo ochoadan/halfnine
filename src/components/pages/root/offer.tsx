@@ -7,7 +7,8 @@ const StatsComponent = () => (
       <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
         {/* How we aim to help you succeed */}
         {/* Solve it with Halfnine */}
-        Solve and Build with Halfnine
+        {/* Solve and Build with Halfnine */}
+        Halfnine Can Help You Solve and Build
       </h2>
     </FadeIn>
     <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
