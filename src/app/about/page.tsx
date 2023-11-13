@@ -26,23 +26,23 @@ const Page = () => {
         description="Our Highest Commitment is Our Customer's Success"
         // description="Committed to driving change through exceptional experiences"
       />
-      <div className="overflow-hidden bg-white py-16 sm:py-28">
+      <div className="overflow-hidden bg-white py-16 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <AboutFirst />
         </div>
       </div>
-      <div className="overflow-hidden bg-gray-100 py-16 sm:py-28">
+      <div className="overflow-hidden bg-gray-100 py-16 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <AboutSecond />
         </div>
       </div>
-      <div className="overflow-hidden bg-white py-16 sm:py-28">
+      <div className="overflow-hidden bg-white py-16 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <AboutThird />
         </div>
       </div>
       <AboutLast />
-      <div className="overflow-hidden bg-white py-16 sm:py-28">
+      <div className="overflow-hidden bg-white py-16 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <GlobalContactForm />
         </div>
