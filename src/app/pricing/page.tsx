@@ -7,11 +7,8 @@ import { TagList, TagListItem } from "@/components/Global/TagList";
 
 export const metadata: Metadata = {
   title: "Halfnine - Pricing: How much does it cost to develop an app?",
-  description:
-    "Explore app development costs with Halfnine. Understand pricing based on your needs. Maximize your app’s potential with us.",
-  alternates: {
-    canonical: "https://www.halfnine.com/pricing",
-  },
+  description: "Explore app development costs with Halfnine. Understand pricing based on your needs. Maximize your app’s potential with us.",
+  alternates: { canonical: "https://www.halfnine.com/pricing" },
 };
 
 const importImage = (src: string) => {
