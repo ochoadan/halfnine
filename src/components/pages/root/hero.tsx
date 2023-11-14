@@ -5,11 +5,14 @@ const RootHeading = () => {
   return (
     <>
       <div className="relative">
-        <img
+        <Image
           className="absolute -z-10 select-none hidden lg:block"
           // className="absolute opacity-[0.1] -z-10"
           alt="Background"
           src="/img/index/indxbg.png"
+          width={1920}
+          height={1080}
+          loading="lazy"
           style={{
             // transition: "opacity 1.5s",
             opacity: 0,

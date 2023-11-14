@@ -47,11 +47,10 @@ const Contact = () => {
   //   setTurnstileSolved(true);
   // };
 
-  const emailRegex =
-    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  const nameRegex = /^[a-z ,.'-]+$/i;
-
   useEffect(() => {
+    const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const nameRegex = /^[a-z ,.'-]+$/i;
+
     const newFormErrors = {
       name: !nameRegex.test(formData.name),
       email: !emailRegex.test(formData.email),

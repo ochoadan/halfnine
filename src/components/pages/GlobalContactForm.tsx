@@ -32,11 +32,10 @@ function GlobalContactForm() {
   const [messageSuccess, setMessageSuccess] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const emailRegex =
-    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  const nameRegex = /^[a-z ,.'-]+$/i;
-
   useEffect(() => {
+    const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const nameRegex = /^[a-z ,.'-]+$/i;
+
     const newFormErrors = {
       name: !nameRegex.test(formData.name),
       email: !emailRegex.test(formData.email),
@@ -44,7 +43,7 @@ function GlobalContactForm() {
     };
     setFormErrors(newFormErrors);
   }, [formData, submitted]);
-
+  
   const handleInputChange = (e: any) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -204,11 +203,10 @@ function GlobalContactForm() {
               value={formData.message}
               onChange={handleInputChange}
               placeholder="Message"
-              className={`block w-full min-h-[80px] shadow-sm sm:text-sm rounded-md ${
-                submitted && formErrors.message
+              className={`block w-full min-h-[80px] shadow-sm sm:text-sm rounded-md ${submitted && formErrors.message
                   ? "border-red-300 focus:ring-red-500"
                   : "border-slate-200 focus:ring-sky-500"
-              }`}
+                }`}
             />
           </div>
           {submitted &&
