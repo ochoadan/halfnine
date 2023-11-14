@@ -1,5 +1,12 @@
 import getAllMarkdownFiles from '@/markdoc/pages.mjs'
+import { Metadata } from 'next';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+    title: "Halfnine - Blog",
+    description: "Information for the technology of your business.",
+    alternates: { canonical: "https://www.halfnine.com/blog" },
+};
 
 function MarkdownPage() {
     const data = getAllMarkdownFiles();
