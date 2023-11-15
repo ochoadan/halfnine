@@ -17,7 +17,7 @@ const importImage = (src: string) => {
       <g className="origin-center scale-100 transition duration-500 motion-safe:group-hover:scale-105">
         <Image
           src={src}
-          alt=""
+          alt="BG"
           className="object-cover object-center"
           width={655}
           height={655}

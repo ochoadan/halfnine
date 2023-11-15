@@ -1,5 +1,6 @@
 ---
 title: How AI Helps Businesses Achieve Digital Transformation Goals
+category: Digital Transformation
 nextjs:
   metadata:
     title: How AI Helps Businesses Achieve Digital Transformation Goals  - Halfnine
@@ -23,6 +24,9 @@ Artificial intelligence (AI) is revolutionizing the way businesses operate in th
 {% quick-link title="API reference" icon="theming" href="/" description="Learn to easily customize and modify your app's visual design to fit your brand." /%}
 
 {% /quick-links %} -->
+---
+
+{% blog-hero image="/img/blog/ai-helps-businesses-achieve-digital-transformation-goals.png" imagedescription="Clean, minimalist design with a solid background, showcasing the synergy between AI and business transformation." /%}
 
 ---
 

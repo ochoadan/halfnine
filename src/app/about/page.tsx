@@ -44,7 +44,7 @@ const Page = () => {
               <g className="origin-center scale-100 transition duration-500 motion-safe:group-hover:scale-105">
                 <Image
                   src="/img/about/pexels-mizuno-k-12902918-min.jpg"
-                  alt=""
+                  alt="Businesswomen Looking at a Document Folder"
                   className="object-cover object-center"
                   fill
                 />
@@ -139,7 +139,7 @@ const Page = () => {
                   // className="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
                   className="absolute left-0 top-0 w-[57rem] max-w-none rounded-md"
                   src="/img/about/FymHRtjXwAId1Rt.jpg"
-                  alt="App screenshot"
+                  alt="Surveyr App screenshot"
                   width={1824}
                   height={1080}
                 />
@@ -155,7 +155,7 @@ const Page = () => {
               <Image
                 className="h-full w-full object-cover"
                 src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&&sat=-100"
-                alt=""
+                alt="Man questioning computer screen"
                 fill
               />
               <div

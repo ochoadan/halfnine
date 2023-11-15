@@ -183,8 +183,8 @@ export default function GlobalNavbar() {
               src="/img/en.svg"
               width={16}
               height={16}
-              layout="fixed"
-              alt=""
+              objectFit="fixed"
+              alt="USA Flag"
               aria-hidden="true"
             />
             <span className="leading-tight">+1 (321) 270-9110</span>
@@ -228,7 +228,7 @@ export default function GlobalNavbar() {
                   width={20}
                   height={20}
                   className="-ml-0.5"
-                  alt=""
+                  alt="USA Flag"
                   aria-hidden="true"
                 />
                 +1 (321) 270-9110

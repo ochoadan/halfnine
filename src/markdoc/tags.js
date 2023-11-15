@@ -1,5 +1,6 @@
 import { Callout } from '@/components/Callout'
 import { QuickLink, QuickLinks } from '@/components/QuickLinks'
+import { BlogHero } from '@/components/BlogHero'
 
 const tags = {
   callout: {
@@ -42,6 +43,15 @@ const tags = {
       href: { type: String },
     },
   },
+  'blog-hero': {
+    render: BlogHero,
+    attributes: {
+      title: { type: String },
+      imagedescription: { type: String },
+      image: { type: String },
+      imgsrc: { type: String },
+    },
+  }
 }
 
 export default tags
