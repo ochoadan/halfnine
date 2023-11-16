@@ -2,7 +2,7 @@
 title: How AI Helps Businesses Achieve Digital Transformation Goals
 nextjs:
   metadata:
-    title: How AI Helps Businesses Achieve Digital Transformation Goals  - Halfnine
+    title: How AI Helps Businesses Achieve Digital Transformation Goals - Halfnine
     description: AI revolutionizes businesses in the digital age, driving digital transformation and helping businesses achieve their goals.
     alternates:
       canonical: https://www.halfnine.com/blog/digital-transformation/ai-helps-businesses-achieve-digital-transformation-goals

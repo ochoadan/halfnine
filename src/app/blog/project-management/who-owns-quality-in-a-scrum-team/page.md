@@ -2,7 +2,7 @@
 title: Defining Quality Ownership in Scrum - A Comprehensive Guide
 nextjs:
   metadata:
-    title: How Defining Quality Ownership in Scrum - A Comprehensive Guide  - Halfnine
+    title: How Defining Quality Ownership in Scrum - A Comprehensive Guide - Halfnine
     description: Discover the key principles of quality ownership in Scrum with our comprehensive guide.
     alternates:
       canonical: https://www.halfnine.com/blog/project-management/who-owns-quality-in-a-scrum-team
