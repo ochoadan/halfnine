@@ -38,7 +38,7 @@ export function BlogHero({
         />
       </div>
       <p className="text-lg font-semibold text-gray-900 sm:text-xl mt-2 mb-8">
-        Need Help with this topic? <span>Get expert help! </span><span>
+        Need a hand with this topic? <span>
           <Link href="/contact">
             Contact us
           </Link>

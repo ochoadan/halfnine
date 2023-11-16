@@ -8,7 +8,7 @@ const StatsComponent = () => (
         {/* How we aim to help you succeed */}
         {/* Solve it with Halfnine */}
         {/* Solve and Build with Halfnine */}
-        Halfnine Can Help You Solve and Build
+        Halfnine can help you Solve and Build
       </h2>
     </FadeIn>
     <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
