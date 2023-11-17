@@ -17,6 +17,8 @@ In this comprehensive guide, we will walk you through the step-by-step process o
 
 {% blog-hero image="/img/blog/how-to-add-stripe-to-wordpress.png" imagedescription="Stripe Payments with WordPress" /%}
 
+---
+
 ## What is a Payment Gateway and How Does It Work?
 
 Before we dive into setting up Stripe in WordPress, let's first understand what a payment gateway is and how it works. A payment gateway is an application integrated into your online store that enables secure payments. It acts as the middleman between you and your customers, facilitating the transaction process.
@@ -31,6 +33,8 @@ Here's a simplified overview of how a payment gateway works:
 6. The bank settles the amount with the payment gateway, which then settles with the merchant.
 
 It's important to note that all payment gateways require your website to use SSL/HTTPS encryption for security purposes. Most hosting service providers offer free SSL certification, so make sure to enable it before setting up a payment gateway.
+
+---
 
 ## PayPal vs Stripe: An Overview
 
@@ -55,9 +59,13 @@ Please note that the fees and availability may vary depending on your location. 
 
 Based on your specific requirements, you can choose either PayPal or Stripe as your payment gateway. In this guide, we will focus on setting up Stripe in WordPress, but keep in mind that PayPal integration with WooCommerce is equally straightforward and hassle-free.
 
+---
+
 ## How to Accept Payments in WordPress
 
 Now that we have a clear understanding of payment gateways and the differences between PayPal and Stripe, let's explore how to set up and accept payments in WordPress. We will cover four different methods: Stripe with WordPress, Stripe with WPForms, Stripe in WooCommerce, and Stripe in Easy Digital Downloads (EDD).
+
+---
 
 ## Stripe With WordPress
 
@@ -111,6 +119,8 @@ Now that you have set up Stripe and created a payment form, it's time to integra
 5. Publish your page.
 
 Congratulations! You have successfully set up Stripe with WordPress. Your checkout page is now ready, and customers can make payments using Stripe.
+
+---
 
 ## Stripe With WPForms
 
@@ -166,6 +176,8 @@ The final step is to include the form on a page of your WordPress site. Follow t
 
 Your form with Stripe payment options is now ready. Visitors can fill out the form and make payments using Stripe.
 
+---
+
 ## Stripe in WooCommerce
 
 If you're running an eCommerce store with WordPress, integrating Stripe with WooCommerce is a popular choice. WooCommerce is a leading eCommerce plugin that allows you to sell physical and digital products seamlessly.
@@ -200,6 +212,8 @@ Fill in the required fields and configure other options according to your prefer
 
 Congratulations! You have successfully set up Stripe with WooCommerce. Customers can now make payments using Stripe on your WooCommerce store.
 
+---
+
 ## Stripe in Easy Digital Downloads (EDD)
 
 If you're selling digital products or downloads, Easy Digital Downloads (EDD) is a popular WordPress plugin to consider. With EDD, you can easily sell eBooks, PDF files, WordPress plugins, and other digital items.
@@ -219,6 +233,8 @@ Once you have the premium version, follow these steps:
 5. Click 'Save Changes' to apply the settings.
 
 With Stripe successfully integrated into Easy Digital Downloads, your checkout pages will be able to accept credit card payments through Stripe.
+
+---
 
 ## Conclusion
 

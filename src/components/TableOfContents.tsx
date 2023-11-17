@@ -87,12 +87,12 @@ export function TableOfContents({
                       {section.title}
                     </Link>
                   </h3>
-                  {section.children.length > 0 && (
+                  {isActive(section) && section.children.length > 0 && (
                     <ol
                       role="list"
                       className="mt-2 space-y-3 pl-5 text-slate-500 dark:text-slate-400"
                     >
-                      {/* {section.children.map((subSection) => (
+                      {section.children.map((subSection) => (
                         <li key={subSection.id}>
                           <Link
                             href={`#${subSection.id}`}
@@ -105,7 +105,7 @@ export function TableOfContents({
                             {subSection.title}
                           </Link>
                         </li>
-                      ))} */}
+                      ))}
                     </ol>
                   )}
                 </li>

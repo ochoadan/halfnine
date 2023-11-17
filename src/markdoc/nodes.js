@@ -58,6 +58,18 @@ const nodes = {
       },
     },
   },
+  // TODO: Fix support for `target` attribute in `a` tag
+  a: {
+    ...defaultNodes.a,
+    transform(node, config) {
+      let attributes = node.transformAttributes(config)
+      let href = attributes.href
+      if (href && href.startsWith('http')) {
+        attributes.target = '_blank'
+      }
+      return new Tag('a', attributes, node.transformChildren(config))
+    },
+  },
 }
 
 export default nodes
