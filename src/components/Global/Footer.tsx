@@ -85,7 +85,7 @@ export default function GlobalFooter() {
             target="_blank"
             className="text-gray-400 hover:text-black scale-100 hover:scale-{1.02}"
           >
-            <span className="sr-only">Github</span>
+            <span className="sr-only">GitHub</span>
             <FaGithub className="h-6 w-6" aria-hidden="true" />
           </Link>
         </div>
