@@ -26,7 +26,7 @@ export function Fence({
                   .map((token, tokenIndex) => (
                     <span key={tokenIndex} {...getTokenProps({ token })} />
                   ))}
-                {'\n'}
+                {/* {'\n'} */}
               </Fragment>
             ))}
           </code>
