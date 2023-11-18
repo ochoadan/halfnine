@@ -34,7 +34,7 @@ export function TableOfContents({
     let headings = getHeadings(tableOfContents)
     function onScroll() {
       let top = window.scrollY
-      let current = headings[0].id
+      let current = currentSection // Store the current section to compare later
       for (let heading of headings) {
         if (top >= heading.top - 10) {
           current = heading.id
@@ -42,14 +42,16 @@ export function TableOfContents({
           break
         }
       }
-      setCurrentSection(current)
+      if (current !== currentSection) { // Only update if the current section has changed
+        setCurrentSection(current)
+      }
     }
     window.addEventListener('scroll', onScroll, { passive: true })
     onScroll()
     return () => {
       window.removeEventListener('scroll', onScroll)
     }
-  }, [getHeadings, tableOfContents])
+  }, [getHeadings, tableOfContents, currentSection]) // Add currentSection as a dependency
 
   function isActive(section: Section | Subsection) {
     if (section.id === currentSection) {

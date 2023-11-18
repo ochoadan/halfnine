@@ -4,6 +4,7 @@ import yaml from 'js-yaml'
 
 import { DocsLayout } from '@/components/DocsLayout'
 import { Fence } from '@/components/Fence'
+import { InlineCode } from '@/components/InlineCode'
 
 let documentSlugifyMap = new Map()
 
@@ -58,9 +59,12 @@ const nodes = {
       },
     },
   },
+  // code: {
+  //   render: InlineCode,
+  // },
   // TODO: Fix support for `target` attribute in `a` tag
-  a: {
-    ...defaultNodes.a,
+  link: {
+    ...defaultNodes.link,
     transform(node, config) {
       let attributes = node.transformAttributes(config)
       let href = attributes.href
