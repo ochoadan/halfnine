@@ -162,29 +162,30 @@ export default function GlobalNavbar() {
   }
 
   const pathname = usePathname();
-  const isRootPage = pathname === "/";
-
+  const isRootPage = pathname === "/" || pathname === "/blog";
+  
   return (
     <header
       className={`sticky top-0 isolate w-full filter bg-white z-[100] ${isRootPage || mobileMenuOpen
-          ? scrollPosition > 20
-            ? "shadow-md"
-            : ""
-          : "shadow-md"
+        ? scrollPosition > 20
+          ? "shadow-md"
+          : ""
+        : "shadow-md"
         }`}
     >
-      <div className="bg-stone-50 h-6 hidden lg:block">
+            <div className="bg-stone-50 h-6 hidden lg:block">
         <div className="flex mx-auto max-w-7xl text-center justify-end px-4 text-xs font-small lg:px-8 gap-x-5 rounded-md py-1">
           <Link
             href="tel:+13212709110"
             className="hover:text-blue-800 inline-flex gap-x-1.5"
+            aria-label="Call Halfnine LLC"
           >
             <Image
               src="/img/en.svg"
-              width={16}
-              height={16}
               objectFit="fixed"
               alt="USA Flag"
+              width={20}
+              height={20}
               aria-hidden="true"
             />
             <span className="leading-tight">+1 (321) 270-9110</span>
@@ -221,6 +222,7 @@ export default function GlobalNavbar() {
               type="button"
               href="tel:+13212709110"
               className="items-center rounded-md px-3 py-2 text-xs font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 text-gray-700 hover:text-blue-600"
+              aria-label="Call Halfnine LLC"
             >
               <span className="hidden md:inline-flex gap-x-1.5">
                 <Image
@@ -272,9 +274,8 @@ export default function GlobalNavbar() {
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Link
               href={"/contact"}
-              className="select-none font-bold inline-flex items-center gap-x-1.5 rounded-md bg-sky-600 px-3 py-2 text-sm text-white shadow-sm hover:bg-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
+              className="select-none font-bold inline-flex items-center gap-x-1.5 rounded-md bg-[#1976d2] px-3 py-2 text-sm text-white shadow-sm hover:bg-[#2196f3] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
               type="button"
-              style={{ color: 'white' }}
             >
               Contact us
             </Link>
