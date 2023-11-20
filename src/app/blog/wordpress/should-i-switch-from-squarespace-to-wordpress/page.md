@@ -12,7 +12,7 @@ Squarespace and WordPress are two popular website building platforms each with i
 
 ---
 
-{% blog-hero image="/img/blog/should-i-switch-from-squarespace-to-wordpress.png" imagedescription="Wordpress and Squarespace Comparison" /%}
+{% blog-hero image="/img/blog/should-i-switch-from-squarespace-to-wordpress.png" imagedescription="WordPress and Squarespace Comparison" /%}
 
 ---
 
@@ -68,7 +68,7 @@ WordPress also offers plugins like Yoast SEO, which provides in-depth analysis a
 
 Squarespace provides customer support to assist you with any questions or issues you may encounter. On the other hand, WordPress is an open-source platform and does not offer direct customer support. However, many paid plugins and themes come with support from their creators.
 
-If you choose WordPress as your platform, reliable hosting providers like Nexcess can provide 24/7/365 customer support specialized in WordPress-related issues. With experienced support teams and extensive knowledge bases, you can rest assured that any technical challenges will be promptly addressed.
+If you choose WordPress as your platform, reliable hosting providers like Nexcess can provide 24/7/365 customer support specialized on WordPress-related issues. With experienced support teams and extensive knowledge bases, you can rest assured that any technical challenges will be promptly addressed.
 
 ---
 

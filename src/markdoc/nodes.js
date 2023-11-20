@@ -59,7 +59,7 @@ const nodes = {
       },
     },
   },
-  // code: {
+  // inline: {
   //   render: InlineCode,
   // },
   // TODO: Fix support for `target` attribute in `a` tag

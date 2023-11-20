@@ -274,7 +274,7 @@ export default function GlobalNavbar() {
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Link
               href={"/contact"}
-              className="select-none font-bold inline-flex items-center gap-x-1.5 rounded-md bg-[#1976d2] px-3 py-2 text-sm text-white shadow-sm hover:bg-[#2196f3] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+              className="select-none font-bold inline-flex items-center gap-x-1.5 rounded-md bg-sky-600 px-3 py-2 text-sm text-white shadow-sm hover:bg-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
               type="button"
             >
               Contact us

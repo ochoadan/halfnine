@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function DevProcess() {
   return (
     <>
-      <FadeInStagger>
+      <FadeInStagger faster>
         <FadeIn className="mx-auto lg:mx-0">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
             Our Technical Capabilities
