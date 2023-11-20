@@ -32,7 +32,7 @@ export default function DevProcess() {
               <p className="text-2xl font-bold text-white">Development</p>
               <p className="mt-2 text-base leading-7 text-gray-400">
                 Designing technology that is both reliable and ready
-                fordeployment after testing
+                for deployment after testing
               </p>
             </div>
           </FadeIn>

@@ -162,8 +162,8 @@ export default function GlobalNavbar() {
   }
 
   const pathname = usePathname();
-  const isRootPage = pathname === "/" || pathname === "/blog";
-  
+  const isRootPage = pathname === "/"
+
   return (
     <header
       className={`sticky top-0 isolate w-full filter bg-white z-[100] ${isRootPage || mobileMenuOpen
@@ -173,7 +173,7 @@ export default function GlobalNavbar() {
         : "shadow-md"
         }`}
     >
-            <div className="bg-stone-50 h-6 hidden lg:block">
+      <div className="bg-stone-50 h-6 hidden lg:block">
         <div className="flex mx-auto max-w-7xl text-center justify-end px-4 text-xs font-small lg:px-8 gap-x-5 rounded-md py-1">
           <Link
             href="tel:+13212709110"

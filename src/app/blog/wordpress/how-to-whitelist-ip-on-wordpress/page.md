@@ -22,6 +22,8 @@ Whitelisting IP addresses is a method used to control who can access your websit
 
 This technique proves invaluable in two main scenarios: boosting security for sensitive areas of your site, such as the dashboard, and restricting access to your site as a whole. By whitelisting IP addresses, you can ensure that only authorized users can access important sections of your site, enhancing security and preventing unauthorized access. Additionally, during website development or redesign, whitelisting allows you to restrict access to the site until it is ready for launch, providing a controlled environment for testing and refinement.
 
+---
+
 ## Advantages of Whitelisting IP Addresses
 
 Whitelisting IP addresses offers several key benefits for WordPress website owners:
@@ -38,6 +40,8 @@ Whitelisting IP addresses allows you to control who can access your entire websi
 
 During the development or redesign phase of your website, whitelisting IP addresses enables you to limit access to the site. This way, you can ensure that only authorized users can view and test the site while it is still in progress, maintaining confidentiality and preventing premature exposure.
 
+---
+
 ## Potential Drawbacks of IP Whitelisting
 
 While whitelisting IP addresses offers significant benefits, there are certain considerations and potential drawbacks to be aware of:
@@ -49,6 +53,8 @@ If your IP address changes frequently, such as when working from different locat
 ### 2. Granting Access to Multiple Users
 
 If you need to consistently grant access to multiple users or teams, managing the IP address whitelist manually can become cumbersome. Each time a new collaborator is added or their IP address changes, you would need to update the whitelist accordingly, increasing the administrative effort required.
+
+---
 
 ## How to Whitelist IP Addresses on WordPress
 
@@ -103,6 +109,8 @@ To whitelist IP addresses using Cerber Security & Antispam, follow these steps:
 
 While most WordPress hosts utilize the Apache web server, some premium performance-oriented hosts employ the Nginx web server. If your host uses Nginx, you will need to consult their documentation or contact their support to determine the best method for whitelisting specific IP addresses. The configuration process may differ from the .htaccess approach used with Apache.
 
+---
+
 ## Best Practices for Whitelisting IP Addresses on WordPress
 
 To ensure a smooth and secure whitelisting process, consider following these best practices:
@@ -111,6 +119,8 @@ To ensure a smooth and secure whitelisting process, consider following these bes
 2. Regularly Backup Your Site: Before making any modifications to your website's core files, such as the .htaccess file, it is essential to create a complete backup of your site. This ensures that you can quickly restore your site in case of any unforeseen issues.
 3. Verify IP Address Stability: Ensure that the IP addresses you whitelist are stable and unlikely to change frequently. Dynamic IP addresses may lead to access issues if not consistently updated in the whitelist.
 4. Optimize Whitelist Management: If you frequently need to grant access to multiple users or teams, consider exploring more advanced access control solutions, such as user roles and permissions plugins, to streamline the process and reduce manual effort.
+
+---
 
 ## Conclusion
 
