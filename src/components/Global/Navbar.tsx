@@ -182,7 +182,6 @@ export default function GlobalNavbar() {
           >
             <Image
               src="/img/en.svg"
-              objectFit="fixed"
               alt="USA Flag"
               width={20}
               height={20}

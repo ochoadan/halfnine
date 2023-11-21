@@ -33,7 +33,6 @@ export function BlogHero({
           alt={imagedescription}
           width={940}
           height={400}
-          objectFit="cover"
           className="m-0 ring-gray-900/10"
         />
       </div>
