@@ -1,7 +1,7 @@
 'use client'
 
 import { Fragment } from 'react'
-import { Highlight } from 'prism-react-renderer'
+import { Highlight, themes } from 'prism-react-renderer'
 
 export function Fence({
   children,
@@ -14,11 +14,11 @@ export function Fence({
     <Highlight
       code={children.trimEnd()}
       language={language}
-      theme={{ plain: {}, styles: [] }}
+      theme={themes.jettwaveDark}
     >
       {({ className, style, tokens, getTokenProps }) => (
         <pre className={className} style={style}>
-          <code>
+          {/* <code> */}
             {tokens.map((line, lineIndex) => (
               <Fragment key={lineIndex}>
                 {line
@@ -29,7 +29,7 @@ export function Fence({
                 {'\n'}
               </Fragment>
             ))}
-          </code>
+          {/* </code> */}
         </pre>
       )}
     </Highlight>

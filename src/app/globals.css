@@ -40,17 +40,18 @@ body {
 } */
 /* .markdown-body code, */
 .prose :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
-  /* padding: 0.2em; */
+  padding: 0.2em;
   margin: 0;
   font-size: 85%;
-  background-color: #1b1f230d;
-  /* border-radius: 3px; */
+  background-color: #ededed;
+  /* color: #fff; */
+  border-radius: 3px;
 }
 
-/* .markdown-body code::before,
+.markdown-body code::before,
 .markdown-body code::after,
 .prose :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *))::before,
 .prose :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *))::after {
   letter-spacing: -0.2em;
   content: "\00a0";
-} */
+}
