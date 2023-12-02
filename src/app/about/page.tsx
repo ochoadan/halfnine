@@ -3,12 +3,13 @@ import { Metadata } from "next";
 import GlobalContactForm from "@/components/pages/GlobalContactForm";
 import { FadeIn, FadeInStagger } from "@/components/Global/FadeIn";
 import Image from "next/image";
-import { features, supportLinks } from "./content"
+import { features, supportLinks } from "./content";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Learn about how we empower your vision - Halfnine",
-  description: "Halfnine was born out of a desire to help businesses to transform their opportunities and ideas through innovative technology solutions.",
+  description:
+    "Halfnine was born out of a desire to help businesses to transform their opportunities and ideas through innovative technology solutions.",
   alternates: { canonical: "https://www.halfnine.com/about" },
 };
 
@@ -28,14 +29,14 @@ const Page = () => {
                 <hr className="border-sky-600 opacity-90 border-b-[2px] w-20 my-2" />
               </h2>
               <p className="mt-4 text-gray-500">
-                Halfnine was born out of a desire to help businesses to transform
-                their opportunities and ideas through innovative technology
-                solutions.
+                Halfnine was born out of a desire to help businesses to
+                transform their opportunities and ideas through innovative
+                technology solutions.
                 <br />
                 <br />
                 We are a group of dedicated engineers with a passion for pushing
-                boundaries and delivering exceptional results, inspired to shape the
-                digital landscape. We are driven by innovation and fueled by
+                boundaries and delivering exceptional results, inspired to shape
+                the digital landscape. We are driven by innovation and fueled by
                 creativity, focused on efficiency and creating a return on
                 investment for our clients.
               </p>
@@ -62,8 +63,9 @@ const Page = () => {
               </h2>
               <hr className="border-sky-600 opacity-90 border-b-[2px] mx-auto w-28 my-4" />
               <p className="mt-4 text-lg leading-8 text-gray-600">
-                As you understand our team, you’ll see we’re driven by key principles,
-                enabling us to achieve significant change through unique experiences.
+                As you understand our team, you’ll see we’re driven by key
+                principles, enabling us to achieve significant change through
+                unique experiences.
               </p>
             </FadeIn>
             <div className="mx-auto mt-4 max-w-xl sm:mt-8 lg:mt-10 lg:max-w-none">
@@ -87,6 +89,12 @@ const Page = () => {
         </div>
       </div>
       <div className="overflow-hidden bg-white py-16 sm:py-32">
+        <FadeIn className="mx-auto max-w-4xl text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+            Our Innovative Projects
+          </h2>
+          <hr className="border-sky-600 opacity-90 border-b-[2px] mx-auto w-28 my-4" />
+        </FadeIn>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <FadeInStagger>
             <FadeIn className="relative isolate overflow-hidden bg-gray-800 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
@@ -114,8 +122,9 @@ const Page = () => {
                   Cron Monitoring For Laravel
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-gray-300">
-                  Surveyr.io was created to monitor Laravel cron jobs. These cron
-                  jobs, critical for backend tasks, are the application’s backbone.
+                  Surveyr was created to monitor Laravel cron jobs. These cron
+                  jobs, critical for backend tasks, are the application’s
+                  backbone.
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
                   <Link
@@ -148,6 +157,69 @@ const Page = () => {
           </FadeInStagger>
         </div>
       </div>
+      <div className="relative -my-8 sm:-my-16">
+        <div className="absolute inset-0 flex items-center" aria-hidden="true">
+          <div className="w-full border-t border-gray-300" />
+        </div>
+        <div className="relative flex justify-center">
+          <span className="bg-white px-2 text-sm text-gray-500"></span>
+        </div>
+      </div>
+      <div className="overflow-hidden bg-white py-16 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <FadeInStagger>
+            <FadeIn className="relative isolate overflow-hidden bg-gray-800 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
+              <svg
+                viewBox="0 0 1024 1024"
+                className="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
+                aria-hidden="true"
+              >
+                <circle
+                  cx={512}
+                  cy={512}
+                  r={512}
+                  fill="url(#759c1415-0410-454c-8f7c-9a820de03641)"
+                  fillOpacity="0.7"
+                />
+                <defs>
+                  <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
+                    <stop stopColor="#7597d6" />
+                    <stop offset={1} stopColor="#3540e9" />
+                  </radialGradient>
+                </defs>
+              </svg>
+              <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
+                <h2 className="text-2xl font-bold text-white sm:text-3xl">
+                  Business Email for individuals
+                </h2>
+                <p className="mt-6 text-lg leading-8 text-gray-300">
+                  Virtuabyte is Making the process of creating a professional
+                  business email address simple, cheap and easy.
+                </p>
+                <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
+                  <Link
+                    href="https://virtuabyte.com"
+                    target="_blank"
+                    className="text-sm font-semibold leading-6 text-white"
+                  >
+                    Development Version <span aria-hidden="true">→</span>
+                  </Link>
+                </div>
+              </div>
+              <div className="relative mt-16 h-80 lg:mt-8">
+                <Image
+                  // className="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
+                  className="absolute left-0 top-0 w-[57rem] max-w-none rounded-md"
+                  src="/img/about/abtimgx.png"
+                  alt="Surveyr App screenshot"
+                  width={1824}
+                  height={1080}
+                />
+              </div>
+            </FadeIn>
+          </FadeInStagger>
+        </div>
+      </div>
       <FadeInStagger className="bg-white">
         <div className="bg-gray-100">
           <FadeIn className="relative bg-gray-800 pb-28">
@@ -169,9 +241,9 @@ const Page = () => {
               </h2>
               <p className="mt-6 max-w-3xl text-xl text-gray-200">
                 We prioritize reliability and partnership in our approach to
-                software development. Our commitment to transparent communication
-                and dedication to excellence ensures your satisfaction as our
-                valued customer.
+                software development. Our commitment to transparent
+                communication and dedication to excellence ensures your
+                satisfaction as our valued customer.
               </p>
             </div>
           </FadeIn>
