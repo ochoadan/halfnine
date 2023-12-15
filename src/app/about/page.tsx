@@ -157,7 +157,7 @@ const Page = () => {
           </FadeInStagger>
         </div>
       </div>
-      <div className="relative -my-8 sm:-my-16">
+      {/* <div className="relative -my-8 sm:-my-16">
         <div className="absolute inset-0 flex items-center" aria-hidden="true">
           <div className="w-full border-t border-gray-300" />
         </div>
@@ -219,7 +219,7 @@ const Page = () => {
             </FadeIn>
           </FadeInStagger>
         </div>
-      </div>
+      </div> */}
       <FadeInStagger className="bg-white">
         <div className="bg-gray-100">
           <FadeIn className="relative bg-gray-800 pb-28">
