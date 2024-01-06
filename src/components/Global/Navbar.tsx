@@ -71,12 +71,12 @@ function SolutionsPopover() {
       {({ open }) => (
         <>
           <Popover.Button className="group flex items-center gap-x-1 font-semibold leading-6 text-gray-500 hover:text-gray-900 -mr-3 outline-none">
-
             {/* -mr-6 */}
             Solutions
             <ChevronDownIcon
-              className={`h-5 w-5 mt-1 flex-none text-gray-400 group-hover:text-gray-900 ${open ? "rotate-180" : "rotate-0"
-                }`}
+              className={`h-5 w-5 mt-1 flex-none text-gray-400 group-hover:text-gray-900 ${
+                open ? "rotate-180" : "rotate-0"
+              }`}
               aria-hidden="true"
             />
           </Popover.Button>
@@ -88,12 +88,12 @@ function SolutionsPopover() {
             leave="transition ease-in duration-150"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
-          // enter="transition ease-out duration-200"
-          // enterFrom="opacity-0 -translate-y-1"
-          // enterTo="opacity-100 translate-y-0"
-          // leave="transition ease-in duration-150"
-          // leaveFrom="opacity-100 translate-y-0"
-          // leaveTo="opacity-0 -translate-y-1"
+            // enter="transition ease-out duration-200"
+            // enterFrom="opacity-0 -translate-y-1"
+            // enterTo="opacity-100 translate-y-0"
+            // leave="transition ease-in duration-150"
+            // leaveFrom="opacity-100 translate-y-0"
+            // leaveTo="opacity-0 -translate-y-1"
           >
             <Popover.Panel className="absolute inset-x-0 top-0 -z-10 bg-white mt-[92px] shadow-lg border-t-[1px] border-neutral-200">
               <div className="mx-auto grid max-w-7xl grid-cols-4 gap-x-4 px-6 py-6 lg:px-8 xl:gap-x-8">
@@ -162,16 +162,17 @@ export default function GlobalNavbar() {
   }
 
   const pathname = usePathname();
-  const isRootPage = pathname === "/"
+  const isRootPage = pathname === "/";
 
   return (
     <header
-      className={`sticky top-0 isolate w-full filter bg-white z-[100] ${isRootPage || mobileMenuOpen
-        ? scrollPosition > 20
-          ? "shadow-md"
-          : ""
-        : "shadow-md"
-        }`}
+      className={`sticky top-0 isolate w-full filter bg-white z-[100] ${
+        isRootPage || mobileMenuOpen
+          ? scrollPosition > 20
+            ? "shadow-md"
+            : ""
+          : "shadow-md"
+      }`}
     >
       <div className="bg-stone-50 h-6 hidden lg:block">
         <div className="flex mx-auto max-w-7xl text-center justify-end px-4 text-xs font-small lg:px-8 gap-x-5 rounded-md py-1">
@@ -287,8 +288,8 @@ export default function GlobalNavbar() {
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}
       >
-        <div className="fixed inset-0" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <div className="fixed inset-0 z-[102]" />
+        <Dialog.Panel className="fixed inset-y-0 right-0 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 z-[103]">
           <div className="flex items-center justify-end">
             <button
               type="button"
