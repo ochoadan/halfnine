@@ -41,7 +41,7 @@ const StatsComponent = () => (
         <dl>
           <dt className="text-lg font-bold text-emerald-900">Management</dt>
           <dd className="text-sm text-gray-600">
-            We administer your IT systems and ensure they are operating efficiently and securely.
+            We administer your IT assets and ensure they are operating efficiently and securely.
           </dd>
         </dl>
       </FadeIn>

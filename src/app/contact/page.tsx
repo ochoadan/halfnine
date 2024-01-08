@@ -48,13 +48,14 @@ const Contact = () => {
   // };
 
   useEffect(() => {
-    const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    const nameRegex = /^[a-z ,.'-]+$/i;
-
-    const newFormErrors = {
+    const emailRegex =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      const nameRegex = /^[a-z ,.'-]{3,}$/i;
+      
+      const newFormErrors = {
       name: !nameRegex.test(formData.name),
       email: !emailRegex.test(formData.email),
-      message: formData.message.trim() === "",
+      message: formData.message.trim().length < 20,
     };
     setFormErrors(newFormErrors);
   }, [formData, submitted]);
@@ -155,11 +156,15 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       placeholder="Name"
-                      className={
-                        submitted && formErrors.name
-                          ? "pl-10 block w-full shadow-sm sm:text-sm border-red-300 rounded-md focus:ring-red-500"
-                          : "pl-10 block w-full shadow-sm sm:text-sm border-slate-200 rounded-md focus:ring-sky-500"
-                      }
+                      className={clsx(
+                        "pl-10 block w-full shadow-sm sm:text-sm rounded-md focus:border-transparent focus:ring-2",
+                        {
+                          "border-red-300 focus:ring-red-500":
+                            submitted && formErrors.name,
+                          "border-slate-200 focus:ring-sky-500":
+                            !submitted || !formErrors.name,
+                        }
+                      )}
                     />
                   </div>
                 </div>
@@ -179,11 +184,15 @@ const Contact = () => {
                       onChange={handleInputChange}
                       placeholder="Email"
                       // required
-                      className={
-                        submitted && formErrors.email
-                          ? "pl-10 block w-full shadow-sm sm:text-sm border-red-300 rounded-md focus:ring-red-500"
-                          : "pl-10 block w-full shadow-sm sm:text-sm border-slate-200 rounded-md focus:ring-sky-500"
-                      }
+                      className={clsx(
+                        "pl-10 block w-full shadow-sm sm:text-sm rounded-md focus:border-transparent focus:ring-2",
+                        {
+                          "border-red-300 focus:ring-red-500":
+                            submitted && formErrors.email,
+                          "border-slate-200 focus:ring-sky-500":
+                            !submitted || !formErrors.email,
+                        }
+                      )}
                     />
                   </div>
                 </div>
@@ -204,7 +213,7 @@ const Contact = () => {
                       value={formData.company}
                       onChange={handleInputChange}
                       placeholder="Company"
-                      className="pl-10 block w-full shadow-sm sm:text-sm border-slate-200 rounded-md focus:ring-sky-500"
+                      className="pl-10 block w-full shadow-sm sm:text-sm border-slate-200 rounded-md focus:border-transparent focus:ring-sky-500 focus:ring-2"
                     />
                   </div>
                 </div>
@@ -225,7 +234,7 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       placeholder="Phone"
-                      className="pl-10 block w-full shadow-sm sm:text-sm border-slate-200 rounded-md focus:ring-sky-500"
+                      className="pl-10 block w-full shadow-sm sm:text-sm border-slate-200 rounded-md focus:border-transparent focus:ring-sky-500 focus:ring-2"
                     />
                   </div>
                 </div>
@@ -240,11 +249,15 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleInputChange}
                   placeholder="Message"
-                  className={`block min-h-[80px] w-full shadow-sm sm:text-sm rounded-md ${
-                    submitted && formErrors.message
-                      ? "border-red-300 focus:ring-red-500"
-                      : "border-slate-200 focus:ring-sky-500"
-                  }`}
+                  className={clsx(
+                    "block min-h-[80px] w-full shadow-sm sm:text-sm rounded-md focus:border-transparent focus:ring-2",
+                    {
+                      "border-red-300 focus:ring-red-500":
+                        submitted && formErrors.message,
+                      "border-slate-200 focus:ring-sky-500":
+                        !submitted || !formErrors.message,
+                    }
+                  )}
                 />
               </div>
               {submitted &&
@@ -270,7 +283,7 @@ const Contact = () => {
                               <li>The email you input is not a valid email.</li>
                             )}
                             {formErrors.message && (
-                              <li>You must include a Message.</li>
+                              <li>The message is not long enough.</li>
                             )}
                           </ul>
                         </div>
