@@ -157,7 +157,7 @@ const Page = () => {
           </FadeInStagger>
         </div>
       </div>
-      {/* <div className="relative -my-8 sm:-my-16">
+      <div className="relative -my-8 sm:-my-16">
         <div className="absolute inset-0 flex items-center" aria-hidden="true">
           <div className="w-full border-t border-gray-300" />
         </div>
@@ -190,19 +190,19 @@ const Page = () => {
               </svg>
               <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
                 <h2 className="text-2xl font-bold text-white sm:text-3xl">
-                  Business Email for individuals
+                  Yourname.is - Business Email for Individuals
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-gray-300">
-                  Virtuabyte is Making the process of creating a professional
+                  Yourname.is is Making the process of creating a professional
                   business email address simple, cheap and easy.
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
                   <Link
-                    href="https://virtuabyte.com"
+                    href="https://yourname.is"
                     target="_blank"
-                    className="text-sm font-semibold leading-6 text-white"
+                    className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                   >
-                    Development Version <span aria-hidden="true">→</span>
+                    Explore
                   </Link>
                 </div>
               </div>
@@ -211,7 +211,7 @@ const Page = () => {
                   // className="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
                   className="absolute left-0 top-0 w-[57rem] max-w-none rounded-md"
                   src="/img/about/abtimgx.png"
-                  alt="Surveyr App screenshot"
+                  alt="Yourname.is App screenshot"
                   width={1824}
                   height={1080}
                 />
@@ -219,7 +219,7 @@ const Page = () => {
             </FadeIn>
           </FadeInStagger>
         </div>
-      </div> */}
+      </div>
       <FadeInStagger className="bg-white">
         <div className="bg-gray-100">
           <FadeIn className="relative bg-gray-800 pb-28">
