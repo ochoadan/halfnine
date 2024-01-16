@@ -33,7 +33,7 @@ const Page = () => (
     ].map((Component, index) => (
       <div
         key={index}
-        className={`bg-${index % 2 === 0 ? "gray-50" : "white"} py-16 md:py-32`}
+        className={`${index % 2 === 0 ? "bg-gray-50" : "bg-white"} py-16 md:py-32`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <Component />

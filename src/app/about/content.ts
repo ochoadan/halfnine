@@ -1,4 +1,4 @@
-import { FaHandshake, FaUsers, FaChartLine, FaChess } from "react-icons/fa";
+import { FaHandshake, FaUsers, FaChartLine, FaChess } from "react-icons/fa6";
 import { LifebuoyIcon, NewspaperIcon, PhoneIcon } from "@heroicons/react/24/outline";
 
 export const features = [

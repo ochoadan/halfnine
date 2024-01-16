@@ -7,7 +7,7 @@ import clsx from "clsx";
 // import { Metadata } from "next";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import { FaPhoneAlt } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa6";
 import { FaRegBuilding, FaRegEnvelope, FaRegUser } from "react-icons/fa6";
 import { SlPhone, SlEnvolope } from "react-icons/sl";
 
@@ -50,9 +50,9 @@ const Contact = () => {
   useEffect(() => {
     const emailRegex =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      const nameRegex = /^[a-z ,.'-]{3,}$/i;
-      
-      const newFormErrors = {
+    const nameRegex = /^[a-z ,.'-]{3,}$/i;
+
+    const newFormErrors = {
       name: !nameRegex.test(formData.name),
       email: !emailRegex.test(formData.email),
       message: formData.message.trim().length < 20,
@@ -96,24 +96,24 @@ const Contact = () => {
 
       setMessageSuccess(true);
 
-      const data = await response.json();
-
-      if (data.status === 200) {
+      if (response.status === 200) {
         setMessageSuccess(true);
         return;
       } else {
-        alert("Failed to send email.");
+        console.log(response);
+        alert("Failed to send request.");
         return;
       }
     } catch (error) {
-      // console.error("Error:", error);
-      // alert("An error occurred. Please try again.");
+      console.error("Error:", error);
+      alert("An error occurred. Please try again.");
       return;
     } finally {
       setAwaitingResponse(false);
       return;
     }
   };
+
   useEffect(() => {
     (async function () {
       const cal = await getCalApi();
@@ -226,7 +226,7 @@ const Contact = () => {
                   </label>
                   <div className="relative">
                     <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <FaPhoneAlt color="slate.800" />
+                      <FaPhone color="slate.800" />
                     </span>
                     <input
                       type="text"

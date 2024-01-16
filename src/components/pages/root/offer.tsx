@@ -1,5 +1,5 @@
 import { FadeIn, FadeInStagger } from "@/components/Global/FadeIn";
-import { FaRegCompass, FaCode, FaHeadset, FaRegIdCard } from "react-icons/fa";
+import { FaRegCompass, FaCode, FaHeadset, FaRegIdCard } from "react-icons/fa6";
 
 const StatsComponent = () => (
   <FadeInStagger faster>

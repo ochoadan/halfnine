@@ -1,4 +1,4 @@
-import nodemailer from 'nodemailer';
+import nodemailer from "nodemailer";
 
 export async function POST(request: Request, response: Response) {
   const { name, email, phone, company, message } = await request.json();
@@ -14,28 +14,25 @@ export async function POST(request: Request, response: Response) {
   });
 
   let mailOptions = {
-    from: 'contact-form@halfnine.com',
-    to: "dan@halfnine.tech",
-    subject: `Message From ${name}`,
+    from: "contact-form@halfnine.com",
+    to: "diogamb@gmail.com",
+    subject: `Message From Halfnine: ${name}`,
     text: message + " | Sent from: " + email,
-    html: `<div>Message: ${message}</div><p>Email: ${email}</p><p>Phone: ${phone}</p><p>Company: ${company}</p>`,
+    html: `
+      <div>
+        <p><strong>Message:</strong> ${message}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Company:</strong> ${company}</p>
+      </div>
+    `,
   };
 
   try {
     await transporter.sendMail(mailOptions);
-    return new Response('Success', {
-      status: 200,
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    return Response.json({ message: "Email sent" }, { status: 200 });
   } catch (error) {
-    console.error('Error:', error);
-    return new Response('Error', {
-      status: 500,
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    console.error("Error:", error);
+    return Response.json({ message: "Internal server error" }, { status: 500 });
   }
 }

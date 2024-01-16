@@ -2,7 +2,7 @@
 
 import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/24/outline";
 import { useEffect, useState } from "react";
-import { FaPhoneAlt } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa6";
 import { FaRegBuilding, FaRegEnvelope, FaRegUser } from "react-icons/fa6";
 
 import clsx from "clsx";
@@ -75,18 +75,17 @@ function GlobalContactForm() {
 
       setMessageSuccess(true);
 
-      const data = await response.json();
-
-      if (data.status === 200) {
+      if (response.status === 200) {
         setMessageSuccess(true);
         return;
       } else {
-        alert("Failed to send email.");
+        console.log(response);
+        alert("Failed to send request.");
         return;
       }
     } catch (error) {
-      // console.error("Error:", error);
-      // alert("An error occurred. Please try again.");
+      console.error("Error:", error);
+      alert("An error occurred. Please try again.");
       return;
     } finally {
       setAwaitingResponse(false);
@@ -107,7 +106,7 @@ function GlobalContactForm() {
             best solution for your needs
           </p>
           <form onSubmit={handleSubmit}>
-            <div className="space-y-5 mt-8">
+            <div className="space-y-5 mt-6">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-5 w-full">
                 <div className="space-y-1">
                   <label>
@@ -185,7 +184,7 @@ function GlobalContactForm() {
                   <label>Phone Number</label>
                   <div className="relative">
                     <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <FaPhoneAlt color="slate.800" />
+                      <FaPhone color="slate.800" />
                     </span>
                     <input
                       type="text"
@@ -285,7 +284,7 @@ function GlobalContactForm() {
                 disabled={awaitingResponse}
                 className={clsx(
                   // "bg-sky-600 flex rounded-md px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-slate-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500",
-                  "bg-sky-600 flex rounded-md px-16 py-3 text-sm font-semibold text-white shadow-sm hover:bg-sky-500 mx-auto",
+                  "bg-sky-600 flex rounded-md px-12 py-2 text-sm font-semibold text-white shadow-sm hover:bg-sky-500 mx-auto",
                   awaitingResponse &&
                     "bg-slate-400 select-none hover:bg-slate-400"
                 )}
