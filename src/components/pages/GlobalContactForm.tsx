@@ -99,7 +99,7 @@ function GlobalContactForm() {
       <div className="mx-auto max-w-7xl px-0 md:px-6 lg:px-8">
         <div className="bg-gray-50 rounded-none md:rounded-xl p-6 shadow-none md:shadow-md">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            Let's talk solutions
+            Let&apos;s talk solutions
             <hr className="border-sky-600 opacity-90 border-b-[2px] w-24 my-2" />
           </h2>
           <p className="mt-2 leading-8 text-gray-700">
