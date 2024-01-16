@@ -24,7 +24,7 @@ export default function DevProcess() {
                     <div className="group flex w-full items-center justify-between space-x-3 rounded-xl py-1 px-2 border border-gray-100 text-left">
                       <span className="flex min-w-0 flex-1 items-center space-x-2">
                         <span className="block flex-shrink-0 rounded-lg overflow-hidden">
-                          <item.icon className={`h-6 w-6`} />
+                          <item.icon className="h-6 w-6" />
                         </span>
                         <span className="block min-w-0 flex-1">
                           <span className="block truncate text-sm font-medium text-gray-900">

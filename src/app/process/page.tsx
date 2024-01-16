@@ -14,8 +14,10 @@ import { StylizedImage } from "@/components/Global/StylizedImage";
 import { Container } from "@/components/Global/Container";
 
 export const metadata: Metadata = {
-  title: "Halfnine's Approach: Leveraging Technology for Problem-Solution Lifecycle",
-  description: "Learn how we utilize technology to solve problems effectively. Discover our comprehensive Development Lifecycle.",
+  title:
+    "Halfnine's Approach: Leveraging Technology for Problem-Solution Lifecycle",
+  description:
+    "Learn how we utilize technology to solve problems effectively. Discover our comprehensive Development Lifecycle.",
   alternates: { canonical: "https://www.halfnine.com/process" },
 };
 
@@ -93,11 +95,7 @@ const Page = () => {
           </FadeIn>
         </div>
       </div>
-      <div className="overflow-hidden bg-white py-16 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <GlobalContactForm />
-        </div>
-      </div>
+      <GlobalContactForm />
     </>
   );
 };
@@ -191,13 +189,13 @@ function Define() {
           <hr className="border-sky-600 opacity-90 border-b-[2px] w-12 my-2" />
         </h2>
         <p className="mt-6 text-md leading-7 text-gray-600">
-          We collaborate closely with you to understand your software product&apos;s
-          unique requirements and objectives, including the core and non-core
-          features that will drive its success. We then develop a comprehensive
-          project plan that outlines the resources, timeline, and costs required
-          for development. For existing software products, we conduct a
-          technical audit or feasibility study to ensure that our proposed
-          solutions align with your current systems and processes.
+          We collaborate closely with you to understand your software
+          product&apos;s unique requirements and objectives, including the core
+          and non-core features that will drive its success. We then develop a
+          comprehensive project plan that outlines the resources, timeline, and
+          costs required for development. For existing software products, we
+          conduct a technical audit or feasibility study to ensure that our
+          proposed solutions align with your current systems and processes.
         </p>
       </div>
       <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">

@@ -7,7 +7,8 @@ import { TagList, TagListItem } from "@/components/Global/TagList";
 
 export const metadata: Metadata = {
   title: "Halfnine - Pricing: How much does it cost to develop an app?",
-  description: "Explore app development costs with Halfnine. Understand pricing based on your needs. Maximize your app’s potential with us.",
+  description:
+    "Explore app development costs with Halfnine. Understand pricing based on your needs. Maximize your app’s potential with us.",
   alternates: { canonical: "https://www.halfnine.com/pricing" },
 };
 
@@ -45,8 +46,8 @@ const Page = () => {
             </p>
             <p className="mt-4 text-lg leading-8 text-gray-600">
               App development cost depends on factors like complexity, features,
-              platform, design, team structure, and post-launch support. Costs can
-              range from a few thousand to hundreds of thousands of dollars,
+              platform, design, team structure, and post-launch support. Costs
+              can range from a few thousand to hundreds of thousands of dollars,
               including updates, server costs, and user acquisition.
             </p>
           </FadeIn>
@@ -64,10 +65,11 @@ const Page = () => {
                 Cost: $15,000+
               </p>
               <p className="mt-4 text-gray-500">
-                We help you define your project&apos;s unique goals, assess feasibility,
-                and create a plan to achieve the best possible user experience. We&apos;ll
-                work with you to distinguish between essential and non-essential
-                features, and provide a project cost estimate.
+                We help you define your project&apos;s unique goals, assess
+                feasibility, and create a plan to achieve the best possible user
+                experience. We&apos;ll work with you to distinguish between
+                essential and non-essential features, and provide a project cost
+                estimate.
               </p>
               <h3 className="mt-8 font-display text-base font-semibold text-neutral-950">
                 Typical Deliverables include:
@@ -97,8 +99,8 @@ const Page = () => {
                 Cost: $20,000 - $1,000,000+
               </p>
               <p className="mt-4 text-gray-500">
-                The financial investment for your project can significantly fluctuate
-                based on its specific requirements and deadlines.
+                The financial investment for your project can significantly
+                fluctuate based on its specific requirements and deadlines.
               </p>
               <h3 className="mt-8 font-display text-base font-semibold text-neutral-950">
                 However, here are the typical cost ranges we observe :
@@ -108,7 +110,8 @@ const Page = () => {
                   Research, Prototyping, and Validation: $20,000 - $150,000+
                 </TagListItem>
                 <TagListItem>
-                  Consumer-oriented Web or Mobile Application: $80,000 - $350,000+
+                  Consumer-oriented Web or Mobile Application: $80,000 -
+                  $350,000+
                 </TagListItem>
                 <TagListItem>
                   Enterprise Software Product: $250,000 - $1,000,000+
@@ -130,20 +133,25 @@ const Page = () => {
                 Cost: $5,000 - 10,000 + / month
               </p>
               <p className="mt-4 text-gray-500">
-                Custom software is a living, breathing thing. It needs to be constantly updated and improved to keep up with the changing needs of your business and your customers. That&apos;s why we offer continuous development cycles, where we work with you to strategize and prioritize the changes that will make the biggest impact on your ROI.                <br />
+                Custom software is a living, breathing thing. It needs to be
+                constantly updated and improved to keep up with the changing
+                needs of your business and your customers. That&apos;s why we
+                offer continuous development cycles, where we work with you to
+                strategize and prioritize the changes that will make the biggest
+                impact on your ROI. <br />
                 <br />
-                Whether it&apos;s new features, design updates, or performance optimizations, our goal is to make sure your custom software is always working at its best. We&apos;ll work with you to define the scope of each cycle, and then we&apos;ll get to work implementing your changes quickly and efficiently.
+                Whether it&apos;s new features, design updates, or performance
+                optimizations, our goal is to make sure your custom software is
+                always working at its best. We&apos;ll work with you to define
+                the scope of each cycle, and then we&apos;ll get to work
+                implementing your changes quickly and efficiently.
               </p>
             </div>
             {importImage("/img/pricing/pexels-photo-7176319.jpeg")}
           </div>
         </div>
       </div>
-      <div className="overflow-hidden bg-white py-16 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <GlobalContactForm />
-        </div>
-      </div>
+      <GlobalContactForm />
     </>
   );
 };
