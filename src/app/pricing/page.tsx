@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 import Image from "next/image";
-import BackgroundwImage from "@/components/Global/BackgroundwImage";
+import PageHero from "@/components/Global/PageHero";
 import { FadeIn } from "@/components/Global/FadeIn";
-import GlobalContactForm from "@/components/pages/GlobalContactForm";
+import GlobalContactForm from "@/components/Global/ContactForm";
 import { TagList, TagListItem } from "@/components/Global/TagList";
 
 export const metadata: Metadata = {
@@ -31,7 +31,7 @@ const importImage = (src: string) => {
 const Page = () => {
   return (
     <>
-      <BackgroundwImage
+      <PageHero
         heading="Pricing"
         description="Find the Pricing for custom software development"
       />

@@ -1,6 +1,6 @@
-import BackgroundwImage from "@/components/Global/BackgroundwImage";
+import PageHero from "@/components/Global/PageHero";
 import { Metadata } from "next";
-import GlobalContactForm from "@/components/pages/GlobalContactForm";
+import GlobalContactForm from "@/components/Global/ContactForm";
 import { FadeIn, FadeInStagger } from "@/components/Global/FadeIn";
 import Image from "next/image";
 import { features, supportLinks } from "./content";
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const Page = () => {
   return (
     <>
-      <BackgroundwImage
+      <PageHero
         heading="About Halfnine"
         description="Our Highest Commitment is Our Customer's Success"
       />

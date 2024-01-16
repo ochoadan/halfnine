@@ -1,21 +1,22 @@
-import { type Node } from '@markdoc/markdoc'
+import { type Node } from "@markdoc/markdoc";
+import { collectSections } from "@/lib/sections";
 
-import { DocsHeader } from '@/components/DocsHeader'
-import { PrevNextLinks } from '@/components/PrevNextLinks'
-import { Prose } from '@/components/Prose'
-import { TableOfContents } from '@/components/TableOfContents'
-import { collectSections } from '@/lib/sections'
+import {
+  DocsHeader,
+  Prose,
+  TableOfContents,
+} from "@/components/Markdoc";
 
 export function DocsLayout({
   children,
   frontmatter: { title },
   nodes,
 }: {
-  children: React.ReactNode
-  frontmatter: { title?: string }
-  nodes: Array<Node>
+  children: React.ReactNode;
+  frontmatter: { title?: string };
+  nodes: Array<Node>;
 }) {
-  let tableOfContents = collectSections(nodes)
+  let tableOfContents = collectSections(nodes);
 
   return (
     <div className="relative mx-auto flex w-full max-w-7xl flex-auto justify-center">
@@ -24,9 +25,8 @@ export function DocsLayout({
           <DocsHeader title={title} />
           <Prose>{children}</Prose>
         </article>
-        <PrevNextLinks />
       </div>
       <TableOfContents tableOfContents={tableOfContents} />
     </div>
-  )
+  );
 }

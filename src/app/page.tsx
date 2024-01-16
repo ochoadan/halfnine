@@ -1,6 +1,5 @@
 import React from "react";
-import GlobalContactForm from "@/components/pages/GlobalContactForm";
-import GlobalFAQ from "@/components/pages/GlobalFAQ";
+import GlobalContactForm from "@/components/Global/ContactForm";
 import {
   RootHero,
   RootStats,
@@ -9,6 +8,7 @@ import {
   RootFeatureGrid,
   RootOffer,
   RootOffering,
+  RootFAQ
 } from "@/components/pages/root";
 import { Metadata } from "next";
 
@@ -29,7 +29,7 @@ const Page = () => (
       RootFeature,
       RootStats,
       RootFeatureGrid,
-      GlobalFAQ,
+      RootFAQ,
     ].map((Component, index) => (
       <div
         key={index}

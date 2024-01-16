@@ -1,6 +1,6 @@
 "use client";
 
-import BackgroundwImage from "@/components/Global/BackgroundwImage";
+import PageHero from "@/components/Global/PageHero";
 import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/24/outline";
 // import { Turnstile } from "@marsidev/react-turnstile";
 import clsx from "clsx";
@@ -128,7 +128,7 @@ const Contact = () => {
 
   return (
     <>
-      <BackgroundwImage
+      <PageHero
         heading="Contact Halfnine"
         description="Looking to upgrade your software or kickstart a new idea? Let's discuss it!"
       />
