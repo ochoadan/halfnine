@@ -15,7 +15,7 @@ export default function DevProcess() {
         <div className="divide-y divide-gray-200">
           {categories.map((category, index) => (
             <FadeIn className="py-4" key={index}>
-              <h3 className="text-md sm:text-lg font-extrabold text-gray-900">
+              <h3 className="text-base sm:text-lg font-extrabold text-gray-900">
                 {category.title}
               </h3>
               <ul role="list" className="mt-2 gap-4 flex flex-wrap">

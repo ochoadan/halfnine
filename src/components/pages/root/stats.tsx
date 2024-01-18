@@ -28,12 +28,11 @@ const StatsComponent = () => (
   <FadeInStagger faster>
     <FadeIn className="text-center">
       <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-        {/* How we aim to help you succeed */}
-        How we aim to stay ahead
+        Why choose us?
       </h2>
       <p className="mt-4 text-lg leading-8 text-gray-600 mx-auto">
-        We empower you to succeed with expertise, competitive pricing, quick
-        updates, and continuous innovation
+        We empower our clients with the right tools and technologies to help
+        them achieve their goals.
       </p>
     </FadeIn>
     <div className="mt-8 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">

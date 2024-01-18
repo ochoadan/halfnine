@@ -6,7 +6,7 @@ import GlobalContactForm from "@/components/Global/ContactForm";
 import { TagList, TagListItem } from "@/components/Global/TagList";
 
 export const metadata: Metadata = {
-  title: "Halfnine - Pricing: How much does it cost to develop an app?",
+  title: "Halfnine - How much does it cost to develop an app?",
   description:
     "Explore app development costs with Halfnine. Understand pricing based on your needs. Maximize your app’s potential with us.",
   alternates: { canonical: "https://www.halfnine.com/pricing" },
@@ -32,8 +32,8 @@ const Page = () => {
   return (
     <>
       <PageHero
-        heading="Pricing"
-        description="Find the Pricing for custom software development"
+        heading="Software Development Costs"
+        description="We help you define your project's unique goals, assess feasibility, and create a plan to achieve the best possible user experience."
       />
       <div className="overflow-hidden bg-white py-16 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">

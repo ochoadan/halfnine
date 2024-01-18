@@ -277,7 +277,7 @@ const Page = () => {
           </div>
         </section>
       </FadeInStagger>
-      <GlobalContactForm />
+      <GlobalContactForm paddingBottomOnly />
     </>
   );
 };

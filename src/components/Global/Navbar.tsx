@@ -262,7 +262,7 @@ export default function GlobalNavbar() {
               href="/pricing"
               className="font-semibold leading-6 text-gray-500 hover:text-gray-900 select-none"
             >
-              Pricing
+              Costs
             </Link>
             <Link
               href="/about"

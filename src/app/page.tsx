@@ -8,9 +8,11 @@ import {
   RootFeatureGrid,
   RootOffer,
   RootOffering,
-  RootFAQ
+  RootFAQ,
+  RootServices,
 } from "@/components/pages/root";
 import { Metadata } from "next";
+import { FadeIn } from "@/components/Global/FadeIn";
 
 export const metadata: Metadata = {
   title: "Software Development and Consulting Solutions - Halfnine",
@@ -23,24 +25,29 @@ const Page = () => (
   <>
     <RootHero />
     {[
+      RootServices,
       RootOffer,
       RootOffering,
-      RootDevProcess,
-      RootFeature,
       RootStats,
+      RootFeature,
+      RootDevProcess,
       RootFeatureGrid,
       RootFAQ,
     ].map((Component, index) => (
       <div
         key={index}
-        className={`${index % 2 === 0 ? "bg-gray-50" : "bg-white"} py-16 md:py-32`}
+        className={`${
+          index % 2 === 0 ? "bg-gray-50" : "bg-white"
+        } py-14 md:py-28`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <Component />
         </div>
       </div>
     ))}
-    <GlobalContactForm />
+    <FadeIn>
+      <GlobalContactForm paddingBottomOnly />
+    </FadeIn>
   </>
 );
 

@@ -7,7 +7,15 @@ import { FaRegBuilding, FaRegEnvelope, FaRegUser } from "react-icons/fa6";
 
 import clsx from "clsx";
 
-function GlobalContactForm() {
+interface ContactFormProps {
+  paddingBottomOnly?: boolean;
+  paddingTop?: string;
+}
+
+const ContactForm: React.FC<ContactFormProps> = ({
+  paddingBottomOnly,
+  paddingTop,
+}) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -94,9 +102,14 @@ function GlobalContactForm() {
   };
 
   return (
-    <div className="overflow-hidden bg-white py-16 sm:py-32">
+    <div
+      className={clsx(
+        "overflow-hidden bg-white",
+        paddingBottomOnly ? "pb-16 sm:pb-32" : paddingTop || "py-16 sm:py-32"
+      )}
+    >
       <div className="mx-auto max-w-7xl px-0 md:px-6 lg:px-8">
-        <div className="bg-gray-50 rounded-none md:rounded-xl p-6 shadow-none md:shadow-md">
+        <div className="bg-gray-50 rounded-none md:rounded-xl p-6 md:p-10 shadow-none md:shadow-md">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
             Let&apos;s talk solutions
             <hr className="border-sky-600 opacity-90 border-b-[2px] w-24 my-2" />
@@ -107,7 +120,7 @@ function GlobalContactForm() {
           </p>
           <form onSubmit={handleSubmit}>
             <div className="space-y-5 mt-6">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-5 w-full">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 w-full">
                 <div className="space-y-1">
                   <label>
                     Name
@@ -325,6 +338,6 @@ function GlobalContactForm() {
       </div>
     </div>
   );
-}
+};
 
-export default GlobalContactForm;
+export default ContactForm;

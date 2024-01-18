@@ -154,7 +154,7 @@ function Discover() {
           Discover
           <hr className="border-sky-600 opacity-90 border-b-[2px] w-12 my-2" />
         </h2>
-        <p className="mt-6 text-md leading-7 text-gray-600">
+        <p className="mt-6 text-base leading-7 text-gray-600">
           We start by understanding your vision and requirements. Conducting
           comprehensive research to ensure that our development strategy aligns
           with your business goals and meets the needs of your users and the
@@ -189,7 +189,7 @@ function Define() {
           Define
           <hr className="border-sky-600 opacity-90 border-b-[2px] w-12 my-2" />
         </h2>
-        <p className="mt-6 text-md leading-7 text-gray-600">
+        <p className="mt-6 text-base leading-7 text-gray-600">
           We collaborate closely with you to understand your software
           product&apos;s unique requirements and objectives, including the core
           and non-core features that will drive its success. We then develop a
@@ -227,7 +227,7 @@ function Develop() {
           Develop
           <hr className="border-sky-600 opacity-90 border-b-[2px] w-12 my-2" />
         </h2>
-        <p className="mt-6 text-md leading-7 text-gray-600">
+        <p className="mt-6 text-base leading-7 text-gray-600">
           We turn your vision into reality by building robust and reliable
           software products. Our team of experts prioritizes core features and
           develops them first, ensuring they function seamlessly. Once the core
@@ -263,7 +263,7 @@ function Deliver() {
           Deliver
           <hr className="border-sky-600 opacity-90 border-b-[2px] w-12 my-2" />
         </h2>
-        <p className="mt-6 text-md leading-7 text-gray-600">
+        <p className="mt-6 text-base leading-7 text-gray-600">
           We ensure the smooth and successful deployment of your software
           product. We conduct rigorous testing to guarantee optimal performance,
           reliability, and compliance with your expectations. Any identified
