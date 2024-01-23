@@ -5,6 +5,11 @@ import { FadeIn, FadeInStagger } from "@/components/Global/FadeIn";
 import Image from "next/image";
 import { features, supportLinks } from "./content";
 import Link from "next/link";
+import { LinkIcon } from "@heroicons/react/20/solid";
+import logoHyleon from '@/images/logos/hyleon.svg'
+import logoSurveyr from '@/images/logos/surveyr.svg'
+import logoYournameis from '@/images/logos/yournameis.svg'
+import logoCasente from '@/images/logos/casente.svg'
 
 export const metadata: Metadata = {
   title: "Learn about how we empower your vision - Halfnine",
@@ -12,6 +17,49 @@ export const metadata: Metadata = {
     "Halfnine was born out of a desire to help businesses to transform their opportunities and ideas through innovative technology solutions.",
   alternates: { canonical: "https://www.halfnine.com/about" },
 };
+
+const projects = [
+  {
+    name: 'Surveyr.io',
+    status: "Live",
+    description:
+      'A platform for monitoring backend cron jobs for Laravel and php Applications.',
+    link: { href: 'https://surveyr.io', label: 'surveyr.io' },
+    logo: logoSurveyr,
+  },
+  // {
+  //   name: 'Surveyr.io',
+  //   status: "In Development",
+  //   description:
+  //     'Adding support for all backend cron jobs not only Laravel and php applications.',
+  //   link: { href: 'https://dev.surveyr.io', label: 'dev.surveyr.io' },
+  //   logo: logoPlanetaria,
+  // },
+  {
+    name: 'Yourname.is',
+    status: "Live",
+    description:
+      'An application that helps individuals create a professional business email address with their first and last name.',
+    link: { href: 'https://yourname.is', label: 'yourname.is' },
+    logo: logoYournameis,
+  },
+  {
+    name: 'Dynamic QR Codes',
+    status: "Live - Demo",
+    description:
+      'This is a Demo Application for the QR code service made for Casente. It allows companies to generate dynamic QR codes for their users to update.',
+    link: { href: 'https://casente.halfnine.com', label: 'casente.halfnine.com' },
+    logo: logoCasente,
+  },
+  {
+    name: 'Hyleon',
+    status: "In Development",
+    description:
+      'An application that helps you find the top developers in any specific field.',
+    link: { href: 'https://hyleon.com', label: 'hyleon.com' },
+    logo: logoHyleon,
+  },
+]
 
 const Page = () => {
   return (
@@ -54,41 +102,46 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div className="overflow-hidden bg-gray-100 py-16 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <FadeInStagger>
-            <FadeIn className="mx-auto max-w-4xl text-center">
-              <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-                Our Core Values
-              </h2>
-              <hr className="border-sky-600 opacity-90 border-b-[2px] mx-auto w-28 my-4" />
-              <p className="mt-4 text-lg leading-8 text-gray-600">
-                As you understand our team, you’ll see we’re driven by key
-                principles, enabling us to achieve significant change through
-                unique experiences.
-              </p>
-            </FadeIn>
-            <div className="mx-auto mt-4 max-w-xl sm:mt-8 lg:mt-10 lg:max-w-none">
-              <dl className="grid max-w-xl grid-cols-2 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4">
-                {features.map((feature) => (
-                  <FadeIn key={feature.name} className="flex flex-col">
-                    <dt className="text-lg font-semibold leading-7 flex flex-col items-center justify-center">
-                      <div className="mb-2 h-16 w-16 flex items-center justify-center rounded-lg bg-white ring-1 ring-gray-300">
-                        <feature.icon
-                          className="h-10 w-10 text-sky-600"
-                          aria-hidden="true"
-                        />
-                      </div>
-                      {feature.name}
-                    </dt>
-                  </FadeIn>
-                ))}
-              </dl>
-            </div>
-          </FadeInStagger>
-        </div>
+      <div className="overflow-hidden bg-gray-50 py-16 sm:py-32">
+        <FadeInStagger className="mx-auto max-w-7xl px-6 lg:px-8">
+          <FadeIn className="mx-auto max-w-4xl text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+              Our Innovative Projects
+            </h2>
+          </FadeIn>
+          <ul
+            role="list"
+            className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
+          >
+            {projects.map((project, index) => (
+              <FadeIn as="li" key={project.name} className='group relative flex flex-col items-start'>
+                <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                  <Image
+                    src={project.logo}
+                    alt=""
+                    className="h-8 w-8"
+                    unoptimized
+                  />
+                </div>
+                <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+                  <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50" />
+                  <Link href={project.link.href} target="_blank">
+                    <span className="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl" />
+                    <span className="relative z-10">{project.name}</span>
+                  </Link>
+                </h2>
+                <p className="relative z-10 mt-2 text-sm text-zinc-500 dark:text-zinc-400">Status: <span className="text-zinc-700">{project.status}</span></p>
+                <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">{project.description}</p>
+                <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
+                  <LinkIcon className="h-6 w-6 flex-none" />
+                  <span className="ml-2">{project.link.label}</span>
+                </p>
+              </FadeIn>
+            ))}
+          </ul>
+        </FadeInStagger>
       </div>
-      <div className="overflow-hidden bg-white py-16 sm:py-32">
+      {/* <div className="overflow-hidden bg-gray-50 py-16 sm:py-32">
         <FadeIn className="mx-auto max-w-4xl text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
             Our Innovative Projects
@@ -157,7 +210,7 @@ const Page = () => {
           </FadeInStagger>
         </div>
       </div>
-      {/* <div className="relative -my-8 sm:-my-16">
+      <div className="relative -my-8 sm:-my-16">
         <div className="absolute inset-0 flex items-center" aria-hidden="true">
           <div className="w-full border-t border-gray-300" />
         </div>
@@ -220,6 +273,40 @@ const Page = () => {
           </FadeInStagger>
         </div>
       </div> */}
+      <div className="overflow-hidden bg-white py-16 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <FadeInStagger>
+            <FadeIn className="mx-auto max-w-4xl text-center">
+              <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+                Our Core Values
+              </h2>
+              <hr className="border-sky-600 opacity-90 border-b-[2px] mx-auto w-28 my-4" />
+              <p className="mt-4 text-lg leading-8 text-gray-600">
+                As you understand our team, you’ll see we’re driven by key
+                principles, enabling us to achieve significant change through
+                unique experiences.
+              </p>
+            </FadeIn>
+            <div className="mx-auto mt-4 max-w-xl sm:mt-8 lg:mt-10 lg:max-w-none">
+              <dl className="grid max-w-xl grid-cols-2 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4">
+                {features.map((feature) => (
+                  <FadeIn key={feature.name} className="flex flex-col">
+                    <dt className="text-lg font-semibold leading-7 flex flex-col items-center justify-center">
+                      <div className="mb-2 h-16 w-16 flex items-center justify-center rounded-lg bg-white ring-1 ring-gray-300">
+                        <feature.icon
+                          className="h-10 w-10 text-sky-600"
+                          aria-hidden="true"
+                        />
+                      </div>
+                      {feature.name}
+                    </dt>
+                  </FadeIn>
+                ))}
+              </dl>
+            </div>
+          </FadeInStagger>
+        </div>
+      </div>
       <FadeInStagger className="bg-white">
         <div className="bg-gray-100">
           <FadeIn className="relative bg-gray-800 pb-28">
