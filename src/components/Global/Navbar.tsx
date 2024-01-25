@@ -169,9 +169,9 @@ export default function GlobalNavbar() {
       className={`sticky top-0 isolate w-full filter bg-white z-[100] ${
         isRootPage || mobileMenuOpen
           ? scrollPosition > 20
-            ? "shadow-md"
+            ? "shadow"
             : ""
-          : "shadow-md"
+          : "shadow"
       }`}
     >
       <div className="bg-stone-50 h-6 hidden lg:block">
