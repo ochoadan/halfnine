@@ -47,8 +47,8 @@ const projects = [
     name: 'Dynamic QR Codes',
     status: "Live - Demo",
     description:
-      'This is a Demo Application for the QR code service made for Casente. It allows companies to generate dynamic QR codes for their users to update.',
-    link: { href: 'https://casente.halfnine.com', label: 'casente.halfnine.com' },
+      'This is a Demo Application for allows companies to generate dynamic QR codes for their users to update.',
+    link: { href: 'https://qrdemo.halfnine.com', label: 'qrdemo.halfnine.com' },
     logo: logoCasente,
   },
   {
