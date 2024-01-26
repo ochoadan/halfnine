@@ -111,8 +111,8 @@ function Section({
   children: React.ReactNode;
 }) {
   return (
-    <div className="mx-auto max-w-7xl px-6 lg:px-8">
-      <div className="mx-auto max-w-2xl lg:max-w-none group/section [counter-increment:section]">
+    <div className="mx-auto max-w-7xl px-6 lg:px-8 group/section [counter-increment:section]">
+      <div className="mx-auto max-w-2xl lg:max-w-none">
         <div className="lg:flex lg:items-center lg:justify-end lg:gap-x-8 lg:group-even/section:justify-start xl:gap-x-20">
           <FadeIn className="lg:flex justify-center hidden">
             <div className="w-[33.75rem] flex-none lg:w-[35rem]">
