@@ -6,6 +6,7 @@ import { FaPhone } from "react-icons/fa6";
 import { FaRegBuilding, FaRegEnvelope, FaRegUser } from "react-icons/fa6";
 
 import clsx from "clsx";
+import { useRouter } from "next/navigation";
 
 interface ContactFormProps {
   paddingBottomOnly?: boolean;
@@ -16,6 +17,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
   paddingBottomOnly,
   paddingTop,
 }) => {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -85,6 +87,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
 
       if (response.status === 200) {
         setMessageSuccess(true);
+        router.push("/contact/thank-you")
         return;
       } else {
         console.log(response);
@@ -299,7 +302,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                   // "bg-sky-600 flex rounded-md px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-slate-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500",
                   "bg-sky-600 flex rounded-md px-12 py-2 text-sm font-semibold text-white shadow-sm hover:bg-sky-500 mx-auto",
                   awaitingResponse &&
-                    "bg-slate-400 select-none hover:bg-slate-400"
+                  "bg-slate-400 select-none hover:bg-slate-400"
                 )}
               >
                 {awaitingResponse && (

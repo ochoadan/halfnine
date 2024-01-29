@@ -13,6 +13,7 @@ import { SlPhone, SlEnvolope } from "react-icons/sl";
 
 // @ts-expect-error
 import Cal, { getCalApi } from "@calcom/embed-react";
+import { useRouter } from "next/navigation";
 
 // export const metadata: Metadata = {
 //   title:
@@ -24,6 +25,7 @@ import Cal, { getCalApi } from "@calcom/embed-react";
 // };
 
 const Contact = () => {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -98,6 +100,7 @@ const Contact = () => {
 
       if (response.status === 200) {
         setMessageSuccess(true);
+        router.push("/contact/thank-you")
         return;
       } else {
         console.log(response);
@@ -327,7 +330,7 @@ const Contact = () => {
                 className={clsx(
                   "bg-sky-600 flex rounded-md px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-slate-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500",
                   awaitingResponse &&
-                    "bg-slate-400 select-none hover:bg-slate-400"
+                  "bg-slate-400 select-none hover:bg-slate-400"
                 )}
               >
                 {awaitingResponse && (
