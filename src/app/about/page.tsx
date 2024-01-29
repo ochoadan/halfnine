@@ -115,7 +115,7 @@ const Page = () => {
           >
             {projects.map((project, index) => (
               <FadeIn as="li" key={project.name} className='group relative flex flex-col items-start'>
-                <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5">
                   <Image
                     src={project.logo}
                     alt=""
@@ -123,16 +123,16 @@ const Page = () => {
                     unoptimized
                   />
                 </div>
-                <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-                  <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50" />
+                <h2 className="mt-6 text-base font-semibold text-zinc-800">
+                  <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl" />
                   <Link href={project.link.href} target="_blank">
                     <span className="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl" />
                     <span className="relative z-10">{project.name}</span>
                   </Link>
                 </h2>
-                <p className="relative z-10 mt-2 text-sm text-zinc-500 dark:text-zinc-400">Status: <span className="text-zinc-700">{project.status}</span></p>
-                <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">{project.description}</p>
-                <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-sky-500 dark:text-zinc-200">
+                <p className="relative z-10 mt-2 text-sm text-zinc-500">Status: <span className="text-zinc-700">{project.status}</span></p>
+                <p className="relative z-10 mt-2 text-sm text-zinc-600">{project.description}</p>
+                <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-sky-500">
                   <LinkIcon className="h-6 w-6 flex-none" />
                   <span className="ml-2">{project.link.label}</span>
                 </p>
