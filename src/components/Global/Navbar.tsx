@@ -270,6 +270,12 @@ export default function GlobalNavbar() {
             >
               About
             </Link>
+            <Link
+              href="/investors"
+              className="font-semibold leading-6 text-gray-500 hover:text-gray-900 select-none"
+            >
+              Investors
+            </Link>
           </Popover.Group>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Link

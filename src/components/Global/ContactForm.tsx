@@ -11,11 +11,15 @@ import { useRouter } from "next/navigation";
 interface ContactFormProps {
   paddingBottomOnly?: boolean;
   paddingTop?: string;
+  title?: string;
+  description?: string;
 }
 
 const ContactForm: React.FC<ContactFormProps> = ({
   paddingBottomOnly,
   paddingTop,
+  title,
+  description,
 }) => {
   const router = useRouter();
   const [formData, setFormData] = useState({
@@ -114,12 +118,11 @@ const ContactForm: React.FC<ContactFormProps> = ({
       <div className="mx-auto max-w-7xl px-0 md:px-6 lg:px-8">
         <div className="bg-gray-50 rounded-none md:rounded-xl p-6 md:p-10 shadow-none md:shadow-md">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            Let&apos;s talk solutions
+            {title || "Let's talk solutions"}
             <hr className="border-sky-600 opacity-90 border-b-[2px] w-24 my-2" />
           </h2>
           <p className="mt-2 leading-8 text-gray-700">
-            Our team is ready to answer your questions and help you find the
-            best solution for your needs
+            {description || "Our team is ready to answer your questions and help you find the best solution for your needs"}
           </p>
           <form onSubmit={handleSubmit}>
             <div className="space-y-5 mt-6">
