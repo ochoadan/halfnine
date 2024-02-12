@@ -6,8 +6,8 @@ import Image from "next/image";
 export const metadata: Metadata = {
     title: "Investors | Halfnine",
     description:
-        "Explore app development costs with Halfnine. Understand pricing based on your needs. Maximize your app’s potential with us.",
-    alternates: { canonical: "https://www.halfnine.com/pricing" },
+        "The tech industry is still growing and evolving, most companies are overvalued. Investing in the markets is a gamble. Don't gamble in tech anymore. Invest in responsible strategies that deliver results",
+    alternates: { canonical: "https://www.halfnine.com/investors" },
 };
 
 const Page = () => {
