@@ -11,6 +11,7 @@ import { useRouter } from "next/navigation";
 interface ContactFormProps {
   paddingBottomOnly?: boolean;
   paddingTop?: string;
+  paddingNone?: boolean;
   title?: string;
   description?: string;
 }
@@ -18,6 +19,7 @@ interface ContactFormProps {
 const ContactForm: React.FC<ContactFormProps> = ({
   paddingBottomOnly,
   paddingTop,
+  paddingNone,
   title,
   description,
 }) => {
@@ -112,7 +114,9 @@ const ContactForm: React.FC<ContactFormProps> = ({
     <div
       className={clsx(
         "overflow-hidden bg-white",
-        paddingBottomOnly ? "pb-16 sm:pb-32" : paddingTop || "py-16 sm:py-32"
+        paddingBottomOnly && "pb-16 sm:pb-32",
+        paddingTop && "py-16 sm:py-32",
+        paddingNone && ""
       )}
     >
       <div className="mx-auto max-w-7xl px-0 md:px-6 lg:px-8">

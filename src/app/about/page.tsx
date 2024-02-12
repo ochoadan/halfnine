@@ -51,14 +51,14 @@ const projects = [
     link: { href: 'https://qrdemo.halfnine.com', label: 'qrdemo.halfnine.com' },
     logo: logoCasente,
   },
-  {
-    name: 'Hyleon',
-    status: "In Development",
-    description:
-      'An application that helps you find the top developers in any specific field.',
-    link: { href: 'https://hyleon.com', label: 'hyleon.com' },
-    logo: logoHyleon,
-  },
+  // {
+  //   name: 'Hyleon',
+  //   status: "In Development",
+  //   description:
+  //     'An application that helps you find the top developers in any specific field.',
+  //   link: { href: 'https://hyleon.com', label: 'hyleon.com' },
+  //   logo: logoHyleon,
+  // },
 ]
 
 const Page = () => {
