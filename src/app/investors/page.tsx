@@ -99,7 +99,7 @@ const Page = () => {
                         <hr className="border-sky-600 opacity-90 border-b-[2px] w-24 my-3 mx-auto" />
                     </h2>
                     <p className="text-lg leading-7 text-gray-600 text-center max-w-3xl mx-auto">
-                        {`We acquire profitable but struggling digital assets with room to grow, then boost operations and marketing. Existing profits guarantee ROI even if growth goals aren't met.`}
+                        {`We acquire profitable digital assets facing challenges or room to grow, then boost operations and marketing. Existing profits guarantee ROI even if growth goals aren't met.`}
                         {/* We acquire profitable digital assets with growth challenges or untapped potential. Then, we optimize their operations and improve marketing strategies. If we don't meet our growth goals, our existing profits ensure a return on investment. */}
                         {/* We acquire profitable digital assets with growth challenges or untapped potential. Then, we enhance, update, and revitalize them. If we don't meet our goals, our existing profits ensure a return on investment. */}
                         {/* We buy profitable digital assets with growth hurdles or untapped potential. We optimize, modernize, and revitalize them, and if results fall short, existing profits secure ROI. */}
