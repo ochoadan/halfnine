@@ -11,7 +11,6 @@ import { FaPhone } from "react-icons/fa6";
 import { FaRegBuilding, FaRegEnvelope, FaRegUser } from "react-icons/fa6";
 import { SlPhone, SlEnvolope } from "react-icons/sl";
 
-// @ts-expect-error
 import Cal, { getCalApi } from "@calcom/embed-react";
 import { useRouter } from "next/navigation";
 
