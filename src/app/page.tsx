@@ -46,7 +46,7 @@ const Page = () => (
       </div>
     ))}
     <FadeIn>
-      <GlobalContactForm paddingBottomOnly />
+      <GlobalContactForm paddingBottom />
     </FadeIn>
   </>
 );

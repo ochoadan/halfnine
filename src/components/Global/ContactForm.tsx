@@ -9,7 +9,7 @@ import clsx from "clsx";
 import { useRouter } from "next/navigation";
 
 interface ContactFormProps {
-  paddingBottomOnly?: boolean;
+  paddingBottom?: boolean;
   paddingTop?: string;
   paddingNone?: boolean;
   title?: string;
@@ -17,7 +17,7 @@ interface ContactFormProps {
 }
 
 const ContactForm: React.FC<ContactFormProps> = ({
-  paddingBottomOnly,
+  paddingBottom,
   paddingTop,
   paddingNone,
   title,
@@ -114,9 +114,10 @@ const ContactForm: React.FC<ContactFormProps> = ({
     <div
       className={clsx(
         "overflow-hidden bg-white",
-        paddingBottomOnly && "pb-16 sm:pb-32",
-        paddingTop && "py-16 sm:py-32",
-        paddingNone && ""
+        paddingBottom && "pb-16 sm:pb-32",
+        paddingTop && "pt-16 sm:pt-32",
+        paddingNone && "",
+        !paddingBottom && !paddingTop && !paddingNone && "py-16 sm:py-32"
       )}
     >
       <div className="mx-auto max-w-7xl px-0 md:px-6 lg:px-8">

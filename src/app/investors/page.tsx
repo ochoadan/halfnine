@@ -58,7 +58,7 @@ const Page = () => {
                 <ContactForm
                     title="Fill out to learn more"
                     description="We are always looking for investors who share our vision. Let's talk."
-                    paddingBottomOnly
+                    paddingBottom
                 />
             {/* </div> */}
         </>
