@@ -197,8 +197,8 @@ const Page = () => {
           </h2>
           <p className="text-lg leading-7 text-gray-600 text-center max-w-3xl mx-auto">
             We acquire underperforming digital assets, rebuild operations and
-            marketing to grow value. While the asset's existing profits ensure
-            ROI, even if growth goals aren't met.
+            marketing to grow value. While the asset&apos;s existing profits ensure
+            ROI, even if growth goals aren&apos;t met.
             {/* We acquire underperforming digital assets, optimizing operations and marketing to boost value. Existing profits secure ROI, even if growth goals aren't met. */}
             {/* We acquire underperforming digital assets with challenges or room to grow, while rebuilding their operations and marketing to increase their value. If we don't meet our growth goals, the asset's existing profits ensure a return on investment. */}
             {/* We acquire underperforming digital assets with challanges or room to grow, while rebuilding their operations and marketing to grow their value. If we don't meet our growth goals, the asset's existing profits ensure a return on investment. */}
