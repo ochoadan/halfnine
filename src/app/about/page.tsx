@@ -6,6 +6,7 @@ import Image from "next/image";
 import { features, supportLinks } from "./content";
 import Link from "next/link";
 import { LinkIcon } from "@heroicons/react/20/solid";
+import logoAppealing from '@/images/logos/appealing.svg'
 import logoHyleon from '@/images/logos/hyleon.svg'
 import logoSurveyr from '@/images/logos/surveyr.svg'
 import logoYournameis from '@/images/logos/yournameis.svg'
@@ -50,6 +51,14 @@ const projects = [
       'This is a Demo Application for allows companies to generate dynamic QR codes for their users to update.',
     link: { href: 'https://qrdemo.halfnine.com', label: 'qrdemo.halfnine.com' },
     logo: logoCasente,
+  },
+  {
+    name: 'Appealing Design',
+    status: "In Development",
+    description:
+      'Our subscription-based design provides you with dedicated designers to help with all your design needs.',
+    link: { href: 'https://appealing.design/', label: 'appealing.design' },
+    logo: logoAppealing,
   },
   // {
   //   name: 'Hyleon',
