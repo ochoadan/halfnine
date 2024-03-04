@@ -190,12 +190,12 @@ const Page = () => {
       </div>
       <div className="bg-gray-50 py-14 md:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-6">
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl text-center">
+          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl lg:text-center">
             So what <span className="uppercase text-sky-600">are</span> you
             investing in?
-            <hr className="border-sky-600 opacity-90 border-b-[2px] w-24 my-3 mx-auto" />
+            <hr className="border-sky-600 opacity-90 border-b-[2px] w-36 my-4 lg:mx-auto" />
           </h2>
-          <p className="text-lg leading-7 text-gray-600 text-center max-w-3xl mx-auto">
+          <p className="text-lg leading-7 text-gray-600 lg:text-center lg:max-w-3xl lg:mx-auto">
             We acquire underperforming digital assets, rebuild operations and
             marketing to grow value. While the asset&apos;s existing profits ensure
             ROI, even if growth goals aren&apos;t met.
