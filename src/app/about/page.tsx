@@ -6,26 +6,27 @@ import Image from "next/image";
 import { features, supportLinks } from "./content";
 import Link from "next/link";
 import { LinkIcon } from "@heroicons/react/20/solid";
-import logoAppealing from '@/images/logos/appealing.svg'
-import logoHyleon from '@/images/logos/hyleon.svg'
-import logoSurveyr from '@/images/logos/surveyr.svg'
-import logoYournameis from '@/images/logos/yournameis.svg'
-import logoCasente from '@/images/logos/casente.svg'
+import logoAppealing from "@/images/logos/appealing.svg";
+import logoHyleon from "@/images/logos/hyleon.svg";
+import logoHalfnine from "@/images/logos/halfnine.svg";
+import logoSurveyr from "@/images/logos/surveyr.svg";
+import logoYournameis from "@/images/logos/yournameis.svg";
+import logoCasente from "@/images/logos/casente.svg";
 
 export const metadata: Metadata = {
   title: "Learn about how we empower your vision - Halfnine",
   description:
-    "Halfnine was born out of a desire to help businesses to transform their opportunities and ideas through innovative technology solutions.",
+    "Halfnine emerged from a vision to assist businesses in leveraging technology solutions to transform opportunities and ideas into a reality.",
   alternates: { canonical: "https://www.halfnine.com/about" },
 };
 
 const projects = [
   {
-    name: 'Surveyr.io',
+    name: "Surveyr.io",
     status: "Live",
     description:
-      'A platform for monitoring backend cron jobs for Laravel and php Applications.',
-    link: { href: 'https://surveyr.io', label: 'surveyr.io' },
+      "A platform for monitoring backend cron jobs for Laravel and php Applications.",
+    link: { href: "https://surveyr.io", label: "surveyr.io" },
     logo: logoSurveyr,
   },
   // {
@@ -37,28 +38,36 @@ const projects = [
   //   logo: logoPlanetaria,
   // },
   {
-    name: 'Yourname.is',
+    name: "Yourname.is",
     status: "Live",
     description:
-      'An application that helps individuals create a professional business email address with their first and last name.',
-    link: { href: 'https://yourname.is', label: 'yourname.is' },
+      "An application that helps individuals create a professional business email address with their first and last name.",
+    link: { href: "https://yourname.is", label: "yourname.is" },
     logo: logoYournameis,
   },
   {
-    name: 'Dynamic QR Codes',
-    status: "Live - Demo",
+    name: "Dynamic QR Codes",
+    status: "Live (Demo)",
     description:
-      'This is a Demo Application for allows companies to generate dynamic QR codes for their users to update.',
-    link: { href: 'https://qrdemo.halfnine.com', label: 'qrdemo.halfnine.com' },
+      "This is a Demo Application for allows companies to generate dynamic QR codes for their users to update.",
+    link: { href: "https://qrdemo.halfnine.com", label: "qrdemo.halfnine.com" },
     logo: logoCasente,
   },
   {
-    name: 'Appealing Design',
+    name: "Appealing Design",
     status: "In Development",
     description:
-      'Our subscription-based design provides you with dedicated designers to help with all your design needs.',
-    link: { href: 'https://appealing.design/', label: 'appealing.design' },
+      "Our subscription-based design provides you with dedicated designers to help with all your design needs.",
+    link: { href: "https://appealing.design/", label: "appealing.design" },
     logo: logoAppealing,
+  },
+  {
+    name: "Engagement Platform",
+    status: "In Development",
+    description:
+      "Our subscription-based design provides you with dedicated designers to help with all your design needs.",
+    link: { href: "https://engagement.halfnine.com/", label: "engagement.halfnine.com" },
+    logo: logoHalfnine,
   },
   // {
   //   name: 'Hyleon',
@@ -68,7 +77,7 @@ const projects = [
   //   link: { href: 'https://hyleon.com', label: 'hyleon.com' },
   //   logo: logoHyleon,
   // },
-]
+];
 
 const Page = () => {
   return (
@@ -86,16 +95,35 @@ const Page = () => {
                 <hr className="border-sky-600 opacity-90 border-b-[2px] w-20 my-2" />
               </h2>
               <p className="mt-4 text-gray-500">
-                Halfnine was born out of a desire to help businesses to
+                {/* Halfnine was born out of a desire to help businesses to
                 transform their opportunities and ideas through innovative
-                technology solutions.
+                technology solutions. */}
+                {/* Halfnine empowers businesses to turn opportunities and ideas
+                into reality through innovative technology solutions. */}
+                {/* Halfnine emerged from a drive to assist businesses in realizing
+                their opportunities and ideas through technology services and
+                solutions. */}
+                Halfnine emerged from a vision to assist businesses in
+                leveraging technology solutions to transform opportunities and
+                ideas into a reality.
+                {/* Halfnine emerged from a vision to assist businesses in leveraging technology services and solutions to transform opportunities and ideas. */}
                 <br />
                 <br />
-                We are a group of dedicated engineers with a passion for pushing
-                boundaries and delivering exceptional results, inspired to shape
-                the digital landscape. We are driven by innovation and fueled by
-                creativity, focused on efficiency and creating a return on
-                investment for our clients.
+                {/* We are a group of dedicated engineers and designers with a
+                passion for pushing boundaries and delivering exceptional
+                results, inspired to shape the digital landscape. We are driven
+                by innovation and fueled by creativity, focused on efficiency
+                and creating a return on investment for our clients. */}
+                {/* We're a team of skilled engineers and designers committed to
+                pushing boundaries and delivering top-notch results. Inspired to
+                shape the digital landscape, we thrive on innovation and
+                creativity, prioritizing efficiency to ensure a strong return on
+                investment for our clients. */}
+                We are a team of dedicated engineers and designers driven by a
+                passion for pushing boundaries. Our inspiration lies in shaping
+                the digital landscape. Innovation fuels us, while creativity
+                propels us forward. We prioritize efficiency and strive to
+                deliver a tangible return on investment for our clients.
               </p>
             </div>
             <FadeIn className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg bg-gray-100 group">
@@ -123,7 +151,11 @@ const Page = () => {
             className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
           >
             {projects.map((project, index) => (
-              <FadeIn as="li" key={project.name} className='group relative flex flex-col items-start'>
+              <FadeIn
+                as="li"
+                key={project.name}
+                className="group relative flex flex-col items-start"
+              >
                 <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5">
                   <Image
                     src={project.logo}
@@ -139,8 +171,13 @@ const Page = () => {
                     <span className="relative z-10">{project.name}</span>
                   </Link>
                 </h2>
-                <p className="relative z-10 mt-2 text-sm text-zinc-500">Status: <span className="text-zinc-700">{project.status}</span></p>
-                <p className="relative z-10 mt-2 text-sm text-zinc-600">{project.description}</p>
+                <p className="relative z-10 mt-2 text-sm text-zinc-500">
+                  Status:{" "}
+                  <span className="text-zinc-700">{project.status}</span>
+                </p>
+                <p className="relative z-10 mt-2 text-sm text-zinc-600">
+                  {project.description}
+                </p>
                 <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-sky-500">
                   <LinkIcon className="h-6 w-6 flex-none" />
                   <span className="ml-2">{project.link.label}</span>

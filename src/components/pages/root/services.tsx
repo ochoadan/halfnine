@@ -76,19 +76,19 @@ export default function Services() {
         { name: "Enterprise IT consulting" },
       ],
     },
-    "Data Analytics": {
-      description:
-        "We transform historical and real-time data into actionable insights for businesses, preparing the raw data environment and enhancing businesses with advanced analytics.",
-      features: [
-        { name: "Business Intelligence" },
-        { name: "Big Data" },
-        { name: "Data Warehousing" },
-        { name: "Data Science" },
-        { name: "Data Management" },
-        { name: "Machine and Deep Learning" },
-        { name: "Data Analytics as a Service" },
-      ],
-    },
+    // "Data Analytics": {
+    //   description:
+    //     "We transform historical and real-time data into actionable insights for businesses, preparing the raw data environment and enhancing businesses with advanced analytics.",
+    //   features: [
+    //     { name: "Business Intelligence" },
+    //     { name: "Big Data" },
+    //     { name: "Data Warehousing" },
+    //     { name: "Data Science" },
+    //     { name: "Data Management" },
+    //     { name: "Machine and Deep Learning" },
+    //     { name: "Data Analytics as a Service" },
+    //   ],
+    // },
     // "Help Desk Services": {
     //   description:
     //     "Our help desk services resolve various issues, from application queries to code-level enhancements, ensuring smooth software functioning and user satisfaction.",
@@ -129,12 +129,12 @@ export default function Services() {
       description:
         "We provide IT staffing services to help you find the right talent for your projects.",
       features: [
-        { name: "IT staffing" },
-        { name: "IT recruitment" },
         { name: "IT staff augmentation" },
-        { name: "IT headhunting" },
         { name: "IT recruitment process outsourcing" },
         { name: "IT recruitment consulting" },
+        { name: "IT recruitment" },
+        { name: "IT headhunting" },
+        // { name: "IT staffing" },
       ],
     },
     // "IT Training": {

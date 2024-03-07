@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 const features = [
   {
-    name: "Divirsified portfolio",
+    name: "Divirsified Portfolio",
     description:
       "We don't put all our eggs in one basket. We invest in a variety of digital assets to minimize risk and maximize returns.",
   },
