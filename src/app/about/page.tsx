@@ -65,7 +65,7 @@ const projects = [
     name: "Engagement Platform",
     status: "In Development",
     description:
-      "Our subscription-based design provides you with dedicated designers to help with all your design needs.",
+      "Through this platform, our clients interact with us and our team to manage their projects and tasks.",
     link: { href: "https://engagement.halfnine.com/", label: "engagement.halfnine.com" },
     logo: logoHalfnine,
   },
