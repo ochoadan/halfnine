@@ -175,7 +175,7 @@ export default function GlobalNavbar() {
       }`}
     >
       <div className="bg-stone-50 h-6 hidden lg:block">
-        <div className="flex mx-auto max-w-7xl text-center justify-end px-4 text-xs font-small lg:px-8 gap-x-5 rounded-md py-1">
+        <div className="flex mx-auto max-w-7xl text-center justify-end px-4 text-xs font-small lg:px-8 gap-x-5 rounded-md py-1 tracking-wide">
           <Link
             href="tel:+13213120362"
             className="hover:text-blue-800 inline-flex gap-x-1.5"
@@ -200,6 +200,11 @@ export default function GlobalNavbar() {
             />
             <span className="leading-tight">contact@halfnine.com</span>
           </Link>
+          <Link href='/contact' className="group">
+            <span className="inline-flex items-center rounded-md bg-gray-50 px-1.5 text-xs font-medium text-gray-800  group-hover:ring-blue-500/10 group-hover:text-blue-800 ">
+              Contact Form
+            </span>
+          </Link>
         </div>
       </div>
       <div>
@@ -211,7 +216,7 @@ export default function GlobalNavbar() {
             {isRootPage ? (
               <Logo />
             ) : (
-              <Link href={"/"} className="-m-1.5 p-1.5">
+              <Link href="/" className="-m-1.5 p-1.5">
                 <span className="sr-only">Halfnine LLC</span>
                 <Logo />
               </Link>
@@ -279,11 +284,12 @@ export default function GlobalNavbar() {
           </Popover.Group>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Link
-              href={"/contact"}
+              href="https://engagement.halfnine.com/"
+              // target="_blank"
               className="select-none font-bold inline-flex items-center gap-x-1.5 rounded-md bg-sky-600 px-3 py-2 text-sm text-white shadow-sm hover:bg-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
               type="button"
             >
-              Contact us
+              Get Started
             </Link>
           </div>
         </nav>

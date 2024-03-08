@@ -70,6 +70,14 @@ const projects = [
     logo: logoHalfnine,
   },
   // {
+  //   name: 'Resourceful Agency',
+  //   status: "In Development",
+  //   description:
+  //     'An application that helps you find the top developers in any specific field.',
+  //   link: { href: 'https://resourceful.agency', label: 'resourceful.agency' },
+  //   logo: logoHyleon,
+  // },
+  // {
   //   name: 'Hyleon',
   //   status: "In Development",
   //   description:
