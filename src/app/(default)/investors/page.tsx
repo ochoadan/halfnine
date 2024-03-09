@@ -1,4 +1,5 @@
 import ContactForm from "@/components/Global/ContactForm";
+import { FadeIn } from "@/components/Global/FadeIn";
 import PageHero from "@/components/Global/PageHero";
 import { CheckIcon } from "@heroicons/react/24/outline";
 
@@ -63,16 +64,48 @@ const Page = () => {
       {/* Its like making passive income, we manage the investment and you simply watch the returns. */}
       <div className="overflow-hidden bg-white py-14 md:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl lg:text-center space-y-6">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-              {`"It's like making passive income"`}
-              {/* "It's like making passive income" - Mark Jennings */}
-            </h2>
-            <p className="text-lg leading-8 text-gray-700">
+          <div className="mx-auto max-w-2xl lg:max-w-none grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2">
+            {" "}
+            <div>
+              <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                {/* {`"It's like making passive income"`} */}
+                {/* "It's like making passive income" - Mark Jennings */}
+                So what <span className="uppercase text-sky-600">are</span> you
+                investing in?
+                <hr className="border-sky-600 opacity-90 border-b-[2px] w-20 my-2" />
+              </h2>
+              <p className="mt-6 text-gray-500">
+                {/* <p className="text-lg leading-8 text-gray-700"> */}
+                We acquire struggling digital assets, revamp operations and
+                marketing to boost their worth. Existing profits guarantee ROI,
+                even if growth targets aren't achieved.
+                <br />
+                We handle your investment, allowing you to enjoy the returns
+                stress-free. While engagement is encouraged, it's optional. Rest
+                assured, you'll always have access to detailed financial
+                information.
+                {/* We acquire underperforming digital assets, rebuild operations and
+              marketing to grow value. While the asset&apos;s existing profits
+              ensure ROI, even if growth goals aren&apos;t met.
+              <br />
+              <br />
               We manage your investment, and you simply watch the returns,
               Engagement is recommended but not required, while you always have
-              access to the information of where your money is going.{" "}
-            </p>
+              access to the information of where your money is going.*/}
+              </p>
+            </div>
+            {/* <FadeIn className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg bg-gray-100 group"> */}
+            <FadeIn className="aspect-h-6 aspect-w-10 overflow-hidden rounded-lg bg-gray-100 group">
+              <g className="origin-center scale-100 transition duration-500 motion-safe:group-hover:scale-[1.03]">
+                <Image
+                  src='/img/index/pexels-lukas-669621.jpg'
+                  alt="BG"
+                  className="object-cover object-center"
+                  width={655}
+                  height={655}
+                />
+              </g>
+            </FadeIn>
           </div>
 
           {/* <div className="grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2 mx-auto max-w-2xl lg:max-w-none">
@@ -188,7 +221,7 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div className="bg-white py-14 md:py-28">
+      {/* <div className="bg-white py-14 md:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-6">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl lg:text-center">
             So what <span className="uppercase text-sky-600">are</span> you
@@ -198,21 +231,21 @@ const Page = () => {
           <p className="text-lg leading-7 text-gray-600 lg:text-center lg:max-w-3xl lg:mx-auto">
             We acquire underperforming digital assets, rebuild operations and
             marketing to grow value. While the asset&apos;s existing profits ensure
-            ROI, even if growth goals aren&apos;t met.
-            {/* We acquire underperforming digital assets, optimizing operations and marketing to boost value. Existing profits secure ROI, even if growth goals aren't met. */}
-            {/* We acquire underperforming digital assets with challenges or room to grow, while rebuilding their operations and marketing to increase their value. If we don't meet our growth goals, the asset's existing profits ensure a return on investment. */}
-            {/* We acquire underperforming digital assets with challanges or room to grow, while rebuilding their operations and marketing to grow their value. If we don't meet our growth goals, the asset's existing profits ensure a return on investment. */}
-            {/* {`We acquire profitable digital assets facing challenges or room to grow, then boost operations and marketing. Existing profits guarantee ROI even if growth goals aren't met.`} */}
-            {/* We acquire profitable digital assets with growth challenges or untapped potential. Then, we optimize their operations and improve marketing strategies. If we don't meet our growth goals, our existing profits ensure a return on investment. */}
-            {/* We acquire profitable digital assets with growth challenges or untapped potential. Then, we enhance, update, and revitalize them. If we don't meet our goals, our existing profits ensure a return on investment. */}
-            {/* We buy profitable digital assets with growth hurdles or untapped potential. We optimize, modernize, and revitalize them, and if results fall short, existing profits secure ROI. */}
-            {/* We acquire digital assets that are already generating profits but face challenges in growth or competition, or aren't realizing their full potential. We enhance these assets, and if improvement efforts don't yield results, the existing profit generated is sufficient to ensure a return on investment. */}
-            {/* We acquire digital assets that are already generating revenue but face challenges in growth or competition, or aren't realizing their full potential. We enhance and expand them to boost their value further. */}
-            {/* We acquire digital assets that are already generating revenue and value, but are struggling to grow or compete in the market, or not reaching their full potential. We then optimize and scale them to increase their value. */}
-            {/* We acquire digital assets that are already generating revenue. We then optimize and scale them to increase their value. */}
-          </p>
+            ROI, even if growth goals aren&apos;t met. */}
+      {/* We acquire underperforming digital assets, optimizing operations and marketing to boost value. Existing profits secure ROI, even if growth goals aren't met. */}
+      {/* We acquire underperforming digital assets with challenges or room to grow, while rebuilding their operations and marketing to increase their value. If we don't meet our growth goals, the asset's existing profits ensure a return on investment. */}
+      {/* We acquire underperforming digital assets with challanges or room to grow, while rebuilding their operations and marketing to grow their value. If we don't meet our growth goals, the asset's existing profits ensure a return on investment. */}
+      {/* {`We acquire profitable digital assets facing challenges or room to grow, then boost operations and marketing. Existing profits guarantee ROI even if growth goals aren't met.`} */}
+      {/* We acquire profitable digital assets with growth challenges or untapped potential. Then, we optimize their operations and improve marketing strategies. If we don't meet our growth goals, our existing profits ensure a return on investment. */}
+      {/* We acquire profitable digital assets with growth challenges or untapped potential. Then, we enhance, update, and revitalize them. If we don't meet our goals, our existing profits ensure a return on investment. */}
+      {/* We buy profitable digital assets with growth hurdles or untapped potential. We optimize, modernize, and revitalize them, and if results fall short, existing profits secure ROI. */}
+      {/* We acquire digital assets that are already generating profits but face challenges in growth or competition, or aren't realizing their full potential. We enhance these assets, and if improvement efforts don't yield results, the existing profit generated is sufficient to ensure a return on investment. */}
+      {/* We acquire digital assets that are already generating revenue but face challenges in growth or competition, or aren't realizing their full potential. We enhance and expand them to boost their value further. */}
+      {/* We acquire digital assets that are already generating revenue and value, but are struggling to grow or compete in the market, or not reaching their full potential. We then optimize and scale them to increase their value. */}
+      {/* We acquire digital assets that are already generating revenue. We then optimize and scale them to increase their value. */}
+      {/* </p>
         </div>
-      </div>
+      </div> */}
       {/* <div className="py-0 sm:pb-32"> */}
       {/* <ContactForm
         title="Fill out to learn more"

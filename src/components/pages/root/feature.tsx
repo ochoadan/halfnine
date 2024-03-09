@@ -27,7 +27,7 @@ const features = [
 
 export default function RootFeature() {
   return (
-    <FadeInStagger>
+    <FadeInStagger faster>
       <FadeIn className="mx-auto lg:text-center">
         {/* <h2 className="text-base font-semibold leading-7 text-sky-600">
           Deploy faster

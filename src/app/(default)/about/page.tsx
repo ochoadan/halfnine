@@ -329,7 +329,7 @@ const Page = () => {
       </div> */}
       <div className="overflow-hidden bg-white py-16 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <FadeInStagger>
+          <FadeInStagger faster>
             <FadeIn className="mx-auto max-w-4xl text-center">
               <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
                 Our Core Values
