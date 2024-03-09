@@ -135,7 +135,7 @@ const Page = () => {
               </p>
             </div>
             <FadeIn className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg bg-gray-100 group">
-              <g className="origin-center scale-100 transition duration-500 motion-safe:group-hover:scale-105">
+              <g className="origin-center scale-100 transition duration-500 motion-safe:group-hover:scale-[1.03]">
                 <Image
                   src="/img/about/pexels-mizuno-k-12902918-min.jpg"
                   alt="Businesswomen Looking at a Document Folder"
@@ -418,7 +418,7 @@ const Page = () => {
           </div>
         </section>
       </FadeInStagger>
-      <GlobalContactForm paddingBottom />
+      {/* <GlobalContactForm paddingBottom /> */}
     </>
   );
 };

@@ -86,7 +86,7 @@ const Page = () => {
                             </p>
                         </div>
                         <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg bg-gray-100 group">
-                            <g className="origin-center scale-100 transition duration-500 motion-safe:group-hover:scale-105">
+                            <g className="origin-center scale-100 transition duration-500 motion-safe:group-hover:scale-[1.03]">
                                 <Image
                                     src="/img/about/pexels-mizuno-k-12902918-min.jpg"
                                     alt="Businesswomen Looking at a Document Folder"
@@ -188,7 +188,7 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div className="bg-gray-50 py-14 md:py-28">
+      <div className="bg-white py-14 md:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-6">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl lg:text-center">
             So what <span className="uppercase text-sky-600">are</span> you
@@ -214,10 +214,10 @@ const Page = () => {
         </div>
       </div>
       {/* <div className="py-0 sm:pb-32"> */}
-      <ContactForm
+      {/* <ContactForm
         title="Fill out to learn more"
         description="We are always looking for investors who share our vision. Let's talk."
-      />
+      /> */}
       {/* </div> */}
     </>
   );

@@ -39,7 +39,7 @@ export function StylizedImage({
     >
       <svg viewBox={`0 0 ${width} ${height}`} fill="none" className="h-full">
         <g clipPath={`url(#${id}-clip)`} className="group">
-          <g className="origin-center scale-100 transition duration-500 motion-safe:group-hover:scale-105">
+          <g className="origin-center scale-100 transition duration-500 motion-safe:group-hover:scale-[1.03]">
             <foreignObject width={width} height={height}>
               <Image
                 alt="Side Image"

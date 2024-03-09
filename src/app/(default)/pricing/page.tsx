@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 const importImage = (src: string) => {
   return (
     <FadeIn className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg bg-gray-100 group">
-      <g className="origin-center scale-100 transition duration-500 motion-safe:group-hover:scale-105">
+      <g className="origin-center scale-100 transition duration-500 motion-safe:group-hover:scale-[1.03]">
         <Image
           src={src}
           alt="BG"
@@ -35,7 +35,7 @@ const Page = () => {
         heading="Software Development Costs"
         description="We help you define your project's unique goals, assess feasibility, and create a plan to achieve the best possible user experience."
       />
-      <div className="overflow-hidden bg-white py-16 sm:py-32">
+      {/* <div className="overflow-hidden bg-white py-16 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <FadeIn className="mx-auto max-w-4xl lg:text-center">
             <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
@@ -52,8 +52,8 @@ const Page = () => {
             </p>
           </FadeIn>
         </div>
-      </div>
-      <div className="overflow-hidden bg-gray-100 py-16 sm:py-32">
+      </div> */}
+      <div className="overflow-hidden bg-white py-16 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:max-w-none grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2">
             <div>
@@ -86,7 +86,7 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div className="overflow-hidden bg-white py-16 sm:py-32">
+      <div className="overflow-hidden bg-gray-50 py-16 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:max-w-none grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2">
             {importImage("/img/pricing/pexels-mikhail-nilov-7988079-min.jpg")}
@@ -121,7 +121,7 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div className="overflow-hidden bg-gray-100 py-16 sm:py-32">
+      <div className="overflow-hidden bg-white py-16 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:max-w-none grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2">
             <div>
@@ -151,7 +151,7 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <GlobalContactForm />
+      {/* <GlobalContactForm /> */}
     </>
   );
 };

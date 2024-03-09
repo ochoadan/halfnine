@@ -54,7 +54,7 @@ const Page = () => {
           <Deliver />
         </div>
       </div>
-      <div className="overflow-hidden bg-gray-100 py-16 sm:py-24">
+      {/* <div className="overflow-hidden bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <FadeIn className="relative overflow-hidden rounded-lg lg:h-96">
             <div className="absolute inset-0">
@@ -73,7 +73,6 @@ const Page = () => {
               aria-hidden="true"
               className="relative h-32 w-full lg:hidden"
             />
-            {/* <div className="absolute inset-x-0 bottom-0 rounded-bl-lg rounded-br-lg bg-black bg-opacity-75 p-6 backdrop-blur backdrop-filter sm:flex sm:items-center sm:justify-between lg:inset-x-auto lg:inset-y-0 lg:w-96 lg:flex-col lg:items-start lg:rounded-br-none lg:rounded-tl-lg"> */}
             <div className="absolute inset-x-0 bottom-0 rounded-bl-lg rounded-br-lg bg-black bg-opacity-75 p-6 backdrop-blur backdrop-filter sm:flex sm:items-center sm:justify-between lg:inset-x-auto lg:inset-y-0 lg:w-[450px] lg:flex-col lg:items-start lg:rounded-br-none lg:rounded-tl-lg">
               <div>
                 <h2 className="text-2xl font-bold text-white">
@@ -93,8 +92,8 @@ const Page = () => {
             </div>
           </FadeIn>
         </div>
-      </div>
-      <GlobalContactForm />
+      </div> */}
+      {/* <GlobalContactForm /> */}
     </>
   );
 };

@@ -35,7 +35,7 @@ const features = [
 
 export default function FeatureGrid() {
   return (
-    <FadeInStagger>
+    <FadeInStagger faster>
       <FadeIn className="mx-auto lg:text-center">
         <h2 className="text-base font-bold leading-7 text-sky-600">
           Our Driving Forces
