@@ -76,14 +76,9 @@ const Page = () => {
               </h2>
               <p className="mt-6 text-gray-500">
                 {/* <p className="text-lg leading-8 text-gray-700"> */}
-                We acquire struggling digital assets, revamp operations and
-                marketing to boost their worth. Existing profits guarantee ROI,
-                even if growth targets aren't achieved.
+                {`We acquire struggling digital assets, revamp operations and marketing to boost their worth. Existing profits guarantee ROI, even if growth targets aren't achieved.`}
                 <br />
-                We handle your investment, allowing you to enjoy the returns
-                stress-free. While engagement is encouraged, it's optional. Rest
-                assured, you'll always have access to detailed financial
-                information.
+                {`We handle your investment, allowing you to enjoy the returns stress-free. While engagement is encouraged, it's optional. Rest assured, you'll always have access to detailed financial information.`}
                 {/* We acquire underperforming digital assets, rebuild operations and
               marketing to grow value. While the asset&apos;s existing profits
               ensure ROI, even if growth goals aren&apos;t met.
@@ -98,7 +93,7 @@ const Page = () => {
             <FadeIn className="aspect-h-6 aspect-w-10 overflow-hidden rounded-lg bg-gray-100 group">
               <g className="origin-center scale-100 transition duration-500 motion-safe:group-hover:scale-[1.03]">
                 <Image
-                  src='/img/index/pexels-lukas-669621.jpg'
+                  src="/img/index/pexels-lukas-669621.jpg"
                   alt="BG"
                   className="object-cover object-center"
                   width={655}
