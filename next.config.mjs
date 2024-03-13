@@ -1,10 +1,23 @@
 // /** @type {import('next').NextConfig} */
-import withMarkdoc from '@markdoc/next.js'
-import withSearch from './src/markdoc/search.mjs'
+
+// const nextConfig = {
+//   output: 'standalone',
+//   pageExtensions: ['md', 'mdoc', 'js', 'jsx', 'ts', 'tsx'],
+//   images: {
+//     remotePatterns: [
+//       { hostname: 'tailwindui.com', },
+//       { hostname: 'images.unsplash.com', },
+//       { hostname: 'raw.githubusercontent.com', },
+//     ],
+//     dangerouslyAllowSVG: true,
+//   },
+// };
+
+// module.exports = nextConfig;
 
 const nextConfig = {
   output: 'standalone',
-  pageExtensions: ['md', 'mdoc', 'js', 'jsx', 'ts', 'tsx'],
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
   images: {
     remotePatterns: [
       { hostname: 'tailwindui.com', },
@@ -15,6 +28,4 @@ const nextConfig = {
   },
 };
 
-export default withSearch(
-  withMarkdoc({ schemaPath: './src/markdoc' })(nextConfig),
-)
+export default nextConfig;

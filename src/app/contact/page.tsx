@@ -12,25 +12,13 @@ import {
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import { PiPhone } from "react-icons/pi";
 
-import {
-  ChevronDownIcon,
-  PhoneIcon,
-  RectangleGroupIcon,
-} from "@heroicons/react/20/solid";
+import { PhoneIcon } from "@heroicons/react/20/solid";
 
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import Logo from "@/components/Global/Logo";
-import {
-  FaCode,
-  FaHeadset,
-  FaRegCompass,
-  FaRegFileCode,
-  FaRegIdCard,
-  FaRegLifeRing,
-  FaUsersGear,
-} from "react-icons/fa6";
+
+import Cal, { getCalApi } from "@calcom/embed-react";
 
 import { BuildingOffice2Icon, EnvelopeIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
@@ -486,7 +474,21 @@ export default function Example() {
           </form>
         </div>
       </div>
+      <div className="py-4 md:py-20 px-8 max-w-7xl mx-auto">
+        {/* <div className="bg-gray-50 rounded-xl p-5 lg:p-10"> */}
+        <h2 className="pb-6 text-2xl md:text-3xl font-bold text-center">
+          Schedule a meeting:
+        </h2>
+        <Cal
+          calLink="halfnine/30min"
+          style={{ width: "100%", height: "100%", overflow: "scroll" }}
+          config={{ layout: "month_view" }}
+        />
+        {/* </div> */}
+      </div>
       <GlobalFooter />
     </>
   );
 }
+
+// function CalDialog({ open, setOpen }: any) {

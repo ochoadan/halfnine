@@ -21,10 +21,14 @@ const RootHeading = () => {
         />
         <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-16 lg:pt-32">
           <h1 className="text-3xl sm:text-4xl md:text-5xl text-center font-extrabold">
-            Software Consulting and Development
+            {/* Technology Consulting & Development */}
+            Full-Service Technology Solutions 
           </h1>
-          <p className="text-3xl sm:text-4xl md:text-5xl text-center font-extrabold mt-2">
-            For your Digital Success
+          <p className="text-3xl sm:text-4xl md:text-5xl text-center font-extrabold mt-4">
+            {/* Realize your digital potential */}
+            Realize your digital success
+            {/* For your Digital Success */}
+            {/* Realize your opportunities */}
           </p>
         </div>
         <hr className="border-sky-600 opacity-90 border-b-[3px] mx-auto w-40 my-6" />
@@ -32,11 +36,15 @@ const RootHeading = () => {
           <p className="px-4 lg:px-24 my-4 text-lg md:text-xl text-gray-700">
             {/* Our digital solutions are powerful and flexible, meeting the demands of the present while unlocking future potential for countless users and businesses. */}
             {/* We empower businesses to thrive by providing flexible and scalable solutions that meet their needs of the present and the future. */}
-            We empower businesses to thrive by providing end-to-end solutions that meet their needs and goals for the present and the future.
+            We empower businesses to thrive by providing end-to-end solutions
+            that meet their needs and goals for the present and the future.
           </p>
         </div>
       </div>
-      <FadeInStagger faster className="max-w-7xl pt-16 mx-auto px-6 lg:px-8 pb-20 lg:pb-40">
+      <FadeInStagger
+        faster
+        className="max-w-7xl pt-16 mx-auto px-6 lg:px-8 pb-20 lg:pb-40"
+      >
         <FadeIn className="mb-10 flex justify-center">
           <p className="relative rounded-full bg-white px-4 py-1.5 text-sm leading-6 text-gray-600 ring-1 ring-inset ring-gray-900/10">
             Join over 20+ Businesses improving with us.

@@ -6,7 +6,7 @@ const navigation = {
   main: [
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
-    { name: "Blog", href: "/blog" },
+    // { name: "Blog", href: "/blog" },
     // { name: "Jobs", href: "/careers" },
     // { name: "Press", href: "#" },
     // { name: "Accessibility", href: "#" },

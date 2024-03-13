@@ -1,21 +1,18 @@
 import React from "react";
-import GlobalContactForm from "@/components/Global/ContactForm";
-import {
-  RootHero,
-  RootStats,
-  RootFeature,
-  RootDevProcess,
-  RootFeatureGrid,
-  RootOffer,
-  RootOffering,
-  RootFAQ,
-  RootServices,
-} from "@/components/pages/root";
 import { Metadata } from "next";
-import { FadeIn } from "@/components/Global/FadeIn";
+
+import RootHero from "./hero";
+import RootStats from "./stats";
+import RootFeature from "./feature";
+import RootDevProcess from "./devprocess";
+import RootFeatureGrid from "./featuregrid";
+import RootOffer from "./offer";
+import RootOffering from "./offering";
+import RootFAQ from "./faq";
+import RootServices from "./services";
 
 export const metadata: Metadata = {
-  title: "Software Development and Consulting Solutions - Halfnine",
+  title: "Full-Service Technology Solutions, Development & Consulting - Halfnine",
   description:
     "Unlock future potential with our digital solutions. Experience efficiency, cost-effectiveness, speed, and innovation with us.",
   alternates: { canonical: "https://www.halfnine.com" },

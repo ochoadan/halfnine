@@ -6,7 +6,7 @@ import { Mulish } from "next/font/google";
 const fontSource = Mulish({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Software Development and Consulting Solutions - Halfnine",
+  title: "Full-Service Technology Solutions - Halfnine",
   description:
     "Unlock future potential with our digital solutions. Experience efficiency, cost-effectiveness, speed, and innovation with us.",
   alternates: { canonical: "https://www.halfnine.com" },
