@@ -1,9 +1,9 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Providers } from "@/app/providers";
-import { Wix_Madefor_Text } from "next/font/google";
+import { Wix_Madefor_Display } from "next/font/google";
 
-const fontSource = Wix_Madefor_Text({ subsets: ["latin"] });
+const fontSource = Wix_Madefor_Display({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Full-Service Technology Solutions - Halfnine",
