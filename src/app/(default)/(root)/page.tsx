@@ -10,34 +10,39 @@ import RootOffer from "./offer";
 import RootOffering from "./offering";
 import RootFAQ from "./faq";
 import RootServices from "./services";
+import RootClientLogoCloud from "./logocloud";
 
 export const metadata: Metadata = {
-  title: "Full-Service Technology Solutions, Development & Consulting - Halfnine",
+  title: "Technology Company Restructuring and Turnaround - Halfnine",
   description:
-    "Unlock future potential with our digital solutions. Experience efficiency, cost-effectiveness, speed, and innovation with us.",
+    "We help you stand out if you are experiencing the effects of a declining sales, increased competition, or consolidating markets. We deliver success to the struggling.",
   alternates: { canonical: "https://www.halfnine.com" },
 };
 
 const Page = () => (
   <>
-    <RootHero />
+    <div className="py-12 md:py-24">
+      <RootHero />
+      <RootOffer />
+    </div>
     {[
-      RootServices,
-      RootOffer,
-      RootOffering,
-      RootStats,
-      RootFeature,
-      RootDevProcess,
-      RootFeatureGrid,
+      RootClientLogoCloud,
+      // RootOffer,
+      // RootServices,
+      // RootOffering,
+      // RootStats,
+      // RootFeature,
+      // RootDevProcess,
+      // RootFeatureGrid,
       RootFAQ,
     ].map((Component, index) => (
       <div
         key={index}
         className={`${
           index % 2 === 0 ? "bg-gray-50" : "bg-white"
-        } py-14 md:py-28`}
+        } py-12 md:py-24`}
       >
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <Component />
         </div>
       </div>

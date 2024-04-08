@@ -7,7 +7,7 @@ export default function DevProcess() {
         <FadeIn className="mx-auto lg:mx-0">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
             Custom Software Development Costs
-            <hr className="border-sky-600 opacity-90 border-b-[2px] w-24 my-2" />
+            <hr className="border-brand-600 opacity-90 border-b-[2px] w-24 my-2" />
           </h2>
           <p className="mt-4 text-base leading-7 text-gray-600">
             General estimates for a wide range of software development tasks,
@@ -36,13 +36,13 @@ export default function DevProcess() {
               </p>
             </div>
           </FadeIn>
-          <FadeIn className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-sky-600 p-8 sm:w-11/12 sm:max-w-xl sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-none lg:flex-auto lg:flex-col lg:items-start lg:gap-y-28">
+          <FadeIn className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-brand-600 p-8 sm:w-11/12 sm:max-w-xl sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-none lg:flex-auto lg:flex-col lg:items-start lg:gap-y-28">
             <p className="flex-none text-3xl font-bold text-white">
               $5k - 10k+ / month
             </p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
               <p className="text-2xl font-bold text-white">Maintenance</p>
-              <p className="mt-2 text-base leading-7 text-sky-200">
+              <p className="mt-2 text-base leading-7 text-brand-200">
                 We build dynamic and adaptable solutions, with regular updates
                 and new features
               </p>

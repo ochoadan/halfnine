@@ -1,14 +1,10 @@
 import PageHero from "@/components/Global/PageHero";
 import { Metadata } from "next";
-import GlobalContactForm from "@/components/Global/ContactForm";
 import { FadeIn, FadeInStagger } from "@/components/Global/FadeIn";
 import Image from "next/image";
 import { features, supportLinks } from "./content";
 import Link from "next/link";
 import { LinkIcon } from "@heroicons/react/20/solid";
-import logoAppealing from "@/images/logos/appealing.svg";
-import logoHyleon from "@/images/logos/hyleon.svg";
-import logoHalfnine from "@/images/logos/halfnine.svg";
 import logoSurveyr from "@/images/logos/surveyr.svg";
 import logoYournameis from "@/images/logos/yournameis.svg";
 import logoCasente from "@/images/logos/casente.svg";
@@ -53,22 +49,25 @@ const projects = [
     link: { href: "https://qrdemo.halfnine.com", label: "qrdemo.halfnine.com" },
     logo: logoCasente,
   },
-  {
-    name: "Appealing Design",
-    status: "In Development",
-    description:
-      "Our subscription-based design provides you with dedicated designers to help with all your design needs.",
-    link: { href: "https://appealing.design/", label: "appealing.design" },
-    logo: logoAppealing,
-  },
-  {
-    name: "Engagement Platform",
-    status: "In Development",
-    description:
-      "Through this platform, our clients interact with us and our team to manage their projects and tasks.",
-    link: { href: "https://engagement.halfnine.com/", label: "engagement.halfnine.com" },
-    logo: logoHalfnine,
-  },
+  // {
+  //   name: "Appealing Design",
+  //   status: "In Development",
+  //   description:
+  //     "Our subscription-based design provides you with dedicated designers to help with all your design needs.",
+  //   link: { href: "https://appealing.design/", label: "appealing.design" },
+  //   logo: logoAppealing,
+  // },
+  // {
+  //   name: "Engagement Platform",
+  //   status: "In Development",
+  //   description:
+  //     "Through this platform, our clients interact with us and our team to manage their projects and tasks.",
+  //   link: {
+  //     href: "https://engagement.halfnine.com/",
+  //     label: "engagement.halfnine.com",
+  //   },
+  //   logo: logoHalfnine,
+  // },
   // {
   //   name: 'Resourceful Agency',
   //   status: "In Development",
@@ -94,39 +93,20 @@ const Page = () => {
         heading="About Halfnine"
         description="Our Highest Commitment is Our Customer's Success"
       />
-      <div className="overflow-hidden bg-white py-16 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="overflow-hidden bg-white py-14 md:py-28">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <div className="grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2 mx-auto max-w-2xl lg:max-w-none">
             <div>
               <h2 className="text-4xl font-bold text-gray-900">
-                Empowering your Vision
-                <hr className="border-sky-600 opacity-90 border-b-[2px] w-20 my-2" />
+                Redefining your vision
+                <hr className="border-brand-600 opacity-90 border-b-[2px] w-20 my-2" />
               </h2>
               <p className="mt-4 text-gray-500">
-                {/* Halfnine was born out of a desire to help businesses to
-                transform their opportunities and ideas through innovative
-                technology solutions. */}
-                {/* Halfnine empowers businesses to turn opportunities and ideas
-                into reality through innovative technology solutions. */}
-                {/* Halfnine emerged from a drive to assist businesses in realizing
-                their opportunities and ideas through technology services and
-                solutions. */}
-                Halfnine emerged from a vision to assist businesses in
-                leveraging technology solutions to transform opportunities and
-                ideas into a reality.
-                {/* Halfnine emerged from a vision to assist businesses in leveraging technology services and solutions to transform opportunities and ideas. */}
+                Halfnine emerged from a vision to assist struggling businesses
+                in their journey to success. We have a passion for technology
+                and innovation, and we are dedicated to helping our clients
+                achieve their goals.
                 <br />
-                <br />
-                {/* We are a group of dedicated engineers and designers with a
-                passion for pushing boundaries and delivering exceptional
-                results, inspired to shape the digital landscape. We are driven
-                by innovation and fueled by creativity, focused on efficiency
-                and creating a return on investment for our clients. */}
-                {/* We're a team of skilled engineers and designers committed to
-                pushing boundaries and delivering top-notch results. Inspired to
-                shape the digital landscape, we thrive on innovation and
-                creativity, prioritizing efficiency to ensure a strong return on
-                investment for our clients. */}
                 We are a team of dedicated engineers and designers driven by a
                 passion for pushing boundaries. Our inspiration lies in shaping
                 the digital landscape. Innovation fuels us, while creativity
@@ -147,8 +127,8 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div className="overflow-hidden bg-gray-50 py-16 sm:py-32">
-        <FadeInStagger className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="overflow-hidden bg-gray-50 py-14 md:py-28">
+        <FadeInStagger className="mx-auto max-w-6xl px-6 lg:px-8">
           <FadeIn className="mx-auto max-w-4xl text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
               Our Innovative Projects
@@ -186,7 +166,7 @@ const Page = () => {
                 <p className="relative z-10 mt-2 text-sm text-zinc-600">
                   {project.description}
                 </p>
-                <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-sky-500">
+                <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-brand-500">
                   <LinkIcon className="h-6 w-6 flex-none" />
                   <span className="ml-2">{project.link.label}</span>
                 </p>
@@ -195,14 +175,14 @@ const Page = () => {
           </ul>
         </FadeInStagger>
       </div>
-      {/* <div className="overflow-hidden bg-gray-50 py-16 sm:py-32">
+      {/* <div className="overflow-hidden bg-gray-50 py-14 md:py-28">
         <FadeIn className="mx-auto max-w-4xl text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
             Our Innovative Projects
           </h2>
-          <hr className="border-sky-600 opacity-90 border-b-[2px] mx-auto w-28 my-4" />
+          <hr className="border-brand-600 opacity-90 border-b-[2px] mx-auto w-28 my-4" />
         </FadeIn>
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <FadeInStagger>
             <FadeIn className="relative isolate overflow-hidden bg-gray-800 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
               <svg
@@ -224,7 +204,7 @@ const Page = () => {
                   </radialGradient>
                 </defs>
               </svg>
-              <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
+              <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-28 lg:text-left">
                 <h2 className="text-2xl font-bold text-white sm:text-3xl">
                   Cron Monitoring For Laravel
                 </h2>
@@ -272,8 +252,8 @@ const Page = () => {
           <span className="bg-white px-2 text-sm text-gray-500"></span>
         </div>
       </div>
-      <div className="overflow-hidden bg-white py-16 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="overflow-hidden bg-white py-14 sm:py-28">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <FadeInStagger>
             <FadeIn className="relative isolate overflow-hidden bg-gray-800 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
               <svg
@@ -295,7 +275,7 @@ const Page = () => {
                   </radialGradient>
                 </defs>
               </svg>
-              <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
+              <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-28 lg:text-left">
                 <h2 className="text-2xl font-bold text-white sm:text-3xl">
                   Yourname.is - Business Email for Individuals
                 </h2>
@@ -327,14 +307,14 @@ const Page = () => {
           </FadeInStagger>
         </div>
       </div> */}
-      <div className="overflow-hidden bg-white py-16 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="overflow-hidden bg-white py-14 sm:py-28">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <FadeInStagger faster>
             <FadeIn className="mx-auto max-w-4xl text-center">
               <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
                 Our Core Values
               </h2>
-              <hr className="border-sky-600 opacity-90 border-b-[2px] mx-auto w-28 my-4" />
+              <hr className="border-brand-600 opacity-90 border-b-[2px] mx-auto w-28 my-4" />
               <p className="mt-4 text-lg leading-8 text-gray-600">
                 As you understand our team, you’ll see we’re driven by key
                 principles, enabling us to achieve significant change through
@@ -348,7 +328,7 @@ const Page = () => {
                     <dt className="text-lg font-semibold leading-7 flex flex-col items-center justify-center">
                       <div className="mb-2 h-16 w-16 flex items-center justify-center rounded-lg bg-white ring-1 ring-gray-300">
                         <feature.icon
-                          className="h-10 w-10 text-sky-600"
+                          className="h-10 w-10 text-brand-600"
                           aria-hidden="true"
                         />
                       </div>
@@ -376,21 +356,20 @@ const Page = () => {
                 aria-hidden="true"
               />
             </div>
-            <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-28 lg:px-8">
+            <div className="relative mx-auto max-w-6xl px-6 py-24 sm:py-28 lg:px-8">
               <h2 className="text-3xl font-bold text-white md:text-4xl lg:text-5xl">
                 Why Choose Us?
               </h2>
               <p className="mt-6 max-w-3xl text-xl text-gray-200">
-                We prioritize reliability and partnership in our approach to
-                software development. Our commitment to transparent
-                communication and dedication to excellence ensures your
+                We prioritize our clients and their needs. Our commitment to
+                open communication and dedication to excellence ensures your
                 satisfaction as our valued customer.
               </p>
             </div>
           </FadeIn>
         </div>
         <section
-          className="relative z-10 mx-auto -mt-28 max-w-7xl px-6 pb-28 lg:px-8"
+          className="relative z-10 mx-auto -mt-28 max-w-6xl px-6 pb-28 lg:px-8"
           aria-labelledby="contact-heading"
         >
           <div className="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-0">
@@ -400,7 +379,7 @@ const Page = () => {
                 className="flex flex-col rounded-2xl bg-white shadow-xl"
               >
                 <div className="relative flex-1 px-6 pb-8 pt-12 md:px-8">
-                  <div className="absolute top-0 inline-block -translate-y-1/2 transform rounded-xl bg-sky-600 p-3 shadow-lg">
+                  <div className="absolute top-0 inline-block -translate-y-1/2 transform rounded-xl bg-brand-600 p-3 shadow-lg">
                     <link.icon
                       className="h-8 w-8 text-white"
                       aria-hidden="true"

@@ -4,9 +4,9 @@ import Image from "next/image";
 export default function RootClientLogoCloud() {
   return (
     <FadeInStagger>
-      <FadeIn className="mb-10 flex justify-center">
+      <FadeIn className="mb-6 flex justify-center">
         <p className="relative rounded-full bg-white px-4 py-1.5 text-sm leading-6 text-gray-600 ring-1 ring-inset ring-gray-900/10">
-          Join over 20+ Businesses improving with us.
+          Select Halfnine&apos;s Users and Clients
         </p>
       </FadeIn>
       <div className="mx-auto grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-12 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-5">

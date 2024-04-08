@@ -134,7 +134,7 @@ const Contact = () => {
         heading="Contact Halfnine"
         description="Looking to upgrade your software or kickstart a new idea? Let's discuss it!"
       />
-      <div className="py-8 md:py-12 max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="py-8 md:py-12 max-w-6xl mx-auto px-6 lg:px-8">
         <div className="bg-gray-50 rounded-xl p-5 lg:p-10 shadow-md">
           <h2 className="pb-4 text-2xl md:text-3xl font-bold text-center">
             Contact Form:
@@ -163,7 +163,7 @@ const Contact = () => {
                         {
                           "border-red-300 focus:ring-red-500":
                             submitted && formErrors.name,
-                          "border-slate-200 focus:ring-sky-500":
+                          "border-slate-200 focus:ring-brand-500":
                             !submitted || !formErrors.name,
                         }
                       )}
@@ -191,7 +191,7 @@ const Contact = () => {
                         {
                           "border-red-300 focus:ring-red-500":
                             submitted && formErrors.email,
-                          "border-slate-200 focus:ring-sky-500":
+                          "border-slate-200 focus:ring-brand-500":
                             !submitted || !formErrors.email,
                         }
                       )}
@@ -215,7 +215,7 @@ const Contact = () => {
                       value={formData.company}
                       onChange={handleInputChange}
                       placeholder="Company"
-                      className="pl-10 block w-full shadow-sm sm:text-sm border-slate-200 rounded-md focus:border-transparent focus:ring-sky-500 focus:ring-2"
+                      className="pl-10 block w-full shadow-sm sm:text-sm border-slate-200 rounded-md focus:border-transparent focus:ring-brand-500 focus:ring-2"
                     />
                   </div>
                 </div>
@@ -236,7 +236,7 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       placeholder="Phone"
-                      className="pl-10 block w-full shadow-sm sm:text-sm border-slate-200 rounded-md focus:border-transparent focus:ring-sky-500 focus:ring-2"
+                      className="pl-10 block w-full shadow-sm sm:text-sm border-slate-200 rounded-md focus:border-transparent focus:ring-brand-500 focus:ring-2"
                     />
                   </div>
                 </div>
@@ -256,7 +256,7 @@ const Contact = () => {
                     {
                       "border-red-300 focus:ring-red-500":
                         submitted && formErrors.message,
-                      "border-slate-200 focus:ring-sky-500":
+                      "border-slate-200 focus:ring-brand-500":
                         !submitted || !formErrors.message,
                     }
                   )}
@@ -327,7 +327,7 @@ const Contact = () => {
                 type="submit"
                 disabled={awaitingResponse}
                 className={clsx(
-                  "bg-sky-600 flex rounded-md px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-slate-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500",
+                  "bg-brand-600 flex rounded-md px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-slate-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500",
                   awaitingResponse &&
                   "bg-slate-400 select-none hover:bg-slate-400"
                 )}
@@ -365,7 +365,7 @@ const Contact = () => {
             </div>
           </form>
         </div>
-        <div className="py-8 md:py-12 max-w-7xl mx-auto">
+        <div className="py-8 md:py-12 max-w-6xl mx-auto">
           <div className="bg-gray-50 rounded-xl p-5 lg:p-10 shadow-md">
             <h2 className="pb-4 text-2xl md:text-3xl font-bold text-center">
               Schedule a meeting:

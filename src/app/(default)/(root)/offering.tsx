@@ -9,7 +9,7 @@ export default function DevProcess() {
         <FadeIn className="mx-auto lg:mx-0">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
             Our Technical Capabilities
-            <hr className="border-sky-600 opacity-90 border-b-[2px] w-24 my-2" />
+            <hr className="border-brand-600 opacity-90 border-b-[2px] w-24 my-2" />
           </h2>
         </FadeIn>
         <div className="divide-y divide-gray-200">
@@ -42,7 +42,7 @@ export default function DevProcess() {
         <FadeIn className="pt-4 sm:pt-6 md:flex md:items-center">
           <h3 className="text-lg font-bold text-gray-900 sm:text-xl">
             Find a solution not listed here? <span>We might work with it! </span><span>
-              <Link href="/contact" className="text-sky-600 hover:text-sky-500 hover:underline">
+              <Link href="/contact" className="text-brand-600 hover:text-brand-500 hover:underline">
                 Contact us
               </Link>
             </span>

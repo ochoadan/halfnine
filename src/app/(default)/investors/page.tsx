@@ -60,19 +60,20 @@ const Page = () => {
       <PageHero
         heading="Want to invest in tech?"
         description="Don't gamble in tech anymore. Invest in responsible strategies that deliver results."
+        // description="Invest in our acquisitions, we manage the investment and you simply watch the returns."
       />
       {/* Its like making passive income, we manage the investment and you simply watch the returns. */}
       <div className="overflow-hidden bg-white py-14 md:py-28">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:max-w-none grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2">
             {" "}
             <div>
               <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
                 {/* {`"It's like making passive income"`} */}
                 {/* "It's like making passive income" - Mark Jennings */}
-                So what <span className="uppercase text-sky-600">are</span> you
+                What <span className="uppercase text-brand-600">are</span> you
                 investing in?
-                <hr className="border-sky-600 opacity-90 border-b-[2px] w-20 my-2" />
+                <hr className="border-brand-600 opacity-90 border-b-[2px] w-20 my-2" />
               </h2>
               <p className="mt-6 text-gray-500">
                 {/* <p className="text-lg leading-8 text-gray-700"> */}
@@ -107,7 +108,7 @@ const Page = () => {
                         <div>
                             <h2 className="text-4xl font-bold text-gray-900">
                                 "Its like making passive income"
-                                <hr className="border-sky-600 opacity-90 border-b-[2px] w-20 my-2" />
+                                <hr className="border-brand-600 opacity-90 border-b-[2px] w-20 my-2" />
                             </h2>
                             <p className="mt-4 text-gray-500">
                             We manage your investment and you simply watch the returns, Engagement is not requiered while you always have access to the information of where your money is going.
@@ -127,10 +128,10 @@ const Page = () => {
         </div>
       </div>
       <div className="bg-gray-50 py-14 md:py-28">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
             <span className="block">Invest in a responsible strategy</span>
-            <hr className="border-sky-600 opacity-90 border-b-[2px] w-24 my-2" />
+            <hr className="border-brand-600 opacity-90 border-b-[2px] w-24 my-2" />
           </h2>
           <p className="mt-4 text-base leading-7 text-gray-600">
             The tech industry is still growing and evolving, most companies are
@@ -171,23 +172,23 @@ const Page = () => {
         </div>
       </div>
       {/* <div className="bg-gray-50 py-14 md:py-28">
-                <div className="max-w-7xl mx-auto px-6 lg:px-8">
+                <div className="max-w-6xl mx-auto px-6 lg:px-8">
                     <h1 className="text-2xl sm:text-3xl md:text-4xl text-center font-extrabold">
                         Its like making passive income
                     </h1>
-                    <hr className="border-sky-600 opacity-90 border-b-[2px] mx-auto w-40 my-2" />
+                    <hr className="border-brand-600 opacity-90 border-b-[2px] mx-auto w-40 my-2" />
                     <p className="text-xl sm:text-2xl md:text-3xl text-center font-extrabold mt-2">
                         We manage the investment and you simply watch the returns.
                     </p>
                 </div>
             </div> */}
       <div className="bg-white py-14 md:py-28">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          {/* <div className="bg-white py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8"> */}
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          {/* <div className="bg-white py-24 sm:py-28">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8"> */}
           <div className="mx-auto grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:grid-cols-3">
             <div>
-              <h2 className="text-base font-semibold leading-7 text-sky-600">
+              <h2 className="text-base font-semibold leading-7 text-brand-600">
                 <span className="block">Invest in digital assets</span>
               </h2>
               <p className="mt-2 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
@@ -204,7 +205,7 @@ const Page = () => {
                 <div key={feature.name} className="relative pl-9">
                   <dt className="font-semibold text-gray-900">
                     <CheckIcon
-                      className="absolute left-0 top-1 h-5 w-5 text-sky-500"
+                      className="absolute left-0 top-1 h-5 w-5 text-brand-500"
                       aria-hidden="true"
                     />
                     {feature.name}
@@ -217,11 +218,11 @@ const Page = () => {
         </div>
       </div>
       {/* <div className="bg-white py-14 md:py-28">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-6">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8 space-y-6">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl lg:text-center">
-            So what <span className="uppercase text-sky-600">are</span> you
+            So what <span className="uppercase text-brand-600">are</span> you
             investing in?
-            <hr className="border-sky-600 opacity-90 border-b-[2px] w-36 my-4 lg:mx-auto" />
+            <hr className="border-brand-600 opacity-90 border-b-[2px] w-36 my-4 lg:mx-auto" />
           </h2>
           <p className="text-lg leading-7 text-gray-600 lg:text-center lg:max-w-3xl lg:mx-auto">
             We acquire underperforming digital assets, rebuild operations and

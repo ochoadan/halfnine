@@ -26,12 +26,20 @@ body {
     rgb(var(--background-start-rgb));
 } */
 @keyframes pointonefadein {
-  from { opacity: 0; }
-  to   { opacity: 0.1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.1;
+  }
 }
 @keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* .min-height-screen {
@@ -50,8 +58,46 @@ body {
 
 .markdown-body code::before,
 .markdown-body code::after,
-.prose :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *))::before,
-.prose :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *))::after {
+.prose
+  :where(code):not(
+    :where([class~="not-prose"], [class~="not-prose"] *)
+  )::before,
+.prose
+  :where(code):not(
+    :where([class~="not-prose"], [class~="not-prose"] *)
+  )::after {
   letter-spacing: -0.2em;
   content: "\00a0";
 }
+
+/* Keen Slider */
+
+.keen-slider:not([data-keen-slider-disabled]) {
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  align-content: flex-start;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  touch-action: pan-y;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -khtml-user-select: none;
+  width: 100%;
+}
+.keen-slider:not([data-keen-slider-disabled]) .keen-slider__slide {
+  min-height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.keen-slider:not([data-keen-slider-disabled])[data-keen-slider-reverse] {
+  flex-direction: row-reverse;
+}
+.keen-slider:not([data-keen-slider-disabled])[data-keen-slider-v] {
+  flex-wrap: wrap;
+}
+
+/* Keen Slider End */

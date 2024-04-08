@@ -117,14 +117,14 @@ const ContactForm: React.FC<ContactFormProps> = ({
         paddingBottom && "pb-16 sm:pb-32",
         paddingTop && "pt-16 sm:pt-32",
         paddingNone && "",
-        !paddingBottom && !paddingTop && !paddingNone && "py-16 sm:py-32"
+        !paddingBottom && !paddingTop && !paddingNone && "py-14 sm:py-28"
       )}
     >
-      <div className="mx-auto max-w-7xl px-0 md:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl px-0 md:px-6 lg:px-8">
         <div className="bg-gray-50 rounded-none md:rounded-xl p-6 md:p-10 shadow-none md:shadow-md">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
             {title || "Let's talk solutions"}
-            <hr className="border-sky-600 opacity-90 border-b-[2px] w-24 my-2" />
+            <hr className="border-brand-600 opacity-90 border-b-[2px] w-24 my-2" />
           </h2>
           <p className="mt-2 leading-8 text-gray-700">
             {description || "Our team is ready to answer your questions and help you find the best solution for your needs"}
@@ -153,7 +153,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                         {
                           "border-red-300 focus:ring-red-500":
                             submitted && formErrors.name,
-                          "border-slate-200 focus:ring-sky-500":
+                          "border-slate-200 focus:ring-brand-500":
                             !submitted || !formErrors.name,
                         }
                       )}
@@ -181,7 +181,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                         {
                           "border-red-300 focus:ring-red-500":
                             submitted && formErrors.email,
-                          "border-slate-200 focus:ring-sky-500":
+                          "border-slate-200 focus:ring-brand-500":
                             !submitted || !formErrors.email,
                         }
                       )}
@@ -200,7 +200,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                       value={formData.company}
                       onChange={handleInputChange}
                       placeholder="Company"
-                      className="pl-10 block w-full shadow-sm sm:text-sm border-slate-200 rounded-md focus:border-transparent focus:ring-sky-500 focus:ring-2"
+                      className="pl-10 block w-full shadow-sm sm:text-sm border-slate-200 rounded-md focus:border-transparent focus:ring-brand-500 focus:ring-2"
                     />
                   </div>
                 </div>
@@ -216,7 +216,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                       value={formData.phone}
                       onChange={handleInputChange}
                       placeholder="Phone"
-                      className="pl-10 block w-full shadow-sm sm:text-sm border-slate-200 rounded-md focus:border-transparent focus:ring-sky-500 focus:ring-2"
+                      className="pl-10 block w-full shadow-sm sm:text-sm border-slate-200 rounded-md focus:border-transparent focus:ring-brand-500 focus:ring-2"
                     />
                   </div>
                 </div>
@@ -236,7 +236,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                     {
                       "border-red-300 focus:ring-red-500":
                         submitted && formErrors.message,
-                      "border-slate-200 focus:ring-sky-500":
+                      "border-slate-200 focus:ring-brand-500":
                         !submitted || !formErrors.message,
                     }
                   )}
@@ -307,8 +307,8 @@ const ContactForm: React.FC<ContactFormProps> = ({
                 type="submit"
                 disabled={awaitingResponse}
                 className={clsx(
-                  // "bg-sky-600 flex rounded-md px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-slate-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500",
-                  "bg-sky-600 flex rounded-md px-12 py-2 text-sm font-semibold text-white shadow-sm hover:bg-sky-500 mx-auto",
+                  // "bg-brand-600 flex rounded-md px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-slate-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500",
+                  "bg-brand-600 flex rounded-md px-12 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-500 mx-auto",
                   awaitingResponse &&
                   "bg-slate-400 select-none hover:bg-slate-400"
                 )}

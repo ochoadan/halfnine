@@ -6,35 +6,30 @@ import { MinusSmallIcon, PlusSmallIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 
 const faqs = [
-  // {
-  //   question: "How much does it cost to build an app?",
-  //   answer:
-  //     "The cost to build an app can vary widely, typically ranging from $5,000 to $500,000. However, The final cost depends on several factors such as the complexity of the app, the experience of the developers, and the number of features included.",
-  // },
-  // {
-  //   question: "How long does it take to build custom software?",
-  //   answer:
-  //     "Our custom software applications typically take three to nine months to deliver the first release, depending on the chosen objectives. To provide a more accurate timeline for your project, we need to understand your objectives and core features through our discovery process.",
-  // },
-  // {
-  //   question: "Do you have any experience in my industry?",
-  //   answer:
-  //     "Our experience spans across a diverse range of industries such as software products, manufacturing, retail, startups, and much more.",
-  // },
   {
-    question: "Are you capable of providing end-to-end software solutions?",
+    question: "My company is struggling. How can you help?",
     answer:
-      "Yes, we can offer full-stack software development services, including end-to-end software delivery. We have a deep understanding of the software development lifecycle on complex software solutions. We also have a strong network of offshore partners that we can leverage to augment our team and deliver even more value to our clients.",
+      "We provide a range of services to help struggling businesses. We can help you identify the root causes of your problems and develop a plan to address them. We can also help you implement that plan and monitor your progress to ensure that you are on track to achieve your goals.",
   },
   {
-    question: "I need to get this done fast, what are my options?",
+    question: "How long does it take to see results?",
     answer:
-      "Based on the scope of your project, we can deliver your minimum viable product (MVP) in 2 to 4 months. After that, we can release new features every 2 to 6 weeks. Please contact us to discuss your specific needs so we can develop a plan that meets your goals.",
+      "The time it takes to see results will depend on the nature of your problems and the solutions we develop. Some businesses see results quickly, while others take longer to achieve their goals. We will work with you to develop a timeline that meets your needs and expectations.",
   },
   {
-    question: "What affects the cost of software development?",
+    question: "How much does your service cost?",
     answer:
-      "Software development costs for medium/large applications can vary widely, from $40,000 to $1 million or more. The primary factors influencing cost are the number and complexity of features, the number of platforms supported, the type of development, the UI design, the number of integrations, and availability, security, and performance requirements.",
+      "The cost of our services will depend on the nature of your problems and the solutions we develop. We offer a range of pricing options to meet your needs and budget. We will work with you to develop a pricing plan that meets your needs and expectations. This means usually a fixed fee or a percentage of the value we create for you.",
+  },
+  {
+    question: "What makes you different from other consulting firms?",
+    answer:
+      "We do not only identify the root causes of your problems, but we also develop tangible solutions that address them. We work closely with you to implement those solutions and actively monitor and get involved in the transformation process to ensure that you are on track to achieve your goals.",
+  },
+  {
+    question: "How do I get started?",
+    answer:
+      "The first step is to contact us to schedule an initial consultation. During this consultation, we will discuss your needs and goals and develop a plan to address them. We will work with you to develop a timeline and pricing plan that meets your needs and expectations.",
   },
 ];
 const GlobalFAQ = () => {

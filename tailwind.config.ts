@@ -8,6 +8,21 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        brand: {
+          "50": "#eff9ff",
+          "100": "#dcf0fd",
+          "200": "#c1e6fc",
+          "300": "#96d8fa",
+          "400": "#64c1f6",
+          "500": "#40a5f1",
+          "600": "#2b88e5",
+          "700": "#2374d6",
+          "800": "#225cab",
+          "900": "#214f87",
+          "950": "#193152",
+        },
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -20,7 +35,7 @@ const config: Config = {
         "500": "500ms",
       },
       maxWidth: {
-        '8xl': '88rem',
+        "8xl": "88rem",
       },
     },
   },

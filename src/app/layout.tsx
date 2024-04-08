@@ -6,9 +6,9 @@ import { Wix_Madefor_Display } from "next/font/google";
 const fontSource = Wix_Madefor_Display({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Full-Service Technology Solutions - Halfnine",
+  title: "Technology Company Restructuring and Turnaround - Halfnine",
   description:
-    "Unlock future potential with our digital solutions. Experience efficiency, cost-effectiveness, speed, and innovation with us.",
+    "We help you stand out if you are experiencing the effects of a declining sales, increased competition, or consolidating markets. We deliver success to the struggling.",
   alternates: { canonical: "https://www.halfnine.com" },
 };
 
