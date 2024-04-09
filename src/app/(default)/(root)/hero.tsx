@@ -24,7 +24,7 @@ const RootHeading = () => {
           <h1 className="text-3xl sm:text-4xl md:text-5xl">
             Tech Restructuring & Turnaround
           </h1>
-          <hr className="border-brand-600 opacity-90 border-b-[2px] mx-auto w-40 mt-6 mb-4" />
+          <hr className="border-brand-600 opacity-90 border-b-[2px] mx-auto w-40 mt-4 mb-2" />
           <p className="text-2xl sm:text-3xl md:text-4xl font-bold">
             Realize your digital success
           </p>

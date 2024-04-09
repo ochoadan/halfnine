@@ -2,11 +2,13 @@ import React from "react";
 import { Metadata } from "next";
 
 import RootHero from "./hero";
+import RootOffer from "./offer";
 import RootStats from "./stats";
 import RootFeature from "./feature";
 import RootDevProcess from "./devprocess";
 import RootFeatureGrid from "./featuregrid";
-import RootOffer from "./offer";
+import IdealClient from "./idealclient";
+import RootMisc from "./misc";
 import RootOffering from "./offering";
 import RootFAQ from "./faq";
 import RootServices from "./services";
@@ -23,11 +25,12 @@ const Page = () => (
   <>
     <div className="py-12 md:py-24">
       <RootHero />
-      <RootOffer />
+      <IdealClient />
     </div>
     {[
-      RootClientLogoCloud,
-      // RootOffer,
+      // RootClientLogoCloud,
+      RootOffer,
+      RootMisc,
       // RootServices,
       // RootOffering,
       // RootStats,

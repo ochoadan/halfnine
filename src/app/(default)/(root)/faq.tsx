@@ -2,7 +2,7 @@
 
 import { FadeIn, FadeInStagger } from "@/components/Global/FadeIn";
 import { Disclosure } from "@headlessui/react";
-import { MinusSmallIcon, PlusSmallIcon } from "@heroicons/react/24/outline";
+import { MinusIcon, PlusIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 
 const faqs = [
@@ -61,15 +61,9 @@ const GlobalFAQ = () => {
                         </span>
                         <span className="ml-6 flex h-7 items-center">
                           {open ? (
-                            <MinusSmallIcon
-                              className="h-6 w-6"
-                              aria-hidden="true"
-                            />
+                            <MinusIcon className="h-6 w-6" aria-hidden="true" />
                           ) : (
-                            <PlusSmallIcon
-                              className="h-6 w-6"
-                              aria-hidden="true"
-                            />
+                            <PlusIcon className="h-6 w-6" aria-hidden="true" />
                           )}
                         </span>
                       </Disclosure.Button>
