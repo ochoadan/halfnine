@@ -28,7 +28,9 @@ export async function generateMetadata({ params }: PostPageParams) {
   return {
     title: `${post.title.rendered} - Halfnine`,
     description: post.excerpt.raw,
-    alternates: { canonical: `https://www.halfnine.com/blog/posts/${params.slug}` },
+    alternates: {
+      canonical: `https://www.halfnine.com/blog/posts/${params.slug}`,
+    },
   };
 }
 
@@ -38,6 +40,22 @@ function PostPage({ params }: PostPageParams) {
   if (!post) {
     notFound();
   }
+  function addNofollowContent(content: string) {
+    content = content.replace(
+      /<a[^>]*href=["|'](http[^"']*)["|'][^>]*>(.*?)<\/a>/gi,
+      function (match, p1, p2) {
+        if (p1.indexOf("halfnine.com") === -1) {
+          return `<a href="${p1}" rel="nofollow" target="_blank">${p2}</a>`;
+        } else {
+          return `<a href="${p1}" target="_blank">${p2}</a>`;
+        }
+      }
+    );
+    return content;
+  }
+  const modifiedContent = addNofollowContent(post.content.rendered);
+
+  console.log(modifiedContent);
 
   return (
     <div className="max-w-4xl mx-auto px-6 lg:px-8 my-8 prose prose-neutral prose-lg">
@@ -48,7 +66,7 @@ function PostPage({ params }: PostPageParams) {
         </div>
 
         <div>
-          <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
+          <div dangerouslySetInnerHTML={{ __html: modifiedContent }} />
         </div>
       </div>
     </div>
@@ -56,6 +74,58 @@ function PostPage({ params }: PostPageParams) {
 }
 
 export default PostPage;
+
+
+  // function addNofollowContent(content: string) {
+  //   content = content.replace(
+  //     /<a[^>]*href=["|']([^"']*)["|'][^>]*>(.*?)<\/a>/gi,
+  //     function (match, p1, p2) {
+  //       if (p1.indexOf("https://www.halfnine.com/") === -1) {
+  //         return `<a href="${p1}" rel="nofollow" target="_blank">${p2}</a>`;
+  //       } else {
+  //         return `<a href="${p1}" target="_blank">${p2}</a>`;
+  //       }
+  //     }
+  //   );
+  //   return content;
+  // }
+
+  // function addNofollowContent(content: string) {
+  //   content = content.replace(
+  //     /<a[^>]*href=["|']([^"']*)["|'][^>]*>([^<]*)<\/a>/gi,
+  //     function (match, p1, p2) {
+  //       if (p1.indexOf("https://www.halfnine.com/") === -1) {
+  //         return (
+  //           '<a href="' + p1 + '" rel="nofollow" target="_blank">' + p2 + "</a>"
+  //         );
+  //       } else {
+  //         return '<a href="' + p1 + '" target="_blank">' + p2 + "</a>";
+  //       }
+  //     }
+  //   );
+  //   content = content.replace(
+  //     /<a[^>]*href=["|']([^"']*)["|'][^>]*><sup>([^<]*)<\/sup><\/a>/gi,
+  //     function (match, p1, p2) {
+  //       if (p1.indexOf("https://www.halfnine.com/") === -1) {
+  //         return (
+  //           '<a href="' + p1 + '" rel="nofollow" target="_blank"><sup>' + p2 + "</sup></a>"
+  //         );
+  //       } else {
+  //         return '<a href="' + p1 + '" target="_blank"><sup>' + p2 + "</sup></a>";
+  //       }
+  //     }
+  //   );
+  //   return content;
+  // }
+
+
+
+
+
+
+
+
+
 
 // import { use } from "react";
 // import { notFound } from "next/navigation";
@@ -120,12 +190,12 @@ export default PostPage;
 
 // Generate static paths
 
-// export async function generateStaticParams() {
-//     const { posts } = await wpService.getPosts({
-//       per_page: 100,
-//     });
+export async function generateStaticParams() {
+  const { posts } = await wpService.getPosts({
+    per_page: 100,
+  });
 
-//     return posts.map((post) => ({
-//       slug: post.slug,
-//     }));
-//   }
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+}
