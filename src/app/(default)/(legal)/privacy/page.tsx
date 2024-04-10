@@ -1,9 +1,13 @@
-// import { NextSeo } from "next-seo";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Privacy Policy | Halfnine",
+    alternates: { canonical: "https://www.halfnine.com/privacy" },
+};
 
 const TermsOfService = () => {
     return (
         <div className="prose prose-slate mx-auto max-w-3xl">
-            {/* <NextSeo title="Privacy Policy" /> */}
             <div>
                 <p><strong>Privacy Policy</strong></p>
                 <p><strong>halfnine.com</strong> understands the importance of your personal privacy. Therefore, we have created this Privacy Policy so that you know how we use and disclose your information when you make it available to us. The Privacy Policy below discloses our practices regarding information collection and usage website located at halfnine.com, the related mobile website, and the mobile application (collectively, the &ldquo;Websites&rdquo;) and the service provided thereon (the &ldquo;Service&rdquo;).</p>

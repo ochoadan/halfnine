@@ -96,7 +96,7 @@ function SolutionsPopover() {
             // leaveTo="opacity-0 -translate-y-1"
           >
             <Popover.Panel className="absolute inset-x-0 top-0 -z-10 bg-white mt-[92px] shadow-lg border-t-[1px] border-neutral-200">
-              <div className="mx-auto grid max-w-6xl grid-cols-4 gap-x-4 px-6 py-6 lg:px-8 xl:gap-x-8">
+              <div className="mx-auto grid max-w-7xl grid-cols-4 gap-x-4 px-6 py-6 lg:px-8 xl:gap-x-8">
                 {products.map((item) => (
                   <Popover.Button
                     as={Link}
@@ -122,7 +122,7 @@ function SolutionsPopover() {
                 ))}
               </div>
               <div className="bg-gray-50">
-                <div className="mx-auto max-w-6xl px-6 lg:px-8">
+                <div className="mx-auto max-w-7xl px-6 lg:px-8">
                   <div className="grid grid-cols-2 divide-x divide-gray-900/5 border-x border-gray-900/5">
                     {callsToAction.map((item) => (
                       <Popover.Button
@@ -175,7 +175,7 @@ export default function GlobalNavbar() {
       }`}
     >
       <div className="bg-stone-50 h-6 hidden lg:block">
-        <div className="flex mx-auto max-w-6xl text-center justify-end px-4 text-xs font-small lg:px-8 gap-x-5 rounded-md py-1 tracking-wide">
+        <div className="flex mx-auto max-w-7xl text-center justify-end px-4 text-xs font-small lg:px-8 gap-x-5 rounded-md py-1 tracking-wide">
           <Link
             href="tel:+13213120362"
             className="hover:text-blue-800 inline-flex gap-x-1.5"
@@ -209,7 +209,7 @@ export default function GlobalNavbar() {
       </div>
       <div>
         <nav
-          className="mx-auto max-w-6xl flex items-center justify-between p-4 lg:px-8"
+          className="mx-auto max-w-7xl flex items-center justify-between p-4 lg:px-8"
           aria-label="Global"
         >
           <div className="flex lg:flex-1">
@@ -281,6 +281,12 @@ export default function GlobalNavbar() {
             >
               Investors
             </Link>
+            <Link
+              href="/blog"
+              className="font-semibold leading-6 text-gray-500 hover:text-gray-900 select-none"
+            >
+              Blog
+            </Link>
           </Popover.Group>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Link
@@ -343,6 +349,13 @@ export default function GlobalNavbar() {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Investors
+                </Link>
+                <Link
+                  href="/blog"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Blog
                 </Link>
               </div>
               <div className="py-6">

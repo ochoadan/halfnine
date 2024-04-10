@@ -120,7 +120,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
         !paddingBottom && !paddingTop && !paddingNone && "py-14 sm:py-28"
       )}
     >
-      <div className="mx-auto max-w-6xl px-0 md:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-0 md:px-6 lg:px-8">
         <div className="bg-gray-50 rounded-none md:rounded-xl p-6 md:p-10 shadow-none md:shadow-md">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
             {title || "Let's talk solutions"}

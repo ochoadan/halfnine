@@ -30,7 +30,7 @@ const navigation = {
 export default function GlobalFooter() {
   return (
     <footer className="bg-white border-gray-200 border-t-[2px]">
-      <div className="mx-auto max-w-6xl overflow-hidden px-6 py-12 sm:py-14 lg:px-8">
+      <div className="mx-auto max-w-7xl overflow-hidden px-6 py-12 sm:py-14 lg:px-8">
         <nav
           className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12"
           aria-label="Footer"

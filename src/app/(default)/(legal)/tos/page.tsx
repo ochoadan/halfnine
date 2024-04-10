@@ -1,9 +1,13 @@
-// import { NextSeo } from "next-seo";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+    title: "Terms of Service | Halfnine",
+    alternates: { canonical: "https://www.halfnine.com/tos" },
+};
+  
 const TermsOfService = () => {
     return (
         <div className="prose prose-slate mx-auto max-w-3xl">
-            {/* <NextSeo title="Terms of Service" /> */}
             <div>
                 <p><strong>Terms of Service Agreement </strong></p>
                 <p>Welcome to halfnine.com, operated by HALFNINE LLC, located in the state of Florida. By using the website located at halfnine.com, the related mobile website, and the mobile application (collectively, the &ldquo;Websites&rdquo;), you agree to be bound by these Terms of Service (this &ldquo;Terms of Service&rdquo; or &ldquo;Agreement&rdquo;), whether or not you register as a member of halfnine.com (&quot;Member&quot;). If you wish to become a Member and/or make use of the service (the &ldquo;Service&rdquo;), please read this Agreement. If you object to anything in this Agreement or the halfnine.com Privacy Policy, do not use the Service.</p>

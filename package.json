@@ -37,7 +37,8 @@
     "react-icons": "^5.0.1",
     "react-use-intercom": "^5.3.0",
     "simple-functional-loader": "^1.2.1",
-    "typescript": "5.3.3"
+    "typescript": "5.3.3",
+    "wp-types": "^3.65.0"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",

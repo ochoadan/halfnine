@@ -94,7 +94,7 @@ const Page = () => {
         description="Our Highest Commitment is Our Customer's Success"
       />
       <div className="overflow-hidden bg-white py-14 md:py-28">
-        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2 mx-auto max-w-2xl lg:max-w-none">
             <div>
               <h2 className="text-4xl font-bold text-gray-900">
@@ -128,7 +128,7 @@ const Page = () => {
         </div>
       </div>
       <div className="overflow-hidden bg-gray-50 py-14 md:py-28">
-        <FadeInStagger className="mx-auto max-w-6xl px-6 lg:px-8">
+        <FadeInStagger className="mx-auto max-w-7xl px-6 lg:px-8">
           <FadeIn className="mx-auto max-w-4xl text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
               Our Innovative Projects
@@ -182,7 +182,7 @@ const Page = () => {
           </h2>
           <hr className="border-brand-600 opacity-90 border-b-[2px] mx-auto w-28 my-4" />
         </FadeIn>
-        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <FadeInStagger>
             <FadeIn className="relative isolate overflow-hidden bg-gray-800 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
               <svg
@@ -253,7 +253,7 @@ const Page = () => {
         </div>
       </div>
       <div className="overflow-hidden bg-white py-14 sm:py-28">
-        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <FadeInStagger>
             <FadeIn className="relative isolate overflow-hidden bg-gray-800 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
               <svg
@@ -308,7 +308,7 @@ const Page = () => {
         </div>
       </div> */}
       <div className="overflow-hidden bg-white py-14 sm:py-28">
-        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <FadeInStagger faster>
             <FadeIn className="mx-auto max-w-4xl text-center">
               <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
@@ -356,7 +356,7 @@ const Page = () => {
                 aria-hidden="true"
               />
             </div>
-            <div className="relative mx-auto max-w-6xl px-6 py-24 sm:py-28 lg:px-8">
+            <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-28 lg:px-8">
               <h2 className="text-3xl font-bold text-white md:text-4xl lg:text-5xl">
                 Why Choose Us?
               </h2>
@@ -369,7 +369,7 @@ const Page = () => {
           </FadeIn>
         </div>
         <section
-          className="relative z-10 mx-auto -mt-28 max-w-6xl px-6 pb-28 lg:px-8"
+          className="relative z-10 mx-auto -mt-28 max-w-7xl px-6 pb-28 lg:px-8"
           aria-labelledby="contact-heading"
         >
           <div className="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-0">

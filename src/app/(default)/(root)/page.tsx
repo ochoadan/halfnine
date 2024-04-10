@@ -45,7 +45,7 @@ const Page = () => (
           index % 2 === 0 ? "bg-gray-50" : "bg-white"
         } py-12 md:py-24`}
       >
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <Component />
         </div>
       </div>

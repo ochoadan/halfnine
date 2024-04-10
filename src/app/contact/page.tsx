@@ -119,7 +119,7 @@ export default function Example() {
   return (
     <>
       <div className="relative isolate bg-white">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 lg:grid-cols-2">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
           <div className="relative lg:static px-6 lg:px-8">
             <div className="mx-auto max-w-xl">
               <Link href="/" className="-m-1.5 p-1.5">
@@ -474,7 +474,7 @@ export default function Example() {
           </form>
         </div>
       </div>
-      <div className="py-4 md:py-20 px-8 max-w-6xl mx-auto">
+      <div className="py-4 md:py-20 px-8 max-w-7xl mx-auto">
         {/* <div className="bg-gray-50 rounded-xl p-5 lg:p-10"> */}
         <h2 className="pb-6 text-2xl md:text-3xl font-bold text-center">
           Schedule a meeting:

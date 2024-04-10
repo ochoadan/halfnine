@@ -23,7 +23,7 @@ const statsData = [
 ];
 
 const IdealClient = () => (
-  <FadeInStagger faster className="max-w-6xl mx-auto px-6 lg:px-8 space-y-4">
+  <FadeInStagger faster className="max-w-7xl mx-auto px-6 lg:px-8 space-y-4">
     {/* <FadeIn className="text-center">
       <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
         We Deliver Success to the Struggling

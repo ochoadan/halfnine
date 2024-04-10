@@ -64,7 +64,7 @@ const Page = () => {
       />
       {/* Its like making passive income, we manage the investment and you simply watch the returns. */}
       <div className="overflow-hidden bg-white py-14 md:py-28">
-        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:max-w-none grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2">
             {" "}
             <div>
@@ -128,7 +128,7 @@ const Page = () => {
         </div>
       </div>
       <div className="bg-gray-50 py-14 md:py-28">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
             <span className="block">Invest in a responsible strategy</span>
             <hr className="border-brand-600 opacity-90 border-b-[2px] w-24 my-2" />
@@ -172,7 +172,7 @@ const Page = () => {
         </div>
       </div>
       {/* <div className="bg-gray-50 py-14 md:py-28">
-                <div className="max-w-6xl mx-auto px-6 lg:px-8">
+                <div className="max-w-7xl mx-auto px-6 lg:px-8">
                     <h1 className="text-2xl sm:text-3xl md:text-4xl text-center font-extrabold">
                         Its like making passive income
                     </h1>
@@ -183,9 +183,9 @@ const Page = () => {
                 </div>
             </div> */}
       <div className="bg-white py-14 md:py-28">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* <div className="bg-white py-24 sm:py-28">
-        <div className="mx-auto max-w-6xl px-6 lg:px-8"> */}
+        <div className="mx-auto max-w-7xl px-6 lg:px-8"> */}
           <div className="mx-auto grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:grid-cols-3">
             <div>
               <h2 className="text-base font-semibold leading-7 text-brand-600">
@@ -218,7 +218,7 @@ const Page = () => {
         </div>
       </div>
       {/* <div className="bg-white py-14 md:py-28">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8 space-y-6">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-6">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl lg:text-center">
             So what <span className="uppercase text-brand-600">are</span> you
             investing in?

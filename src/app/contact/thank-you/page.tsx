@@ -7,7 +7,7 @@ const Page = () => {
     <>
       <GlobalNavbar />
       <div className="pt-8 lg:pt-12 pb-12 lg:pb-24">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <h1 className="text-3xl sm:text-4xl md:text-5xl text-center font-extrabold">
             Thank You for Contacting Us!
           </h1>
@@ -18,7 +18,7 @@ const Page = () => {
             We will get back to you as soon as possible.
           </p>
         </div>
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <Image
             src="/img/svg/msgsent.svg"
             width={500}

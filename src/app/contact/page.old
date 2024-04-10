@@ -134,7 +134,7 @@ const Contact = () => {
         heading="Contact Halfnine"
         description="Looking to upgrade your software or kickstart a new idea? Let's discuss it!"
       />
-      <div className="py-8 md:py-12 max-w-6xl mx-auto px-6 lg:px-8">
+      <div className="py-8 md:py-12 max-w-7xl mx-auto px-6 lg:px-8">
         <div className="bg-gray-50 rounded-xl p-5 lg:p-10 shadow-md">
           <h2 className="pb-4 text-2xl md:text-3xl font-bold text-center">
             Contact Form:
@@ -365,7 +365,7 @@ const Contact = () => {
             </div>
           </form>
         </div>
-        <div className="py-8 md:py-12 max-w-6xl mx-auto">
+        <div className="py-8 md:py-12 max-w-7xl mx-auto">
           <div className="bg-gray-50 rounded-xl p-5 lg:p-10 shadow-md">
             <h2 className="pb-4 text-2xl md:text-3xl font-bold text-center">
               Schedule a meeting:

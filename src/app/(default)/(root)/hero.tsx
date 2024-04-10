@@ -20,7 +20,7 @@ const RootHeading = () => {
             animation: "pointonefadein 1.5s forwards",
           }}
         />
-        <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center font-extrabold">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center font-extrabold">
           <h1 className="text-3xl sm:text-4xl md:text-5xl">
             Tech Restructuring & Turnaround
           </h1>
