@@ -30,7 +30,7 @@ const RootHeading = () => {
           </p>
         </div>
         {/* <hr className="border-brand-600 opacity-90 border-b-[3px] mx-auto w-40 my-6" /> */}
-        <div className="max-w-5xl mx-auto text-center mt-8">
+        <div className="max-w-5xl mx-auto text-center mt-12">
           <p className="px-4 lg:px-24 my-4 text-lg md:text-xl text-gray-700">
             We empower struggling businesses to thrive by providing solutions
             that meet their needs and goals for the present and the future.

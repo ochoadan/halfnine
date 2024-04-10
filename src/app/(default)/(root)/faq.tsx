@@ -1,6 +1,6 @@
 "use client";
 
-import { FadeIn, FadeInStagger } from "@/components/Global/FadeIn";
+import { FadeIn } from "@/components/Global/FadeIn";
 import { Disclosure } from "@headlessui/react";
 import { MinusIcon, PlusIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
@@ -34,14 +34,14 @@ const faqs = [
 ];
 const GlobalFAQ = () => {
   return (
-    <FadeInStagger className="mx-auto max-w-5xl">
-      <FadeIn className="text-3xl font-extrabold leading-10 text-gray-900">
+    <div className="mx-auto max-w-5xl">
+      <div className="text-3xl font-extrabold leading-10 text-gray-900">
         <h2>Frequently asked questions:</h2>
         <hr className="border-sky-600 opacity-90 border-b-[2px] w-20 my-2" />
-      </FadeIn>
+      </div>
       <dl className="mt-10 divide-y divide-gray-900/10">
         {faqs.map((faq) => (
-          <FadeIn key={faq.question}>
+          <div key={faq.question}>
             <dl>
               <Disclosure as="div">
                 {({ open }) => (
@@ -77,10 +77,10 @@ const GlobalFAQ = () => {
                 )}
               </Disclosure>
             </dl>
-          </FadeIn>
+          </div>
         ))}
       </dl>
-    </FadeInStagger>
+    </div>
   );
 };
 

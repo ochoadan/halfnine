@@ -1,11 +1,10 @@
 import { FadeIn, FadeInStagger } from "@/components/Global/FadeIn";
-import { FaRegCompass, FaCode, FaHeadset, FaRegIdCard } from "react-icons/fa6";
 import Image from "next/image";
 
 const statsData = [
   {
     icon: "/icons/loss-graph-finance.svg",
-    title: "Declining Companies",
+    title: "Declining Profits",
     description:
       "We Build Turnaround Strategies, Cost Optimization, and Revenue Growth.",
   },
@@ -18,20 +17,21 @@ const statsData = [
   {
     icon: "/icons/merge.svg",
     title: "Consolidating Markets",
-    description: "We help you grow faster in a competitive and consolidating market.",
+    description:
+      "We help you grow faster in a competitive and consolidating market.",
   },
 ];
 
 const IdealClient = () => (
-  <FadeInStagger faster className="max-w-7xl mx-auto px-6 lg:px-8 space-y-4">
+  <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-4">
     {/* <FadeIn className="text-center">
       <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
         We Deliver Success to the Struggling
       </h2>
     </FadeIn> */}
-    <div className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-3">
+    <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-3">
       {statsData.map((data, index) => (
-        <FadeIn
+        <div
           key={index}
           className="flex flex-col p-4 transition-colors duration-200 rounded-2xl border-2 gap-1 bg-white border-brand-500"
         >
@@ -54,10 +54,10 @@ const IdealClient = () => (
               {data.description}
             </dd>
           </dl>
-        </FadeIn>
+        </div>
       ))}
     </div>
-  </FadeInStagger>
+  </div>
 );
 
 export default IdealClient;
