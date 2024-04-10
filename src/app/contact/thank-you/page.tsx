@@ -29,6 +29,7 @@ const Page = () => {
         </div>
       </div>
       <GlobalFooter />
+      <meta name="robots" content="noindex" />
     </>
   );
 };
