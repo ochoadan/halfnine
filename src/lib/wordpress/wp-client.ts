@@ -40,10 +40,12 @@ export default class WpClient {
     const totalPagesHeader = response.headers.get("X-WP-TotalPages");
     const totalPages = totalPagesHeader ? Number(totalPagesHeader) : 0;
     const posts = await response.json();
+
     const updatedPostsData: Post[] = [];
     for (const post of posts) {
       const media: string = await this.getMediaById(post.featured_media);
       const author = await this.getAuthorById(post.author);
+      const category = await this.getCategoryById(post.categories[0]);
       const description = sanitizeHtml(
         post.excerpt.rendered.replace(/\n/g, ""),
         {
@@ -56,9 +58,11 @@ export default class WpClient {
         description: description,
         mediaData: media,
         authorData: author,
+        categoryData: category,
       };
       updatedPostsData.push(updatedPost);
     }
+    
     return {
       posts: updatedPostsData,
       totalPages,
@@ -79,6 +83,12 @@ export default class WpClient {
 
   async getAuthorById(id: number): Promise<string> {
     const response = await fetch(`${BASE_URL}users/${id}`);
+
+    return response.json();
+  }
+
+  async getCategoryById(id: number): Promise<string> {
+    const response = await fetch(`${BASE_URL}categories/${id}`);
 
     return response.json();
   }

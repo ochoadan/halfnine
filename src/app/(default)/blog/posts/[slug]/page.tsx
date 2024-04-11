@@ -52,6 +52,7 @@ export async function generateMetadata({ params }: PostPageParams) {
 
 function PostPage({ params }: PostPageParams) {
   const post = use(getPostBySlug(params.slug));
+  const { posts } = use(wpService.getPosts());
 
   if (!post) {
     notFound();
@@ -73,15 +74,15 @@ function PostPage({ params }: PostPageParams) {
 
   return (
     <>
-      <div className="mx-auto flex w-full max-w-7xl items-start gap-x-8 px-4 py-10 sm:px-6 lg:px-8 prose prose-neutral">
-        <main className="flex-1">
+      <div className="mx-auto flex w-full max-w-7xl items-start gap-x-8 px-4 py-10 sm:px-6 lg:px-8">
+        <main className="flex-1 prose prose-neutral max-w-none">
           <div className="flex flex-col space-y-4">
             <div>
               {/* {JSON.stringify(post.mediaData.source_url)} */}
               <Image
                 width={800}
                 height={400}
-                className="aspect-video rounded-xl bg-gray-50 object-cover mx-auto mt-2 mb-8"
+                className="aspect-video rounded-2xl bg-gray-50 object-cover mx-auto mt-0 mb-8"
                 src={
                   (post.mediaData as { source_url: string }).source_url ||
                   "https://via.placeholder.com/640x400"
@@ -125,8 +126,49 @@ function PostPage({ params }: PostPageParams) {
           </div>
         </main>
 
-        <aside className="sticky top-8 hidden w-96 shrink-0 xl:block">
-          Right column area
+        {/* <aside className="sticky top-28 hidden w-96 shrink-0 xl:block text-gray-700 font-thin"> */}
+        <aside className="hidden w-[22rem] shrink-0 xl:block text-gray-700">
+          <div className="rounded-xl ring-1 ring-gray-200 px-2.5 py-1.5">
+            <p className="font-bold text-xl mb-2">Latest Posts:</p>
+            <div className="space-y-2">
+              {posts.slice(0, 10).map((postx) => (
+                <div>
+                  <Link
+                    key={postx.id}
+                    href={`/blog/posts/${postx.slug}`}
+                    className="no-underline text-gray-700 font-base"
+                  >
+                    <p>{postx.title.rendered}</p>
+                  </Link>
+                </div>
+              ))}
+            </div>
+            {/* <p>
+              Read more the "
+              <Link
+                href={`/blog/category/${
+                  (post.categoryData as { slug: string }).slug
+                }`}
+                className="no-underline text-gray-700 font-bold"
+              >
+                {(post.categoryData as { name: string }).name}
+              </Link>
+              " category:
+            </p>
+            <div className="">
+              {posts
+                .filter((postx) => postx.categories![0] === post.categories![0])
+                .map((postx) => (
+                  <Link
+                    key={postx.id}
+                    href={`/blog/posts/${postx.slug}`}
+                    className="no-underline text-gray-700 font-semibold"
+                  >
+                    <p>{postx.title.rendered}</p>
+                  </Link>
+                ))}
+            </div> */}
+          </div>
         </aside>
       </div>
     </>

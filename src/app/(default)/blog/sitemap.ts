@@ -6,7 +6,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = response.posts;
 
   return posts.map((post) => ({
-    url: `https://www.halfnine.com/blog/${post.slug}`,
+    url: `https://www.halfnine.com/blog/posts/${post.slug}`,
     lastModified: new Date(post.date),
     changeFrequency: "weekly",
     priority: 0.5,
