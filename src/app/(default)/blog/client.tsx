@@ -32,12 +32,12 @@ const Client = ({ posts }: any) => {
             key={post.id}
             className="flex flex-col items-start justify-between"
           >
-            {/* {JSON.stringify(post)} */}
+            {/* {JSON.stringify(post.mediaData.media_details.sizes.medium_large.source_url)} */}
             <Link href={`/blog/posts/${post.slug}`}>
               <div className="relative w-full">
                 <Image
                   src={
-                    post.mediaData.source_url.toString() ||
+                    post.mediaData.media_details.sizes.medium_large.source_url.toString() ||
                     "https://via.placeholder.com/640x360"
                   }
                   width={640}
