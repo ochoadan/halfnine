@@ -59,7 +59,8 @@ const Page = () => {
     <>
       <PageHero
         heading="Want to invest in tech?"
-        description="Don't gamble in tech anymore. Invest in responsible strategies that deliver results."
+        // description="Don't gamble in tech anymore. Invest in responsible strategies that deliver results."
+        description="Invest with us for a responsible strategy that delivers results."
         // description="Invest in our acquisitions, we manage the investment and you simply watch the returns."
       />
       {/* Its like making passive income, we manage the investment and you simply watch the returns. */}
@@ -91,17 +92,17 @@ const Page = () => {
               </p>
             </div>
             {/* <FadeIn className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg bg-gray-100 group"> */}
-            <FadeIn className="aspect-h-6 aspect-w-10 overflow-hidden rounded-lg bg-gray-100 group">
+            <div className="aspect-h-6 aspect-w-10 overflow-hidden rounded-lg bg-gray-100 group">
               <g className="origin-center scale-100 transition duration-500 motion-safe:group-hover:scale-[1.03]">
                 <Image
-                  src="/img/index/pexels-lukas-669621.jpg"
-                  alt="BG"
+                  src="https://images.pexels.com/photos/3943714/pexels-photo-3943714.jpeg"
+                  alt="Cover Image"
                   className="object-cover object-center"
                   width={655}
                   height={655}
                 />
               </g>
-            </FadeIn>
+            </div>
           </div>
 
           {/* <div className="grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2 mx-auto max-w-2xl lg:max-w-none">
@@ -130,7 +131,7 @@ const Page = () => {
       <div className="bg-gray-50 py-14 md:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            <span className="block">Invest in a responsible strategy</span>
+            <span className="block">Market Overview</span>
             <hr className="border-brand-600 opacity-90 border-b-[2px] w-24 my-2" />
           </h2>
           <p className="mt-4 text-base leading-7 text-gray-600">
@@ -144,7 +145,7 @@ const Page = () => {
                 width={900}
                 height={600}
                 className="aspect-[3/2] w-full rounded-2xl object-cover border-gray-200 border-2"
-                src={"/img/pr.jpg"}
+                src="/img/index/investors1.jpg"
                 alt=""
               />
               <p className="pt-1 text-base leading-7 text-gray-600 text-center">
@@ -159,7 +160,7 @@ const Page = () => {
                 width={900}
                 height={600}
                 className="aspect-[3/2] w-full rounded-2xl object-cover border-gray-200 border-2"
-                src={"/img/pr2.jpg"}
+                src="/img/index/investors2.jpg"
                 alt=""
               />
               {/* <img className="aspect-[3/2] w-full rounded-2xl object-cover" src={"https://images.pexels.com/photos/20109536/pexels-photo-20109536/free-photo-of-a-person-holding-a-heart-shaped-snow-ball-in-their-hands.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"} alt="" /> */}
@@ -188,9 +189,9 @@ const Page = () => {
         <div className="mx-auto max-w-7xl px-6 lg:px-8"> */}
           <div className="mx-auto grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:grid-cols-3">
             <div>
-              <h2 className="text-base font-semibold leading-7 text-brand-600">
+              {/* <h2 className="text-base font-semibold leading-7 text-brand-600">
                 <span className="block">Invest in digital assets</span>
-              </h2>
+              </h2> */}
               <p className="mt-2 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                 Checking all the boxes
               </p>

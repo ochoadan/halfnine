@@ -8,6 +8,7 @@ const nextConfig = {
       { hostname: "raw.githubusercontent.com" },
       { hostname: "hyleon.com" },
       { hostname: "via.placeholder.com" },
+      { hostname: "images.pexels.com" },
     ],
     dangerouslyAllowSVG: true,
   },

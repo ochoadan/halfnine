@@ -1,6 +1,5 @@
 import PageHero from "@/components/Global/PageHero";
 import { Metadata } from "next";
-import { FadeIn, FadeInStagger } from "@/components/Global/FadeIn";
 import Image from "next/image";
 import { features, supportLinks } from "./content";
 import Link from "next/link";
@@ -19,23 +18,15 @@ export const metadata: Metadata = {
 const projects = [
   {
     name: "Surveyr.io",
-    status: "Live",
+    status: "Acquisition",
     description:
       "A platform for monitoring backend cron jobs for Laravel and php Applications.",
     link: { href: "https://surveyr.io", label: "surveyr.io" },
     logo: logoSurveyr,
   },
-  // {
-  //   name: 'Surveyr.io',
-  //   status: "In Development",
-  //   description:
-  //     'Adding support for all backend cron jobs not only Laravel and php applications.',
-  //   link: { href: 'https://dev.surveyr.io', label: 'dev.surveyr.io' },
-  //   logo: logoPlanetaria,
-  // },
   {
     name: "Yourname.is",
-    status: "Live",
+    status: "Developed",
     description:
       "An application that helps individuals create a professional business email address with their first and last name.",
     link: { href: "https://yourname.is", label: "yourname.is" },
@@ -43,47 +34,12 @@ const projects = [
   },
   {
     name: "Dynamic QR Codes",
-    status: "Live (Demo)",
+    status: "Developed (Demo)",
     description:
       "This is a Demo Application for allows companies to generate dynamic QR codes for their users to update.",
     link: { href: "https://qrdemo.halfnine.com", label: "qrdemo.halfnine.com" },
     logo: logoCasente,
   },
-  // {
-  //   name: "Appealing Design",
-  //   status: "In Development",
-  //   description:
-  //     "Our subscription-based design provides you with dedicated designers to help with all your design needs.",
-  //   link: { href: "https://appealing.design/", label: "appealing.design" },
-  //   logo: logoAppealing,
-  // },
-  // {
-  //   name: "Engagement Platform",
-  //   status: "In Development",
-  //   description:
-  //     "Through this platform, our clients interact with us and our team to manage their projects and tasks.",
-  //   link: {
-  //     href: "https://engagement.halfnine.com/",
-  //     label: "engagement.halfnine.com",
-  //   },
-  //   logo: logoHalfnine,
-  // },
-  // {
-  //   name: 'Resourceful Agency',
-  //   status: "In Development",
-  //   description:
-  //     'An application that helps you find the top developers in any specific field.',
-  //   link: { href: 'https://resourceful.agency', label: 'resourceful.agency' },
-  //   logo: logoHyleon,
-  // },
-  // {
-  //   name: 'Hyleon',
-  //   status: "In Development",
-  //   description:
-  //     'An application that helps you find the top developers in any specific field.',
-  //   link: { href: 'https://hyleon.com', label: 'hyleon.com' },
-  //   logo: logoHyleon,
-  // },
 ];
 
 const Page = () => {
@@ -114,33 +70,34 @@ const Page = () => {
                 deliver a tangible return on investment for our clients.
               </p>
             </div>
-            <FadeIn className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg bg-gray-100 group">
+            <div className="aspect-h-6 aspect-w-10 overflow-hidden rounded-lg bg-gray-100 group">
               <g className="origin-center scale-100 transition duration-500 motion-safe:group-hover:scale-[1.03]">
                 <Image
-                  src="/img/about/pexels-mizuno-k-12902918-min.jpg"
+                  src="https://images.pexels.com/photos/8728380/pexels-photo-8728380.jpeg"
                   alt="Businesswomen Looking at a Document Folder"
                   className="object-cover object-center"
-                  fill
+                  width={900}
+                  height={600}
                 />
               </g>
-            </FadeIn>
+            </div>
           </div>
         </div>
       </div>
       <div className="overflow-hidden bg-gray-50 py-14 md:py-28">
-        <FadeInStagger className="mx-auto max-w-7xl px-6 lg:px-8">
-          <FadeIn className="mx-auto max-w-4xl text-center mb-12">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-              Our Innovative Projects
+              Our Projects
             </h2>
-          </FadeIn>
+          </div>
           <ul
             role="list"
             className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
           >
             {projects.map((project, index) => (
-              <FadeIn
-                as="li"
+              <li
+                // as="li"
                 key={project.name}
                 className="group relative flex flex-col items-start"
               >
@@ -160,7 +117,7 @@ const Page = () => {
                   </Link>
                 </h2>
                 <p className="relative z-10 mt-2 text-sm text-zinc-500">
-                  Status:{" "}
+                  Source:{" "}
                   <span className="text-zinc-700">{project.status}</span>
                 </p>
                 <p className="relative z-10 mt-2 text-sm text-zinc-600">
@@ -170,21 +127,21 @@ const Page = () => {
                   <LinkIcon className="h-6 w-6 flex-none" />
                   <span className="ml-2">{project.link.label}</span>
                 </p>
-              </FadeIn>
+              </li>
             ))}
           </ul>
-        </FadeInStagger>
+        </div>
       </div>
       {/* <div className="overflow-hidden bg-gray-50 py-14 md:py-28">
-        <FadeIn className="mx-auto max-w-4xl text-center mb-12">
+        <div className="mx-auto max-w-4xl text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
             Our Innovative Projects
           </h2>
           <hr className="border-brand-600 opacity-90 border-b-[2px] mx-auto w-28 my-4" />
-        </FadeIn>
+        </div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <FadeInStagger>
-            <FadeIn className="relative isolate overflow-hidden bg-gray-800 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
+          <div>
+            <div className="relative isolate overflow-hidden bg-gray-800 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
               <svg
                 viewBox="0 0 1024 1024"
                 className="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
@@ -240,8 +197,8 @@ const Page = () => {
                   height={1080}
                 />
               </div>
-            </FadeIn>
-          </FadeInStagger>
+            </div>
+          </div>
         </div>
       </div>
       <div className="relative -my-8 sm:-my-16">
@@ -254,8 +211,8 @@ const Page = () => {
       </div>
       <div className="overflow-hidden bg-white py-14 sm:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <FadeInStagger>
-            <FadeIn className="relative isolate overflow-hidden bg-gray-800 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
+          <div>
+            <div className="relative isolate overflow-hidden bg-gray-800 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
               <svg
                 viewBox="0 0 1024 1024"
                 className="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
@@ -303,47 +260,45 @@ const Page = () => {
                   height={1080}
                 />
               </div>
-            </FadeIn>
-          </FadeInStagger>
+            </div>
+          </div>
         </div>
       </div> */}
       <div className="overflow-hidden bg-white py-14 sm:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <FadeInStagger faster>
-            <FadeIn className="mx-auto max-w-4xl text-center">
-              <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-                Our Core Values
-              </h2>
-              <hr className="border-brand-600 opacity-90 border-b-[2px] mx-auto w-28 my-4" />
-              <p className="mt-4 text-lg leading-8 text-gray-600">
-                As you understand our team, you’ll see we’re driven by key
-                principles, enabling us to achieve significant change through
-                unique experiences.
-              </p>
-            </FadeIn>
-            <div className="mx-auto mt-4 max-w-xl sm:mt-8 lg:mt-10 lg:max-w-none">
-              <dl className="grid max-w-xl grid-cols-2 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4">
-                {features.map((feature) => (
-                  <FadeIn key={feature.name} className="flex flex-col">
-                    <dt className="text-lg font-semibold leading-7 flex flex-col items-center justify-center">
-                      <div className="mb-2 h-16 w-16 flex items-center justify-center rounded-lg bg-white ring-1 ring-gray-300">
-                        <feature.icon
-                          className="h-10 w-10 text-brand-600"
-                          aria-hidden="true"
-                        />
-                      </div>
-                      {feature.name}
-                    </dt>
-                  </FadeIn>
-                ))}
-              </dl>
-            </div>
-          </FadeInStagger>
+          <div className="mx-auto max-w-4xl text-center">
+            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+              Our Core Values
+            </h2>
+            <hr className="border-brand-600 opacity-90 border-b-[2px] mx-auto w-28 my-4" />
+            <p className="mt-4 text-lg leading-8 text-gray-600">
+              As you understand our team, you’ll see we’re driven by key
+              principles, enabling us to achieve significant change through
+              unique experiences.
+            </p>
+          </div>
+          <div className="mx-auto mt-4 max-w-xl sm:mt-8 lg:mt-10 lg:max-w-none">
+            <dl className="grid max-w-xl grid-cols-2 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4">
+              {features.map((feature) => (
+                <div key={feature.name} className="flex flex-col">
+                  <dt className="text-lg font-semibold leading-7 flex flex-col items-center justify-center">
+                    <div className="mb-2 h-16 w-16 flex items-center justify-center rounded-lg bg-white ring-1 ring-gray-300">
+                      <feature.icon
+                        className="h-10 w-10 text-brand-600"
+                        aria-hidden="true"
+                      />
+                    </div>
+                    {feature.name}
+                  </dt>
+                </div>
+              ))}
+            </dl>
+          </div>
         </div>
       </div>
-      <FadeInStagger className="bg-white">
+      <div className="bg-white">
         <div className="bg-gray-100">
-          <FadeIn className="relative bg-gray-800 pb-28">
+          <div className="relative bg-gray-800 pb-28">
             <div className="absolute inset-0">
               <Image
                 className="h-full w-full object-cover"
@@ -366,7 +321,7 @@ const Page = () => {
                 satisfaction as our valued customer.
               </p>
             </div>
-          </FadeIn>
+          </div>
         </div>
         <section
           className="relative z-10 mx-auto -mt-28 max-w-7xl px-6 pb-28 lg:px-8"
@@ -374,7 +329,7 @@ const Page = () => {
         >
           <div className="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-0">
             {supportLinks.map((link) => (
-              <FadeIn
+              <div
                 key={link.name}
                 className="flex flex-col rounded-2xl bg-white shadow-xl"
               >
@@ -392,11 +347,11 @@ const Page = () => {
                     {link.description}
                   </p>
                 </div>
-              </FadeIn>
+              </div>
             ))}
           </div>
         </section>
-      </FadeInStagger>
+      </div>
       {/* <GlobalContactForm paddingBottom /> */}
     </>
   );
