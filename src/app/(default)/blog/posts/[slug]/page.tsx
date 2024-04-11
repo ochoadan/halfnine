@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import wpService from "@/lib/wordpress/wp-service";
 import sanitizeHtml from "sanitize-html";
 import Image from "next/image";
+import Link from "next/link";
 
 interface PostPageParams {
   params: {
@@ -31,6 +32,21 @@ export async function generateMetadata({ params }: PostPageParams) {
     alternates: {
       canonical: `https://www.halfnine.com/blog/posts/${params.slug}`,
     },
+    openGraph: {
+      title: post.title.rendered,
+      description: post.description,
+      type: "article",
+      publishedTime: post.date,
+      authors: [(post.authorData as { name: string }).name],
+      images: [
+        {
+          url: (post.mediaData as { source_url: string }).source_url,
+          width: 800,
+          height: 400,
+          alt: post.title.rendered,
+        },
+      ],
+    },
   };
 }
 
@@ -55,60 +71,65 @@ function PostPage({ params }: PostPageParams) {
   }
   const modifiedContent = addNofollowContent(post.content.rendered);
 
-  // return (
-  //   <>
-  //     <div className="mx-auto flex w-full max-w-7xl items-start gap-x-8 px-4 py-10 sm:px-6 lg:px-8 prose prose-neutral">
-  //       <main className="flex-1">
-  //         <div className="flex flex-col space-y-4">
-  //           <div>
-  //             <Image
-  //               width={800}
-  //               height={400}
-  //               className="aspect-video rounded-xl bg-gray-50 object-cover mx-auto mt-2 mb-8"
-  //               src={
-  //                 post.featured_media?.toString() ||
-  //                 "https://via.placeholder.com/640x400"
-  //               }
-  //               alt=""
-  //             />
-  //             <h1 className="text-4xl font-extrabold text-neutral-800 text-center">
-  //               {post.title.rendered}
-  //             </h1>
-  //             <div dangerouslySetInnerHTML={{ __html: modifiedContent }} />
-  //           </div>
-  //         </div>
-  //       </main>
-
-  //       <aside className="sticky top-8 hidden w-96 shrink-0 xl:block">
-  //         Right column area
-  //       </aside>
-  //     </div>
-  //   </>
-  // );
   return (
-    <div className="max-w-3xl mx-auto">
-      <div className="max-w-3xl px-6 lg:px-8 my-8 prose prose-neutral">
-        <div className="flex flex-col space-y-4">
-          <div>
-            <Image
-              width={800}
-              height={400}
-              className="aspect-video rounded-xl bg-gray-50 object-cover mx-auto"
-              src={
-                post.featured_media?.toString() ||
-                "https://via.placeholder.com/640x400"
-              }
-              alt=""
-            />
-            <h1 className="text-4xl font-extrabold text-neutral-800 text-center">
-              {post.title.rendered}
-            </h1>
-
-            <div dangerouslySetInnerHTML={{ __html: modifiedContent }} />
+    <>
+      <div className="mx-auto flex w-full max-w-7xl items-start gap-x-8 px-4 py-10 sm:px-6 lg:px-8 prose prose-neutral">
+        <main className="flex-1">
+          <div className="flex flex-col space-y-4">
+            <div>
+              {/* {JSON.stringify(post.mediaData.source_url)} */}
+              <Image
+                width={800}
+                height={400}
+                className="aspect-video rounded-xl bg-gray-50 object-cover mx-auto mt-2 mb-8"
+                src={
+                  (post.mediaData as { source_url: string }).source_url ||
+                  "https://via.placeholder.com/640x400"
+                }
+                alt=""
+              />
+              <h1 className="text-4xl font-extrabold text-neutral-800 text-center">
+                {post.title.rendered}
+              </h1>
+              <div className="relative py-2">
+                <div
+                  className="absolute inset-0 flex items-center"
+                  aria-hidden="true"
+                >
+                  <div className="w-full border-t border-gray-300" />
+                </div>
+                <div className="relative flex justify-center">
+                  <span className="bg-white px-2 text-sm text-gray-500">
+                    Posted on{" "}
+                    <time>
+                      {new Date(post.date).toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
+                    </time>{" "}
+                    by{" "}
+                    <Link
+                      href={`/blog/author/${
+                        (post.authorData as { slug: string }).slug
+                      }`}
+                      className="no-underline text-gray-500 text-sm font-thin"
+                    >
+                      {(post.authorData as { name: string }).name}
+                    </Link>
+                  </span>
+                </div>
+              </div>
+              <div dangerouslySetInnerHTML={{ __html: modifiedContent }} />
+            </div>
           </div>
-        </div>
+        </main>
+
+        <aside className="sticky top-8 hidden w-96 shrink-0 xl:block">
+          Right column area
+        </aside>
       </div>
-    </div>
+    </>
   );
 }
 

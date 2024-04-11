@@ -1,5 +1,9 @@
 import sanitizeHtml from "sanitize-html";
-import { WP_REST_API_Post as Post } from "wp-types";
+import {
+  WP_REST_API_Post as Post,
+  WP_REST_API_Attachment,
+  WP_REST_API_User,
+} from "wp-types";
 
 const API_BASE_URL =
   process.env.WORDPRESS_API_BASE_URL ?? "http://localhost:8080/wp-json";
@@ -36,9 +40,10 @@ export default class WpClient {
     const totalPagesHeader = response.headers.get("X-WP-TotalPages");
     const totalPages = totalPagesHeader ? Number(totalPagesHeader) : 0;
     const posts = await response.json();
-    const updatedPosts: Post[] = [];
+    const updatedPostsData: Post[] = [];
     for (const post of posts) {
-      const mediaUrl = await this.getMediaUrlbyId(post.featured_media);
+      const media: string = await this.getMediaById(post.featured_media);
+      const author = await this.getAuthorById(post.author);
       const description = sanitizeHtml(
         post.excerpt.rendered.replace(/\n/g, ""),
         {
@@ -49,12 +54,13 @@ export default class WpClient {
       const updatedPost: Post = {
         ...post,
         description: description,
-        featured_media: mediaUrl,
+        mediaData: media,
+        authorData: author,
       };
-      updatedPosts.push(updatedPost);
+      updatedPostsData.push(updatedPost);
     }
     return {
-      posts: updatedPosts,
+      posts: updatedPostsData,
       totalPages,
     };
   }
@@ -65,17 +71,16 @@ export default class WpClient {
     return response.json();
   }
 
-  async getMediaUrlbyId(id: number): Promise<string> {
+  async getMediaById(id: number): Promise<string> {
     const response = await fetch(`${BASE_URL}media/${id}`);
-    const media = await response.json();
 
-    return media.source_url;
+    return response.json();
   }
 
-  async getLatestThreePosts(): Promise<Post[]> {
-    const { posts } = await this.getPosts({ per_page: 3 });
+  async getAuthorById(id: number): Promise<string> {
+    const response = await fetch(`${BASE_URL}users/${id}`);
 
-    return posts;
+    return response.json();
   }
 
   private getHeaders() {
