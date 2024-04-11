@@ -132,9 +132,8 @@ function PostPage({ params }: PostPageParams) {
             <p className="font-bold text-xl mb-2">Latest Posts:</p>
             <div className="space-y-2">
               {posts.slice(0, 10).map((postx) => (
-                <div>
+                <div key={postx.id}>
                   <Link
-                    key={postx.id}
                     href={`/blog/posts/${postx.slug}`}
                     className="no-underline text-gray-700 font-base"
                   >
