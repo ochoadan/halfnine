@@ -6,6 +6,8 @@ const nextConfig = {
       { hostname: "tailwindui.com" },
       { hostname: "images.unsplash.com" },
       { hostname: "raw.githubusercontent.com" },
+      { hostname: "hyleon.com" },
+      { hostname: "via.placeholder.com" },
     ],
     dangerouslyAllowSVG: true,
   },

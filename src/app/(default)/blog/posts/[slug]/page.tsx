@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 
 import wpService from "@/lib/wordpress/wp-service";
 import sanitizeHtml from "sanitize-html";
+import Image from "next/image";
 
 interface PostPageParams {
   params: {
@@ -26,10 +27,7 @@ export async function generateMetadata({ params }: PostPageParams) {
 
   return {
     title: `${post.title.rendered} - Halfnine`,
-    description: sanitizeHtml(post.excerpt.rendered.replace(/\n/g, ""), {
-      allowedTags: [],
-      allowedAttributes: {},
-    }),
+    description: post.description,
     alternates: {
       canonical: `https://www.halfnine.com/blog/posts/${params.slug}`,
     },
@@ -57,29 +55,57 @@ function PostPage({ params }: PostPageParams) {
   }
   const modifiedContent = addNofollowContent(post.content.rendered);
 
-  return (
-    <div className="max-w-4xl mx-auto px-6 lg:px-8 my-8 prose prose-neutral prose-lg">
-      <div className="flex flex-col space-y-4">
-        {/* <div className="flex flex-col space-y-2">
-          <h1 className="text-3xl font-semibold">{post.title.rendered}</h1>
-          <h2 className="text-xl font-semibold">{post.excerpt.rendered}</h2>
-        </div> */}
+  // return (
+  //   <>
+  //     <div className="mx-auto flex w-full max-w-7xl items-start gap-x-8 px-4 py-10 sm:px-6 lg:px-8 prose prose-neutral">
+  //       <main className="flex-1">
+  //         <div className="flex flex-col space-y-4">
+  //           <div>
+  //             <Image
+  //               width={800}
+  //               height={400}
+  //               className="aspect-video rounded-xl bg-gray-50 object-cover mx-auto mt-2 mb-8"
+  //               src={
+  //                 post.featured_media?.toString() ||
+  //                 "https://via.placeholder.com/640x400"
+  //               }
+  //               alt=""
+  //             />
+  //             <h1 className="text-4xl font-extrabold text-neutral-800 text-center">
+  //               {post.title.rendered}
+  //             </h1>
+  //             <div dangerouslySetInnerHTML={{ __html: modifiedContent }} />
+  //           </div>
+  //         </div>
+  //       </main>
 
-        <div>
-          <h1 className="text-3xl font-bold text-neutral-800">
-            {post.title.rendered}
-          </h1>
-          {/* <h2 className="text-lg font-thin text-neutral-700">
-            {
-              sanitizeHtml(post.excerpt.rendered.replace(/\n/g, ""), {
-                allowedTags: [],
-                allowedAttributes: {},
-              })
-              // .replace(/<[^>]*>/g, "")
-              // .replace(/&nbsp;/g, " ")
-            }
-          </h2> */}
-          <div dangerouslySetInnerHTML={{ __html: modifiedContent }} />
+  //       <aside className="sticky top-8 hidden w-96 shrink-0 xl:block">
+  //         Right column area
+  //       </aside>
+  //     </div>
+  //   </>
+  // );
+  return (
+    <div className="max-w-3xl mx-auto">
+      <div className="max-w-3xl px-6 lg:px-8 my-8 prose prose-neutral">
+        <div className="flex flex-col space-y-4">
+          <div>
+            <Image
+              width={800}
+              height={400}
+              className="aspect-video rounded-xl bg-gray-50 object-cover mx-auto"
+              src={
+                post.featured_media?.toString() ||
+                "https://via.placeholder.com/640x400"
+              }
+              alt=""
+            />
+            <h1 className="text-4xl font-extrabold text-neutral-800 text-center">
+              {post.title.rendered}
+            </h1>
+
+            <div dangerouslySetInnerHTML={{ __html: modifiedContent }} />
+          </div>
         </div>
       </div>
     </div>
