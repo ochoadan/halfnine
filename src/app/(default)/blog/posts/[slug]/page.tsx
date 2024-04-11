@@ -6,6 +6,8 @@ import sanitizeHtml from "sanitize-html";
 import Image from "next/image";
 import Link from "next/link";
 
+export const revalidate = 60;
+
 interface PostPageParams {
   params: {
     slug: string;

@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.halfnine.com/blog" },
 };
 
+export const revalidate = 60;
+
 export default function Home() {
   const { posts } = use(wpService.getPosts());
   return <Client posts={posts} />;
