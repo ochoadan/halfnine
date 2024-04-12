@@ -2,7 +2,6 @@ import { use } from "react";
 import { notFound } from "next/navigation";
 
 import wpService from "@/lib/wordpress/wp-service";
-import sanitizeHtml from "sanitize-html";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -52,13 +51,17 @@ export async function generateMetadata({ params }: PostPageParams) {
   };
 }
 
+async function getLatestPosts() {
+  const posts = await wpService.getLatestThreePosts();
+  return posts;
+}
+
 function PostPage({ params }: PostPageParams) {
   const post = use(getPostBySlug(params.slug));
-  const { posts } = use(wpService.getPosts());
-
   if (!post) {
     notFound();
   }
+  const posts = use(getLatestPosts());
   function addNofollowContent(content: string) {
     content = content.replace(
       /<a[^>]*href=["|'](http[^"']*)["|'][^>]*>(.*?)<\/a>/gi,
@@ -76,7 +79,8 @@ function PostPage({ params }: PostPageParams) {
 
   return (
     <>
-      <div className="mx-auto flex w-full max-w-7xl items-start gap-x-8 px-4 py-10 sm:px-6 lg:px-8">
+      {/* <div className="mx-auto flex w-full max-w-7xl items-start gap-x-8 px-4 py-10 sm:px-6 lg:px-8"> */}
+      <div className="mx-auto flex w-full max-w-3xl items-start gap-x-8 px-4 py-10 sm:px-6 lg:px-8">
         <main className="flex-1 prose prose-neutral max-w-none">
           <div className="flex flex-col space-y-4">
             <div>
@@ -112,14 +116,14 @@ function PostPage({ params }: PostPageParams) {
                       })}
                     </time>{" "}
                     by{" "}
-                    <Link
+                    {/* <Link
                       href={`/blog/author/${
                         (post.authorData as { slug: string }).slug
                       }`}
                       className="no-underline text-gray-500 text-sm font-thin"
-                    >
+                    > */}
                       {(post.authorData as { name: string }).name}
-                    </Link>
+                    {/* </Link> */}
                   </span>
                 </div>
               </div>
@@ -129,7 +133,7 @@ function PostPage({ params }: PostPageParams) {
         </main>
 
         {/* <aside className="sticky top-28 hidden w-96 shrink-0 xl:block text-gray-700 font-thin"> */}
-        <aside className="hidden w-[22rem] shrink-0 xl:block text-gray-700">
+        {/* <aside className="hidden w-[22rem] shrink-0 xl:block text-gray-700">
           <div className="rounded-xl ring-1 ring-gray-200 px-2.5 py-1.5">
             <p className="font-bold text-xl mb-2">Latest Posts:</p>
             <div className="space-y-2">
@@ -143,8 +147,8 @@ function PostPage({ params }: PostPageParams) {
                   </Link>
                 </div>
               ))}
-            </div>
-            {/* <p>
+            </div> */}
+        {/* <p>
               Read more the "
               <Link
                 href={`/blog/category/${
@@ -169,8 +173,69 @@ function PostPage({ params }: PostPageParams) {
                   </Link>
                 ))}
             </div> */}
+        {/* </div>
+        </aside> */}
+      </div>
+      <div className="mx-auto w-full max-w-4xl items-start gap-x-8 px-4 py-10 sm:px-6 lg:px-8">
+        <p className="font-bold mb-2 text-xl">Latest Posts:</p>
+        <div className="grid md:grid-cols-3 gap-4">
+            {posts.map((postx: any) => (
+              <div
+                key={postx.id}
+                className="flex flex-col items-start justify-between"
+            >
+              <Link href={`/blog/posts/${postx.slug}`}>
+                <div className="relative w-full">
+                  <Image
+                    src={
+                      postx.mediaData.media_details.sizes.medium_large.source_url.toString() ||
+                      "https://via.placeholder.com/640x360"
+                    }
+                    width={368}
+                    height={207}
+                    alt={postx.mediaData.alt_text as string}
+                    className="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover"
+                  />
+                  <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
+                </div>
+                <div className="flex flex-col space-y-5">
+                  <h2 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600 line-clamp-2">
+                    {postx.title.rendered}
+                  </h2>
+                  <span className="mt-5 line-clamp-2 text-sm leading-6 text-gray-600">
+                    {postx.description as React.ReactNode}
+                  </span>
+                </div>
+              </Link>
+            </div>
+          ))}
+        </div>
+        {/* {posts.map((postx: any) => (
+          <div key={postx.id}>
+            <Link
+              href={`/blog/posts/${postx.slug}`}
+              className="no-underline text-gray-700 font-base"
+            >
+              <div className="relative w-full">
+                <Image
+                  src={
+                    (
+                      postx.mediaData as any
+                    ).media_details.sizes.medium_large.source_url.toString() ||
+                    "https://via.placeholder.com/640x360"
+                  }
+                  width={640}
+                  height={360}
+                  alt={(postx.mediaData as any).alt_text as string}
+                  // alt={"Image for " + post.title.rendered}
+                  className="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
+                />
+                <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
+              </div>
+               <p>{postx.title.rendered}</p> 
+            </Link>
           </div>
-        </aside>
+        ))} */}
       </div>
     </>
   );

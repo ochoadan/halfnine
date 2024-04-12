@@ -1,13 +1,15 @@
-'use client'
+"use client";
 
 import Link from "next/link";
 import { FaLinkedin, FaXTwitter, FaFacebook, FaGithub } from "react-icons/fa6";
 const navigation = {
   main: [
     { name: "About", href: "/about" },
+    { name: "Investors", href: "/investors" },
+    { name: "Blog", href: "/blog" },
+    { name: "Contact", href: "/contact" },
     { name: "Privacy", href: "/privacy" },
     { name: "Terms", href: "/tos" },
-    { name: "Contact", href: "/contact" },
     // { name: "Blog", href: "/blog" },
     // { name: "Jobs", href: "/careers" },
     // { name: "Press", href: "#" },
@@ -32,7 +34,7 @@ export default function GlobalFooter() {
     <footer className="bg-white border-gray-200 border-t-[2px]">
       <div className="mx-auto max-w-7xl overflow-hidden px-6 py-12 sm:py-14 lg:px-8">
         <nav
-          className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12"
+          className="-mb-6 columns-2 sm:flex sm:justify-center sm:gap-x-12"
           aria-label="Footer"
         >
           {navigation.main.map((item) => (
@@ -46,7 +48,7 @@ export default function GlobalFooter() {
             </div>
           ))}
         </nav>
-        <div className="mt-10 flex justify-center space-x-10">
+        <div className="mt-10 flex justify-center gap-x-10">
           {/* {navigation.social.map((item) => (
             <Link
               key={item.name}
@@ -92,7 +94,11 @@ export default function GlobalFooter() {
           </Link>
         </div>
         <p className="mt-10 text-center text-xs leading-5 text-gray-500">
-          &copy; {new Date().getFullYear()} <Link href="https://www.halfnine.com" target="_blank">Halfnine</Link> LLC. All rights reserved.
+          &copy; {new Date().getFullYear()}{" "}
+          <Link href="https://www.halfnine.com" target="_blank">
+            Halfnine
+          </Link>{" "}
+          LLC. All rights reserved.
         </p>
       </div>
     </footer>

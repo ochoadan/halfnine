@@ -14,5 +14,6 @@ export const revalidate = 1200;
 
 export default function Home() {
   const { posts } = use(wpService.getPosts());
-  return <Client posts={posts} />;
+  const categories = use(wpService.getCategories());
+  return <Client posts={posts} categories={categories} />;
 }

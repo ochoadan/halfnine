@@ -12,20 +12,30 @@ const nextConfig = {
     ],
     dangerouslyAllowSVG: true,
   },
-  // async redirects() {
-  //   return [
-  //     {
-  //       source: "/blog/posts",
-  //       destination: "/blog",
-  //       permanent: false,
-  //     },
-  //     // {
-  //     //   source: "/blog/:slug",
-  //     //   destination: "/blog/posts/:slug",
-  //     //   permanent: true,
-  //     // },
-  //   ];
-  // },
+  async redirects() {
+    return [
+      {
+        source: "/blog/posts",
+        destination: "/blog",
+        permanent: false,
+      },
+      {
+        source: "/blog/author",
+        destination: "/blog",
+        permanent: false,
+      },
+      {
+        source: "/blog/category",
+        destination: "/blog",
+        permanent: false,
+      },
+      // {
+      //   source: "/blog/:slug",
+      //   destination: "/blog/posts/:slug",
+      //   permanent: true,
+      // },
+    ];
+  },
 };
 
 export default nextConfig;

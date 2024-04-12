@@ -1,8 +1,25 @@
 import wpService from "@/lib/wordpress/wp-service";
 import { notFound } from "next/navigation";
 
-// async function getStaticPaths() {
-//   const { author } = await wpService.getAuthor();
+const Page = async ({ params }: { params: { userId: string } }) => {
+  // const author = await wpService.getAuthorBySlugAndPosts(params.userId);
+  // if (!author) {
+  //   return notFound();
+  // }
+
+  // return (
+  //   <div>
+  //     Author Not Implemented Yet
+  //     {/* {JSON.stringify(author)} */}
+  //   </div>
+  // );
+  return notFound();
+};
+
+export default Page;
+
+// async function getStaticPaths({ params }: { params: { userId: string }) {
+//   const { author } = await (wpService.getAuthor());
 //   const paths = author.map((author) => ({
 //     params: { userId: author.id.toString() },
 //   }));
@@ -33,15 +50,3 @@ import { notFound } from "next/navigation";
 //     </>
 //   );
 // };
-
-// export default Page;
-
-const Page = () => {
-  return (
-    <div>
-      Enter
-    </div>
-  );
-}
-
-export default Page;
