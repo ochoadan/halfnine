@@ -1,10 +1,4 @@
-"use client";
-
-// import { ThemeProvider } from "next-themes";
 import Script from "next/script";
-import { IntercomProvider, useIntercom } from "react-use-intercom";
-
-const INTERCOM_APP_ID = "l1qtvc55";
 
 function GoogleAnalytics() {
   return (
@@ -25,16 +19,29 @@ function GoogleAnalytics() {
   );
 }
 
+function Hotjar() {
+  return (
+    <>
+      <Script>
+        {`(function(h,o,t,j,a,r){
+               h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+               h._hjSettings={hjid:3702256,hjsv:6};
+               a=o.getElementsByTagName('head')[0];
+               r=o.createElement('script');r.async=1;
+               r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+               a.appendChild(r);
+           })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`}
+      </Script>
+    </>
+  );
+}
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <>
-      {/* <IntercomProvider appId={INTERCOM_APP_ID} autoBoot> */}
       <GoogleAnalytics />
-      {/* <ThemeProvider attribute="class" disableTransitionOnChange> */}
+      <Hotjar />
       {children}
-      {/* </ThemeProvider> */}
-      {/* </IntercomProvider> */}
     </>
   );
 }
