@@ -1,4 +1,3 @@
-import { FadeIn, FadeInStagger } from "@/components/Global/FadeIn";
 import Image from "next/image";
 
 const statsData = [
@@ -38,7 +37,7 @@ const IdealClient = () => (
           <Image
             src={data.icon}
             alt={data.title}
-            className="h-50 w-50 mx-auto"
+            className="h-15 w-15 mx-auto"
             width={50}
             height={50}
           />

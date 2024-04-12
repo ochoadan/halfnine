@@ -13,7 +13,7 @@ const RootHeading = () => {
           src="/img/index/indxbg.png"
           width={1920}
           height={1080}
-          loading="lazy"
+          loading="eager"
           style={{
             // transition: "opacity 1.5s",
             opacity: 0,

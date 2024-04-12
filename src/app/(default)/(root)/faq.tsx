@@ -39,14 +39,14 @@ const GlobalFAQ = () => {
         <h2>Frequently asked questions:</h2>
         <hr className="border-sky-600 opacity-90 border-b-[2px] w-20 my-2" />
       </div>
-      <dl className="mt-10 divide-y divide-gray-900/10">
+      <div className="mt-10 divide-y divide-gray-900/10">
         {faqs.map((faq) => (
           <div key={faq.question}>
-            <dl>
+            <div>
               <Disclosure as="div">
                 {({ open }) => (
                   <>
-                    <dt>
+                    <div>
                       <Disclosure.Button
                         className={clsx(
                           "flex w-full items-start justify-between text-left text-gray-700 hover:text-black",
@@ -67,19 +67,19 @@ const GlobalFAQ = () => {
                           )}
                         </span>
                       </Disclosure.Button>
-                    </dt>
-                    <Disclosure.Panel as="dd" className="pr-12 mb-6">
+                    </div>
+                    <div className="pr-12 mb-6">
                       <p className="text-base leading-7 text-gray-600">
                         {faq.answer}
                       </p>
-                    </Disclosure.Panel>
+                    </div>
                   </>
                 )}
               </Disclosure>
-            </dl>
+            </div>
           </div>
         ))}
-      </dl>
+      </div>
     </div>
   );
 };

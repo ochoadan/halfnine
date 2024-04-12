@@ -178,6 +178,7 @@ export default function GlobalNavbar() {
               alt="USA Flag"
               width={16}
               height={16}
+              layout="fixed"
               aria-hidden="true"
             />
             <span className="leading-tight">+1 (321) 312-0362</span>
@@ -224,6 +225,7 @@ export default function GlobalNavbar() {
                     height={20}
                     className="-ml-0.5"
                     alt="USA Flag"
+                    layout="fixed"
                     aria-hidden="true"
                   />
                   +1 (321) 312-0362
