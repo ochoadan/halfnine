@@ -15,20 +15,25 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: "/blog/posts",
+        source: "/blog/0",
         destination: "/blog",
-        permanent: false,
+        permanent: true,
       },
-      {
-        source: "/blog/author",
-        destination: "/blog",
-        permanent: false,
-      },
-      {
-        source: "/blog/category",
-        destination: "/blog",
-        permanent: false,
-      },
+      // {
+      //   source: "/blog/posts",
+      //   destination: "/blog",
+      //   permanent: false,
+      // },
+      // {
+      //   source: "/blog/author",
+      //   destination: "/blog",
+      //   permanent: false,
+      // },
+      // {
+      //   source: "/blog/category",
+      //   destination: "/blog",
+      //   permanent: false,
+      // },
       // {
       //   source: "/blog/:slug",
       //   destination: "/blog/posts/:slug",

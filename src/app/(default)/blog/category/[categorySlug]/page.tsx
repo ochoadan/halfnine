@@ -98,6 +98,7 @@ const Page = ({ params }: { params: { categorySlug: string } }) => {
           ))}
         </div>
       </div>
+
     </>
   );
 };

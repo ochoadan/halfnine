@@ -196,9 +196,9 @@ function PostPage({ params }: PostPageParams) {
         {/* </div>
         </aside> */}
       </div>
-      <div className="mx-auto w-full max-w-4xl items-start gap-x-8 px-4 py-10 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-4xl items-start gap-x-8 px-4 py-10 pb-16 sm:px-6 lg:px-8">
         <p className="font-bold mb-2 text-xl">Latest Posts:</p>
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className="grid sm:grid-cols-3 gap-4">
           {posts.map((postx: any) => (
             <div
               key={postx.id}
