@@ -165,15 +165,7 @@ export default function GlobalNavbar() {
   const isRootPage = pathname === "/";
 
   return (
-    <header
-      className={`sticky top-0 isolate w-full filter bg-white z-[100] ${
-        isRootPage || mobileMenuOpen
-          ? scrollPosition > 20
-            ? "shadow"
-            : ""
-          : "shadow"
-      }`}
-    >
+    <>
       <div className="bg-stone-50 h-6 hidden lg:block">
         <div className="flex mx-auto max-w-7xl text-center justify-end px-4 text-xs font-small lg:px-8 gap-x-5 rounded-md py-1 tracking-wide">
           <Link
@@ -200,64 +192,60 @@ export default function GlobalNavbar() {
             />
             <span className="leading-tight">contact@halfnine.com</span>
           </Link>
-          {/* <Link href='/contact' className="group">
-            <span className="inline-flex items-center rounded-md bg-gray-50 px-1.5 text-xs font-medium text-gray-800  group-hover:ring-blue-500/10 group-hover:text-blue-800 ">
-              Contact Form
-            </span>
-          </Link> */}
         </div>
       </div>
-      <div>
-        <nav
-          className="mx-auto max-w-7xl flex items-center justify-between p-4 lg:px-8"
-          aria-label="Global"
-        >
-          <div className="flex lg:flex-1">
-            {isRootPage ? (
-              <Logo />
-            ) : (
-              <Link href="/" className="-m-1.5 p-1.5">
-                <span className="sr-only">Halfnine LLC</span>
+      <header className="sticky top-0 isolate w-full filter bg-white z-[100] ring-1 ring-gray-900/5">
+        <div>
+          <nav
+            className="mx-auto max-w-7xl flex items-center justify-between p-4 lg:px-8"
+            aria-label="Global"
+          >
+            <div className="flex lg:flex-1">
+              {isRootPage ? (
                 <Logo />
-              </Link>
-            )}
-          </div>
-          <div className="flex lg:hidden gap-x-5">
-            <Link
-              type="button"
-              href="tel:+13213120362"
-              className="items-center rounded-md px-3 py-2 text-xs font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 text-gray-700 hover:text-blue-600"
-              aria-label="Call Halfnine LLC"
-            >
-              <span className="hidden md:inline-flex gap-x-1.5">
-                <Image
-                  src="/img/en.svg"
-                  width={20}
-                  height={20}
-                  className="-ml-0.5"
-                  alt="USA Flag"
-                  aria-hidden="true"
-                />
-                +1 (321) 312-0362
-              </span>
-              <PiPhone className="h-6 w-6 flex md:hidden hover:text-blue-800" />
-            </Link>
-            <button
-              type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-              onClick={() => setMobileMenuOpen(true)}
-            >
-              <span className="sr-only">Open main menu</span>
-              {mobileMenuOpen ? (
-                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
               ) : (
-                <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                <Link href="/" className="-m-1.5 p-1.5">
+                  <span className="sr-only">Halfnine LLC</span>
+                  <Logo />
+                </Link>
               )}
-            </button>
-          </div>
-          <Popover.Group className="hidden lg:flex lg:gap-x-10">
-            {/* <SolutionsPopover /> */}
-            {/* <Link
+            </div>
+            <div className="flex lg:hidden gap-x-5">
+              <Link
+                type="button"
+                href="tel:+13213120362"
+                className="items-center rounded-md px-3 py-2 text-xs font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 text-gray-700 hover:text-blue-600"
+                aria-label="Call Halfnine LLC"
+              >
+                <span className="hidden md:inline-flex gap-x-1.5">
+                  <Image
+                    src="/img/en.svg"
+                    width={20}
+                    height={20}
+                    className="-ml-0.5"
+                    alt="USA Flag"
+                    aria-hidden="true"
+                  />
+                  +1 (321) 312-0362
+                </span>
+                <PiPhone className="h-6 w-6 flex md:hidden hover:text-blue-800" />
+              </Link>
+              <button
+                type="button"
+                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                onClick={() => setMobileMenuOpen(true)}
+              >
+                <span className="sr-only">Open main menu</span>
+                {mobileMenuOpen ? (
+                  <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                ) : (
+                  <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                )}
+              </button>
+            </div>
+            <Popover.Group className="hidden lg:flex lg:gap-x-10">
+              {/* <SolutionsPopover /> */}
+              {/* <Link
               href="/process"
               className="font-semibold leading-6 text-gray-500 hover:text-gray-900 select-none"
             >
@@ -269,60 +257,60 @@ export default function GlobalNavbar() {
             >
               Costs
             </Link> */}
-            <Link
-              href="/about"
-              className="font-semibold leading-6 text-gray-500 hover:text-gray-900 select-none"
-            >
-              About
-            </Link>
-            <Link
-              href="/investors"
-              className="font-semibold leading-6 text-gray-500 hover:text-gray-900 select-none"
-            >
-              Investors
-            </Link>
-            <Link
-              href="/blog"
-              className="font-semibold leading-6 text-gray-500 hover:text-gray-900 select-none"
-            >
-              Blog
-            </Link>
-          </Popover.Group>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <Link
-            href='/contact'
-              // href="https://engagement.halfnine.com/"
-              // target="_blank"
-              className="select-none font-bold inline-flex items-center gap-x-1.5 rounded-md bg-brand-600 px-3 py-2 text-sm text-white shadow-sm hover:bg-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-              type="button"
-            >
-              Get Started
-            </Link>
-          </div>
-        </nav>
-      </div>
-      <Dialog
-        as="div"
-        className="lg:hidden"
-        open={mobileMenuOpen}
-        onClose={setMobileMenuOpen}
-      >
-        <div className="fixed inset-0 z-[102]" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 z-[103]">
-          <div className="flex items-center justify-end">
-            <button
-              type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-700"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              <span className="sr-only">Close menu</span>
-              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-            </button>
-          </div>
-          <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">
-                {/* <Link
+              <Link
+                href="/about"
+                className="font-semibold leading-6 text-gray-500 hover:text-gray-900 select-none"
+              >
+                About
+              </Link>
+              <Link
+                href="/investors"
+                className="font-semibold leading-6 text-gray-500 hover:text-gray-900 select-none"
+              >
+                Investors
+              </Link>
+              <Link
+                href="/blog"
+                className="font-semibold leading-6 text-gray-500 hover:text-gray-900 select-none"
+              >
+                Blog
+              </Link>
+            </Popover.Group>
+            <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+              <Link
+                href="/contact"
+                // href="https://engagement.halfnine.com/"
+                // target="_blank"
+                className="select-none font-bold inline-flex items-center gap-x-1.5 rounded-md bg-brand-600 px-3 py-2 text-sm text-white shadow-sm hover:bg-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                type="button"
+              >
+                Get Started
+              </Link>
+            </div>
+          </nav>
+        </div>
+        <Dialog
+          as="div"
+          className="lg:hidden"
+          open={mobileMenuOpen}
+          onClose={setMobileMenuOpen}
+        >
+          <div className="fixed inset-0 z-[102]" />
+          <Dialog.Panel className="fixed inset-y-0 right-0 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 z-[103]">
+            <div className="flex items-center justify-end">
+              <button
+                type="button"
+                className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <span className="sr-only">Close menu</span>
+                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+              </button>
+            </div>
+            <div className="mt-6 flow-root">
+              <div className="-my-6 divide-y divide-gray-500/10">
+                <div className="space-y-2 py-6">
+                  {/* <Link
                   href="/process"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   onClick={() => setMobileMenuOpen(false)}
@@ -336,41 +324,42 @@ export default function GlobalNavbar() {
                 >
                   Pricing
                 </Link> */}
-                <Link
-                  href="/about"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  About
-                </Link>
-                <Link
-                  href="/investors"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Investors
-                </Link>
-                <Link
-                  href="/blog"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Blog
-                </Link>
-              </div>
-              <div className="py-6">
-                <Link
-                  href="/contact"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Contact us
-                </Link>
+                  <Link
+                    href="/about"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    About
+                  </Link>
+                  <Link
+                    href="/investors"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Investors
+                  </Link>
+                  <Link
+                    href="/blog"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Blog
+                  </Link>
+                </div>
+                <div className="py-6">
+                  <Link
+                    href="/contact"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Contact us
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-        </Dialog.Panel>
-      </Dialog>
-    </header>
+          </Dialog.Panel>
+        </Dialog>
+      </header>
+    </>
   );
 }
