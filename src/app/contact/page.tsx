@@ -20,11 +20,22 @@ import Logo from "@/components/Global/Logo";
 
 import Cal, { getCalApi } from "@calcom/embed-react";
 
-import { BuildingOffice2Icon, EnvelopeIcon } from "@heroicons/react/24/outline";
+import { EnvelopeIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 import GlobalFooter from "@/components/Global/Footer";
 
 export default function Example() {
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi();
+      cal("ui", {
+        theme: "light",
+        styles: { branding: { brandColor: "#000000" } },
+        hideEventTypeDetails: false,
+        layout: "month_view",
+      });
+    })();
+  }, []);
   const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
