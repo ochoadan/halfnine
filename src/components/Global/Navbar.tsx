@@ -177,7 +177,7 @@ export default function GlobalNavbar() {
               src="/img/en.svg"
               alt="USA Flag"
               width={16}
-              height={16}
+              height={12}
               layout="fixed"
               aria-hidden="true"
             />
@@ -222,7 +222,7 @@ export default function GlobalNavbar() {
                   <Image
                     src="/img/en.svg"
                     width={20}
-                    height={20}
+                    height={15}
                     className="-ml-0.5"
                     alt="USA Flag"
                     layout="fixed"

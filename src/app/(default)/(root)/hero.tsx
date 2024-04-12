@@ -7,7 +7,7 @@ const RootHeading = () => {
     <>
       <div className="relative">
         <Image
-          className="absolute -z-10 select-none hidden lg:block -mt-32"
+          className="absolute -z-10 select-none hidden lg:block -mt-24"
           // className="absolute opacity-[0.1] -z-10"
           alt="Background"
           src="/img/index/indxbg.png"
