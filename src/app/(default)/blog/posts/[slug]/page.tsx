@@ -89,7 +89,7 @@ function PostPage({ params }: PostPageParams) {
                   (post.mediaData as { source_url: string }).source_url ||
                   "https://via.placeholder.com/640x400"
                 }
-                alt=""
+                alt={(post.mediaData as { alt_text: string }).alt_text}
               />
               <h1 className="text-4xl font-extrabold text-neutral-800 text-center">
                 {post.title.rendered}

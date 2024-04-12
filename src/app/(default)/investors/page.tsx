@@ -146,7 +146,7 @@ const Page = () => {
                 height={600}
                 className="aspect-[3/2] w-full rounded-2xl object-cover border-gray-200 border-2"
                 src="/img/index/investors1.jpg"
-                alt=""
+                alt="Infographic for Investors"
               />
               <p className="pt-1 text-base leading-7 text-gray-600 text-center">
                 Immersive technology is growing, but investing in the wrong
@@ -161,7 +161,7 @@ const Page = () => {
                 height={600}
                 className="aspect-[3/2] w-full rounded-2xl object-cover border-gray-200 border-2"
                 src="/img/index/investors2.jpg"
-                alt=""
+                alt="as string"
               />
               {/* <img className="aspect-[3/2] w-full rounded-2xl object-cover" src={"https://images.pexels.com/photos/20109536/pexels-photo-20109536/free-photo-of-a-person-holding-a-heart-shaped-snow-ball-in-their-hands.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"} alt="" /> */}
               <p className="pt-1 text-base leading-7 text-gray-600 text-center">
