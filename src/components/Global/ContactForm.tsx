@@ -149,7 +149,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                       onChange={handleInputChange}
                       placeholder="Name"
                       className={clsx(
-                        "pl-10 block w-full shadow-sm sm:text-sm rounded-md focus:border-transparent focus:ring-2",
+                        "pl-10 block w-full shadow-sm sm:text-sm rounded-lg focus:border-transparent focus:ring-2",
                         {
                           "border-red-300 focus:ring-red-500":
                             submitted && formErrors.name,
@@ -177,7 +177,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                       placeholder="Email"
                       // required
                       className={clsx(
-                        "pl-10 block w-full shadow-sm sm:text-sm rounded-md focus:border-transparent focus:ring-2",
+                        "pl-10 block w-full shadow-sm sm:text-sm rounded-lg focus:border-transparent focus:ring-2",
                         {
                           "border-red-300 focus:ring-red-500":
                             submitted && formErrors.email,
@@ -200,7 +200,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                       value={formData.company}
                       onChange={handleInputChange}
                       placeholder="Company"
-                      className="pl-10 block w-full shadow-sm sm:text-sm border-slate-200 rounded-md focus:border-transparent focus:ring-brand-500 focus:ring-2"
+                      className="pl-10 block w-full shadow-sm sm:text-sm border-slate-200 rounded-lg focus:border-transparent focus:ring-brand-500 focus:ring-2"
                     />
                   </div>
                 </div>
@@ -216,7 +216,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                       value={formData.phone}
                       onChange={handleInputChange}
                       placeholder="Phone"
-                      className="pl-10 block w-full shadow-sm sm:text-sm border-slate-200 rounded-md focus:border-transparent focus:ring-brand-500 focus:ring-2"
+                      className="pl-10 block w-full shadow-sm sm:text-sm border-slate-200 rounded-lg focus:border-transparent focus:ring-brand-500 focus:ring-2"
                     />
                   </div>
                 </div>
@@ -232,7 +232,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                   onChange={handleInputChange}
                   placeholder="Message"
                   className={clsx(
-                    "block min-h-[80px] w-full shadow-sm sm:text-sm rounded-md focus:border-transparent focus:ring-2",
+                    "block min-h-[80px] w-full shadow-sm sm:text-sm rounded-lg focus:border-transparent focus:ring-2",
                     {
                       "border-red-300 focus:ring-red-500":
                         submitted && formErrors.message,
@@ -244,7 +244,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
               </div>
               {submitted &&
                 (formErrors.name || formErrors.email || formErrors.message ? (
-                  <div className="rounded-md bg-red-50 border-red-200 border-[1px] px-4 py-3">
+                  <div className="rounded-lg bg-red-50 border-red-200 border-[1px] px-4 py-3">
                     <div className="flex">
                       <div className="flex-shrink-0">
                         <XCircleIcon
@@ -274,7 +274,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                   </div>
                 ) : (
                   messageSuccess && (
-                    <div className="rounded-md bg-green-50 border-green-200 border-[1px] px-4 py-3">
+                    <div className="rounded-lg bg-green-50 border-green-200 border-[1px] px-4 py-3">
                       <div className="flex">
                         <div className="flex-shrink-0">
                           <CheckCircleIcon
@@ -307,8 +307,8 @@ const ContactForm: React.FC<ContactFormProps> = ({
                 type="submit"
                 disabled={awaitingResponse}
                 className={clsx(
-                  // "bg-brand-600 flex rounded-md px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-slate-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500",
-                  "bg-brand-600 flex rounded-md px-12 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-500 mx-auto",
+                  // "bg-brand-600 flex rounded-lg px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-slate-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500",
+                  "bg-brand-600 flex rounded-lg px-12 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-500 mx-auto",
                   awaitingResponse &&
                   "bg-slate-400 select-none hover:bg-slate-400"
                 )}

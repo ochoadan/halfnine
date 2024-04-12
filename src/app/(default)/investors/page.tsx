@@ -92,8 +92,8 @@ const Page = () => {
               </p>
             </div>
             {/* <FadeIn className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg bg-gray-100 group"> */}
-            <div className="aspect-h-6 aspect-w-10 overflow-hidden rounded-lg bg-gray-100 group">
-              <g className="origin-center scale-100 transition duration-500 motion-safe:group-hover:scale-[1.03]">
+            <div className="aspect-h-6 aspect-w-10 overflow-hidden rounded-2xl bg-gray-100 group">
+              <g className="origin-center scale-100 transition duration-500 motion-safe:group-hover:scale-[1.02]">
                 <Image
                   src="https://images.pexels.com/photos/3943714/pexels-photo-3943714.jpeg"
                   alt="Cover Image"

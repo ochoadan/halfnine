@@ -19,7 +19,7 @@ const Page = ({ params }: { params: { categorySlug: string } }) => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 my-8">
         <Link
           href="/blog"
-          className="inline-flex items-center gap-x-1.5 rounded-md bg-brand-600 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600"
+          className="inline-flex items-center gap-x-1.5 rounded-lg bg-brand-600 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600"
         >
           <FaArrowLeft className="-ml-0.5 h-5 w-5" aria-hidden="true" />
           Back to Blog
@@ -49,7 +49,7 @@ const Page = ({ params }: { params: { categorySlug: string } }) => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 my-8">
         <Link
           href="/blog"
-          className="inline-flex items-center gap-x-1.5 rounded-md bg-brand-600 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600"
+          className="inline-flex items-center gap-x-1.5 rounded-lg bg-brand-600 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600"
         >
           <FaArrowLeft className="-ml-0.5 h-5 w-5" aria-hidden="true" />
           Back to Blog

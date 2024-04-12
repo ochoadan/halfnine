@@ -70,8 +70,8 @@ const Page = () => {
                 deliver a tangible return on investment for our clients.
               </p>
             </div>
-            <div className="aspect-h-6 aspect-w-10 overflow-hidden rounded-lg bg-gray-100 group">
-              <g className="origin-center scale-100 transition duration-500 motion-safe:group-hover:scale-[1.03]">
+            <div className="aspect-h-6 aspect-w-10 overflow-hidden rounded-2xl bg-gray-100 group">
+              <g className="origin-center scale-100 transition duration-500 motion-safe:group-hover:scale-[1.02]">
                 <Image
                   src="https://images.pexels.com/photos/8728380/pexels-photo-8728380.jpeg"
                   alt="Businesswomen Looking at a Document Folder"
@@ -174,7 +174,7 @@ const Page = () => {
                   <Link
                     href="https://surveyr.io"
                     target="_blank"
-                    className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                    className="rounded-lg bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                   >
                     Explore
                   </Link>
@@ -189,8 +189,8 @@ const Page = () => {
               </div>
               <div className="relative mt-16 h-80 lg:mt-8">
                 <Image
-                  // className="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
-                  className="absolute left-0 top-0 w-[57rem] max-w-none rounded-md"
+                  // className="absolute left-0 top-0 w-[57rem] max-w-none rounded-lg bg-white/5 ring-1 ring-white/10"
+                  className="absolute left-0 top-0 w-[57rem] max-w-none rounded-lg"
                   src="/img/about/FymHRtjXwAId1Rt.jpg"
                   alt="Surveyr App screenshot"
                   width={1824}
@@ -244,7 +244,7 @@ const Page = () => {
                   <Link
                     href="https://yourname.is"
                     target="_blank"
-                    className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                    className="rounded-lg bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                   >
                     Explore
                   </Link>
@@ -252,8 +252,8 @@ const Page = () => {
               </div>
               <div className="relative mt-16 h-80 lg:mt-8">
                 <Image
-                  // className="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
-                  className="absolute left-0 top-0 w-[57rem] max-w-none rounded-md"
+                  // className="absolute left-0 top-0 w-[57rem] max-w-none rounded-lg bg-white/5 ring-1 ring-white/10"
+                  className="absolute left-0 top-0 w-[57rem] max-w-none rounded-lg"
                   src="/img/about/abtimgx.png"
                   alt="Yourname.is App screenshot"
                   width={1824}

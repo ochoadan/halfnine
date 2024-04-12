@@ -316,7 +316,7 @@ export default function Services() {
                 key={category}
                 className={({ selected }) =>
                   clsx(
-                    "p-2 group flex rounded-md text-base leading-6 font-semibold text-left",
+                    "p-2 group flex rounded-lg text-base leading-6 font-semibold text-left",
                     selected
                       ? "bg-gray-50 text-brand-500 cursor-default"
                       : "text-gray-700 hover:text-brand-600"

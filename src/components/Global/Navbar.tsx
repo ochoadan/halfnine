@@ -167,7 +167,7 @@ export default function GlobalNavbar() {
   return (
     <>
       <div className="bg-stone-50 h-6 hidden lg:block">
-        <div className="flex mx-auto max-w-7xl text-center justify-end px-4 text-xs font-small lg:px-8 gap-x-5 rounded-md py-1 tracking-wide">
+        <div className="flex mx-auto max-w-7xl text-center justify-end px-4 text-xs font-small lg:px-8 gap-x-5 rounded-lg py-1 tracking-wide">
           <Link
             href="tel:+13213120362"
             className="hover:text-blue-800 inline-flex gap-x-1.5"
@@ -214,7 +214,7 @@ export default function GlobalNavbar() {
               <Link
                 type="button"
                 href="tel:+13213120362"
-                className="items-center rounded-md px-3 py-2 text-xs font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 text-gray-700 hover:text-blue-600"
+                className="items-center rounded-lg px-3 py-2 text-xs font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 text-gray-700 hover:text-blue-600"
                 aria-label="Call Halfnine LLC"
               >
                 <span className="hidden md:inline-flex gap-x-1.5">
@@ -232,7 +232,7 @@ export default function GlobalNavbar() {
               </Link>
               <button
                 type="button"
-                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                className="-m-2.5 inline-flex items-center justify-center rounded-lg p-2.5 text-gray-700"
                 onClick={() => setMobileMenuOpen(true)}
               >
                 <span className="sr-only">Open main menu</span>
@@ -281,10 +281,10 @@ export default function GlobalNavbar() {
                 href="/contact"
                 // href="https://engagement.halfnine.com/"
                 // target="_blank"
-                className="select-none font-bold inline-flex items-center gap-x-1.5 rounded-md bg-brand-600 px-3 py-2 text-sm text-white shadow-sm hover:bg-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                className="select-none font-bold inline-flex items-center gap-x-1.5 rounded-lg bg-brand-600 px-3 py-2 text-sm text-white shadow-sm hover:bg-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                 type="button"
               >
-                Get Started
+                Contact Us
               </Link>
             </div>
           </nav>
@@ -300,7 +300,7 @@ export default function GlobalNavbar() {
             <div className="flex items-center justify-end">
               <button
                 type="button"
-                className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                className="-m-2.5 rounded-lg p-2.5 text-gray-700"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span className="sr-only">Close menu</span>

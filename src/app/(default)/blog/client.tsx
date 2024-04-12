@@ -35,7 +35,7 @@ const Client = ({ posts, categories }: any) => {
                   <Link
                     key={category.id}
                     href={`/blog/category/${category.slug}`}
-                    className="inline-block px-3 py-1 text-sm font-semibold text-gray-900 bg-gray-200 rounded-md"
+                    className="inline-block px-3 py-1 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg"
                   >
                     {category.name}
                   </Link>
