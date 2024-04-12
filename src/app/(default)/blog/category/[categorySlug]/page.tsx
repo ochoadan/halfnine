@@ -5,6 +5,8 @@ import { notFound } from "next/navigation";
 import { use } from "react";
 import { FaArrowLeft } from "react-icons/fa6";
 
+export const revalidate = 1200;
+
 const Page = ({ params }: { params: { categorySlug: string } }) => {
   const category = use(wpService.getCategoriesBySlug(params.categorySlug));
 
