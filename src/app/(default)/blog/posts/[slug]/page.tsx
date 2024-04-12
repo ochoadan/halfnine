@@ -33,21 +33,21 @@ export async function generateMetadata({ params }: PostPageParams) {
     alternates: {
       canonical: `https://www.halfnine.com/blog/posts/${params.slug}`,
     },
-    openGraph: {
-      title: post.title.rendered,
-      description: post.description,
-      type: "article",
-      publishedTime: post.date,
-      authors: [(post.authorData as { name: string }).name],
-      images: [
-        {
-          url: (post.mediaData as { source_url: string }).source_url,
-          width: 800,
-          height: 400,
-          alt: post.title.rendered,
-        },
-      ],
-    },
+    // openGraph: {
+    //   title: post.title.rendered,
+    //   description: post.description,
+    //   type: "article",
+    //   publishedTime: post.date,
+    //   authors: [(post.authorData as { name: string }).name],
+    //   images: [
+    //     {
+    //       url: (post.mediaData as { source_url: string }).source_url,
+    //       width: 800,
+    //       height: 400,
+    //       alt: post.title.rendered,
+    //     },
+    //   ],
+    // },
   };
 }
 

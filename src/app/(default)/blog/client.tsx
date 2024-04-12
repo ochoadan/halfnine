@@ -5,7 +5,6 @@ import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
-import { Suspense } from "react";
 
 const Client = ({ posts, categories }: any) => {
   const searchParams = useSearchParams();
@@ -18,16 +17,15 @@ const Client = ({ posts, categories }: any) => {
 
   return (
     <>
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 my-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            From the blog
-          </h1>
-          <p className="mt-2 text-lg leading-8 text-gray-600">
-            Learn how to grow your business with our expert advice.
-          </p>
-        </div>
-        <Suspense fallback={<div>Loading...</div>}>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 my-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              From the blog
+            </h1>
+            <p className="mt-2 text-lg leading-8 text-gray-600">
+              Learn how to grow your business with our expert advice.
+            </p>
+          </div>
           {currentPage === 1 && (
             <>
               <div className="mt-12 mb-4 text-2xl font-bold">By Category:</div>
@@ -46,11 +44,9 @@ const Client = ({ posts, categories }: any) => {
               </div>
             </>
           )}
-        </Suspense>
 
-        <div className="mt-12 mb-4 text-2xl font-bold">Latest:</div>
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-          <Suspense fallback={<div>Loading...</div>}>
+          <div className="mt-12 mb-4 text-2xl font-bold">Latest:</div>
+          <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             {currentPosts.map((post: any) => (
               <div
                 key={post.id}
@@ -82,9 +78,7 @@ const Client = ({ posts, categories }: any) => {
                 </Link>
               </div>
             ))}
-          </Suspense>
-        </div>
-        <Suspense fallback={<div>Loading...</div>}>
+          </div>
           {totalPages > 1 && (
             <div className="flex justify-center mt-8">
               <Link
@@ -131,8 +125,7 @@ const Client = ({ posts, categories }: any) => {
               </Link>
             </div>
           )}
-        </Suspense>
-      </div>
+        </div>
     </>
   );
 };
