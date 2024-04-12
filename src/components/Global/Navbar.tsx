@@ -151,15 +151,15 @@ function SolutionsPopover() {
 
 export default function GlobalNavbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [scrollPosition, setScrollPosition] = useState(0);
+  // const [scrollPosition, setScrollPosition] = useState(0);
 
-  const handleScroll = () => {
-    const position = window.scrollY;
-    setScrollPosition(position);
-  };
-  if (typeof window !== "undefined") {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-  }
+  // const handleScroll = () => {
+  //   const position = window.scrollY;
+  //   setScrollPosition(position);
+  // };
+  // if (typeof window !== "undefined") {
+  //   window.addEventListener("scroll", handleScroll, { passive: true });
+  // }
 
   const pathname = usePathname();
   const isRootPage = pathname === "/";
