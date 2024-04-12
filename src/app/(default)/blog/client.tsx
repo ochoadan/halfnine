@@ -1,20 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
-import clsx from "clsx";
 
 const Client = ({ posts, categories }: any) => {
-  const searchParams = useSearchParams();
-  const limit = 9;
-  const totalPages = Math.ceil(posts.length / limit);
-  const currentPage = Number(searchParams.get("page")) || 1;
-  const startIndex = (currentPage - 1) * limit;
-  const endIndex = startIndex + limit;
-  const currentPosts = posts.slice(startIndex, endIndex);
-
   return (
     <>
         <div className="max-w-7xl mx-auto px-6 lg:px-8 my-8">
@@ -26,7 +15,7 @@ const Client = ({ posts, categories }: any) => {
               Learn how to grow your business with our expert advice.
             </p>
           </div>
-          {currentPage === 1 && (
+          {/* {currentPage === 1 && ( */}
             <>
               <div className="mt-12 mb-4 text-2xl font-bold">By Category:</div>
               <div className=" space-x-4">
@@ -43,11 +32,11 @@ const Client = ({ posts, categories }: any) => {
                 })}
               </div>
             </>
-          )}
+          {/* )} */}
 
           <div className="mt-12 mb-4 text-2xl font-bold">Latest:</div>
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-            {currentPosts.map((post: any) => (
+            {posts.map((post: any) => (
               <div
                 key={post.id}
                 className="flex flex-col items-start justify-between"
@@ -79,7 +68,7 @@ const Client = ({ posts, categories }: any) => {
               </div>
             ))}
           </div>
-          {totalPages > 1 && (
+          {/* {totalPages > 1 && (
             <div className="flex justify-center mt-8">
               <Link
                 href={`/blog?page=${currentPage - 1}`}
@@ -124,7 +113,7 @@ const Client = ({ posts, categories }: any) => {
                 <ChevronRightIcon className="w-5 h-5" />
               </Link>
             </div>
-          )}
+          )} */}
         </div>
     </>
   );

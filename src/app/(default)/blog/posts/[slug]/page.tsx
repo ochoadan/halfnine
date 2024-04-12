@@ -28,26 +28,46 @@ export async function generateMetadata({ params }: PostPageParams) {
   }
 
   return {
+    metadataBase: "https://www.halfnine.com",
     title: `${post.title.rendered} - Halfnine`,
     description: post.description,
     alternates: {
       canonical: `https://www.halfnine.com/blog/posts/${params.slug}`,
     },
-    // openGraph: {
-    //   title: post.title.rendered,
-    //   description: post.description,
-    //   type: "article",
-    //   publishedTime: post.date,
-    //   authors: [(post.authorData as { name: string }).name],
-    //   images: [
-    //     {
-    //       url: (post.mediaData as { source_url: string }).source_url,
-    //       width: 800,
-    //       height: 400,
-    //       alt: post.title.rendered,
-    //     },
-    //   ],
-    // },
+    openGraph: {
+      title: post.title.rendered,
+      description: post.description,
+      type: "article",
+      sitename: "Halfnine",
+      locale: "en_US",
+      publishedTime: post.date,
+      authors: [(post.authorData as { name: string }).name],
+      images: [
+        {
+          url: (post.mediaData as { source_url: string }).source_url,
+          width: 800,
+          height: 400,
+          alt: post.title.rendered,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title.rendered,
+      description: post.description,
+      siteId: "1591480775735709700",
+      creatorId: "1591480775735709700",
+      site: "@halfnine",
+      creator: "@halfnine",
+      images: [
+        {
+          url: (post.mediaData as { source_url: string }).source_url,
+          width: 800,
+          height: 400,
+          alt: post.title.rendered,
+        },
+      ],
+    },
   };
 }
 
@@ -122,7 +142,7 @@ function PostPage({ params }: PostPageParams) {
                       }`}
                       className="no-underline text-gray-500 text-sm font-thin"
                     > */}
-                      {(post.authorData as { name: string }).name}
+                    {(post.authorData as { name: string }).name}
                     {/* </Link> */}
                   </span>
                 </div>
@@ -179,10 +199,10 @@ function PostPage({ params }: PostPageParams) {
       <div className="mx-auto w-full max-w-4xl items-start gap-x-8 px-4 py-10 sm:px-6 lg:px-8">
         <p className="font-bold mb-2 text-xl">Latest Posts:</p>
         <div className="grid md:grid-cols-3 gap-4">
-            {posts.map((postx: any) => (
-              <div
-                key={postx.id}
-                className="flex flex-col items-start justify-between"
+          {posts.map((postx: any) => (
+            <div
+              key={postx.id}
+              className="flex flex-col items-start justify-between"
             >
               <Link href={`/blog/posts/${postx.slug}`}>
                 <div className="relative w-full">

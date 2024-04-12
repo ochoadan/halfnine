@@ -1,4 +1,4 @@
-import { Suspense, use } from "react";
+import { use } from "react";
 import wpService from "@/lib/wordpress/wp-service";
 import { Metadata } from "next";
 import Client from "./client";
@@ -15,9 +15,5 @@ export const revalidate = 1200;
 export default function Home() {
   const { posts } = use(wpService.getPosts());
   const categories = use(wpService.getCategories());
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <Client posts={posts} categories={categories} />
-    </Suspense>
-  );
+  return <Client posts={posts} categories={categories} />;
 }
