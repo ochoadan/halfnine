@@ -35,19 +35,19 @@ const Misc = () => {
         "Industry analysis",
       ],
     },
-    {
-      title: "Borrower Advisory: Navigate Financial Distress",
-      cost: "$15,000+",
-      description:
-        "Financial distress can be a daunting experience. Our experts work with borrowers to develop and execute strategic plans that address the root causes of distress. We provide guidance on liquidity management, operational improvement, and debt restructuring. Our goal is to help borrowers regain financial stability and achieve long-term success.",
-      offering: [
-        "Business viability assessment",
-        "Operational improvement",
-        "Liquidity management",
-        "Debt restructuring",
-        "Turnaround strategy development and execution",
-      ],
-    },
+    // {
+    //   title: "Borrower Advisory: Navigate Financial Distress",
+    //   cost: "$15,000+",
+    //   description:
+    //     "Financial distress can be a daunting experience. Our experts work with borrowers to develop and execute strategic plans that address the root causes of distress. We provide guidance on liquidity management, operational improvement, and debt restructuring. Our goal is to help borrowers regain financial stability and achieve long-term success.",
+    //   offering: [
+    //     "Business viability assessment",
+    //     "Operational improvement",
+    //     "Liquidity management",
+    //     "Debt restructuring",
+    //     "Turnaround strategy development and execution",
+    //   ],
+    // },
   ];
 
   return (

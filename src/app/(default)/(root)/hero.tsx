@@ -62,7 +62,7 @@ const Hero = () => {
             </div>
           </div>
           <Image
-            src="/img/undraw_data_re_80ws.svg"
+            src="/img/hero.svg"
             alt="Product screenshot"
             // className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[30rem] md:-ml-4 lg:-ml-0"
             width={700}
