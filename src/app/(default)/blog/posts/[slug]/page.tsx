@@ -45,9 +45,10 @@ export async function generateMetadata({ params }: PostPageParams) {
       authors: [(post.authorData as { name: string }).name],
       images: [
         {
-          url: (post.mediaData as { source_url: string }).source_url,
-          width: 800,
-          height: 400,
+          url: (post.mediaData as any).media_details.sizes["1536x1536"]
+            .source_url,
+          width: 1536,
+          height: 864,
           alt: post.title.rendered,
         },
       ],
@@ -62,9 +63,10 @@ export async function generateMetadata({ params }: PostPageParams) {
       creator: "@halfnine",
       images: [
         {
-          url: (post.mediaData as { source_url: string }).source_url,
-          width: 800,
-          height: 400,
+          url: (post.mediaData as any).media_details.sizes["1536x1536"]
+            .source_url,
+          width: 1536,
+          height: 864,
           alt: post.title.rendered,
         },
       ],
