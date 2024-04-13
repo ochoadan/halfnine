@@ -15,8 +15,19 @@ export const metadata: Metadata = {
 
 export const revalidate = 1200;
 
+export async function generateStaticParams() {
+  const { posts } = await wpService.getPosts({
+    per_page: 100,
+  });
+  const totalPages = Math.ceil(posts.length / 6);
+
+  return Array.from({ length: totalPages }).map((_, index) => ({
+    params: { pageNumber: index.toString() },
+  }));
+}
+
 export default function Home({ params }: { params: { pageNumber?: string } }) {
-  const { posts } = use(wpService.getPosts());
+  const { posts } = use(wpService.getPosts({ per_page: 100 }));
   const categories = use(wpService.getCategories());
   const pageNumber = parseInt(params.pageNumber || "0");
 

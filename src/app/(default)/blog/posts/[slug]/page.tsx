@@ -16,6 +16,7 @@ interface PostPageParams {
 async function getPostBySlug(slug: string) {
   const { posts } = await wpService.getPosts({
     slug: [slug],
+    per_page: 100,
   });
   return posts ? posts[0] : null;
 }

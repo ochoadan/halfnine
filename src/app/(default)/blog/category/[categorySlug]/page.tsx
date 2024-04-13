@@ -7,6 +7,13 @@ import { FaArrowLeft } from "react-icons/fa6";
 
 export const revalidate = 1200;
 
+export async function generateStaticParams() {
+  const categories = await wpService.getCategories();
+  return categories.map((category: { slug: any }) => ({
+    params: { categorySlug: category.slug },
+  }));
+}
+
 const Page = ({ params }: { params: { categorySlug: string } }) => {
   const category = use(wpService.getCategoriesBySlug(params.categorySlug));
 
@@ -98,7 +105,6 @@ const Page = ({ params }: { params: { categorySlug: string } }) => {
           ))}
         </div>
       </div>
-
     </>
   );
 };
