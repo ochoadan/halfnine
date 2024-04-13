@@ -105,14 +105,15 @@ function PostPage({ params }: PostPageParams) {
         <main className="flex-1 prose prose-neutral max-w-none">
           <div className="flex flex-col space-y-4">
             <div>
-              {/* {JSON.stringify(post.mediaData.source_url)} */}
+              {/* {JSON.stringify(post.mediaData.media_details.sizes["1536x1536"].source_url)} */}
               <Image
                 width={800}
                 height={400}
                 className="aspect-video rounded-2xl bg-gray-50 object-cover mx-auto mt-0 mb-8"
                 src={
-                  (post.mediaData as { source_url: string }).source_url ||
-                  "https://via.placeholder.com/640x400"
+                  // (post.mediaData as { source_url: string }).source_url ||
+                  (post.mediaData as any).media_details.sizes["1536x1536"]
+                    .source_url || "https://via.placeholder.com/640x400"
                 }
                 alt={(post.mediaData as { alt_text: string }).alt_text}
               />
