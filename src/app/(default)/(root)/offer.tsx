@@ -43,7 +43,7 @@ const StatsComponent = () => (
           key={index}
           className="flex flex-col p-5 transition-colors duration-200 rounded-2xl border-2 gap-1 bg-white text-center"
         >
-          <data.icon className="h-10 w-10 text-brand-700 self-center" aria-hidden="true" />
+          <data.icon className="h-10 w-10 text-brand-500 self-center" aria-hidden="true" />
           <dl>
             <dt className="text-lg font-bold">{data.title}</dt>
             <dd className="text-sm text-gray-700">{data.description}</dd>

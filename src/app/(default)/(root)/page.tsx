@@ -23,10 +23,10 @@ export const metadata: Metadata = {
 
 const Page = () => (
   <>
-    <div className="py-16 md:py-24 lg:py-36">
-      <RootHero />
-      <IdealClient />
-    </div>
+    {/* <div className="py-16 md:py-24 lg:py-36"> */}
+    <RootHero />
+    {/* <IdealClient />
+    </div> */}
     {[
       // RootClientLogoCloud,
       RootOffer,
