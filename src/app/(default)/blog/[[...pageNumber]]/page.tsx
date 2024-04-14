@@ -102,9 +102,10 @@ export default function Home({ params }: { params: { pageNumber?: string } }) {
                   <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
                 </div>
                 <div className="flex flex-col space-y-5">
-                  <h2 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600 line-clamp-2">
-                    {post.title.rendered}
-                  </h2>
+                  <h2
+                    className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600 line-clamp-2"
+                    dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+                  />
                   <span className="mt-5 line-clamp-2 text-sm leading-6 text-gray-600">
                     {post.description as React.ReactNode}
                   </span>
