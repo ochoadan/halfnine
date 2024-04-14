@@ -5,6 +5,37 @@ import Image from "next/image";
 import { redirect } from "next/navigation";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 
+export async function generateMetadata({
+  params,
+}: {
+  params: { pageNumber?: string };
+}) {
+  const pageNumber = parseInt(params.pageNumber || "0");
+  return {
+    title: `Blog ${pageNumber > 0 ? `Page ${pageNumber} ` : ""}`,
+    description:
+      "Learn more about Technology, Software Sales, and more on the Halfnine blog.",
+    alternates: {
+      canonical: `https://www.halfnine.com/blog${
+        pageNumber > 0 ? `/${pageNumber}` : ""
+      }`,
+    },
+  };
+}
+
+export const revalidate = 1200;
+
+export async function generateStaticParams() {
+  const { posts } = await wpService.getPosts({
+    per_page: 100,
+  });
+  const totalPages = Math.ceil(posts.length / 12);
+
+  return Array.from({ length: totalPages }).map((_, index) => ({
+    params: { pageNumber: index.toString() },
+  }));
+}
+
 export default function Home({ params }: { params: { pageNumber?: number } }) {
   const { posts } = use(wpService.getPosts({ per_page: 100 }));
   const categories = use(wpService.getCategories());
