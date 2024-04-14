@@ -119,9 +119,10 @@ function PostPage({ params }: PostPageParams) {
                 }
                 alt={(post.mediaData as { alt_text: string }).alt_text}
               />
-              <h1 className="text-4xl font-extrabold text-neutral-800 text-center">
-                {post.title.rendered}
-              </h1>
+              <h1
+                className="text-4xl font-extrabold text-neutral-800 text-center"
+                dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+              />
               <div className="relative py-2">
                 <div
                   className="absolute inset-0 flex items-center"
