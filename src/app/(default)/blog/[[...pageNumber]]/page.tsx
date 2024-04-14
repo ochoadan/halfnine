@@ -67,12 +67,12 @@ export default function Home({ params }: { params: { pageNumber?: string } }) {
           </p>
         </div>
         {pageNumber === 0 && (
-          <div className="flex justify-center space-x-4 my-4">
+          <div className="flex flex-wrap justify-center my-2">
             {categories.map((category: any) => (
               <Link
                 key={category.id}
                 href={`/blog/category/${category.slug}`}
-                className="inline-block px-3 py-1 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg"
+                className="inline-block px-3 py-1 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg m-2"
               >
                 {category.name}
               </Link>
