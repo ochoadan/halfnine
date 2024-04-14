@@ -6,7 +6,7 @@ import { CheckIcon } from "@heroicons/react/24/outline";
 import { Metadata } from "next";
 import Image from "next/image";
 export const metadata: Metadata = {
-  title: "Investors | Halfnine",
+  title: "Investors",
   description:
     "The tech industry is still growing and evolving, most companies are overvalued. Investing in the markets is a gamble. Don't gamble in tech anymore. Invest in responsible strategies that deliver results",
   alternates: { canonical: "https://www.halfnine.com/investors" },

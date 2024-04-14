@@ -21,7 +21,7 @@ export async function generateMetadata({
 }) {
   const category = await wpService.getCategoriesBySlug(params.categorySlug);
   return {
-    title: `Learn more about ${category[0].name} | Halfnine`,
+    title: `Learn more about ${category[0].name}`,
     description: category[0].description,
     alternates: {
       canonical: `https://www.halfnine.com/blog/category/${category[0].slug}`,

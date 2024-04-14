@@ -13,7 +13,7 @@ export async function generateMetadata({
 }) {
   const pageNumber = parseInt(params.pageNumber || "0");
   return {
-    title: `Blog ${pageNumber > 0 ? `Page ${pageNumber} ` : ""}| Halfnine`,
+    title: `Blog ${pageNumber > 0 ? `Page ${pageNumber} ` : ""}`,
     description:
       "Learn more about Technology, Software Sales, and more on the Halfnine blog.",
     alternates: {
