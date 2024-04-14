@@ -14,6 +14,21 @@ export async function generateStaticParams() {
   }));
 }
 
+export async function generateMetadata({
+  params,
+}: {
+  params: { categorySlug: string };
+}) {
+  const category = await wpService.getCategoriesBySlug(params.categorySlug);
+  return {
+    title: `Learn more about ${category[0].name} | Halfnine`,
+    description: category[0].description,
+    alternates: {
+      canonical: `https://www.halfnine.com/blog/category/${category[0].slug}`,
+    },
+  };
+}
+
 const Page = ({ params }: { params: { categorySlug: string } }) => {
   const category = use(wpService.getCategoriesBySlug(params.categorySlug));
 
@@ -21,7 +36,9 @@ const Page = ({ params }: { params: { categorySlug: string } }) => {
     return notFound();
   }
 
-  const categoryPosts = use(wpService.getPosts({ categories: category[0].id }));
+  const categoryPosts = use(
+    wpService.getPosts({ categories: category[0].id, per_page: 100 })
+  );
 
   if (categoryPosts.totalPages === 0) {
     return (
@@ -51,10 +68,6 @@ const Page = ({ params }: { params: { categorySlug: string } }) => {
 
   return (
     <>
-      {/* <div>{JSON.stringify(categoryPosts)}</div> */}
-      {/* <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-        {categoryPosts.posts.map((post: any) => (}
-        </div> */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 my-8">
         <Link
           href="/blog"
@@ -105,8 +118,58 @@ const Page = ({ params }: { params: { categorySlug: string } }) => {
           ))}
         </div>
       </div>
+      {/* <Pagination
+        currentPage={categoryPosts.currentPage}
+        totalPages={categoryPosts.totalPages}
+      /> */}
     </>
   );
 };
 
 export default Page;
+
+interface PaginationProps {
+  currentPage: number;
+  totalPages: number;
+}
+
+const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages }) => {
+  return (
+    <nav
+      className="isolate inline-flex -space-x-px rounded-md shadow-sm"
+      aria-label="Pagination"
+    >
+      {currentPage > 0 ? (
+        <Link
+          href={`/blog${currentPage > 1 ? `/${currentPage - 1}` : ""}`}
+          className="relative inline-flex items-center rounded-l-md px-3 py-3 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
+        >
+          <span className="sr-only">Previous Page</span>
+          <ChevronLeftIcon className="h-5 w-5" aria-hidden="true" />
+        </Link>
+      ) : (
+        <p className="relative inline-flex items-center rounded-l-md px-3 py-3 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 select-none cursor-not-allowed">
+          <ChevronLeftIcon className="h-5 w-5" aria-hidden="true" />
+        </p>
+      )}
+
+      <p className="relative inline-flex items-center px-6 py-3 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 focus:z-20 focus:outline-offset-0 select-none">
+        {currentPage}
+      </p>
+
+      {currentPage < totalPages - 1 ? (
+        <Link
+          href={`/blog/${currentPage + 1}`}
+          className="relative inline-flex items-center rounded-r-md px-3 py-3 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
+        >
+          <span className="sr-only">Next Page</span>
+          <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
+        </Link>
+      ) : (
+        <p className="relative inline-flex items-center rounded-r-md px-3 py-3 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 select-none cursor-not-allowed">
+          <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
+        </p>
+      )}
+    </nav>
+  );
+};

@@ -13,7 +13,7 @@ export async function generateMetadata({
 }) {
   const pageNumber = parseInt(params.pageNumber || "0");
   return {
-    title: `Blog ${pageNumber > 0 ? `Page ${pageNumber}` : ""}| Halfnine`,
+    title: `Blog ${pageNumber > 0 ? `Page ${pageNumber} ` : ""}| Halfnine`,
     description:
       "Learn more about Technology, Software Sales, and more on the Halfnine blog.",
     alternates: {
@@ -121,7 +121,7 @@ export default function Home({ params }: { params: { pageNumber?: string } }) {
           >
             {(pageNumber > 0 && (
               <Link
-                href={`/blog/${pageNumber - 1}`}
+                href={`/blog${pageNumber > 1 ? `/${pageNumber - 1}` : ""}`}
                 className="relative inline-flex items-center rounded-l-md px-3 py-3 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
               >
                 <span className="sr-only">Next Page</span>

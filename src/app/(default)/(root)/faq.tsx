@@ -19,7 +19,7 @@ const faqs = [
   {
     question: "How much does your service cost?",
     answer:
-      "The cost of our services will depend on the nature of your problems and the solutions we develop. We offer a range of pricing options to meet your needs and budget. We will work with you to develop a pricing plan that meets your needs and expectations. This means usually a fixed fee or a percentage of the value we create for you.",
+      "We offer two pricing options: a flat fee or a success-based fee. The flat fee option provides a fixed cost for our services, while the success-based fee is a percentage of the value we create for you. We will work with you to determine the best pricing option that meets your needs and budget.",
   },
   {
     question: "What makes you different from other consulting firms?",
