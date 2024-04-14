@@ -9,7 +9,7 @@ import logoYournameis from "@/images/logos/yournameis.svg";
 import logoCasente from "@/images/logos/casente.svg";
 
 export const metadata: Metadata = {
-  title: "Learn about how we empower your vision - Halfnine",
+  title: "Learn about how we empower your vision",
   description:
     "Halfnine emerged from a vision to assist businesses in leveraging technology solutions to transform opportunities and ideas into a reality.",
   alternates: { canonical: "https://www.halfnine.com/about" },

@@ -15,7 +15,7 @@ import RootServices from "./services";
 import RootClientLogoCloud from "./logocloud";
 
 export const metadata: Metadata = {
-  title: "Technology Company Restructuring and Turnaround Services - Halfnine",
+  title: "Technology Company Restructuring and Turnaround Services",
   description:
     "We help you stand out if you are experiencing the effects of a declining sales, increased competition, or consolidating markets. We deliver success to the struggling.",
   alternates: { canonical: "https://www.halfnine.com" },

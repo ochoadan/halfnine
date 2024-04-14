@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: PostPageParams) {
 
   return {
     metadataBase: "https://www.halfnine.com",
-    title: `${he.decode(post.title.rendered)} - Halfnine`,
+    title: `${he.decode(post.title.rendered)}`,
     description: post.description,
     alternates: {
       canonical: `https://www.halfnine.com/blog/posts/${params.slug}`,
@@ -335,7 +335,7 @@ export default PostPage;
 //   }
 
 //   return {
-//     title: `${post.title.rendered} - Halfnine`,
+//     title: `${post.title.rendered}`,
 //     description: post.excerpt.raw,
 //     alternates: { canonical: `https://www.halfnine.com/blog/posts/${params.slug}` },
 //   };
