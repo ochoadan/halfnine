@@ -50,7 +50,7 @@ export async function generateMetadata({ params }: PostPageParams) {
             .source_url,
           width: 1536,
           height: 864,
-          alt: he.decode(post.title.rendered),
+          alt: (post.mediaData as { alt_text: string }).alt_text,
         },
       ],
     },

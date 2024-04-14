@@ -91,8 +91,10 @@ export default function Home({ params }: { params: { pageNumber?: string } }) {
                 <div className="relative w-full">
                   <Image
                     src={
-                      post.mediaData.media_details.sizes.medium_large.source_url.toString() ||
-                      "https://via.placeholder.com/640x360"
+                      // post.mediaData.media_details.sizes.medium_large.source_url.toString() ||
+                      // "https://via.placeholder.com/640x360"
+                      (post.mediaData as any).media_details.sizes["1536x1536"]
+                        .source_url || "https://via.placeholder.com/640x400"
                     }
                     width={640}
                     height={360}
