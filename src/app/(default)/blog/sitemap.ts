@@ -35,7 +35,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
     ...posts.map((post) => ({
       url: `https://www.halfnine.com/blog/posts/${post.slug}`,
-      lastModified: new Date(post.date),
+      lastModified: new Date(post.modified_gmt),
       changeFrequency: "weekly",
       priority: 0.5,
     })),
