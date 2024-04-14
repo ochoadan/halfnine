@@ -1,50 +1,21 @@
 import { use, useMemo } from "react";
 import wpService from "@/lib/wordpress/wp-service";
-import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { redirect } from "next/navigation";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { pageNumber?: string };
-}) {
-  const pageNumber = parseInt(params.pageNumber || "0");
-  return {
-    title: `Blog ${pageNumber > 0 ? `Page ${pageNumber} ` : ""}`,
-    description:
-      "Learn more about Technology, Software Sales, and more on the Halfnine blog.",
-    alternates: {
-      canonical: `https://www.halfnine.com/blog${
-        pageNumber > 0 ? `/${pageNumber}` : ""
-      }`,
-    },
-  };
-}
-
-export const revalidate = 1200;
-
-export async function generateStaticParams() {
-  const { posts } = await wpService.getPosts({
-    per_page: 100,
-  });
-  const totalPages = Math.ceil(posts.length / 12);
-
-  return Array.from({ length: totalPages }).map((_, index) => ({
-    params: { pageNumber: index.toString() },
-  }));
-}
-
-export default function Home({ params }: { params: { pageNumber?: string } }) {
+export default function Home({ params }: { params: { pageNumber?: number } }) {
   const { posts } = use(wpService.getPosts({ per_page: 100 }));
   const categories = use(wpService.getCategories());
-  const pageNumber = parseInt(params.pageNumber || "0");
-
+  const pageNumber = params.pageNumber || 0;
   const totalPages = useMemo(() => Math.ceil(posts.length / 12), [posts]);
 
-  if (pageNumber < 0 || pageNumber >= totalPages) {
+  if (
+    (pageNumber !== 0 && isNaN(pageNumber)) ||
+    pageNumber < 0 ||
+    pageNumber >= totalPages
+  ) {
     redirect("/blog");
   }
 
@@ -157,40 +128,3 @@ export default function Home({ params }: { params: { pageNumber?: string } }) {
     </>
   );
 }
-
-// import { useMemo } from "react";
-// import wpService from "@/lib/wordpress/wp-service";
-// import { Metadata } from "next";
-// import Link from "next/link";
-// import Image from "next/image";
-// import { redirect } from "next/navigation";
-
-// export const metadata: Metadata = {
-//   title: "Blog | Halfnine",
-//   description:
-//     "Learn more about Technology, Software Sales, and more on the Halfnine blog.",
-//   alternates: { canonical: "https://www.halfnine.com/blog" },
-// };
-
-// export const revalidate = 1200;
-
-// export default function Home({ params }: { params: { pageNumber?: string } }) {
-//   const { posts } = use(wpService.getPosts());
-//   const categories = use(wpService.getCategories());
-//   const pageNumber = parseInt(params.pageNumber || "0");
-
-//   const totalPages = useMemo(() => Math.ceil(posts.length / 12), [posts]);
-
-//   if (pageNumber < 0 || pageNumber >= totalPages) {
-//     redirect("/blog");
-//   }
-
-//   const startIndex = pageNumber * 12;
-//   const endIndex = startIndex + 12;
-//   const paginatedPosts = useMemo(
-//     () => posts.slice(startIndex, endIndex),
-//     [posts, startIndex, endIndex]
-//   );
-
-//   return (
-//     <>
