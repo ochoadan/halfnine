@@ -128,48 +128,48 @@ const Page = ({ params }: { params: { categorySlug: string } }) => {
 
 export default Page;
 
-interface PaginationProps {
-  currentPage: number;
-  totalPages: number;
-}
+// interface PaginationProps {
+//   currentPage: number;
+//   totalPages: number;
+// }
 
-const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages }) => {
-  return (
-    <nav
-      className="isolate inline-flex -space-x-px rounded-md shadow-sm"
-      aria-label="Pagination"
-    >
-      {currentPage > 0 ? (
-        <Link
-          href={`/blog${currentPage > 1 ? `/${currentPage - 1}` : ""}`}
-          className="relative inline-flex items-center rounded-l-md px-3 py-3 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
-        >
-          <span className="sr-only">Previous Page</span>
-          <ChevronLeftIcon className="h-5 w-5" aria-hidden="true" />
-        </Link>
-      ) : (
-        <p className="relative inline-flex items-center rounded-l-md px-3 py-3 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 select-none cursor-not-allowed">
-          <ChevronLeftIcon className="h-5 w-5" aria-hidden="true" />
-        </p>
-      )}
+// const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages }) => {
+//   return (
+//     <nav
+//       className="isolate inline-flex -space-x-px rounded-md shadow-sm"
+//       aria-label="Pagination"
+//     >
+//       {currentPage > 0 ? (
+//         <Link
+//           href={`/blog${currentPage > 1 ? `/${currentPage - 1}` : ""}`}
+//           className="relative inline-flex items-center rounded-l-md px-3 py-3 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
+//         >
+//           <span className="sr-only">Previous Page</span>
+//           <ChevronLeftIcon className="h-5 w-5" aria-hidden="true" />
+//         </Link>
+//       ) : (
+//         <p className="relative inline-flex items-center rounded-l-md px-3 py-3 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 select-none cursor-not-allowed">
+//           <ChevronLeftIcon className="h-5 w-5" aria-hidden="true" />
+//         </p>
+//       )}
 
-      <p className="relative inline-flex items-center px-6 py-3 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 focus:z-20 focus:outline-offset-0 select-none">
-        {currentPage}
-      </p>
+//       <p className="relative inline-flex items-center px-6 py-3 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 focus:z-20 focus:outline-offset-0 select-none">
+//         {currentPage}
+//       </p>
 
-      {currentPage < totalPages - 1 ? (
-        <Link
-          href={`/blog/${currentPage + 1}`}
-          className="relative inline-flex items-center rounded-r-md px-3 py-3 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
-        >
-          <span className="sr-only">Next Page</span>
-          <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
-        </Link>
-      ) : (
-        <p className="relative inline-flex items-center rounded-r-md px-3 py-3 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 select-none cursor-not-allowed">
-          <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
-        </p>
-      )}
-    </nav>
-  );
-};
+//       {currentPage < totalPages - 1 ? (
+//         <Link
+//           href={`/blog/${currentPage + 1}`}
+//           className="relative inline-flex items-center rounded-r-md px-3 py-3 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
+//         >
+//           <span className="sr-only">Next Page</span>
+//           <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
+//         </Link>
+//       ) : (
+//         <p className="relative inline-flex items-center rounded-r-md px-3 py-3 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 select-none cursor-not-allowed">
+//           <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
+//         </p>
+//       )}
+//     </nav>
+//   );
+// };
