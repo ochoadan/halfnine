@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import wpService from "@/lib/wordpress/wp-service";
 import Image from "next/image";
 import Link from "next/link";
+import he from "he";
 
 export const revalidate = 1200;
 
@@ -30,13 +31,13 @@ export async function generateMetadata({ params }: PostPageParams) {
 
   return {
     metadataBase: "https://www.halfnine.com",
-    title: `${post.title.rendered} - Halfnine`,
+    title: `${he.decode(post.title.rendered)} - Halfnine`,
     description: post.description,
     alternates: {
       canonical: `https://www.halfnine.com/blog/posts/${params.slug}`,
     },
     openGraph: {
-      title: post.title.rendered,
+      title: he.decode(post.title.rendered),
       description: post.description,
       type: "article",
       sitename: "Halfnine",
@@ -49,13 +50,13 @@ export async function generateMetadata({ params }: PostPageParams) {
             .source_url,
           width: 1536,
           height: 864,
-          alt: post.title.rendered,
+          alt: he.decode(post.title.rendered),
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title.rendered,
+      title: he.decode(post.title.rendered),
       description: post.description,
       siteId: "1591480775735709700",
       creatorId: "1591480775735709700",
@@ -67,7 +68,7 @@ export async function generateMetadata({ params }: PostPageParams) {
             .source_url,
           width: 1536,
           height: 864,
-          alt: post.title.rendered,
+          alt: (post.mediaData as { alt_text: string }).alt_text,
         },
       ],
     },
