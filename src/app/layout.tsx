@@ -7,7 +7,7 @@ const fontSource = Wix_Madefor_Display({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "Technology Company Restructuring and Turnaround Services| Halfnine",
+    default: "Technology Company Restructuring and Turnaround Services | Halfnine",
     template: "%s | Halfnine",
   },
    description:
