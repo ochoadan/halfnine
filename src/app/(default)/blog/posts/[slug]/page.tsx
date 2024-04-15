@@ -104,14 +104,14 @@ function PostPage({ params }: PostPageParams) {
   return (
     <>
       {/* <div className="mx-auto flex w-full max-w-7xl items-start gap-x-8 px-4 py-10 sm:px-6 lg:px-8"> */}
-      <div className="mx-auto flex w-full max-w-3xl items-start gap-x-8 px-4 py-10 sm:px-6 lg:px-8">
-        <main className="flex-1 prose prose-neutral max-w-none">
+      <div className="mx-auto flex w-full max-w-[50rem] items-start gap-x-8 px-4 py-10 sm:px-6 lg:px-8">
+        <main className="flex-1 prose prose-lg text-[1.08rem] prose-neutral leading-relaxed max-w-none">
           <div className="flex flex-col space-y-4">
             <div>
               {/* {JSON.stringify(post.mediaData.media_details.sizes["1536x1536"].source_url)} */}
               <Image
-                width={800}
-                height={400}
+                width={740}
+                height={416.25}
                 className="aspect-video rounded-2xl bg-gray-50 object-cover mx-auto mt-0 mb-8"
                 src={
                   // (post.mediaData as { source_url: string }).source_url ||
