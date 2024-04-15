@@ -15,13 +15,13 @@ const features = [
   {
     name: "Beat Competition.",
     description:
-      "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
+      "We make you stand out in a competitive environment with strategic positioning.",
     icon: LockClosedIcon,
   },
   {
     name: "Market Dominance.",
     description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+      "We help you grow faster in a competitive and consolidating market.",
     icon: ServerIcon,
   },
 ];
