@@ -2,7 +2,7 @@ import wpService from "@/lib/wordpress/wp-service";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound, redirect } from "next/navigation";
-import { use, useMemo } from "react";
+import { use } from "react";
 import { FaArrowLeft } from "react-icons/fa6";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 
@@ -78,10 +78,7 @@ const Page = ({
 
   const pageNumber = params.pageNumber || 0;
 
-  const totalPages = useMemo(
-    () => Math.ceil(categoryPosts.posts.length / 12),
-    [categoryPosts.posts]
-  );
+  const totalPages = Math.ceil(categoryPosts.posts.length / 12);
 
   if (
     (pageNumber !== 0 && isNaN(pageNumber)) ||
@@ -93,10 +90,7 @@ const Page = ({
 
   const startIndex = pageNumber * 12;
   const endIndex = startIndex + 12;
-  const paginatedPosts = useMemo(
-    () => categoryPosts.posts.slice(startIndex, endIndex),
-    [categoryPosts.posts, startIndex, endIndex]
-  );
+  const paginatedPosts = categoryPosts.posts.slice(startIndex, endIndex);
 
   return (
     <>

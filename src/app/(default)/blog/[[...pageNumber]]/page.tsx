@@ -1,4 +1,4 @@
-import { use, useMemo } from "react";
+import { use } from "react";
 import wpService from "@/lib/wordpress/wp-service";
 import Link from "next/link";
 import Image from "next/image";
@@ -40,7 +40,7 @@ export default function Home({ params }: { params: { pageNumber?: number } }) {
   const { posts } = use(wpService.getPosts({ per_page: 100 }));
   const categories = use(wpService.getCategories());
   const pageNumber = params.pageNumber || 0;
-  const totalPages = useMemo(() => Math.ceil(posts.length / 12), [posts]);
+  const totalPages = Math.ceil(posts.length / 12);
 
   if (
     (pageNumber !== 0 && isNaN(pageNumber)) ||
@@ -52,10 +52,7 @@ export default function Home({ params }: { params: { pageNumber?: number } }) {
 
   const startIndex = pageNumber * 12;
   const endIndex = startIndex + 12;
-  const paginatedPosts = useMemo(
-    () => posts.slice(startIndex, endIndex),
-    [posts, startIndex, endIndex]
-  );
+  const paginatedPosts = posts.slice(startIndex, endIndex);
 
   return (
     <>
