@@ -115,7 +115,7 @@ function PostPage({ params }: PostPageParams) {
                 className="aspect-video rounded-2xl bg-gray-50 object-cover mx-auto mt-0 mb-8"
                 src={
                   // (post.mediaData as { source_url: string }).source_url ||
-                  (post.mediaData as any).media_details.sizes["1536x1536"]
+                  (post.mediaData as any).media_details.sizes.large
                     .source_url || "https://via.placeholder.com/640x400"
                 }
                 alt={(post.mediaData as { alt_text: string }).alt_text}
