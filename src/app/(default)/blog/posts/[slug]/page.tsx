@@ -5,6 +5,7 @@ import wpService from "@/lib/wordpress/wp-service";
 import Image from "next/image";
 import Link from "next/link";
 import he from "he";
+import { url } from "inspector";
 
 export const revalidate = 1200;
 
@@ -39,6 +40,7 @@ export async function generateMetadata({ params }: PostPageParams) {
     openGraph: {
       title: he.decode(post.title.rendered),
       description: post.description,
+      url: `https://www.halfnine.com/blog/posts/${params.slug}`,
       type: "article",
       sitename: "Halfnine",
       locale: "en_US",
@@ -46,10 +48,9 @@ export async function generateMetadata({ params }: PostPageParams) {
       authors: [(post.authorData as { name: string }).name],
       images: [
         {
-          url: (post.mediaData as any).media_details.sizes["1536x1536"]
-            .source_url,
-          width: 1536,
-          height: 864,
+          url: (post.mediaData as any).media_details.sizes.large.source_url,
+          width: 1024,
+          height: 576,
           alt: (post.mediaData as { alt_text: string }).alt_text,
         },
       ],
@@ -64,10 +65,9 @@ export async function generateMetadata({ params }: PostPageParams) {
       creator: "@halfnine",
       images: [
         {
-          url: (post.mediaData as any).media_details.sizes["1536x1536"]
-            .source_url,
-          width: 1536,
-          height: 864,
+          url: (post.mediaData as any).media_details.sizes.large.source_url,
+          width: 1024,
+          height: 576,
           alt: (post.mediaData as { alt_text: string }).alt_text,
         },
       ],
