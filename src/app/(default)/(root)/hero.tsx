@@ -35,6 +35,7 @@ const Hero = () => {
           <div className="lg:pr-8 lg:pt-4">
             <div className="lg:max-w-xl">
               <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                {/* We make tech grow and stand out in challanging markets. */}
                 We make you grow and stand out in challanging markets.
               </h1>
               {/* <p className="mt-6 text-lg leading-8 text-gray-600">
