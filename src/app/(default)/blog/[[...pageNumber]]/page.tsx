@@ -8,9 +8,9 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 export async function generateMetadata({
   params,
 }: {
-  params: { pageNumber?: string };
+  params: { pageNumber?: number };
 }) {
-  const pageNumber = parseInt(params.pageNumber || "0");
+  const pageNumber = params.pageNumber || 0;
   return {
     title: `Blog ${pageNumber > 0 ? `Page ${pageNumber} ` : ""}`,
     description:

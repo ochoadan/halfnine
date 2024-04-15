@@ -1,9 +1,10 @@
 import wpService from "@/lib/wordpress/wp-service";
 import Link from "next/link";
 import Image from "next/image";
-import { notFound } from "next/navigation";
-import { use } from "react";
+import { notFound, redirect } from "next/navigation";
+import { use, useMemo } from "react";
 import { FaArrowLeft } from "react-icons/fa6";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 
 export const revalidate = 1200;
 
@@ -17,19 +18,28 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { categorySlug: string };
+  params: { categorySlug: string; pageNumber?: number };
 }) {
+  const pageNumber = params.pageNumber || 0;
   const category = await wpService.getCategoriesBySlug(params.categorySlug);
   return {
-    title: `Learn more about ${category[0].name}`,
+    title: `Learn more about ${category[0].name}${
+      pageNumber > 0 ? ` category | Page ${pageNumber} ` : ""
+    }`,
     description: category[0].description,
     alternates: {
-      canonical: `https://www.halfnine.com/blog/category/${category[0].slug}`,
+      canonical: `https://www.halfnine.com/blog/category/${category[0].slug}${
+        pageNumber > 0 ? `/${pageNumber}` : ""
+      }`,
     },
   };
 }
 
-const Page = ({ params }: { params: { categorySlug: string } }) => {
+const Page = ({
+  params,
+}: {
+  params: { categorySlug: string; pageNumber?: number };
+}) => {
   const category = use(wpService.getCategoriesBySlug(params.categorySlug));
 
   if (!category || Object.keys(category).length === 0) {
@@ -66,6 +76,28 @@ const Page = ({ params }: { params: { categorySlug: string } }) => {
     );
   }
 
+  const pageNumber = params.pageNumber || 0;
+
+  const totalPages = useMemo(
+    () => Math.ceil(categoryPosts.posts.length / 12),
+    [categoryPosts.posts]
+  );
+
+  if (
+    (pageNumber !== 0 && isNaN(pageNumber)) ||
+    pageNumber < 0 ||
+    pageNumber >= totalPages
+  ) {
+    redirect(`/blog/category/${category[0].slug}`);
+  }
+
+  const startIndex = pageNumber * 12;
+  const endIndex = startIndex + 12;
+  const paginatedPosts = useMemo(
+    () => categoryPosts.posts.slice(startIndex, endIndex),
+    [categoryPosts.posts, startIndex, endIndex]
+  );
+
   return (
     <>
       <div className="max-w-7xl mx-auto px-6 lg:px-8 my-8">
@@ -85,7 +117,7 @@ const Page = ({ params }: { params: { categorySlug: string } }) => {
           </p>
         </div>
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3 mt-12">
-          {categoryPosts.posts.map((post: any) => (
+          {paginatedPosts.map((post: any) => (
             <div
               key={post.id}
               className="flex flex-col items-start justify-between"
@@ -116,6 +148,46 @@ const Page = ({ params }: { params: { categorySlug: string } }) => {
               </Link>
             </div>
           ))}
+        </div>
+        <div className="flex justify-center mt-8">
+          <nav
+            className="isolate inline-flex -space-x-px rounded-md shadow-sm"
+            aria-label="Pagination"
+          >
+            {(pageNumber > 0 && (
+              <Link
+                href={`/blog/category/${category[0].slug}${
+                  pageNumber > 1 ? `/${pageNumber - 1}` : ""
+                }`}
+                className="relative inline-flex items-center rounded-l-md px-3 py-3 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
+              >
+                <span className="sr-only">Next Page</span>
+                <ChevronLeftIcon className="h-5 w-5" aria-hidden="true" />
+              </Link>
+            )) || (
+              <p className="relative inline-flex items-center rounded-l-md px-3 py-3 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 select-none cursor-not-allowed">
+                {/* <span className="sr-only">Next Page</span> */}
+                <ChevronLeftIcon className="h-5 w-5" aria-hidden="true" />
+              </p>
+            )}
+            <p className="relative inline-flex items-center px-6 py-3 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 focus:z-20 focus:outline-offset-0 select-none">
+              {pageNumber}
+            </p>
+            {(pageNumber < totalPages - 1 && (
+              <Link
+                href={`/blog/category/${category[0].slug}/${pageNumber + 1}`}
+                className="relative inline-flex items-center rounded-r-md px-3 py-3 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
+              >
+                <span className="sr-only">Next Page</span>
+                <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
+              </Link>
+            )) || (
+              <p className="relative inline-flex items-center rounded-r-md px-3 py-3 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 select-none cursor-not-allowed">
+                {/* <span className="sr-only">Next Page</span> */}
+                <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
+              </p>
+            )}
+          </nav>
         </div>
       </div>
       {/* <Pagination
