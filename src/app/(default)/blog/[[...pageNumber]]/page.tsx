@@ -10,7 +10,7 @@ export async function generateMetadata({
 }: {
   params: { pageNumber?: number };
 }) {
-  const pageNumber = params.pageNumber || 0;
+  const pageNumber = parseInt(String(params.pageNumber)) || 0;
   return {
     title: `Blog ${pageNumber > 0 ? `Page ${pageNumber} ` : ""}`,
     description:
@@ -39,7 +39,7 @@ export async function generateStaticParams() {
 export default function Home({ params }: { params: { pageNumber?: number } }) {
   const { posts } = use(wpService.getPosts({ per_page: 100 }));
   const categories = use(wpService.getCategories());
-  const pageNumber = params.pageNumber || 0;
+  const pageNumber = parseInt(String(params.pageNumber)) || 0;
   const totalPages = Math.ceil(posts.length / 12);
 
   if (

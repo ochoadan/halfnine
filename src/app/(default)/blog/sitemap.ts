@@ -47,6 +47,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const { slug, totalPages } = page;
     return Array.from({ length: totalPages }, (_, index) => {
       const pageNumber = index + 1;
+      // const pageNumber = parseInt(String(index + 1));
+
       const url = `https://www.halfnine.com/blog/category/${slug}/${pageNumber}`;
       return { url, changeFrequency: "weekly", priority: 0.5 };
     });

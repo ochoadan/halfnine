@@ -20,7 +20,7 @@ export async function generateMetadata({
 }: {
   params: { categorySlug: string; pageNumber?: number };
 }) {
-  const pageNumber = params.pageNumber || 0;
+  const pageNumber = parseInt(String(params.pageNumber)) || 0;
   const category = await wpService.getCategoriesBySlug(params.categorySlug);
   return {
     title: `Learn more about ${category[0].name}${
@@ -76,7 +76,7 @@ const Page = ({
     );
   }
 
-  const pageNumber = params.pageNumber || 0;
+  const pageNumber = parseInt(String(params.pageNumber)) || 0;
 
   const totalPages = Math.ceil(categoryPosts.posts.length / 12);
 
