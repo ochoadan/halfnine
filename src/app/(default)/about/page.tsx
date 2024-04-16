@@ -54,7 +54,7 @@ const Page = () => {
           <div className="grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2 mx-auto max-w-2xl lg:max-w-none">
             <div>
               <h2 className="text-4xl font-bold text-gray-900">
-                Redefining your vision
+                Achieving your vision
                 <hr className="border-brand-600 opacity-90 border-b-[2px] w-20 my-2" />
               </h2>
               <p className="mt-4 text-gray-500">
@@ -75,9 +75,9 @@ const Page = () => {
                 <Image
                   src="https://images.pexels.com/photos/8728380/pexels-photo-8728380.jpeg"
                   alt="Businesswomen Looking at a Document Folder"
-                  className="object-cover object-center"
-                  width={900}
-                  height={600}
+                  className="object-cover object-center -hue-rotate-60 grayscale-[0.3]"
+                  width={600}
+                  height={900}
                 />
               </g>
             </div>
