@@ -6,6 +6,19 @@ import Image from "next/image";
 const Misc = () => {
   const data = [
     {
+      title: "Startup Advisory: Accelerate Growth",
+      cost: "$10,000+",
+      description:
+        "Startups face unique challenges as they navigate the complexities of growth. Our experts provide strategic guidance to help startups achieve their full potential. We offer tailored solutions to optimize capital access, mitigate risks, and improve overall performance.",
+      offering: [
+        "Business plan development",
+        "Financial modeling",
+        "Market analysis",
+        "Capital structure optimization",
+        "Risk mitigation strategies",
+      ],
+    },
+    {
       title: "Company Advisory: Revitalize the Business",
       cost: "$20,000+",
       description:

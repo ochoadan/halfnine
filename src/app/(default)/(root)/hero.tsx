@@ -34,9 +34,10 @@ const Hero = () => {
         <div className="grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2 mx-auto max-w-2xl lg:max-w-none">
           <div className="lg:pr-8 lg:pt-4">
             <div className="lg:max-w-xl">
-              <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              <h1 className="mt-2 text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                 {/* We make tech grow and stand out in challanging markets. */}
-                We make you grow and stand out in challanging markets.
+                {/* We make you grow and stand out in challanging markets. */}
+                Unleashing your potential in challanging markets.
               </h1>
               {/* <p className="mt-6 text-lg leading-8 text-gray-600">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -44,7 +45,7 @@ const Hero = () => {
                 cupiditate blanditiis ratione.
               </p> */}
               <p className="text-base font-semibold leading-7 text-brand-600 mt-4">
-                3x more growth than average marketing campaigns.
+                3x your revenue in only 6 to 12 months.
               </p>
               <dl className="mt-6 max-w-xl space-y-6 text-base leading-7 text-gray-600 lg:max-w-none">
                 {features.map((feature) => (
