@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 import wpService from "@/lib/wordpress/wp-service";
 
-export const revalidate = 4000;
+export const revalidate = 3600;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const response = await wpService.getPosts({ per_page: 100 });

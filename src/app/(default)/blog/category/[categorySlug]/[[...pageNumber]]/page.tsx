@@ -10,7 +10,7 @@ import {
   HomeIcon,
 } from "@heroicons/react/20/solid";
 
-export const revalidate = 1200;
+export const revalidate = 3600;
 
 export async function generateStaticParams() {
   const categories = await wpService.getCategories();
