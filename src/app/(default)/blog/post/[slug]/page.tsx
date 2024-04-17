@@ -35,12 +35,12 @@ export async function generateMetadata({ params }: PostPageParams) {
     title: `${he.decode(post.title.rendered)}`,
     description: post.description,
     alternates: {
-      canonical: `https://www.halfnine.com/blog/posts/${params.slug}`,
+      canonical: `https://www.halfnine.com/blog/post/${params.slug}`,
     },
     openGraph: {
       title: he.decode(post.title.rendered),
       description: post.description,
-      url: `https://www.halfnine.com/blog/posts/${params.slug}`,
+      url: `https://www.halfnine.com/blog/post/${params.slug}`,
       type: "article",
       sitename: "Halfnine",
       locale: "en_US",
@@ -166,7 +166,7 @@ function PostPage({ params }: PostPageParams) {
               {posts.slice(0, 10).map((postx) => (
                 <div key={postx.id}>
                   <Link
-                    href={`/blog/posts/${postx.slug}`}
+                    href={`/blog/post/${postx.slug}`}
                     className="no-underline text-gray-700 font-base"
                   >
                     <p>{postx.title.rendered}</p>
@@ -192,7 +192,7 @@ function PostPage({ params }: PostPageParams) {
                 .map((postx) => (
                   <Link
                     key={postx.id}
-                    href={`/blog/posts/${postx.slug}`}
+                    href={`/blog/post/${postx.slug}`}
                     className="no-underline text-gray-700 font-semibold"
                   >
                     <p>{postx.title.rendered}</p>
@@ -210,7 +210,7 @@ function PostPage({ params }: PostPageParams) {
               key={postx.id}
               className="flex flex-col items-start justify-between"
             >
-              <Link href={`/blog/posts/${postx.slug}`}>
+              <Link href={`/blog/post/${postx.slug}`}>
                 <div className="relative w-full">
                   <Image
                     src={
@@ -239,7 +239,7 @@ function PostPage({ params }: PostPageParams) {
         {/* {posts.map((postx: any) => (
           <div key={postx.id}>
             <Link
-              href={`/blog/posts/${postx.slug}`}
+              href={`/blog/post/${postx.slug}`}
               className="no-underline text-gray-700 font-base"
             >
               <div className="relative w-full">
@@ -337,7 +337,7 @@ export default PostPage;
 //   return {
 //     title: `${post.title.rendered}`,
 //     description: post.excerpt.raw,
-//     alternates: { canonical: `https://www.halfnine.com/blog/posts/${params.slug}` },
+//     alternates: { canonical: `https://www.halfnine.com/blog/post/${params.slug}` },
 //   };
 // }
 

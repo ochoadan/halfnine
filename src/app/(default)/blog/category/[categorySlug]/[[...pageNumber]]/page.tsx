@@ -120,7 +120,7 @@ const Page = ({
               key={post.id}
               className="flex flex-col items-start justify-between"
             >
-              <Link href={`/blog/posts/${post.slug}`}>
+              <Link href={`/blog/post/${post.slug}`}>
                 <div className="relative w-full">
                   <Image
                     src={
