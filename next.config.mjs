@@ -34,11 +34,11 @@ const nextConfig = {
       //   destination: "/blog",
       //   permanent: false,
       // },
-      // {
-      //   source: "/blog/:slug",
-      //   destination: "/blog/posts/:slug",
-      //   permanent: true,
-      // },
+      {
+        source: "/blog/posts/:slug",
+        destination: "/blog/post/:slug",
+        permanent: true,
+      },
     ];
   },
 };

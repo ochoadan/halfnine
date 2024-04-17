@@ -4,7 +4,11 @@ import Image from "next/image";
 import { notFound, redirect } from "next/navigation";
 import { use } from "react";
 import { FaArrowLeft } from "react-icons/fa6";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
+import {
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  HomeIcon,
+} from "@heroicons/react/20/solid";
 
 export const revalidate = 1200;
 
@@ -94,7 +98,7 @@ const Page = ({
 
   return (
     <>
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 my-8">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 my-4">
         <Link
           href="/blog"
           className="inline-flex items-center gap-x-1.5 rounded-lg bg-brand-600 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600"
