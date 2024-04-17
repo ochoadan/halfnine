@@ -1,8 +1,17 @@
 User-agent: *
-Disallow: /contact
 Disallow: /contact/
-Disallow: /img/index/indxbg.png
-Disallow: /img/svg/hero-pattern.svg
+
+# AI bots
+User-agent: GPTBot
+Disallow: /
+User-agent: ChatGPT-User
+Disallow: /
+# User-agent: Google-Extended
+# Disallow: /
+User-agent: CCBot
+Disallow: /
+User-agent: PerplexityBot
+Disallow: /
 
 # Begin block Bad-Robots from robots.txt
 User-agent: asterias
