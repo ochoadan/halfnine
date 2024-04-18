@@ -335,7 +335,7 @@ export default function Services() {
                   {Object.keys(categories)[idx]}
                   <hr className="border-brand-600 opacity-90 border-b-[2px] w-20 my-2" />
                 </h2>
-                <p>{posts.description}</p>
+                <p>{he.decode(posts.description)}</p>
                 <ul role="list" className="mt-6 gap-4 flex flex-wrap">
                   {posts.features.map((feature: any) => (
                     <li key={feature.name}>

@@ -33,13 +33,13 @@ export async function generateMetadata({ params }: PostPageParams) {
   return {
     metadataBase: "https://www.halfnine.com",
     title: `${he.decode(post.title.rendered)}`,
-    description: post.description,
+    description: he.decode(post.description as string),
     alternates: {
       canonical: `https://www.halfnine.com/blog/post/${params.slug}`,
     },
     openGraph: {
       title: he.decode(post.title.rendered),
-      description: post.description,
+      description: he.decode(post.description as string),
       url: `https://www.halfnine.com/blog/post/${params.slug}`,
       type: "article",
       sitename: "Halfnine",
@@ -58,7 +58,7 @@ export async function generateMetadata({ params }: PostPageParams) {
     twitter: {
       card: "summary_large_image",
       title: he.decode(post.title.rendered),
-      description: post.description,
+      description: he.decode(post.description as string),
       siteId: "1591480775735709700",
       creatorId: "1591480775735709700",
       site: "@halfnine",
@@ -226,10 +226,10 @@ function PostPage({ params }: PostPageParams) {
                 </div>
                 <div className="flex flex-col space-y-5">
                   <h2 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600 line-clamp-2">
-                    {postx.title.rendered}
+                    {he.decode(postx.title.rendered)}
                   </h2>
                   <span className="mt-5 line-clamp-2 text-sm leading-6 text-gray-600">
-                    {postx.description as React.ReactNode}
+                    {he.decode(postx.description as string)}
                   </span>
                 </div>
               </Link>

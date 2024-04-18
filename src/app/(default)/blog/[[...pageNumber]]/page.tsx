@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { redirect } from "next/navigation";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+import he from "he";
 
 export async function generateMetadata({
   params,
@@ -106,7 +107,7 @@ export default function Home({ params }: { params: { pageNumber?: number } }) {
                     dangerouslySetInnerHTML={{ __html: post.title.rendered }}
                   />
                   <span className="mt-5 line-clamp-2 text-sm leading-6 text-gray-600">
-                    {post.description as React.ReactNode}
+                    {he.decode(post.description as string)}
                   </span>
                 </div>
               </Link>
