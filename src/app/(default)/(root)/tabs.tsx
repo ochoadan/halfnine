@@ -5,6 +5,7 @@ import { Tab } from "@headlessui/react";
 import { CheckCircleIcon } from "@heroicons/react/20/solid";
 import { FadeIn, FadeInStagger } from "@/components/Global/FadeIn";
 import clsx from "clsx";
+import he from "he";
 
 export default function Services() {
   let [categories] = useState({
@@ -335,7 +336,7 @@ export default function Services() {
                   {Object.keys(categories)[idx]}
                   <hr className="border-brand-600 opacity-90 border-b-[2px] w-20 my-2" />
                 </h2>
-                <p>{he.decode(posts.description)}</p>
+                <p>{posts.description}</p>
                 <ul role="list" className="mt-6 gap-4 flex flex-wrap">
                   {posts.features.map((feature: any) => (
                     <li key={feature.name}>
