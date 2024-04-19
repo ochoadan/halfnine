@@ -3,7 +3,6 @@ import getPostBySlug from "@/lib/queries/getPostBySlug";
 import getAllRedirects from "@/lib/queries/getRedirects";
 import he from "he";
 import { notFound, redirect } from "next/navigation";
-import { title } from "process";
 import sanitizeHtml from "sanitize-html";
 import slugify from "slugify";
 import Image from "next/image";
@@ -47,7 +46,7 @@ export async function generateStaticParams() {
     (redirect: { origin: string }) => slugify(redirect.origin)
   );
   return [...postsSlugs, ...redirectSlugs].map((slug) => ({
-    params: { slug },
+    slug,
   }));
 }
 
