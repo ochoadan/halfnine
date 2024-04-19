@@ -1,3 +1,4 @@
+import { ApolloWrapper } from "@/components/Global/ApolloWrapper";
 import Script from "next/script";
 
 function GoogleAnalytics() {
@@ -36,10 +37,10 @@ function Hotjar() {
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <>
+    <ApolloWrapper>
       <GoogleAnalytics />
       <Hotjar />
       {children}
-    </>
+    </ApolloWrapper>
   );
 }

@@ -9,6 +9,7 @@ import {
   ChevronRightIcon,
   HomeIcon,
 } from "@heroicons/react/20/solid";
+import he from "he";
 
 export const revalidate = 3600;
 
@@ -140,7 +141,7 @@ const Page = ({
                     dangerouslySetInnerHTML={{ __html: post.title.rendered }}
                   />
                   <span className="mt-5 line-clamp-2 text-sm leading-6 text-gray-600">
-                    {post.description as React.ReactNode}
+                    {he.decode(post.description as string)}
                   </span>
                 </div>
               </Link>

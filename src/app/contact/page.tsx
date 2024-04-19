@@ -1,16 +1,8 @@
 "use client";
 
-import { Fragment, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-import { Dialog, Popover, Transition } from "@headlessui/react";
-import {
-  Bars3Icon,
-  CheckCircleIcon,
-  XCircleIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
-import { HiOutlineEnvelope } from "react-icons/hi2";
-import { PiPhone } from "react-icons/pi";
+import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/24/outline";
 
 import { PhoneIcon } from "@heroicons/react/20/solid";
 

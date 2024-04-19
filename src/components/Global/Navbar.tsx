@@ -4,7 +4,6 @@ import { Fragment, useState } from "react";
 
 import { Dialog, Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { HiOutlineEnvelope } from "react-icons/hi2";
 import { PiPhone } from "react-icons/pi";
 
 import {
@@ -21,10 +20,8 @@ import {
   FaCode,
   FaHeadset,
   FaRegCompass,
-  FaRegFileCode,
+  FaRegEnvelope,
   FaRegIdCard,
-  FaRegLifeRing,
-  FaUsersGear,
 } from "react-icons/fa6";
 
 const products = [
@@ -186,7 +183,7 @@ export default function GlobalNavbar() {
             href="mailto:contact@halfnine.com"
             className="hover:text-blue-800 inline-flex gap-x-1.5"
           >
-            <HiOutlineEnvelope
+            <FaRegEnvelope
               className="h-4 w-4 text-gray-800"
               aria-hidden="true"
             />
