@@ -1,4 +1,3 @@
-import getAllPosts from "@/lib/queries/getAllPosts";
 import getPostBySlug from "@/lib/queries/getPostBySlug";
 import getAllRedirects from "@/lib/queries/getRedirects";
 import he from "he";
@@ -6,6 +5,8 @@ import { notFound, redirect } from "next/navigation";
 import sanitizeHtml from "sanitize-html";
 import slugify from "slugify";
 import Image from "next/image";
+import getAllSlugs from "@/lib/queries/getAllSlugs";
+import { Post } from "@/lib/types";
 
 export const revalidate = 3600;
 
@@ -39,13 +40,12 @@ async function returnPostPage(params: { slug: string }) {
   return { ...post, description };
 }
 export async function generateStaticParams() {
-  const posts = await getAllPosts();
-  const postsSlugs = posts.map((post) => post.slug);
-  const redirects = await getAllRedirects();
-  const redirectSlugs = redirects.redirection.redirects.map(
+  const response = await getAllSlugs();
+  const postSlugs = response.posts.nodes.map((post: Post) => post.slug);
+  const redirectSlugs = response.redirection.redirects.map(
     (redirect: { origin: string }) => slugify(redirect.origin)
   );
-  return [...postsSlugs, ...redirectSlugs].map((slug) => ({
+  return [...postSlugs, ...redirectSlugs].map((slug) => ({
     slug,
   }));
 }

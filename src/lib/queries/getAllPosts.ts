@@ -27,12 +27,6 @@ export default async function getAllPosts() {
           }
         }
       },
-      redirection {
-        redirects {
-          origin
-          target
-        }
-      }
     }
   `;
 
