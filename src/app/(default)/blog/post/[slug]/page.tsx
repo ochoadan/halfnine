@@ -41,23 +41,14 @@ async function returnPostPage(params: { slug: string }) {
 }
 export async function generateStaticParams() {
   const posts = await getAllPosts();
+  const postsSlugs = posts.map((post) => post.slug);
   const redirects = await getAllRedirects();
   const redirectSlugs = redirects.redirection.redirects.map(
     (redirect: { origin: string }) => slugify(redirect.origin)
   );
-  return posts
-    .map((post) => ({
-      params: {
-        slug: post.slug,
-      },
-    }))
-    .concat(
-      redirectSlugs.map((slug: string) => ({
-        params: {
-          slug: slug,
-        },
-      }))
-    );
+  return [...postsSlugs, ...redirectSlugs].map((slug) => ({
+    params: { slug },
+  }));
 }
 
 export async function generateMetadata({ params }: PostPageParams) {
