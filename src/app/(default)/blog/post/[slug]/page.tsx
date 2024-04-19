@@ -100,6 +100,21 @@ export async function generateMetadata({ params }: PostPageParams) {
 
 const Page = async ({ params }: PostPageParams) => {
   const post = await returnPostPage(params);
+
+  function addNofollowContent(content: string) {
+    content = content.replace(
+      /<a[^>]*href=["|'](http[^"']*)["|'][^>]*>(.*?)<\/a>/gi,
+      function (match, p1, p2) {
+        if (p1.indexOf("halfnine.com") === -1) {
+          return `<a href="${p1}" rel="nofollow" target="_blank">${p2}</a>`;
+        } else {
+          return `<a href="${p1}" target="_blank">${p2}</a>`;
+        }
+      }
+    );
+    return content;
+  }
+
   return (
     <>
       {/* <div className="mx-auto flex w-full max-w-7xl items-start gap-x-8 px-4 py-10 sm:px-6 lg:px-8"> */}
@@ -153,7 +168,11 @@ const Page = async ({ params }: PostPageParams) => {
                   </span>
                 </div>
               </div>
-              <div dangerouslySetInnerHTML={{ __html: post.content }} />
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: addNofollowContent(post.content),
+                }}
+              />
             </div>
           </div>
         </main>
