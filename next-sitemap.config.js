@@ -7,6 +7,8 @@ module.exports = {
     "/contact",
     "/dev",
     "/contact/*",
+    "/blog/",
+    "/blog/*",
     "/blog/post/*",
     "/blog/sitemap.xml",
   ],
