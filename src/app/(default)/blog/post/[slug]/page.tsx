@@ -37,7 +37,7 @@ export async function generateStaticParams() {
   const redirectSlugs = response.redirection.redirects.map(
     (redirect: { origin: string }) => slugify(redirect.origin)
   );
-  return [...postSlugs].map((slug) => ({
+  return [...postSlugs, ...redirectSlugs].map((slug) => ({
     slug,
   }));
 }
@@ -102,7 +102,6 @@ const Page = async ({ params }: PostPageParams) => {
     const redirectUrl = `https://www.halfnine.com/blog/post/${targetSlug}`;
     redirect(redirectUrl);
   }
-
   const post = await returnPostPage(params);
 
   function addNofollowContent(content: string) {
