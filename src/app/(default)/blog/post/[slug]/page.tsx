@@ -21,17 +21,6 @@ async function slugsFetcher() {
 }
 
 async function returnPostPage(params: { slug: string }) {
-  const response = await slugsFetcher();
-  const redirectMatch = response.redirection.redirects.find(
-    (redirect: { origin: string }) => slugify(redirect.origin) === params.slug
-  );
-  if (redirectMatch) {
-    const targetSlug = slugify(
-      redirectMatch.target.replace(/.*hyleon.com\//, "")
-    );
-    const redirectUrl = `https://www.halfnine.com/blog/post/${targetSlug}`;
-    redirect(redirectUrl);
-  }
   const post = await getPostBySlug(params.slug);
   const description = sanitizeHtml(post.excerpt.replace(/\n/g, ""), {
     allowedTags: [],
@@ -40,7 +29,6 @@ async function returnPostPage(params: { slug: string }) {
   if (!post) {
     return notFound();
   }
-  // const title = he.decode(post.title);
   return { ...post, description };
 }
 export async function generateStaticParams() {
@@ -49,7 +37,7 @@ export async function generateStaticParams() {
   const redirectSlugs = response.redirection.redirects.map(
     (redirect: { origin: string }) => slugify(redirect.origin)
   );
-  return [...postSlugs, ...redirectSlugs].map((slug) => ({
+  return [...postSlugs].map((slug) => ({
     slug,
   }));
 }
@@ -103,6 +91,18 @@ export async function generateMetadata({ params }: PostPageParams) {
 }
 
 const Page = async ({ params }: PostPageParams) => {
+  const response = await slugsFetcher();
+  const redirectMatch = response.redirection.redirects.find(
+    (redirect: { origin: string }) => slugify(redirect.origin) === params.slug
+  );
+  if (redirectMatch) {
+    const targetSlug = slugify(
+      redirectMatch.target.replace(/.*hyleon.com\//, "")
+    );
+    const redirectUrl = `https://www.halfnine.com/blog/post/${targetSlug}`;
+    redirect(redirectUrl);
+  }
+
   const post = await returnPostPage(params);
 
   function addNofollowContent(content: string) {
