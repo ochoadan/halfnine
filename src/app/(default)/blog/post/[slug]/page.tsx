@@ -6,6 +6,7 @@ import slugify from "slugify";
 import Image from "next/image";
 import { Post } from "@/lib/types";
 import he from "he";
+import getAllRedirects from "@/lib/queries/getRedirects";
 
 export const revalidate = 3600;
 
@@ -13,11 +14,6 @@ interface PostPageParams {
   params: {
     slug: string;
   };
-}
-
-async function slugsFetcher() {
-  const response = await getAllSlugs();
-  return response;
 }
 
 async function returnPostPage(params: { slug: string }) {
@@ -32,7 +28,7 @@ async function returnPostPage(params: { slug: string }) {
   return { ...post, description };
 }
 export async function generateStaticParams() {
-  const response = await slugsFetcher();
+  const response = await getAllSlugs();
   const postSlugs = response.posts.nodes.map((post: Post) => post.slug);
   const redirectSlugs = response.redirection.redirects.map(
     (redirect: { origin: string }) => slugify(redirect.origin)
@@ -91,8 +87,9 @@ export async function generateMetadata({ params }: PostPageParams) {
 }
 
 const Page = async ({ params }: PostPageParams) => {
-  const response = await slugsFetcher();
-  const redirectMatch = response.redirection.redirects.find(
+  const redirectResponse = await getAllRedirects();
+
+  const redirectMatch = redirectResponse.redirection.redirects.find(
     (redirect: { origin: string }) => slugify(redirect.origin) === params.slug
   );
   if (redirectMatch) {
