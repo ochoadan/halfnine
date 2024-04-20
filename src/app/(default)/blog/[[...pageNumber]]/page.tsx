@@ -1,10 +1,26 @@
-import { use } from "react";
-import wpService from "@/lib/wordpress/wp-service";
 import Link from "next/link";
 import Image from "next/image";
 import { redirect } from "next/navigation";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
-import he from "he";
+import getAllPostsForBlogPages from "@/lib/queries/getAllPostsForBlogPages";
+
+export const revalidate = 3600;
+
+async function returnPostPage() {
+  const response = await getAllPostsForBlogPages();
+
+  return response;
+}
+
+export async function generateStaticParams() {
+  const response = await returnPostPage();
+
+  const totalPages = Math.ceil(response.length / 12);
+  const pageNumbers = Array.from({ length: totalPages }, (_, index) => index);
+  return pageNumbers.map((pageNum) => ({
+      pageNumber: [String(pageNum)],
+  }));
+}
 
 export async function generateMetadata({
   params,
@@ -24,24 +40,16 @@ export async function generateMetadata({
   };
 }
 
-export const revalidate = 3600;
-
-export async function generateStaticParams() {
-  const { posts } = await wpService.getPosts({
-    per_page: 100,
-  });
-  const totalPages = Math.ceil(posts.length / 12);
-
-  return Array.from({ length: totalPages }).map((_, index) => ({
-    params: { pageNumber: index.toString() },
-  }));
-}
-
-export default function Home({ params }: { params: { pageNumber?: number } }) {
-  const { posts } = use(wpService.getPosts({ per_page: 100 }));
-  const categories = use(wpService.getCategories());
+export default async function Home({
+  params,
+}: {
+  params: { pageNumber?: number };
+}) {
   const pageNumber = parseInt(String(params.pageNumber)) || 0;
-  const totalPages = Math.ceil(posts.length / 12);
+
+  const response = await returnPostPage();
+
+  const totalPages = Math.ceil(response.length / 12);
 
   if (
     (pageNumber !== 0 && isNaN(pageNumber)) ||
@@ -53,7 +61,7 @@ export default function Home({ params }: { params: { pageNumber?: number } }) {
 
   const startIndex = pageNumber * 12;
   const endIndex = startIndex + 12;
-  const paginatedPosts = posts.slice(startIndex, endIndex);
+  const paginatedPosts = response.slice(startIndex, endIndex);
 
   return (
     <>
@@ -66,7 +74,7 @@ export default function Home({ params }: { params: { pageNumber?: number } }) {
             Learn how to grow your business with our expert advice.
           </p>
         </div>
-        {pageNumber === 0 && (
+        {/* {pageNumber === 0 && (
           <div className="flex flex-wrap justify-center my-2">
             {categories.map((category: any) => (
               <Link
@@ -78,7 +86,7 @@ export default function Home({ params }: { params: { pageNumber?: number } }) {
               </Link>
             ))}
           </div>
-        )}
+        )} */}
 
         <div className="mt-8 mb-4 text-2xl font-bold">Latest:</div>
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
@@ -91,12 +99,12 @@ export default function Home({ params }: { params: { pageNumber?: number } }) {
                 <div className="relative w-full">
                   <Image
                     src={
-                      post.mediaData.media_details.sizes.medium_large.source_url.toString() ||
+                      post.featuredImage.node.sourceUrl ||
                       "https://via.placeholder.com/640x360"
                     }
                     width={640}
                     height={360}
-                    alt={post.mediaData.alt_text as string}
+                    alt={"post"}
                     className="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
                   />
                   <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
@@ -104,10 +112,10 @@ export default function Home({ params }: { params: { pageNumber?: number } }) {
                 <div className="flex flex-col space-y-5">
                   <h2
                     className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600 line-clamp-2"
-                    dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+                    dangerouslySetInnerHTML={{ __html: post.title }}
                   />
                   <span className="mt-5 line-clamp-2 text-sm leading-6 text-gray-600">
-                    {he.decode(post.description as string)}
+                    {post.description}
                   </span>
                 </div>
               </Link>

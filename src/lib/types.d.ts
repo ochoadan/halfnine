@@ -86,6 +86,7 @@ export interface SearchResults {
         }
       }
     }
+    description?: string,
     databaseId: string
     date: string
     modified: string
