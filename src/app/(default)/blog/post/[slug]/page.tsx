@@ -5,6 +5,7 @@ import sanitizeHtml from "sanitize-html";
 import slugify from "slugify";
 import Image from "next/image";
 import { Post } from "@/lib/types";
+import he from "he";
 
 export const revalidate = 3600;
 
@@ -59,13 +60,13 @@ export async function generateMetadata({ params }: PostPageParams) {
   return {
     metadataBase: "https://www.halfnine.com",
     title: post.title,
-    description: post.description,
+    description: he.decode(post.description),
     alternates: {
       canonical: `https://www.halfnine.com/blog/post/${params.slug}`,
     },
     openGraph: {
       title: post.title,
-      description: post.description,
+      description: he.decode(post.description),
       url: `https://www.halfnine.com/blog/post/${params.slug}`,
       type: "article",
       sitename: "Halfnine",
@@ -84,7 +85,7 @@ export async function generateMetadata({ params }: PostPageParams) {
     twitter: {
       card: "summary_large_image",
       title: post.title,
-      description: post.description,
+      description: he.decode(post.description),
       siteId: "1591480775735709700",
       creatorId: "1591480775735709700",
       site: "@halfnine",

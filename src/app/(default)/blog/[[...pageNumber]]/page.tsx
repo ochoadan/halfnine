@@ -3,6 +3,7 @@ import Image from "next/image";
 import { redirect } from "next/navigation";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import getAllPostsForBlogPages from "@/lib/queries/getAllPostsForBlogPages";
+import he from "he";
 
 export const revalidate = 3600;
 
@@ -106,7 +107,7 @@ export default async function Home({
                     }
                     width={640}
                     height={360}
-                    alt={"post"}
+                    alt={post.featuredImage.node.altText}
                     className="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
                   />
                   <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
@@ -117,7 +118,7 @@ export default async function Home({
                     dangerouslySetInnerHTML={{ __html: post.title }}
                   />
                   <span className="mt-5 line-clamp-2 text-sm leading-6 text-gray-600">
-                    {post.description}
+                    {he.decode(post.description)}
                   </span>
                 </div>
               </Link>
