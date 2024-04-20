@@ -46,6 +46,7 @@ const Page = ({
   params: { categorySlug: string; pageNumber?: number };
 }) => {
   const category = use(wpService.getCategoriesBySlug(params.categorySlug));
+  const pageLenght = 15;
 
   if (!category || Object.keys(category).length === 0) {
     return notFound();
@@ -83,7 +84,7 @@ const Page = ({
 
   const pageNumber = parseInt(String(params.pageNumber)) || 0;
 
-  const totalPages = Math.ceil(categoryPosts.posts.length / 12);
+  const totalPages = Math.ceil(categoryPosts.posts.length / pageLenght);
 
   if (
     (pageNumber !== 0 && isNaN(pageNumber)) ||
@@ -93,8 +94,8 @@ const Page = ({
     redirect(`/blog/category/${category[0].slug}`);
   }
 
-  const startIndex = pageNumber * 12;
-  const endIndex = startIndex + 12;
+  const startIndex = pageNumber * pageLenght;
+  const endIndex = startIndex + pageLenght;
   const paginatedPosts = categoryPosts.posts.slice(startIndex, endIndex);
 
   return (

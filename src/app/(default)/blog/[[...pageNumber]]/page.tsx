@@ -18,7 +18,7 @@ export async function generateStaticParams() {
   const totalPages = Math.ceil(response.length / 12);
   const pageNumbers = Array.from({ length: totalPages }, (_, index) => index);
   return pageNumbers.map((pageNum) => ({
-      pageNumber: [String(pageNum)],
+    pageNumber: [String(pageNum)],
   }));
 }
 
@@ -49,7 +49,9 @@ export default async function Home({
 
   const response = await returnPostPage();
 
-  const totalPages = Math.ceil(response.length / 12);
+  const pageLenght = 15;
+
+  const totalPages = Math.ceil(response.length / pageLenght);
 
   if (
     (pageNumber !== 0 && isNaN(pageNumber)) ||
@@ -59,8 +61,8 @@ export default async function Home({
     redirect("/blog");
   }
 
-  const startIndex = pageNumber * 12;
-  const endIndex = startIndex + 12;
+  const startIndex = pageNumber * pageLenght;
+  const endIndex = startIndex + pageLenght;
   const paginatedPosts = response.slice(startIndex, endIndex);
 
   return (

@@ -4,11 +4,12 @@ import wpService from "@/lib/wordpress/wp-service";
 export const revalidate = 3600;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const pageLenght = 15;
   const response = await wpService.getPosts({ per_page: 100 });
   const { posts } = response;
 
   const blogPages = Array.from(
-    { length: Math.ceil(posts.length / 12) - 1 },
+    { length: Math.ceil(posts.length / pageLenght) - 1 },
     (_, index) => index + 1
   );
 
@@ -27,7 +28,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const pagesForEachCategory = postForEachCategory.map((result: any) => {
     const { posts } = result.value || { posts: [] };
-    const totalPages = Math.max(Math.ceil(posts.length / 12) - 1, 0);
+    const totalPages = Math.max(Math.ceil(posts.length / pageLenght) - 1, 0);
     return { slug: result.value?.category, totalPages };
   });
 
