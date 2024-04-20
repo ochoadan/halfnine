@@ -1,11 +1,9 @@
 import getPostBySlug from "@/lib/queries/getPostBySlug";
-import getAllRedirects from "@/lib/queries/getRedirects";
-import he from "he";
+import getAllSlugs from "@/lib/queries/getAllSlugs";
 import { notFound, redirect } from "next/navigation";
 import sanitizeHtml from "sanitize-html";
 import slugify from "slugify";
 import Image from "next/image";
-import getAllSlugs from "@/lib/queries/getAllSlugs";
 import { Post } from "@/lib/types";
 
 export const revalidate = 3600;
@@ -16,9 +14,14 @@ interface PostPageParams {
   };
 }
 
+async function slugsFetcher() {
+  const response = await getAllSlugs();
+  return response;
+}
+
 async function returnPostPage(params: { slug: string }) {
-  const redirectResponse = await getAllRedirects();
-  const redirectMatch = redirectResponse.redirection.redirects.find(
+  const response = await slugsFetcher();
+  const redirectMatch = response.redirection.redirects.find(
     (redirect: { origin: string }) => slugify(redirect.origin) === params.slug
   );
   if (redirectMatch) {
@@ -40,7 +43,7 @@ async function returnPostPage(params: { slug: string }) {
   return { ...post, description };
 }
 export async function generateStaticParams() {
-  const response = await getAllSlugs();
+  const response = await slugsFetcher();
   const postSlugs = response.posts.nodes.map((post: Post) => post.slug);
   const redirectSlugs = response.redirection.redirects.map(
     (redirect: { origin: string }) => slugify(redirect.origin)
@@ -61,7 +64,7 @@ export async function generateMetadata({ params }: PostPageParams) {
       canonical: `https://www.halfnine.com/blog/post/${params.slug}`,
     },
     openGraph: {
-      title: he.decode(post.title),
+      title: post.title,
       description: post.description,
       url: `https://www.halfnine.com/blog/post/${params.slug}`,
       type: "article",
@@ -80,7 +83,7 @@ export async function generateMetadata({ params }: PostPageParams) {
     },
     twitter: {
       card: "summary_large_image",
-      title: he.decode(post.title),
+      title: post.title,
       description: post.description,
       siteId: "1591480775735709700",
       creatorId: "1591480775735709700",
