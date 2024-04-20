@@ -6,7 +6,6 @@ import slugify from "slugify";
 import Image from "next/image";
 import { Post } from "@/lib/types";
 import he from "he";
-import getAllRedirects from "@/lib/queries/getRedirects";
 
 export const revalidate = 3600;
 
@@ -16,19 +15,27 @@ interface PostPageParams {
   };
 }
 
+async function slugsFetcher() {
+  const response = await getAllSlugs();
+  return response;
+}
+
 async function returnPostPage(params: { slug: string }) {
   const post = await getPostBySlug(params.slug);
-  const description = post?.excerpt ? sanitizeHtml(post.excerpt.replace(/\n/g, ""), {
-    allowedTags: [],
-    allowedAttributes: {},
-  }) : "";
+  // TODO: Fix Post exeprt to be always required
+  const description = post?.excerpt
+    ? sanitizeHtml(post.excerpt.replace(/\n/g, ""), {
+        allowedTags: [],
+        allowedAttributes: {},
+      })
+    : "Error: Missing Description";
   if (!post) {
     return notFound();
   }
   return { ...post, description };
 }
 export async function generateStaticParams() {
-  const response = await getAllSlugs();
+  const response = await slugsFetcher();
   const postSlugs = response.posts.nodes.map((post: Post) => post.slug);
   const redirectSlugs = response.redirection.redirects.map(
     (redirect: { origin: string }) => slugify(redirect.origin)
@@ -87,11 +94,11 @@ export async function generateMetadata({ params }: PostPageParams) {
 }
 
 const Page = async ({ params }: PostPageParams) => {
-  const redirectResponse = await getAllRedirects();
-
-  const redirectMatch = redirectResponse.redirection.redirects.find(
+  const response = await slugsFetcher();
+  const redirectMatch = response.redirection.redirects.find(
     (redirect: { origin: string }) => slugify(redirect.origin) === params.slug
   );
+
   if (redirectMatch) {
     const targetSlug = slugify(
       redirectMatch.target.replace(/.*hyleon.com\//, "")
@@ -99,6 +106,7 @@ const Page = async ({ params }: PostPageParams) => {
     const redirectUrl = `https://www.halfnine.com/blog/post/${targetSlug}`;
     redirect(redirectUrl);
   }
+
   const post = await returnPostPage(params);
 
   function addNofollowContent(content: string) {
