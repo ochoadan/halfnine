@@ -18,10 +18,10 @@ interface PostPageParams {
 
 async function returnPostPage(params: { slug: string }) {
   const post = await getPostBySlug(params.slug);
-  const description = sanitizeHtml(post.excerpt.replace(/\n/g, ""), {
+  const description = post?.excerpt ? sanitizeHtml(post.excerpt.replace(/\n/g, ""), {
     allowedTags: [],
     allowedAttributes: {},
-  });
+  }) : "";
   if (!post) {
     return notFound();
   }
