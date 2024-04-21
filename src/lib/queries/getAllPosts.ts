@@ -7,7 +7,7 @@ import { Post } from "@/lib/types";
 export default async function getAllPosts() {
   const query = `
     query GetAllPosts {
-      posts(where: {status: PUBLISH}, first: 100000) {
+      posts(where: {status: PUBLISH}, first: 10000000) {
         nodes {
           databaseId
           date
