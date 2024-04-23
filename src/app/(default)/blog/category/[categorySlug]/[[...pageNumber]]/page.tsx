@@ -7,7 +7,6 @@ import Image from "next/image";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 import he from "he";
 import sanitizeHtml from "sanitize-html";
-import page from "../../../dev/page";
 
 const pageLenght = 15;
 
