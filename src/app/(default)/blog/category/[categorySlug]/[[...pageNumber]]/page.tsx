@@ -1,23 +1,44 @@
-import wpService from "@/lib/wordpress/wp-service";
+import getCategoryData from "@/lib/queries/getCategoryData";
+import getAllSlugs from "@/lib/queries/getAllSlugs";
 import Link from "next/link";
-import Image from "next/image";
 import { notFound, redirect } from "next/navigation";
-import { use } from "react";
 import { FaArrowLeft } from "react-icons/fa6";
-import {
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  HomeIcon,
-} from "@heroicons/react/20/solid";
+import Image from "next/image";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 import he from "he";
+import sanitizeHtml from "sanitize-html";
+import page from "../../../dev/page";
 
-export const revalidate = 3600;
+const pageLenght = 15;
+
+async function fetchCategoryData(categorySlug: string) {
+  const response = await getCategoryData(categorySlug);
+
+  return response;
+}
 
 export async function generateStaticParams() {
-  const categories = await wpService.getCategories();
-  return categories.map((category: { slug: any }) => ({
-    params: { categorySlug: category.slug },
-  }));
+  const response = await getAllSlugs();
+  const totalPagesPerCategory = response.categories.edges.map(
+    (category: any) => {
+      const totalPages = Math.ceil(category.node.count / pageLenght);
+      return Array.from({ length: totalPages }, (_, index) => ({
+        categorySlug: category.node.slug,
+        pageNumber: index,
+      }));
+    }
+  );
+  const pageNumbers = totalPagesPerCategory
+    .flat()
+    .map(({ categorySlug, pageNumber }: { categorySlug: string, pageNumber?: number }) => ({
+      categorySlug ,
+      pageNumber: pageNumber === 0 ? undefined : [String(pageNumber)],
+    }))
+    .map(({ categorySlug, pageNumber }: { categorySlug: string, pageNumber?: number }) => ({
+      categorySlug,
+      pageNumber,
+    }));
+  return pageNumbers;
 }
 
 export async function generateMetadata({
@@ -26,37 +47,33 @@ export async function generateMetadata({
   params: { categorySlug: string; pageNumber?: number };
 }) {
   const pageNumber = parseInt(String(params.pageNumber)) || 0;
-  const category = await wpService.getCategoriesBySlug(params.categorySlug);
+  const data = await fetchCategoryData(params.categorySlug);
   return {
-    title: `Learn more about ${category[0].name}${
+    title: `Learn more about ${data.category.name}${
       pageNumber > 0 ? ` category | Page ${pageNumber} ` : ""
     }`,
-    description: category[0].description,
+    description: data.category.description,
     alternates: {
-      canonical: `https://www.halfnine.com/blog/category/${category[0].slug}${
+      canonical: `https://www.halfnine.com/blog/category/${data.category.slug}${
         pageNumber > 0 ? `/${pageNumber}` : ""
       }`,
     },
   };
 }
 
-const Page = ({
+const Page = async ({
   params,
 }: {
   params: { categorySlug: string; pageNumber?: number };
 }) => {
-  const category = use(wpService.getCategoriesBySlug(params.categorySlug));
-  const pageLenght = 15;
+  const data = await fetchCategoryData(params.categorySlug);
 
-  if (!category || Object.keys(category).length === 0) {
+  // if (!data.category || Object.keys(data.category).length === 0) {
+  if (!data.category) {
     return notFound();
   }
 
-  const categoryPosts = use(
-    wpService.getPosts({ categories: category[0].id, per_page: 100 })
-  );
-
-  if (categoryPosts.totalPages === 0) {
+  if (data.category.posts.edges.length === 0) {
     return (
       <div className="max-w-7xl mx-auto px-6 lg:px-8 my-8">
         <Link
@@ -70,10 +87,10 @@ const Page = ({
           <div className="max-w-7xl mx-auto px-6 lg:px-8 my-8">
             <div className="mx-auto max-w-2xl text-center justify-center">
               <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                {category[0].name}
+                {data.category.name}
               </h1>
               <p className="mt-2 text-lg leading-8 text-gray-600">
-                Posts for {category[0].name} are coming soon!
+                Posts for {data.category.name} are coming soon!
               </p>
             </div>
           </div>
@@ -84,19 +101,23 @@ const Page = ({
 
   const pageNumber = parseInt(String(params.pageNumber)) || 0;
 
-  const totalPages = Math.ceil(categoryPosts.posts.length / pageLenght);
+  if (pageNumber === 0 && parseInt(String(params.pageNumber)) === 0) {
+    redirect(`/blog/category/${data.category.slug}`);
+  }
+
+  const totalPages = Math.ceil(data.category.posts.edges.length / pageLenght);
 
   if (
     (pageNumber !== 0 && isNaN(pageNumber)) ||
     pageNumber < 0 ||
     pageNumber >= totalPages
   ) {
-    redirect(`/blog/category/${category[0].slug}`);
+    redirect(`/blog/category/${data.category.slug}`);
   }
 
   const startIndex = pageNumber * pageLenght;
   const endIndex = startIndex + pageLenght;
-  const paginatedPosts = categoryPosts.posts.slice(startIndex, endIndex);
+  const paginatedPosts = data.category.posts.edges.slice(startIndex, endIndex);
 
   return (
     <>
@@ -110,10 +131,10 @@ const Page = ({
         </Link>
         <div className="mx-auto max-w-2xl text-center">
           <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Learn more about {category[0].name}
+            Learn more about {data.category.name}
           </h1>
           <p className="mt-2 text-lg leading-8 text-gray-600">
-            {category[0].description}
+            {data.category.description}
           </p>
         </div>
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3 mt-12">
@@ -122,16 +143,16 @@ const Page = ({
               key={post.id}
               className="flex flex-col items-start justify-between"
             >
-              <Link href={`/blog/post/${post.slug}`}>
+              <Link href={`/blog/post/${post.node.slug}`}>
                 <div className="relative w-full">
                   <Image
                     src={
-                      post.mediaData.media_details.sizes.medium_large.source_url.toString() ||
+                      post.node.featuredImage.node.sourceUrl ||
                       "https://via.placeholder.com/640x360"
                     }
                     width={640}
                     height={360}
-                    alt={post.mediaData.alt_text as string}
+                    alt={post.node.featuredImage.node.altText}
                     className="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
                   />
                   <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
@@ -139,10 +160,15 @@ const Page = ({
                 <div className="flex flex-col space-y-5">
                   <h2
                     className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600 line-clamp-2"
-                    dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+                    dangerouslySetInnerHTML={{ __html: post.node.title }}
                   />
                   <span className="mt-5 line-clamp-2 text-sm leading-6 text-gray-600">
-                    {he.decode(post.description as string)}
+                    {he.decode(
+                      sanitizeHtml(post.node.excerpt.replace(/\n/g, ""), {
+                        allowedTags: [],
+                        allowedAttributes: {},
+                      })
+                    )}
                   </span>
                 </div>
               </Link>
@@ -156,7 +182,7 @@ const Page = ({
           >
             {(pageNumber > 0 && (
               <Link
-                href={`/blog/category/${category[0].slug}${
+                href={`/blog/category/${data.category.slug}${
                   pageNumber > 1 ? `/${pageNumber - 1}` : ""
                 }`}
                 className="relative inline-flex items-center rounded-l-md px-3 py-3 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
@@ -166,7 +192,6 @@ const Page = ({
               </Link>
             )) || (
               <p className="relative inline-flex items-center rounded-l-md px-3 py-3 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 select-none cursor-not-allowed">
-                {/* <span className="sr-only">Next Page</span> */}
                 <ChevronLeftIcon className="h-5 w-5" aria-hidden="true" />
               </p>
             )}
@@ -175,7 +200,7 @@ const Page = ({
             </p>
             {(pageNumber < totalPages - 1 && (
               <Link
-                href={`/blog/category/${category[0].slug}/${pageNumber + 1}`}
+                href={`/blog/category/${data.category.slug}/${pageNumber + 1}`}
                 className="relative inline-flex items-center rounded-r-md px-3 py-3 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
               >
                 <span className="sr-only">Next Page</span>
@@ -183,65 +208,14 @@ const Page = ({
               </Link>
             )) || (
               <p className="relative inline-flex items-center rounded-r-md px-3 py-3 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 select-none cursor-not-allowed">
-                {/* <span className="sr-only">Next Page</span> */}
                 <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
               </p>
             )}
           </nav>
         </div>
       </div>
-      {/* <Pagination
-        currentPage={categoryPosts.currentPage}
-        totalPages={categoryPosts.totalPages}
-      /> */}
     </>
   );
 };
 
 export default Page;
-
-// interface PaginationProps {
-//   currentPage: number;
-//   totalPages: number;
-// }
-
-// const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages }) => {
-//   return (
-//     <nav
-//       className="isolate inline-flex -space-x-px rounded-md shadow-sm"
-//       aria-label="Pagination"
-//     >
-//       {currentPage > 0 ? (
-//         <Link
-//           href={`/blog${currentPage > 1 ? `/${currentPage - 1}` : ""}`}
-//           className="relative inline-flex items-center rounded-l-md px-3 py-3 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
-//         >
-//           <span className="sr-only">Previous Page</span>
-//           <ChevronLeftIcon className="h-5 w-5" aria-hidden="true" />
-//         </Link>
-//       ) : (
-//         <p className="relative inline-flex items-center rounded-l-md px-3 py-3 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 select-none cursor-not-allowed">
-//           <ChevronLeftIcon className="h-5 w-5" aria-hidden="true" />
-//         </p>
-//       )}
-
-//       <p className="relative inline-flex items-center px-6 py-3 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 focus:z-20 focus:outline-offset-0 select-none">
-//         {currentPage}
-//       </p>
-
-//       {currentPage < totalPages - 1 ? (
-//         <Link
-//           href={`/blog/${currentPage + 1}`}
-//           className="relative inline-flex items-center rounded-r-md px-3 py-3 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
-//         >
-//           <span className="sr-only">Next Page</span>
-//           <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
-//         </Link>
-//       ) : (
-//         <p className="relative inline-flex items-center rounded-r-md px-3 py-3 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 select-none cursor-not-allowed">
-//           <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
-//         </p>
-//       )}
-//     </nav>
-//   );
-// };

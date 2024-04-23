@@ -6,12 +6,20 @@ import { Post } from "@/lib/types";
  */
 export default async function getAllSlugs() {
   const query = `
-    query GetAllPosts {
+    query GetAllSlugs {
+      categories {
+        edges {
+          node {
+            slug
+            count
+          }
+        }
+      }
       posts(where: {status: PUBLISH}, first: 10000000) {
         nodes {
           slug
         }
-      },
+      }
       redirection {
         redirects {
           origin

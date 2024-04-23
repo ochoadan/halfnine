@@ -7,6 +7,8 @@ import he from "he";
 
 export const revalidate = 3600;
 
+const pageLenght = 15;
+
 async function returnPostPage() {
   const response = await getAllPostsForBlogPages();
 
@@ -16,7 +18,7 @@ async function returnPostPage() {
 export async function generateStaticParams() {
   const response = await returnPostPage();
 
-  const totalPages = Math.ceil(response.length / 12);
+  const totalPages = Math.ceil(response.posts.length / pageLenght);
   const pageNumbers = Array.from({ length: totalPages }, (_, index) => index);
   return pageNumbers.map((pageNum) => ({
     pageNumber: [String(pageNum)],
@@ -50,9 +52,7 @@ export default async function Home({
 
   const response = await returnPostPage();
 
-  const pageLenght = 15;
-
-  const totalPages = Math.ceil(response.length / pageLenght);
+  const totalPages = Math.ceil(response.posts.length / pageLenght);
 
   if (
     (pageNumber !== 0 && isNaN(pageNumber)) ||
@@ -64,7 +64,7 @@ export default async function Home({
 
   const startIndex = pageNumber * pageLenght;
   const endIndex = startIndex + pageLenght;
-  const paginatedPosts = response.slice(startIndex, endIndex);
+  const paginatedPosts = response.posts.slice(startIndex, endIndex);
 
   return (
     <>
@@ -77,21 +77,24 @@ export default async function Home({
             Learn how to grow your business with our expert advice.
           </p>
         </div>
-        {/* {pageNumber === 0 && (
+        {pageNumber === 0 && (
           <div className="flex flex-wrap justify-center my-2">
-            {categories.map((category: any) => (
+            {response.categories.map((category: any) => (
               <Link
-                key={category.id}
-                href={`/blog/category/${category.slug}`}
+                key={category.node.slug}
+                href={`/blog/category/${category.node.slug}`}
                 className="inline-block px-3 py-1 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg m-2"
               >
-                {category.name}
+                {category.node.name}
               </Link>
             ))}
           </div>
-        )} */}
-
-        <div className="mt-8 mb-4 text-2xl font-bold">Latest:</div>
+        )}
+        {pageNumber === 0 ? (
+          <div className="mt-8 mb-4 text-2xl font-bold">Latest Posts:</div>
+        ) : (
+          <div className="mt-8 mb-4 text-2xl font-bold">Page {pageNumber}:</div>
+        )}
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {paginatedPosts.map((post: any) => (
             <div

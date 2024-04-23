@@ -8,6 +8,14 @@ import sanitizeHtml from "sanitize-html";
 export default async function getAllPostsForBlogPages() {
   const query = `
     query GetAllPosts {
+      categories {
+        edges {
+          node {
+            name
+            slug
+          }
+        }
+      }
       posts(where: {status: PUBLISH}, first: 10000000) {
         nodes {
           databaseId
@@ -46,12 +54,8 @@ export default async function getAllPostsForBlogPages() {
     };
   });
 
-  // return {
-  //   ...response.data,
-  //   posts: {
-  //     ...response.data.posts,
-  //     nodes: posts,
-  //   },
-  // };
-  return posts as Post[];
+  return {
+    posts: posts as Post[],
+    categories: response.data.categories.edges as { node: { slug: string, name: string } }[],
+  };
 }
