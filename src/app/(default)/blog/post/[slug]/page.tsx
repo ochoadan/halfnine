@@ -144,7 +144,7 @@ const Page = async ({ params }: PostPageParams) => {
                 alt={post.featuredImage.node.altText}
               />
               <h1
-                className="text-4xl font-extrabold text-neutral-800 text-center"
+                className="text-3xl sm:text-4xl font-extrabold text-neutral-800 text-center"
                 dangerouslySetInnerHTML={{ __html: post.title }}
               />
               <div className="relative py-2">

@@ -1,4 +1,4 @@
-import wpService from "@/lib/wordpress/wp-service";
+// import wpService from "@/lib/wordpress/wp-service";
 import { notFound } from "next/navigation";
 
 const Page = async ({ params }: { params: { userId: string } }) => {

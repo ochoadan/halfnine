@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { redirect } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import getAllPostsForBlogPages from "@/lib/queries/getAllPostsForBlogPages";
 import he from "he";
@@ -48,6 +48,9 @@ export default async function Home({
 }: {
   params: { pageNumber?: number };
 }) {
+  if (params.pageNumber && isNaN(parseInt(String(params.pageNumber)))) {
+    return notFound();
+  }
   const pageNumber = parseInt(String(params.pageNumber)) || 0;
 
   const response = await returnPostPage();
@@ -77,19 +80,17 @@ export default async function Home({
             Learn how to grow your business with our expert advice.
           </p>
         </div>
-        {pageNumber === 0 && (
-          <div className="flex flex-wrap justify-center my-2">
-            {response.categories.map((category: any) => (
-              <Link
-                key={category.node.slug}
-                href={`/blog/category/${category.node.slug}`}
-                className="inline-block px-3 py-1 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg m-2"
-              >
-                {category.node.name}
-              </Link>
-            ))}
-          </div>
-        )}
+        <div className="flex flex-wrap justify-center my-2">
+          {response.categories.map((category: any) => (
+            <Link
+              key={category.node.slug}
+              href={`/blog/category/${category.node.slug}`}
+              className="inline-block px-3 py-1 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg m-2"
+            >
+              {category.node.name}
+            </Link>
+          ))}
+        </div>
         {pageNumber === 0 ? (
           <div className="mt-8 mb-4 text-2xl font-bold">Latest Posts:</div>
         ) : (
