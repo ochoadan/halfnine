@@ -28,7 +28,7 @@ const features = [
 
 const Hero = () => {
   return (
-    <div className="overflow-hidden bg-white py-24 sm:py-32">
+    <div className="overflow-hidden bg-white py-24 pt-12 lg:py-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"> */}
         <div className="grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2 mx-auto max-w-2xl lg:max-w-none">
