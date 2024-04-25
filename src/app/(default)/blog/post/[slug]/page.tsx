@@ -156,7 +156,7 @@ const Page = async ({ params }: PostPageParams) => {
   return (
     <>
       {/* {JSON.stringify(tableOfContents)} */}
-      <BlogCTA />
+      {/* <BlogCTA /> */}
       <div className="mx-auto flex w-full max-w-[50rem] items-start gap-x-8 px-4 py-10 sm:px-6 lg:px-8">
         <main className="flex-1 prose prose-lg text-[1.08rem] prose-neutral leading-relaxed max-w-none">
           <div className="flex flex-col space-y-4">
