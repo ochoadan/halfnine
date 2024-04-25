@@ -21,13 +21,14 @@ export async function fetchGraphQL<T = any>(
     // Prepare headers.
     const headers: { [key: string]: string } = {
       "Content-Type": "application/json",
+      "Authorization": `Bearer ${refreshToken}`
     };
 
     // If preview mode is enabled and we have a token.
-    if (preview && refreshToken) {
-      // Add refresh token to fetch headers.
-      headers["Authorization"] = `Bearer ${refreshToken}`;
-    }
+    // if (preview && refreshToken) {
+    //   // Add refresh token to fetch headers.
+    //   headers["Authorization"] = `Bearer ${refreshToken}`;
+    // }
 
     // Get the slug.
     const slug = variables?.slug || variables?.id || "graphql";
