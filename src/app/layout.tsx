@@ -7,11 +7,11 @@ const fontSource = Wix_Madefor_Display({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "Technology Company Restructuring and Turnaround Services | Halfnine",
+    default: "Delivering Comprehensive Technology Solutions | Halfnine",
     template: "%s | Halfnine",
   },
    description:
-    "We help you stand out if you are experiencing the effects of a declining sales, increased competition, or consolidating markets. We deliver success to the struggling.",
+    "Halfnine is a technology company that delivers full-service solutions to help businesses grow. Contact us today to learn more about how we can help you grow your business",
   alternates: { canonical: "https://www.halfnine.com" },
 };
 
