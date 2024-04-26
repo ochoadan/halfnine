@@ -6,6 +6,7 @@ import slugify from "slugify";
 import Image from "next/image";
 import { Post } from "@/lib/types";
 import he from "he";
+import BlogCTA from "@/components/Global/BlogCTA";
 
 export const revalidate = 3600;
 
@@ -22,7 +23,6 @@ async function slugsFetcher() {
 
 async function returnPostPage(params: { slug: string }) {
   const post = await getPostBySlug(params.slug);
-  // TODO: Fix Post exeprt to be always required
   const description = post?.excerpt
     ? sanitizeHtml(post.excerpt.replace(/\n/g, ""), {
         allowedTags: [],
@@ -155,7 +155,7 @@ const Page = async ({ params }: PostPageParams) => {
   return (
     <>
       {/* {JSON.stringify(tableOfContents)} */}
-      {/* <BlogCTA /> */}
+      <BlogCTA />
       <div className="mx-auto flex w-full max-w-[50rem] items-start gap-x-8 px-4 py-10 sm:px-6 lg:px-8">
         <main className="flex-1 prose prose-lg text-[1.08rem] prose-neutral leading-relaxed max-w-none">
           <div className="flex flex-col space-y-4">
