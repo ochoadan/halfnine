@@ -57,7 +57,11 @@ export default async function Home({
 
   const totalPages = Math.ceil(response.posts.length / pageLenght);
 
-  if (isNaN(pageNumber) || pageNumber < 0 || pageNumber >= totalPages) {
+  if (
+    (params.pageNumber && isNaN(params.pageNumber)) ||
+    pageNumber < 0 ||
+    pageNumber >= totalPages
+  ) {
     return redirect("/blog");
   }
 
