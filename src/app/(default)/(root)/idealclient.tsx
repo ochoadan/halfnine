@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const statsData = [
   {
@@ -22,12 +23,15 @@ const statsData = [
 ];
 
 const IdealClient = () => (
-  <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-4">
-    {/* <FadeIn className="text-center">
-      <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-        We Deliver Success to the Struggling
+  <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-6">
+    <div className="text-center">
+      <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+        Facing Challanges?
       </h2>
-    </FadeIn> */}
+      <p className="mt-4 text-lg text-gray-700 max-w-2xl mx-auto">
+        {`Let us help you reverse the effects of declining sales, increased competition, or consolidating markets. We deliver success to the struggling.`}
+      </p>
+    </div>
     <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-3">
       {statsData.map((data, index) => (
         <div
@@ -56,6 +60,15 @@ const IdealClient = () => (
         </div>
       ))}
     </div>
+    <p className="mt-8 text-lg text-gray-600 text-center">
+      Let us help you Today!{" "}
+      <Link
+        href="/contact"
+        className="text-brand-600 hover:text-brand-500 hover:underline"
+      >
+        Contact us
+      </Link>
+    </p>
   </div>
 );
 

@@ -5,8 +5,8 @@ export default function DevProcess() {
     <>
       <FadeInStagger>
         <FadeIn className="mx-auto lg:mx-0">
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            Custom Software Development Costs
+          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+            Want custom software?
             <hr className="border-brand-600 opacity-90 border-b-[2px] w-24 my-2" />
           </h2>
           <p className="mt-4 text-base leading-7 text-gray-600">

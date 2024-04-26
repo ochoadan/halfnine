@@ -16,7 +16,8 @@ const statsData = [
   {
     icon: GiTakeMyMoney,
     title: "Financial Modeling",
-    description: "Understand the implications and capabilities of your business.",
+    description:
+      "Understand the implications and capabilities of your business.",
   },
   {
     icon: GiIdCard,
@@ -26,7 +27,33 @@ const statsData = [
   {
     icon: PiListChecks,
     title: "Contingency Planning",
-    description: "Be prepared for the worst case scenarios and act accordingly.",
+    description:
+      "Be prepared for the worst case scenarios and act accordingly.",
+  },
+  {
+    icon: GiChecklist,
+    title: "Operational Restructuring",
+    description: "Optimize your business processes and increase efficiency.",
+  },
+  {
+    icon: GiChecklist,
+    title: "Sales Consulting",
+    description: "Increase your sales and customer satisfaction.",
+  },
+  {
+    icon: GiChecklist,
+    title: "Marketing Strategy",
+    description: "Get a clear and actionable marketing strategy.",
+  },
+  // {
+  //   icon: GiChecklist,
+  //   title: "Digital Transformation",
+  //   description: "Transform your business digitally and increase efficiency.",
+  // },
+  {
+    icon: GiChecklist,
+    title: "IT Consulting",
+    description: "Get the right IT solutions for your business.",
   },
 ];
 
@@ -43,7 +70,10 @@ const StatsComponent = () => (
           key={index}
           className="flex flex-col p-5 transition-colors duration-200 rounded-2xl border-2 gap-1 bg-white text-center"
         >
-          <data.icon className="h-10 w-10 text-brand-500 self-center" aria-hidden="true" />
+          <data.icon
+            className="h-10 w-10 text-brand-500 self-center"
+            aria-hidden="true"
+          />
           <dl>
             <dt className="text-lg font-bold">{data.title}</dt>
             <dd className="text-sm text-gray-700">{data.description}</dd>

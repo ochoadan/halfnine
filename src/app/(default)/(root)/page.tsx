@@ -23,20 +23,22 @@ export const metadata: Metadata = {
 
 const Page = () => (
   <>
-    {/* <div className="py-16 md:py-24 lg:py-36"> */}
     <RootHero />
-    {/* <IdealClient />
+    {/* <div className="lg:pb-12 max-w-7xl mx-auto px-6 lg:px-8">
+      <RootClientLogoCloud />
     </div> */}
+    {/* <IdealClient /> */}
     {[
       // RootClientLogoCloud,
-      RootOffer,
+      RootServices,
+      RootOffering,
       RootMisc,
-      // RootServices,
-      // RootOffering,
+      IdealClient,
+      // RootOffer,
       // RootStats,
-      // RootFeature,
-      // RootDevProcess,
       // RootFeatureGrid,
+      RootDevProcess,
+      // RootFeature,
       RootFAQ,
     ].map((Component, index) => (
       <div

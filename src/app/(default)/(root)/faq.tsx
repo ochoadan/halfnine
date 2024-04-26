@@ -7,29 +7,16 @@ import clsx from "clsx";
 
 const faqs = [
   {
-    question: "My company is struggling. How can you help?",
-    answer:
-      "We provide a range of services to help struggling businesses. We can help you identify the root causes of your problems and develop a plan to address them. We can also help you implement that plan and monitor your progress to ensure that you are on track to achieve your goals.",
+    question: "What Services Do You Offer?",
+    answer: `We offer "Full-Service Technology Solutions", Meaning we can help you with any technology-related project, from start to finish.`,
   },
   {
-    question: "How long does it take to see results?",
-    answer:
-      "The time it takes to see results will depend on the nature of your problems and the solutions we develop. Some businesses see results quickly, while others take longer to achieve their goals. We will work with you to develop a timeline that meets your needs and expectations.",
+    question: "How Much Do You Charge?",
+    answer: `Our pricing is simple, we charge a small flat rate for the people involved in your project, and a success based fee when we meet your goals. Ensuring we are always aligned with your success.`,
   },
   {
-    question: "How much does your service cost?",
-    answer:
-      "We offer two pricing options: a flat fee or a success-based fee. The flat fee option provides a fixed cost for our services, while the success-based fee is a percentage of the value we create for you. We will work with you to determine the best pricing option that meets your needs and budget.",
-  },
-  {
-    question: "What makes you different from other consulting firms?",
-    answer:
-      "We do not only identify the root causes of your problems, but we also develop tangible solutions that address them. We work closely with you to implement those solutions and actively monitor and get involved in the transformation process to ensure that you are on track to achieve your goals.",
-  },
-  {
-    question: "How do I get started?",
-    answer:
-      "The first step is to contact us to schedule an initial consultation. During this consultation, we will discuss your needs and goals and develop a plan to address them. We will work with you to develop a timeline and pricing plan that meets your needs and expectations.",
+    question: "How Long Do You Take To Complete A Project?",
+    answer: `We work quickly, but we also work carefully. We will give you a realistic timeline for your project, and we will stick to it. We will also keep you updated on our progress.`,
   },
 ];
 const GlobalFAQ = () => {

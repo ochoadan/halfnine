@@ -7,7 +7,7 @@ export default function DevProcess() {
     <>
       <FadeInStagger faster>
         <FadeIn className="mx-auto lg:mx-0">
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
             Our Technical Capabilities
             <hr className="border-brand-600 opacity-90 border-b-[2px] w-24 my-2" />
           </h2>

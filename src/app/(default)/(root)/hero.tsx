@@ -1,3 +1,4 @@
+import { FadeIn } from "@/components/Global/FadeIn";
 import {
   CloudArrowUpIcon,
   LockClosedIcon,
@@ -7,46 +8,45 @@ import Image from "next/image";
 
 const features = [
   {
-    name: "Increase Profits.",
+    name: "ROI Focused",
     description:
-      "We Build Turnaround Strategies, Cost Optimization, and Revenue Growth.",
+      "We will not work with you unless we believe we can deliver a positive return on investment.",
     icon: CloudArrowUpIcon,
   },
   {
-    name: "Beat Competition.",
+    name: "Success-Based Consulting",
     description:
-      "We make you stand out in a competitive environment with strategic positioning.",
+      "We are only successful when you are successful. We are committed to your success.",
     icon: LockClosedIcon,
   },
   {
-    name: "Market Dominance.",
+    name: "Complete Coverage",
     description:
-      "We help you grow faster in a competitive and consolidating market.",
+      "We provide a full range of services to meet all of your technology needs and goals.",
     icon: ServerIcon,
   },
 ];
 
 const Hero = () => {
   return (
-    <div className="overflow-hidden bg-white py-24 pt-12 lg:py-24">
+    <div className="overflow-hidden bg-white py-24 pt-12 lg:py-24 lg:pt-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"> */}
         <div className="grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2 mx-auto max-w-2xl lg:max-w-none">
-          <div className="lg:pr-8 lg:pt-4">
+          <div className="lg:pr-8">
             <div className="lg:max-w-xl">
-              <h1 className="mt-2 text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                {/* We make tech grow and stand out in challanging markets. */}
-                {/* We make you grow and stand out in challanging markets. */}
-                Unleashing your potential in challanging markets.
+              <h1 className="text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                {/* Delivering Full-Service Technology Solutions */}
+                Delivering Comprehensive Technology Solutions
               </h1>
-              {/* <p className="mt-6 text-lg leading-8 text-gray-600">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Maiores impedit perferendis suscipit eaque, iste dolor
-                cupiditate blanditiis ratione.
+              {/* <p className="text-base font-semibold leading-7 text-brand-600 mt-4">
+                Tailored to your needs and goals.
               </p> */}
-              <p className="text-base font-semibold leading-7 text-brand-600 mt-4">
-                3x your revenue in only 6 to 12 months.
-              </p>
+              {/* <p className="mt-6 text-lg text-gray-600">
+                At Halfnine, we provide end-to-end technology solutions tailored
+                to your unique needs. Our services span across various domains,
+                ensuring a seamless digital experience.
+              </p> */}
               <dl className="mt-6 max-w-xl space-y-6 text-base leading-7 text-gray-600 lg:max-w-none">
                 {features.map((feature) => (
                   <div key={feature.name} className="relative pl-9">
@@ -55,21 +55,23 @@ const Hero = () => {
                         className="absolute left-1 top-1 h-5 w-5 text-brand-600"
                         aria-hidden="true"
                       />
-                      {feature.name}
-                    </dt>{" "}
+                      {feature.name}:{" "}
+                    </dt>
                     <dd className="inline">{feature.description}</dd>
                   </div>
                 ))}
               </dl>
             </div>
           </div>
-          <Image
-            src="/img/hero.svg"
-            alt="Product screenshot"
-            // className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[30rem] md:-ml-4 lg:-ml-0"
-            width={700}
-            height={400}
-          />
+          <FadeIn className="mx-auto">
+            <Image
+              src="/img/hero.svg"
+              alt="Product screenshot"
+              // className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[30rem] md:-ml-4 lg:-ml-0"
+              width={400}
+              height={400}
+            />
+          </FadeIn>
           {/* <img
             src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
             alt="Product screenshot"

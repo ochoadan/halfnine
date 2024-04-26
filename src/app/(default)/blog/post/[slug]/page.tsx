@@ -6,7 +6,6 @@ import slugify from "slugify";
 import Image from "next/image";
 import { Post } from "@/lib/types";
 import he from "he";
-import BlogCTA from "@/components/Global/BlogCTA";
 
 export const revalidate = 3600;
 
