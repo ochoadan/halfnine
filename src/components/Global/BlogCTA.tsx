@@ -9,10 +9,10 @@ export default function Example() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    if (!localStorage.getItem("hasClickedOut")) {
-      localStorage.setItem("hasClickedOut", "false");
+    if (!document.cookie.includes("hasClickedOut")) {
+      document.cookie = "hasClickedOut=false";
     }
-    if (localStorage.getItem("hasClickedOut") !== "true") {
+    if (document.cookie.includes("hasClickedOut=false")) {
       const timeout = setTimeout(() => {
         setOpen(true);
       }, 12000);
@@ -23,7 +23,7 @@ export default function Example() {
   }, []);
 
   const handleClose = () => {
-    localStorage.setItem("hasClickedOut", "true");
+    document.cookie = "hasClickedOut=true";
     setOpen(false);
   };
 
