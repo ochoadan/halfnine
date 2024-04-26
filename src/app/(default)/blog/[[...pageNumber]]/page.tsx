@@ -48,21 +48,17 @@ export default async function Home({
 }: {
   params: { pageNumber?: number };
 }) {
-  if (params.pageNumber && isNaN(parseInt(String(params.pageNumber)))) {
-    return notFound();
-  }
+  // if (params.pageNumber && isNaN(parseInt(String(params.pageNumber)))) {
+  //   return notFound();
+  // }
   const pageNumber = parseInt(String(params.pageNumber)) || 0;
 
   const response = await returnPostPage();
 
   const totalPages = Math.ceil(response.posts.length / pageLenght);
 
-  if (
-    (pageNumber !== 0 && isNaN(pageNumber)) ||
-    pageNumber < 0 ||
-    pageNumber >= totalPages
-  ) {
-    redirect("/blog");
+  if (isNaN(pageNumber) || pageNumber < 0 || pageNumber >= totalPages) {
+    return redirect("/blog");
   }
 
   const startIndex = pageNumber * pageLenght;
