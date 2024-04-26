@@ -4,15 +4,18 @@ import { Fragment, useState, useEffect } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { ExclamationTriangleIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
+import { cookies } from "next/headers";
 
 export default function Example() {
+  const cookieStore = cookies();
+
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    if (!document.cookie.includes("hasClickedOut")) {
-      document.cookie = "hasClickedOut=false";
+    if (!cookieStore.has("hasClickedOut")) {
+      cookieStore.set("hasClickedOut", "false");
     }
-    if (document.cookie.includes("hasClickedOut=false")) {
+    if (cookieStore.get("hasClickedOut") ?? "false" === "false") {
       const timeout = setTimeout(() => {
         setOpen(true);
       }, 12000);
@@ -23,7 +26,7 @@ export default function Example() {
   }, []);
 
   const handleClose = () => {
-    document.cookie = "hasClickedOut=true";
+    cookieStore.set("hasClickedOut", "true");
     setOpen(false);
   };
 
