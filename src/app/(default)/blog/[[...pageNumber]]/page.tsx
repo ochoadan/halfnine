@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { notFound, redirect } from "next/navigation";
+import { notFound } from "next/navigation";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import getAllPostsForBlogPages from "@/lib/queries/getAllPostsForBlogPages";
 import he from "he";
@@ -62,7 +62,7 @@ export default async function Home({
     pageNumber < 0 ||
     pageNumber >= totalPages
   ) {
-    return redirect("/blog");
+    return notFound();
   }
 
   const startIndex = pageNumber * pageLenght;
