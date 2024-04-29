@@ -101,7 +101,7 @@ const Page = async ({ params }: PostPageParams) => {
 
   if (redirectMatch) {
     const targetSlug = slugify(
-      redirectMatch.target.replace(/.*hyleon.com\//, "")
+      redirectMatch.target.replace(/.*cms.halfnine.com\//, "")
     );
     const redirectUrl = `https://www.halfnine.com/blog/post/${targetSlug}`;
     redirect(redirectUrl);

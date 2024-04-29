@@ -6,7 +6,7 @@ const nextConfig = {
       { hostname: "tailwindui.com" },
       { hostname: "images.unsplash.com" },
       { hostname: "raw.githubusercontent.com" },
-      { hostname: "hyleon.com" },
+      { hostname: "cms.halfnine.com" },
       { hostname: "via.placeholder.com" },
       { hostname: "images.pexels.com" },
     ],

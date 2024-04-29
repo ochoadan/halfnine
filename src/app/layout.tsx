@@ -7,11 +7,11 @@ const fontSource = Wix_Madefor_Display({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "Delivering Comprehensive Technology Solutions | Halfnine",
+    default: "Software Development Company | Halfnine",
     template: "%s | Halfnine",
   },
    description:
-    "Halfnine is a technology company that delivers full-service solutions to help businesses grow. Contact us today to learn more about how we can help you grow your business",
+    "Halfnine is a software development company that delivers full-service solutions to help businesses grow. Contact us today to learn more about how we can help you grow your business",
   alternates: { canonical: "https://www.halfnine.com" },
 };
 

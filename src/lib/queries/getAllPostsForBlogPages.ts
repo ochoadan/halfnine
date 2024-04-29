@@ -59,3 +59,35 @@ export default async function getAllPostsForBlogPages() {
     categories: response.data.categories.edges as { node: { slug: string, name: string } }[],
   };
 }
+// query GetAllPosts($after: String = "1", $first: Int = 12) {
+//   categories {
+//     edges {
+//       node {
+//         name
+//         slug
+//       }
+//     }
+//   }
+//   posts(where: {status: PUBLISH}, after: $after, first: $first) {
+//     nodes {
+//       databaseId
+//       date
+//       modified
+//       title
+//       slug
+//       excerpt(format: RENDERED)
+//       featuredImage {
+//         node {
+//           altText
+//           sourceUrl(size: MEDIUM_LARGE)
+//           mediaDetails {
+//             sizes(include: MEDIUM_LARGE) {
+//               height
+//               width
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

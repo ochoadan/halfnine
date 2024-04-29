@@ -36,16 +36,18 @@ const Hero = () => {
           <div className="lg:pr-8">
             <div className="lg:max-w-xl">
               <h1 className="text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                US-Based Software Development Company
                 {/* Delivering Full-Service Technology Solutions */}
-                Delivering Comprehensive Technology Solutions
+                {/* Delivering Comprehensive Technology Solutions */}
               </h1>
-              {/* <p className="text-base font-semibold leading-7 text-brand-600 mt-4">
-                Tailored to your needs and goals.
-              </p> */}
-              {/* <p className="mt-6 text-lg text-gray-600">
-                At Halfnine, we provide end-to-end technology solutions tailored
-                to your unique needs. Our services span across various domains,
-                ensuring a seamless digital experience.
+              <p className="text-base font-semibold leading-7 text-brand-600 mt-4">
+                Full-Service Technology Solutions
+                {/* tailored to your needs and goals. */}
+              </p>
+              {/* <p className="mt-6 text-xs text-gray-600">
+                We Provide Full-Service Technology Solutions tailored to meet your
+                needs and goals.
+                 We are committed to your success and will not work with you unless we believe we can deliver a positive return on investment.
               </p> */}
               <dl className="mt-6 max-w-xl space-y-6 text-base leading-7 text-gray-600 lg:max-w-none">
                 {features.map((feature) => (
