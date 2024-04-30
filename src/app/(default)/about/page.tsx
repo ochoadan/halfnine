@@ -58,10 +58,10 @@ const Page = () => {
                 <hr className="border-brand-600 opacity-90 border-b-[2px] w-20 my-2" />
               </h2>
               <p className="mt-4 text-gray-500">
-                Halfnine emerged from a vision to assist struggling businesses
-                in their journey to success. We have a passion for technology
-                and innovation, and we are dedicated to helping our clients
-                achieve their goals.
+                Halfnine emerged with the goal of assisting businesses in
+                leveraging technology solutions to transform opportunities and
+                ideas into reality. We are committed to providing our clients
+                with the tools they need to succeed.
                 <br />
                 We are a team of dedicated engineers and designers driven by a
                 passion for pushing boundaries. Our inspiration lies in shaping
