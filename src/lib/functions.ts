@@ -9,16 +9,16 @@ export async function fetchGraphQL<T = any>(
   preview = false
 ): Promise<GraphQLResponse<T>> {
   try {
-    // Validate the WordPress GraphQL URL.
-    const graphqlUrl = process.env.NEXT_PUBLIC_GRAPHQL_URL!;
+    const graphqlUrl = process.env.NEXT_PUBLIC_GRAPHQL_URL;
     if (!graphqlUrl) {
       throw new Error("Missing WordPress GraphQL URL environment variable!");
     }
 
-    // Get the refresh token.
-    const refreshToken = process.env.NEXTJS_AUTH_REFRESH_TOKEN!;
+    const refreshToken = process.env.NEXT_PUBLIC_NEXTJS_AUTH_REFRESH_TOKEN;
+    if (!refreshToken) {
+      throw new Error("Missing refresh token!");
+    }
 
-    // Prepare headers.
     const headers: { [key: string]: string } = {
       "Content-Type": "application/json",
       "Authorization": `Bearer ${refreshToken}`
