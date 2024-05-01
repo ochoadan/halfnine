@@ -7,7 +7,7 @@ import he from "he";
 
 export const revalidate = 3600;
 
-const pageLenght = 15;
+const pageLength = 15;
 
 async function returnPostPage() {
   const response = await getAllPostsForBlogPages();
@@ -18,7 +18,7 @@ async function returnPostPage() {
 export async function generateStaticParams() {
   const response = await returnPostPage();
 
-  const totalPages = Math.ceil(response.posts.length / pageLenght);
+  const totalPages = Math.ceil(response.posts.length / pageLength);
   const pageNumbers = Array.from({ length: totalPages }, (_, index) => index);
   return pageNumbers.map((pageNum) => ({
     pageNumber: [String(pageNum)],
@@ -55,7 +55,7 @@ export default async function Home({
 
   const response = await returnPostPage();
 
-  const totalPages = Math.ceil(response.posts.length / pageLenght);
+  const totalPages = Math.ceil(response.posts.length / pageLength);
 
   if (
     (params.pageNumber && isNaN(params.pageNumber)) ||
@@ -65,8 +65,8 @@ export default async function Home({
     return notFound();
   }
 
-  const startIndex = pageNumber * pageLenght;
-  const endIndex = startIndex + pageLenght;
+  const startIndex = pageNumber * pageLength;
+  const endIndex = startIndex + pageLength;
   const paginatedPosts = response.posts.slice(startIndex, endIndex);
 
   return (

@@ -10,7 +10,7 @@ import sanitizeHtml from "sanitize-html";
 
 export const revalidate = 3600;
 
-const pageLenght = 15;
+const pageLength = 15;
 
 async function fetchCategoryData(categorySlug: string) {
   const response = await getCategoryData(categorySlug);
@@ -22,7 +22,7 @@ export async function generateStaticParams() {
   const response = await getAllSlugs();
   const totalPagesPerCategory = response.categories.edges.map(
     (category: any) => {
-      const totalPages = Math.ceil(category.node.count / pageLenght);
+      const totalPages = Math.ceil(category.node.count / pageLength);
       return Array.from({ length: totalPages }, (_, index) => ({
         categorySlug: category.node.slug,
         pageNumber: index,
@@ -106,7 +106,7 @@ const Page = async ({
     redirect(`/blog/category/${data.category.slug}`);
   }
 
-  const totalPages = Math.ceil(data.category.posts.edges.length / pageLenght);
+  const totalPages = Math.ceil(data.category.posts.edges.length / pageLength);
 
   if (
     (pageNumber !== 0 && isNaN(pageNumber)) ||
@@ -116,8 +116,8 @@ const Page = async ({
     redirect(`/blog/category/${data.category.slug}`);
   }
 
-  const startIndex = pageNumber * pageLenght;
-  const endIndex = startIndex + pageLenght;
+  const startIndex = pageNumber * pageLength;
+  const endIndex = startIndex + pageLength;
   const paginatedPosts = data.category.posts.edges.slice(startIndex, endIndex);
 
   return (
