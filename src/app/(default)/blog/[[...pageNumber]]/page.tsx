@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import getAllPostsForBlogPages from "@/lib/queries/getAllPostsForBlogPages";
 import he from "he";
+import sanitizeHtml from "sanitize-html";
 
 export const revalidate = 3600;
 
@@ -122,7 +123,12 @@ export default async function Home({
                     dangerouslySetInnerHTML={{ __html: post.title }}
                   />
                   <span className="mt-5 line-clamp-2 text-sm leading-6 text-gray-600">
-                    {he.decode(post.description)}
+                    {he.decode(
+                      sanitizeHtml(post.excerpt.replace(/\n/g, ""), {
+                        allowedTags: [],
+                        allowedAttributes: {},
+                      })
+                    )}
                   </span>
                 </div>
               </Link>

@@ -1,9 +1,6 @@
 import { fetchGraphQL } from "@/lib/functions";
 import { Post } from "@/lib/types";
 
-/**
- * Fetch all blog posts.
- */
 export default async function getAllPosts(slug: string) {
   const query = `
     query GetPost($slug: ID!) {

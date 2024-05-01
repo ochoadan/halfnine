@@ -1,9 +1,6 @@
 import { fetchGraphQL } from "@/lib/functions";
 import { Post } from "@/lib/types";
 
-/**
- * Fetch all blog posts.
- */
 export default async function getSitemapData() {
   const query = `
     query GetAllPosts {

@@ -1,9 +1,6 @@
 import { fetchGraphQL } from "@/lib/functions";
 import { Post } from "@/lib/types";
 
-/**
- * Fetch all blog posts.
- */
 export default async function getCategoryData(id: string) {
   const query = `
     query GetCategoryData($id: ID!) {
@@ -42,7 +39,6 @@ export default async function getCategoryData(id: string) {
 
   const response = await fetchGraphQL(query, variables);
 
-  // return response.data as any;
   return response.data as {
     categories: {
       edges: {
