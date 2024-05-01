@@ -24,7 +24,7 @@ export default async function getSitemapData() {
     }
   `;
 
-  const response = await fetchGraphQL(query);
+  const response = await fetchGraphQL(query, { cache: false });
 
   return response.data as {
     posts: {

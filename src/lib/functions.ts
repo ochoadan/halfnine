@@ -6,7 +6,8 @@ import { GraphQLResponse, SearchResults } from "@/lib/types";
 export async function fetchGraphQL<T = any>(
   query: string,
   variables?: { [key: string]: any },
-  preview = false
+  preview = false,
+  cache: "no-store" | "default" = "default"
 ): Promise<GraphQLResponse<T>> {
   try {
     const graphqlUrl = process.env.NEXT_PUBLIC_GRAPHQL_URL;
@@ -41,6 +42,7 @@ export async function fetchGraphQL<T = any>(
         query,
         variables,
       }),
+      cache,
       next: {
         tags: ["graphql"],
       },
