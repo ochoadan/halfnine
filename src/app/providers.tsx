@@ -37,7 +37,7 @@ function Hotjar() {
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <GoogleAnalytics />
+      {/* <GoogleAnalytics /> */}
       <Hotjar />
       {children}
     </>
