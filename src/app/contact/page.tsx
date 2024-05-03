@@ -141,7 +141,7 @@ export default function Example() {
     //     message: searchParams.get("message") || "",
     //   }));
     // }
-  }, [searchParams]);
+  }, [searchParams, router]);
 
   return (
     <>
