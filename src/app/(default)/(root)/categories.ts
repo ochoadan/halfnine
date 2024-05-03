@@ -1,4 +1,4 @@
-import { PythonIcon, CIcon, JavaIcon, CPlusPlusIcon, NodeJsIcon, GoLangIcon, PHPIcon, AssemblyIcon, RustIcon, RubyIcon, MicrosoftDotNetIcon, ReactIcon, FlutterIcon, NextJSIcon, DockerIcon, KubernetesIcon, GitLabIcon, OpenShiftIcon, GrafanaIcon, AWSIcon, AzureIcon, GoogleCloudIcon, AkamaiIcon, DigitalOceanIcon, CloudFlareIcon, BurpSuiteIcon, NmapIcon, WireSharkIcon, MetaSploitIcon, LaravelIcon, ExpressJSIcon, WordPressIcon } from "@/components/Global/icons";
+import { PythonIcon, CIcon, JavaIcon, CPlusPlusIcon, NodeJsIcon, GoLangIcon, PHPIcon, AssemblyIcon, RustIcon, RubyIcon, MicrosoftDotNetIcon, ReactIcon, FlutterIcon, NextJSIcon, DockerIcon, KubernetesIcon, GitLabIcon, OpenShiftIcon, GrafanaIcon, AWSIcon, AzureIcon, GoogleCloudIcon, AkamaiIcon, DigitalOceanIcon, CloudFlareIcon, BurpSuiteIcon, NmapIcon, WireSharkIcon, MetaSploitIcon, LaravelIcon, ExpressJSIcon, WordPressIcon, JQueryIcon } from "@/components/Global/icons";
 import { BsThreeDots } from "react-icons/bs";
 
 // android, bash, dart, electron, flutter, gatsby, gcp, git, grafana, graphql, heroku, javascript, jenkins, jest, kotlin, linux, mariadb, mysql, nextjs, nginx, nodejs, nuxtjs, postgresql, postman, python, react, redis, sqlite, travisci, vuejs, vuepress, zapier
@@ -11,7 +11,7 @@ export const categories = [
       { name: "C", icon: CIcon },
       { name: "Java", icon: JavaIcon, url: "/services/software-development/java" },
       { name: "C++", icon: CPlusPlusIcon },
-      { name: "Node.js", icon: NodeJsIcon },
+      { name: "Node.js", icon: NodeJsIcon, url: "/services/software-development/nodejs" },
       { name: "Go", icon: GoLangIcon },
       { name: "PHP", icon: PHPIcon },
       { name: "Assembly", icon: AssemblyIcon },
@@ -28,11 +28,12 @@ export const categories = [
     title: "Frameworks",
     items: [
       { name: "Microsoft .NET", icon: MicrosoftDotNetIcon, url: "/services/software-development/dotnet" },
-      { name: "React", icon: ReactIcon },
+      { name: "React", icon: ReactIcon, url: "/services/software-development/react" },
       { name: "Flutter", icon: FlutterIcon },
       { name: "Laravel", icon: LaravelIcon },
       { name: "Next.js", icon: NextJSIcon },
       { name: "Express.js", icon: ExpressJSIcon },
+      { name: "jQuery", icon: JQueryIcon, url: "/services/software-development/jquery" },
       // { name: "Svelte", icon: ExpressJSIcon },
       { name: "And More", icon: BsThreeDots },
     ],

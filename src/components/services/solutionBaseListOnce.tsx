@@ -4,7 +4,11 @@ type SolutionCheckListEvenProps = {
   features: {
     name: string;
     description?: string;
-    furtherList?: { name: string; description?: string }[];
+    furtherList?: {
+      name: string;
+      description?: string;
+      furtherList?: { name: string; description?: string }[];
+    }[];
   }[];
   background: "light" | "dark";
 };
@@ -39,17 +43,38 @@ const SolutionCheckListEven = ({
               {feature.furtherList && (
                 <ul className="mt-4 pl-4 ml-2 space-y-2 list-disc">
                   {feature.furtherList.map((further) => (
-                    <li key={further.name}>
-                      <h4 className="ml-2 text-gray-900 font-semibold inline">
-                        {further.name}
-                      </h4>
-                      {further.description && (
-                        <>
-                          {": "}
-                          <p className="mt-1 inline">{further.description}</p>
-                        </>
+                    <>
+                      <li key={further.name}>
+                        <h4 className="ml-2 text-gray-900 font-semibold inline">
+                          {further.name}
+                        </h4>
+                        {further.description && (
+                          <>
+                            {": "}
+                            <p className="mt-1 inline">{further.description}</p>
+                          </>
+                        )}
+                      </li>
+                      {further.furtherList && (
+                        <ul className="mt-4 pl-4 ml-2 space-y-2 list-disc">
+                          {further.furtherList.map((furtherFurther) => (
+                            <li key={furtherFurther.name}>
+                              <h5 className="ml-2 text-gray-900 font-semibold inline">
+                                {furtherFurther.name}
+                              </h5>
+                              {furtherFurther.description && (
+                                <>
+                                  {": "}
+                                  <p className="mt-1 inline">
+                                    {furtherFurther.description}
+                                  </p>
+                                </>
+                              )}
+                            </li>
+                          ))}
+                        </ul>
                       )}
-                    </li>
+                    </>
                   ))}
                 </ul>
               )}
