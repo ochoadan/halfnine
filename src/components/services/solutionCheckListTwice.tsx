@@ -2,8 +2,12 @@ import { FaRegCircleCheck } from "react-icons/fa6";
 
 type SolutionCheckListEvenProps = {
   heading: string;
-  description: string;
-  features: { name: string; description: string }[];
+  description?: string;
+  features: {
+    name: string;
+    description?: string;
+    furtherList?: { name: string; description?: string }[];
+  }[];
   background: "light" | "dark";
 };
 
@@ -31,7 +35,26 @@ const SolutionCheckListEven = ({
                 />
                 <h3>{feature.name}</h3>
               </dt>
-              <dd className="mt-2">{feature.description}</dd>
+              {feature.description && (
+                <dd className="mt-2">{feature.description}</dd>
+              )}
+              {feature.furtherList && (
+                <ul className="mt-4 pl-4 ml-2 space-y-2 list-disc">
+                  {feature.furtherList.map((further) => (
+                    <li key={further.name}>
+                      <h4 className="text-gray-900 font-semibold inline">
+                        {further.name}
+                      </h4>
+                      {further.description && (
+                        <>
+                          {": "}
+                          <p className="mt-1 inline">{further.description}</p>
+                        </>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           ))}
         </dl>

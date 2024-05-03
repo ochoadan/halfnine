@@ -9,7 +9,7 @@ export const categories = [
     items: [
       { name: "Python", icon: PythonIcon },
       { name: "C", icon: CIcon },
-      { name: "Java", icon: JavaIcon },
+      { name: "Java", icon: JavaIcon, url: "/services/software-development/java" },
       { name: "C++", icon: CPlusPlusIcon },
       { name: "Node.js", icon: NodeJsIcon },
       { name: "Go", icon: GoLangIcon },
