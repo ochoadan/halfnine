@@ -119,29 +119,29 @@ export default function Example() {
       return;
     }
   };
-  const searchParams = useSearchParams();
+  // const searchParams = useSearchParams();
 
-  useEffect(() => {
-    const containsMessage = searchParams.has("message");
-    if (containsMessage) {
-      setFormData((prevData: any) => ({
-        ...prevData,
-        message: searchParams.get("message") || "",
-      }));
-      const updatedSearchParams = new URLSearchParams(searchParams.toString());
-      updatedSearchParams.delete("message");
-      const updatedUrl = `${
-        window.location.pathname
-      }?${updatedSearchParams.toString()}`;
-      router.replace(updatedUrl);
-    }
-    // if (containsMessage) {
-    //   setFormData((prevData: any) => ({
-    //     ...prevData,
-    //     message: searchParams.get("message") || "",
-    //   }));
-    // }
-  }, [searchParams, router]);
+  // useEffect(() => {
+  //   const containsMessage = searchParams.has("message");
+  //   if (containsMessage) {
+  //     setFormData((prevData: any) => ({
+  //       ...prevData,
+  //       message: searchParams.get("message") || "",
+  //     }));
+  //     const updatedSearchParams = new URLSearchParams(searchParams.toString());
+  //     updatedSearchParams.delete("message");
+  //     const updatedUrl = `${
+  //       window.location.pathname
+  //     }?${updatedSearchParams.toString()}`;
+  //     router.replace(updatedUrl);
+  //   }
+  //   // if (containsMessage) {
+  //   //   setFormData((prevData: any) => ({
+  //   //     ...prevData,
+  //   //     message: searchParams.get("message") || "",
+  //   //   }));
+  //   // }
+  // }, [searchParams, router]);
 
   return (
     <>
