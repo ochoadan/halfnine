@@ -6,7 +6,7 @@ import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/24/outline";
 
 import { PhoneIcon } from "@heroicons/react/20/solid";
 
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Logo from "@/components/Global/Logo";
 
@@ -119,6 +119,30 @@ export default function Example() {
       return;
     }
   };
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const containsMessage = searchParams.has("message");
+    if (containsMessage) {
+      setFormData((prevData: any) => ({
+        ...prevData,
+        message: searchParams.get("message") || "",
+      }));
+      const updatedSearchParams = new URLSearchParams(searchParams.toString());
+      updatedSearchParams.delete("message");
+      const updatedUrl = `${
+        window.location.pathname
+      }?${updatedSearchParams.toString()}`;
+      router.replace(updatedUrl);
+    }
+    // if (containsMessage) {
+    //   setFormData((prevData: any) => ({
+    //     ...prevData,
+    //     message: searchParams.get("message") || "",
+    //   }));
+    // }
+  }, [searchParams]);
+
   return (
     <>
       <div className="relative isolate bg-white">

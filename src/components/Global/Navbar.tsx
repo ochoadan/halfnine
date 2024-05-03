@@ -92,7 +92,7 @@ function SolutionsPopover() {
             // leaveFrom="opacity-100 translate-y-0"
             // leaveTo="opacity-0 -translate-y-1"
           >
-            <Popover.Panel className="absolute inset-x-0 top-0 -z-10 bg-white mt-[92px] shadow-lg border-t-[1px] border-neutral-200">
+            <Popover.Panel className="absolute inset-x-0 top-0 -z-10 bg-white mt-[68px] shadow-lg border-t-[1px] border-neutral-200">
               <div className="mx-auto grid max-w-7xl grid-cols-4 gap-x-4 px-6 py-6 lg:px-8 xl:gap-x-8">
                 {products.map((item) => (
                   <Popover.Button
@@ -247,13 +247,13 @@ export default function GlobalNavbar() {
               className="font-semibold leading-6 text-gray-500 hover:text-gray-900 select-none"
             >
               Process
-            </Link>
-            <Link
-              href="/pricing"
-              className="font-semibold leading-6 text-gray-500 hover:text-gray-900 select-none"
-            >
-              Costs
             </Link> */}
+              <Link
+                href="/services"
+                className="font-semibold leading-6 text-gray-500 hover:text-gray-900 select-none"
+              >
+                Services
+              </Link>
               <Link
                 href="/about"
                 className="font-semibold leading-6 text-gray-500 hover:text-gray-900 select-none"

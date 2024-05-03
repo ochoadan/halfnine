@@ -27,7 +27,7 @@ export const categories = [
     // title: "Full-Stack & Cross-platform Frameworks",
     title: "Frameworks",
     items: [
-      { name: "Microsoft .NET", icon: MicrosoftDotNetIcon },
+      { name: "Microsoft .NET", icon: MicrosoftDotNetIcon, url: "/services/software-development/dotnet" },
       { name: "React", icon: ReactIcon },
       { name: "Flutter", icon: FlutterIcon },
       { name: "Laravel", icon: LaravelIcon },

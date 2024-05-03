@@ -6,11 +6,12 @@ import { Wix_Madefor_Display } from "next/font/google";
 const fontSource = Wix_Madefor_Display({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Software Development Company • Halfnine",
-    template: "%s • Halfnine",
-  },
-   description:
+  title: "Software Development Company • Halfnine",
+  // title: {
+  //   default: "Software Development Company • Halfnine",
+  //   template: "%s • Halfnine",
+  // },
+  description:
     "Halfnine is a software development company that delivers full-service solutions to help businesses grow. Contact us today to learn more about how we can help you grow your business",
   alternates: { canonical: "https://www.halfnine.com" },
 };

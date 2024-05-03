@@ -19,20 +19,42 @@ export default function DevProcess() {
             </h3>
             <ul role="list" className="mt-2 gap-4 flex flex-wrap">
               {category.items.map((item, itemIdx) => (
-                <li key={itemIdx}>
-                  <div className="group flex w-full items-center justify-between space-x-3 rounded-xl py-1 px-2 border border-gray-100 text-left bg-white shadow-sm shadow-gray-100">
-                    <span className="flex min-w-0 flex-1 items-center space-x-2">
-                      <span className="block flex-shrink-0 rounded-lg overflow-hidden">
-                        <item.icon className="h-6 w-6" />
-                      </span>
-                      <span className="block min-w-0 flex-1">
-                        <span className="block truncate text-sm font-medium text-gray-900">
-                          {item.name}
+                <>
+                  {item.url ? (
+                    <li key={itemIdx}>
+                      <Link
+                        href={item.url}
+                        className="group flex w-full items-center justify-between space-x-3 rounded-xl py-1 px-2 border border-gray-100 text-left bg-white shadow-sm shadow-gray-100"
+                      >
+                        <span className="flex min-w-0 flex-1 items-center space-x-2">
+                          <span className="block flex-shrink-0 rounded-lg overflow-hidden">
+                            <item.icon className="h-6 w-6" />
+                          </span>
+                          <span className="block min-w-0 flex-1">
+                            <span className="block truncate text-sm font-medium text-gray-900 hover:text-brand-700 hover:underline">
+                              {item.name}
+                            </span>
+                          </span>
                         </span>
-                      </span>
-                    </span>
-                  </div>
-                </li>
+                      </Link>
+                    </li>
+                  ) : (
+                    <li key={itemIdx}>
+                      <div className="group flex w-full items-center justify-between space-x-3 rounded-xl py-1 px-2 border border-gray-100 text-left bg-white shadow-sm shadow-gray-100">
+                        <span className="flex min-w-0 flex-1 items-center space-x-2">
+                          <span className="block flex-shrink-0 rounded-lg overflow-hidden">
+                            <item.icon className="h-6 w-6" />
+                          </span>
+                          <span className="block min-w-0 flex-1">
+                            <span className="block truncate text-sm font-medium text-gray-900">
+                              {item.name}
+                            </span>
+                          </span>
+                        </span>
+                      </div>
+                    </li>
+                  )}
+                </>
               ))}
             </ul>
           </div>
