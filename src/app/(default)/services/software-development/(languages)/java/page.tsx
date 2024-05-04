@@ -34,13 +34,11 @@ const Page = () => {
       <SolutionIconListThrice
         background="light"
         heading={`Key ${technology} Development Services`}
-        // description=""
         features={dataV2}
       />
       <SolutionBaseListOnce
         background="dark"
         heading={`The ${technology} Ecosystem`}
-        // description=""
         features={dataV3}
       />
       <ServicesFAQ features={dataFAQ} />

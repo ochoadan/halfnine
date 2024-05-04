@@ -115,6 +115,6 @@ export const dataFAQ = [
     },
     {
         question: "Has Angular reached its end of life?",
-        answer: "AngularJS was officially deprecated on December 31, 2021, and its Long Term Support (LTS) for the final version 1.8.3 concluded on April 7, 2022. But there is a new and updated angular project that is still actively maintained.",
+        answer: "AngularJS was officially deprecated on December 31, 2021, and its Long Term Support (LTS) for the final version 1.8.3 concluded on April 7, 2022. But there is a new and updated AngularJS project by the standalone name Angular that is still actively maintained.",
     },
 ];

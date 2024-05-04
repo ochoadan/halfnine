@@ -1,4 +1,4 @@
-import { PythonIcon, CIcon, JavaIcon, CPlusPlusIcon, NodeJsIcon, GoLangIcon, PHPIcon, AssemblyIcon, RustIcon, RubyIcon, MicrosoftDotNetIcon, ReactIcon, FlutterIcon, NextJSIcon, DockerIcon, KubernetesIcon, GitLabIcon, OpenShiftIcon, GrafanaIcon, AWSIcon, AzureIcon, GoogleCloudIcon, AkamaiIcon, DigitalOceanIcon, CloudFlareIcon, BurpSuiteIcon, NmapIcon, WireSharkIcon, MetaSploitIcon, LaravelIcon, ExpressJSIcon, WordPressIcon, JQueryIcon, JavaScriptIcon, TypeScriptIcon, AngularJSIcon, VueJSIcon, FlaskIcon, SpringIcon, DjangoIcon } from "@/components/Global/icons";
+import { PythonIcon, CIcon, JavaIcon, CPlusPlusIcon, NodeJsIcon, GoLangIcon, PHPIcon, AssemblyIcon, RustIcon, RubyIcon, MicrosoftDotNetIcon, ReactIcon, FlutterIcon, NextJSIcon, DockerIcon, KubernetesIcon, GitLabIcon, OpenShiftIcon, GrafanaIcon, AWSIcon, AzureIcon, GoogleCloudIcon, AkamaiIcon, DigitalOceanIcon, CloudFlareIcon, BurpSuiteIcon, NmapIcon, WireSharkIcon, MetaSploitIcon, LaravelIcon, ExpressJSIcon, WordPressIcon, JQueryIcon, JavaScriptIcon, TypeScriptIcon, AngularIcon, VueJSIcon, FlaskIcon, SpringIcon, DjangoIcon, FastAPIIcon, SvelteIcon, RubyOnRailsIcon, NestJSIcon } from "@/components/Global/icons";
 import { BsThreeDots } from "react-icons/bs";
 
 // android, bash, dart, electron, flutter, gatsby, gcp, git, grafana, graphql, heroku, javascript, jenkins, jest, kotlin, linux, mariadb, mysql, nextjs, nginx, nodejs, nuxtjs, postgresql, postman, python, react, redis, sqlite, travisci, vuejs, vuepress, zapier
@@ -30,7 +30,7 @@ export const categories = [
       { name: "React", icon: ReactIcon, url: "/services/software-development/react" },
       { name: "jQuery", icon: JQueryIcon, url: "/services/software-development/jquery" },
       { name: "Express", icon: ExpressJSIcon, url: "/services/software-development/express" },
-      { name: "Angular", icon: AngularJSIcon, url: "/services/software-development/angular" },
+      { name: "Angular", icon: AngularIcon, url: "/services/software-development/angular" },
       { name: "Next.js", icon: NextJSIcon, url: "/services/software-development/nextjs" },
       { name: "Microsoft .NET", icon: MicrosoftDotNetIcon, url: "/services/software-development/dotnet" },
       { name: "Vue.js", icon: VueJSIcon, url: "/services/software-development/vuejs" },
@@ -38,9 +38,13 @@ export const categories = [
       { name: "Flask", icon: FlaskIcon, url: "/services/software-development/flask" },
       { name: "Spring", icon: SpringIcon, url: "/services/software-development/spring" },
       { name: "Django", icon: DjangoIcon, url: "/services/software-development/django" },
+      { name: "Laravel", icon: LaravelIcon, url: "/services/software-development/laravel" },
+      { name: "FastAPI", icon: FastAPIIcon, url: "/services/software-development/fastapi" },
+      { name: "Svelte", icon: SvelteIcon, url: "/services/software-development/svelte" },
+      { name: "Ruby on Rails", icon: RubyOnRailsIcon, url: "/services/software-development/rubyonrails" },
+      { name: "NestJS", icon: NestJSIcon, url: "/services/software-development/nestjs" },
+      // Divider
       { name: "Flutter", icon: FlutterIcon },
-      { name: "Laravel", icon: LaravelIcon },
-      // { name: "Svelte", icon: ExpressJSIcon },
       { name: "And More", icon: BsThreeDots },
     ],
   },
