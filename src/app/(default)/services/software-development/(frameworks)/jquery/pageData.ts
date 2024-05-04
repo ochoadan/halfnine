@@ -1,5 +1,3 @@
-import { MdDashboardCustomize } from "react-icons/md";
-
 export const dataV1 = [
     {
         name: "Enhanced User Interaction",

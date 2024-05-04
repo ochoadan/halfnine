@@ -192,10 +192,10 @@ export default function Example() {
                   />
                 </svg>
               </div>
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+              <h1 className="text-3xl font-bold tracking-tight text-gray-900">
                 {/* Get in touch */}
                 {"Let's talk"}
-              </h2>
+              </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600">
                 Please contact us using the information below or fill out the
                 form and we respond within an hour during business hours.

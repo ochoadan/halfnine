@@ -2,7 +2,6 @@ import Link from "next/link";
 import React from "react";
 import { FadeIn } from "@/components/Global/FadeIn";
 import Image from "next/image";
-import { StarIcon } from "@heroicons/react/20/solid";
 
 interface TechnologyInfoProps {
   technology: string;
@@ -38,34 +37,12 @@ const TechnologyInfo: React.FC<TechnologyInfoProps> = ({
               >
                 Talk to our team
               </Link>
-              <div>
+              <div className="text-yellow-500">
                 <p className="text-sm font-semibold leading-6 text-gray-900">
                   {`Clients rate our ${technology} services`}
                 </p>
-                <p className="text-md font-bold tracking-tight text-brand-600">
-                  4.9/5.0
-                  {/* <div className="flex gap-x-1 pl-3">
-                    <StarIcon
-                      className="h-5 w-5 flex-none"
-                      aria-hidden="true"
-                    />
-                    <StarIcon
-                      className="h-5 w-5 flex-none"
-                      aria-hidden="true"
-                    />
-                    <StarIcon
-                      className="h-5 w-5 flex-none"
-                      aria-hidden="true"
-                    />
-                    <StarIcon
-                      className="h-5 w-5 flex-none"
-                      aria-hidden="true"
-                    />
-                    <StarIcon
-                      className="h-5 w-5 flex-none"
-                      aria-hidden="true"
-                    />
-                  </div> */}
+                <p className="pr-2 text-yellow-500 font-bold">
+                  4.9/5 - Excellent
                 </p>
               </div>
               {/* <Link
@@ -79,7 +56,7 @@ const TechnologyInfo: React.FC<TechnologyInfoProps> = ({
           <FadeIn className="mx-auto">
             <Image
               src={`${imgSrc ? imgSrc : "/img/hero.svg"}`}
-              alt="Product screenshot"
+              alt={`Developer working with ${technology}`}
               // className="w-[20rem] max-w-none p-5 rounded-xl shadow ring-1 ring-gray-400/10 sm:w-[30rem] md:-ml-4 lg:-ml-0"
               width={500}
               height={500}
