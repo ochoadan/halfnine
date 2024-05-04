@@ -7,13 +7,13 @@ import { Metadata } from "next";
 import { dataV1, dataV2, dataV3, dataFAQ } from "./pageData";
 import ServicesFAQ from "@/components/services/faq";
 
-const technology = "jQuery";
+const technology = "Angular";
 
 export const metadata: Metadata = {
   title: `${technology} Software Development Company | Custom ${technology} Solutions`,
   description: `Looking for a ${technology} development Partner? Our team builds secure, scalable enterprise applications using the latest ${technology} technologies.`,
   alternates: {
-    canonical: "https://www.halfnine.com/services/software-development/jquery",
+    canonical: "https://www.halfnine.com/services/software-development/angular",
   },
 };
 
@@ -24,24 +24,24 @@ const Page = () => {
       <TechnologyInfo
         technology={technology}
         message={message}
-        imgSrc="/img/services/jquery.svg"
+        imgSrc="/img/services/angular.svg"
       />
       <SolutionCheckListEven
         background="dark"
         heading={`Benefits of Custom ${technology} Solutions`}
-        description="Custom jQuery solutions offer a unique advantage for web development, addressing specific project requirements with precision. The adaptability of jQuery allows for the creation of dynamic web features that are not only functional but also elevate the user experience. Here are some key reasons why custom jQuery solutions are essential:"
+        description="Angular's robust framework is not just popular but also critically acclaimed, used by giants like Microsoft and Google. This wide adoption is due to its effectiveness in developing single-page applications and progressive web apps, which are pivotal in today’s fast-paced digital era. With over 330,000 websites globally harnessing Angular, its growing popularity underscores its reliability and cutting-edge technology."
         features={dataV1}
       />
       <SolutionIconListThrice
         background="light"
         heading={`Key ${technology} Development Services`}
-        description=""
+        // description=""
         features={dataV2}
       />
       <SolutionBaseListOnce
         background="dark"
         heading={`The ${technology} Ecosystem`}
-        description="The jQuery ecosystem is a robust framework that significantly enhances web development through its versatile range of components. It includes jQuery itself, jQuery UI, jQuery Mobile, Sizzle, and QUnit, each serving distinct purposes and collectively broadening the scope of possible web functionalities."
+        // description=""
         features={dataV3}
       />
       <ServicesFAQ features={dataFAQ} />

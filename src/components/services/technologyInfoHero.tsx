@@ -32,7 +32,8 @@ const TechnologyInfo: React.FC<TechnologyInfoProps> = ({
             </div>
             <div className="mt-10 flex items-center gap-x-6">
               <Link
-                href={`/contact${message ? `?message=${message}` : ""}`}
+                // href={`/contact${message ? `?message=${message}` : ""}`}
+                href={`/contact`}
                 className="rounded-md bg-brand-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600"
               >
                 Talk to our team
@@ -59,7 +60,7 @@ const TechnologyInfo: React.FC<TechnologyInfoProps> = ({
               alt={`Developer working with ${technology}`}
               // className="w-[20rem] max-w-none p-5 rounded-xl shadow ring-1 ring-gray-400/10 sm:w-[30rem] md:-ml-4 lg:-ml-0"
               width={500}
-              height={500}
+              height={363}
             />
           </FadeIn>
         </div>

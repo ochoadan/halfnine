@@ -31,7 +31,7 @@ export default function DevProcess() {
                             <item.icon className="h-6 w-6" />
                           </span>
                           <span className="block min-w-0 flex-1">
-                            <span className="block truncate text-sm font-medium text-gray-900 hover:text-brand-700 hover:underline">
+                            <span className="block truncate text-sm font-medium text-gray-900 group-hover:text-brand-700 group-hover:underline">
                               {item.name}
                             </span>
                           </span>

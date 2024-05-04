@@ -28,7 +28,7 @@ const Page = () => {
       />
       <SolutionCheckListTwice
         background="dark"
-        heading={`Why Custom ${technology} Solutions`}
+        heading={`Benefits of Custom ${technology} Solutions`}
         features={dataV1}
       />
       <SolutionIconListThrice

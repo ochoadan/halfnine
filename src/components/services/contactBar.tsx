@@ -16,7 +16,8 @@ const ContactBar: React.FC<ContactBarProps> = ({ technology, message }) => {
           </h2>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Link
-              href={`/contact${message ? `?message=${message}` : ""}`}
+              // href={`/contact${message ? `?message=${message}` : ""}`}
+              href={`/contact`}
               className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-brand-600 shadow-sm hover:bg-brand-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               {"Let's Talk!"}

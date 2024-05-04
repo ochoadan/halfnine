@@ -28,7 +28,7 @@ const Page = () => {
       />
       <SolutionCheckListEven
         background="dark"
-        heading={`Why Custom ${technology} Solutions`}
+        heading={`Benefits of Custom ${technology} Solutions`}
         description="Node.js is highly valued for its efficiency and versatility, making it a top choice for developers looking to create robust applications. This JavaScript runtime is built on Chrome's V8 JavaScript engine, which enhances its performance by converting JavaScript code directly into machine code that the computer's processor can execute. Such capabilities make Node.js particularly suitable for projects requiring quick processing and handling multiple tasks simultaneously."
         features={dataV1}
       />

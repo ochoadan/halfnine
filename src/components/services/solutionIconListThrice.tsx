@@ -51,13 +51,13 @@ const SolutionIconListThrice = ({
                     <ul className="mt-2 pl-4 ml-2 space-y-2 list-disc">
                       {feature.furtherList.map((further) => (
                         <li key={further.name}>
-                          <h4 className="text-gray-600 inline">
+                          <h4 className="text-gray-800 inline">
                             {further.name}
                           </h4>
                           {further.description && (
                             <>
                               {": "}
-                              <p className="mt-1 inline">
+                              <p className="mt-1 inline text-gray-600">
                                 {further.description}
                               </p>
                             </>

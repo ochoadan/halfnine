@@ -28,7 +28,7 @@ const Page = () => {
       />
       <SolutionCheckListEven
         background="dark"
-        heading={`Why Custom ${technology} Solutions`}
+        heading={`Benefits of Custom ${technology} Solutions`}
         description=""
         features={dataV1}
       />

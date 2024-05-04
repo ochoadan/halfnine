@@ -28,7 +28,7 @@ const Page = () => {
       />
       <SolutionCheckListEven
         background="dark"
-        heading={`Why Custom ${technology} Solutions`}
+        heading={`Benefits of Custom ${technology} Solutions`}
         description="Custom .NET solutions are pivotal for businesses aiming to optimize their operational efficiency and strategic growth. These solutions are not only tailored to the unique needs of a business but also integrate seamlessly with existing systems, enhancing overall productivity and scalability. Here’s an in-depth look at why investing in custom .NET solutions is beneficial for enterprises:"
         features={dataV1}
       />

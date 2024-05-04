@@ -28,7 +28,7 @@ const Page = () => {
       />
       <SolutionCheckListEven
         background="dark"
-        heading={`Why Custom ${technology} Solutions`}
+        heading={`Benefits of Custom ${technology} Solutions`}
         description="Express.js stands out as a premier choice for developing custom solutions due to its numerous advantages that cater to diverse business needs. Here's an exploration of why Express.js is highly favored in the tech industry:"
         features={dataV1}
       />
