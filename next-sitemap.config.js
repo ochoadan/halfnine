@@ -3,6 +3,7 @@ module.exports = {
   siteUrl: process.env.SITE_URL || "https://www.halfnine.com/",
   generateRobotsTxt: false,
   output: "standalone",
+  changefreq: "weekly",
   exclude: [
     "/contact",
     "/dev",

@@ -14,20 +14,20 @@ export default function DevProcess() {
       <div className="divide-y divide-gray-200">
         {categories.map((category, index) => (
           <div className="py-4" key={index}>
-            <h3 className="text-base sm:text-lg font-extrabold text-gray-900">
+            <h3 className="text-base sm:text-xl font-bold text-gray-900">
               {category.title}
             </h3>
-            <ul role="list" className="mt-2 gap-4 flex flex-wrap">
+            <ul role="list" className="mt-2 gap-3.5 flex flex-wrap">
               {category.items.map((item, itemIdx) => (
                 <>
                   {item.url ? (
                     <li key={itemIdx}>
                       <Link
                         href={item.url}
-                        className="group flex w-full items-center justify-between space-x-3 rounded-xl py-1 px-2 border border-gray-100 text-left bg-white shadow-sm shadow-gray-100"
+                        className="group flex w-full items-center justify-between space-x-3 rounded-lg py-1 px-1.5 border border-gray-100 text-left bg-white shadow-sm shadow-gray-100"
                       >
                         <span className="flex min-w-0 flex-1 items-center space-x-2">
-                          <span className="block flex-shrink-0 rounded-lg overflow-hidden">
+                          <span className="block flex-shrink-0 rounded-md overflow-hidden">
                             <item.icon className="h-6 w-6" />
                           </span>
                           <span className="block min-w-0 flex-1">
@@ -40,9 +40,9 @@ export default function DevProcess() {
                     </li>
                   ) : (
                     <li key={itemIdx}>
-                      <div className="group flex w-full items-center justify-between space-x-3 rounded-xl py-1 px-2 border border-gray-100 text-left bg-white shadow-sm shadow-gray-100">
+                      <div className="group flex w-full items-center justify-between space-x-3 rounded-lg py-1 px-2 border border-gray-100 text-left bg-white shadow-sm shadow-gray-100">
                         <span className="flex min-w-0 flex-1 items-center space-x-2">
-                          <span className="block flex-shrink-0 rounded-lg overflow-hidden">
+                          <span className="block flex-shrink-0 rounded-md overflow-hidden">
                             <item.icon className="h-6 w-6" />
                           </span>
                           <span className="block min-w-0 flex-1">

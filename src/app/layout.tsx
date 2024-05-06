@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     title: "Software Development Company • Halfnine",
     description:
       "Halfnine is a software development company that delivers full-service solutions to businesses. Contact us to learn more about how we can help you grow",
+    url: "https://www.halfnine.com",
     images: [
       {
         url: "https://www.halfnine.com/img/og-image.jpg",
