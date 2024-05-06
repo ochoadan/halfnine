@@ -28,7 +28,7 @@ const SolutionCheckListEven = ({
             {heading}
           </h2>
           {description && (
-            <p className="mt-6 text-lg leading-8 text-gray-700">
+            <p className="mt-6 text-base leading-7 text-gray-600">
               {description}
             </p>
           )}

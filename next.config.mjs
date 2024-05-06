@@ -9,8 +9,13 @@ const nextConfig = {
       { hostname: "cms.halfnine.com" },
       { hostname: "via.placeholder.com" },
       { hostname: "images.pexels.com" },
+      { hostname: "www.vectorlogo.zone" },
+      { hostname: "upload.wikimedia.org" },
+      { hostname: "cdn.worldvectorlogo.com" },
     ],
     dangerouslyAllowSVG: true,
+    // contentDispositionType: "attachment",
+    // contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   async redirects() {
     return [

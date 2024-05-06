@@ -1,6 +1,6 @@
-import { FadeIn, FadeInStagger } from "@/components/Global/FadeIn";
 import { categories } from "./categories";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function DevProcess() {
   return (
@@ -28,7 +28,15 @@ export default function DevProcess() {
                       >
                         <span className="flex min-w-0 flex-1 items-center space-x-2">
                           <span className="block flex-shrink-0 rounded-md overflow-hidden">
-                            <item.icon className="h-6 w-6" />
+                            <Image
+                              loading="lazy"
+                              quality={10}
+                              src={item.icon || "/icons/error.svg"}
+                              alt={item.name}
+                              width={24}
+                              height={24}
+                              className="h-6 w-6 object-contain"
+                              />
                           </span>
                           <span className="block min-w-0 flex-1">
                             <span className="block truncate text-sm font-medium text-gray-900 group-hover:text-brand-700 group-hover:underline">
@@ -43,7 +51,15 @@ export default function DevProcess() {
                       <div className="group flex w-full items-center justify-between space-x-3 rounded-lg py-1 px-2 border border-gray-100 text-left bg-white shadow-sm shadow-gray-100">
                         <span className="flex min-w-0 flex-1 items-center space-x-2">
                           <span className="block flex-shrink-0 rounded-md overflow-hidden">
-                            <item.icon className="h-6 w-6" />
+                            <Image
+                              loading="lazy"
+                              quality={10}
+                              src={item.icon || "/icons/error.svg"}
+                              alt={item.name}
+                              width={24}
+                              height={24}
+                              className="h-6 w-6 object-contain"
+                            />
                           </span>
                           <span className="block min-w-0 flex-1">
                             <span className="block truncate text-sm font-medium text-gray-900">
