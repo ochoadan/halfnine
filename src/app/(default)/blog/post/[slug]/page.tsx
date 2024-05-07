@@ -40,7 +40,7 @@ export async function generateStaticParams() {
   const redirectSlugs = response.redirection.redirects.map(
     (redirect: { origin: string }) => slugify(redirect.origin)
   );
-  return [...postSlugs, ...redirectSlugs].map((slug) => ({
+  return [...postSlugs].map((slug) => ({
     slug,
   }));
 }
@@ -103,7 +103,7 @@ const Page = async ({ params }: PostPageParams) => {
     const targetSlug = slugify(
       redirectMatch.target.replace(/.*cms.halfnine.com\//, "")
     );
-    const redirectUrl = `https://www.halfnine.com/blog/post/${targetSlug}`;
+    const redirectUrl = `/blog/post/${targetSlug}`;
     redirect(redirectUrl);
   }
 

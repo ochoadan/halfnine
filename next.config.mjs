@@ -14,7 +14,8 @@ const nextConfig = {
       { hostname: "cdn.worldvectorlogo.com" },
     ],
     dangerouslyAllowSVG: true,
-    // contentDispositionType: "attachment",
+    contentDispositionType: "attachment",
+    contentSecurityPolicy: "default-src 'self'; script-src 'self' 'unsafe-inline'; sandbox;",
     // contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   async redirects() {
