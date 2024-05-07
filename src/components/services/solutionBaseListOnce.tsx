@@ -2,7 +2,7 @@ type SolutionCheckListEvenProps = {
   heading: string;
   description?: string;
   features: {
-    name: string;
+    name?: string;
     description?: string;
     furtherList?: {
       name: string;

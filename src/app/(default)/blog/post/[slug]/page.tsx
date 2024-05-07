@@ -104,7 +104,7 @@ const Page = async ({ params }: PostPageParams) => {
       redirectMatch.target.replace(/.*cms.halfnine.com\//, "")
     );
     const redirectUrl = `/blog/post/${targetSlug}`;
-    redirect(redirectUrl);
+    return redirect(redirectUrl);
   }
 
   const post = await returnPostPage(params);

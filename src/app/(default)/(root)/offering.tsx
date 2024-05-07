@@ -24,7 +24,7 @@ const CategoryItem: React.FC<CategoryItemProps> = ({ item }) => {
                 loading="lazy"
                 quality={10}
                 src={item.icon || "/icons/error.svg"}
-                alt={item.name}
+                alt={item.name + " icon"}
                 width={24}
                 height={24}
                 className="h-6 w-6 object-contain"
@@ -45,7 +45,7 @@ const CategoryItem: React.FC<CategoryItemProps> = ({ item }) => {
                 loading="lazy"
                 quality={10}
                 src={item.icon || "/icons/error.svg"}
-                alt={item.name}
+                alt={item.name + " icon"}
                 width={24}
                 height={24}
                 className="h-6 w-6 object-contain"
