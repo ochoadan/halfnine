@@ -1,5 +1,5 @@
 User-agent: *
-Disallow: /contact/
+Disallow: /contact
 
 # AI bots
 User-agent: GPTBot

@@ -1,6 +1,8 @@
+"use client"
 import { categories } from "./categories";
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 
 interface CategoryItemProps {
   item: {
@@ -63,6 +65,51 @@ const CategoryItem: React.FC<CategoryItemProps> = ({ item }) => {
   );
 };
 
+interface CategoryProps {
+  category: {
+    title: string;
+    items: {
+      url?: string;
+      icon?: string;
+      name: string;
+    }[];
+  };
+}
+
+const Category: React.FC<CategoryProps> = ({ category }) => {
+  const [showMore, setShowMore] = useState(false);
+
+  const toggleShowMore = () => {
+    setShowMore(!showMore);
+  };
+
+  return (
+    <div className="py-4">
+      <h3 className="text-base sm:text-xl font-bold text-gray-900">
+        {category.title}
+      </h3>
+      <ul
+        role="list"
+        className={`my-2 gap-x-4 gap-y-3 flex flex-wrap ${
+          showMore ? "" : "max-h-[80px] overflow-hidden"
+        }`}
+      >
+        {category.items.map((item, itemIdx) => (
+          <CategoryItem key={itemIdx} item={item} />
+        ))}
+      </ul>
+      {category.items.length > 22 && (
+        <button
+          className="text-brand-600 hover:text-brand-500 hover:underline"
+          onClick={toggleShowMore}
+        >
+          {showMore ? "Show less" : "Show more"}
+        </button>
+      )}
+    </div>
+  );
+};
+
 export default function Offering() {
   return (
     <>
@@ -74,16 +121,7 @@ export default function Offering() {
       </div>
       <div className="divide-y divide-gray-200">
         {categories.map((category, index) => (
-          <div className="py-4" key={index}>
-            <h3 className="text-base sm:text-xl font-bold text-gray-900">
-              {category.title}
-            </h3>
-            <ul role="list" className="mt-2 gap-3.5 flex flex-wrap">
-              {category.items.map((item, itemIdx) => (
-                <CategoryItem key={itemIdx} item={item} />
-              ))}
-            </ul>
-          </div>
+          <Category key={index} category={category} />
         ))}
       </div>
       <div className="pt-4 sm:pt-6 md:flex md:items-center">
