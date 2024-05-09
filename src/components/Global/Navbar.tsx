@@ -17,49 +17,73 @@ import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/components/Global/Logo";
 import {
+  FaCloud,
   FaCode,
   FaHeadset,
+  FaLifeRing,
   FaRegCompass,
   FaRegEnvelope,
   FaRegIdCard,
 } from "react-icons/fa6";
+import { GoChecklist } from "react-icons/go";
+import { GiUpgrade } from "react-icons/gi";
+import { GrVmMaintenance } from "react-icons/gr";
 
 const products = [
   {
-    name: "Strategy and Planning",
-    description: "Crafting and executing technical roadmaps and architectures",
+    name: "Strategy",
+    description: "Crafting and executing technical roadmaps",
     href: "#",
     icon: FaRegCompass,
   },
   {
-    name: "Development and Integration",
-    // name: "Systems Development and Integration",
-    description:
-      "Developing and integrating custom software applications or products",
+    name: "Planning",
+    description: "Defining requirements and timelines",
     href: "#",
+    icon: GoChecklist,
+  },
+  // {
+  //   name: "Architecture and Design",
+  // },
+  {
+    name: "Development",
+    description: "Building and testing software systems",
+    href: "/services/software-development",
     icon: FaCode,
   },
   {
-    name: "Support and Maintenance",
-    description:
-      "Asset and vendor management, with user training and help desk support",
+    name: "Deployment",
+    description: "Deploying and configuring systems",
+    href: "#",
+    icon: FaCloud,
+  },
+  {
+    name: "Support",
+    description: "Training and troubleshooting systems",
     href: "#",
     icon: FaHeadset,
     // icon: FaRegLifeRing,
   },
   {
-    name: "Managed Services",
-    description:
-      "Systems, network and cybersecurity administration with continuity",
+    name: "Maintenance",
+    description: "Monitoring and updating systems",
     href: "#",
-    icon: FaRegIdCard,
+    icon: GrVmMaintenance,
   },
+  // {
+  //   name: "Managed Services",
+  //   description:
+  //     "Systems, network and cybersecurity administration with continuity",
+  //   href: "#",
+  //   icon: FaRegIdCard,
+  // },
 ];
 
 const callsToAction = [
   // { name: "Watch demo", href: "#", icon: PlayCircleIcon },
-  { name: "View all services", href: "/services", icon: RectangleGroupIcon },
-  { name: "Contact sales", href: "/contact", icon: PhoneIcon },
+  // { name: "View all services", href: "/services", icon: RectangleGroupIcon },
+  { name: "And more...", href: "/services", icon: RectangleGroupIcon },
+  { name: "Contact us", href: "/contact", icon: PhoneIcon },
 ];
 
 function SolutionsPopover() {
@@ -93,28 +117,30 @@ function SolutionsPopover() {
             // leaveTo="opacity-0 -translate-y-1"
           >
             <Popover.Panel className="absolute inset-x-0 top-0 -z-10 bg-white mt-[68px] shadow-lg border-t-[1px] border-neutral-200">
-              <div className="mx-auto grid max-w-7xl grid-cols-4 gap-x-4 px-6 py-6 lg:px-8 xl:gap-x-8">
+              <div className="mx-auto grid max-w-7xl grid-cols-3 gap-x-4 px-6 py-6 lg:px-8 xl:gap-x-8">
                 {products.map((item) => (
                   <Popover.Button
                     as={Link}
                     href={item.href}
                     key={item.name}
-                    className="group relative rounded-lg p-6 text-sm leading-6 hover:bg-gray-50"
+                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                   >
-                    <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                    <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                       <item.icon
                         className="h-6 w-6 text-gray-600 group-hover:text-brand-600"
                         aria-hidden="true"
                       />
                     </div>
-                    <a
-                      // href={item.href}
-                      className="mt-6 block font-semibold text-gray-900"
-                    >
-                      {item.name}
-                      <span className="absolute inset-0" />
-                    </a>
-                    <p className="mt-1 text-gray-600">{item.description}</p>
+                    <div className="flex-auto">
+                      <a
+                        // href={item.href}
+                        className="block font-semibold text-gray-900"
+                      >
+                        {item.name}
+                        <span className="absolute inset-0" />
+                      </a>
+                      <p className="mt-1 text-gray-600">{item.description}</p>
+                    </div>
                   </Popover.Button>
                 ))}
               </div>
@@ -241,19 +267,19 @@ export default function GlobalNavbar() {
               </button>
             </div>
             <Popover.Group className="hidden lg:flex lg:gap-x-10">
-              {/* <SolutionsPopover /> */}
+              <SolutionsPopover />
               {/* <Link
               href="/process"
               className="font-semibold leading-6 text-gray-500 hover:text-gray-900 select-none"
             >
               Process
             </Link> */}
-              <Link
+              {/* <Link
                 href="/services"
                 className="font-semibold leading-6 text-gray-500 hover:text-gray-900 select-none"
               >
                 Services
-              </Link>
+              </Link> */}
               <Link
                 href="/about"
                 className="font-semibold leading-6 text-gray-500 hover:text-gray-900 select-none"
@@ -321,6 +347,13 @@ export default function GlobalNavbar() {
                 >
                   Pricing
                 </Link> */}
+                  <Link
+                    href="/services"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Services
+                  </Link>
                   <Link
                     href="/about"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"

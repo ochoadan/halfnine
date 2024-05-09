@@ -34,10 +34,17 @@ function Hotjar() {
   );
 }
 
+function Tidio() {
+  return (
+    <Script src="//code.tidio.co/cepzufzkjmuip93mcouc64iud4m9bfvq.js" async />
+  );
+}
+
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <>
       <GoogleAnalytics />
+      <Tidio />
       <Hotjar />
       {children}
     </>

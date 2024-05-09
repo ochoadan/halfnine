@@ -12,6 +12,9 @@ module.exports = {
     "/blog/*",
     "/blog/post/*",
     "/blog/sitemap.xml",
+    // ToDelete
+    "/services/aws/dynamodb",
+    "/services/software-development/postgresql",
   ],
   robotsTxtOptions: {
     additionalSitemaps: ["https://www.halfnine.com/blog/sitemap.xml"],

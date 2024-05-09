@@ -52,7 +52,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${fontSource.className} min-h-screen`}>
-        <Providers>{children}</Providers>
+        <div>
+          <Providers>{children}</Providers>
+        </div>
       </body>
     </html>
   );

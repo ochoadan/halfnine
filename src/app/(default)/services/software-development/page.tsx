@@ -1,14 +1,14 @@
 import PageHero from "@/components/Global/PageHero";
-import { RootOffering } from "../(root)";
+import { RootOffering } from "../../(root)";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Software Development Services • Halfnine",
   description:
     "Halfnine is a software development company that delivers full-service solutions to businesses. Contact us to learn more about how we can help you grow",
-  alternates: { canonical: "https://www.halfnine.com/services" },
+  alternates: { canonical: "https://www.halfnine.com/services/software-development" },
   openGraph: {
-    url: "https://www.halfnine.com/services",
+    url: "https://www.halfnine.com/services/software-development",
   },
 };
 
@@ -16,8 +16,8 @@ const Page = () => {
   return (
     <>
       <PageHero
-        heading="Full-Service IT Development & Consulting"
-        description="Our solutions are customized to your needs and goals"
+        heading="Software Development Services"
+        description="Full-Service Software Development and Consulting Solutions"
       />
       {[RootOffering].map((Component, index) => (
         <div

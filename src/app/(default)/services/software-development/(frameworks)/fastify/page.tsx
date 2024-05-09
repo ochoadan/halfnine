@@ -8,12 +8,16 @@ import { dataV1, dataV2, dataV3, dataFAQ } from "./pageData";
 import ServicesFAQ from "@/components/services/faq";
 
 const technology = "Fastify";
+const slug = "fastify";
 
 export const metadata: Metadata = {
   title: `${technology} Software Development Company | Custom ${technology} Solutions`,
   description: `Looking for a ${technology} development Partner? Our team builds secure, scalable enterprise applications using the latest ${technology} technologies.`,
   alternates: {
-    canonical: "https://www.halfnine.com/services/software-development/fastify",
+    canonical: `https://www.halfnine.com/services/software-development/${slug}`,
+  },
+  openGraph: {
+    url: `https://www.halfnine.com/services/software-development/${slug}`,
   },
 };
 
@@ -24,7 +28,7 @@ const Page = () => {
       <TechnologyInfo
         technology={technology}
         message={message}
-        imgSrc="/img/services/fastify.svg"
+        imgSrc={`/img/services/${slug}.svg`}
       />
       <SolutionCheckListEven
         background="dark"

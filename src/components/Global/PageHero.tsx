@@ -14,7 +14,7 @@ const PageHero = ({ heading, description }: any) => {
         // }}
       />
       <div className="relative px-6 py-8 sm:py-12 lg:px-12 lg:py-14">
-        <h1 className="text-center text-2xl font-extrabold sm:text-3xl lg:text-4xl max-w-2xl mx-auto">
+        <h1 className="text-center text-2xl font-extrabold sm:text-3xl lg:text-4xl max-w-3xl mx-auto">
           <span className="block">{heading}</span>
           <hr className="border-brand-600 opacity-90 border-b-[2px] mx-auto w-28 my-8" />
         </h1>

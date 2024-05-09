@@ -99,7 +99,7 @@ const Misc = () => {
                   {item.title}
                   {/* <hr
                     className={clsx(
-                      "border-sky-600 opacity-90 border-b-[2px] w-20 my-2",
+                      "border-brand-600 opacity-90 border-b-[2px] w-20 my-2",
                       index % 2 === 0 ? "" : "ml-auto"
                     )}
                   /> */}
@@ -115,7 +115,7 @@ const Misc = () => {
                     Contact us
                   </Link>
                 </p>
-                {/* <p className="mt-4 text-base font-semibold leading-7 text-sky-600">
+                {/* <p className="mt-4 text-base font-semibold leading-7 text-brand-600">
                 Cost: {item.cost}
                 </p> */}
                 <p className="mt-4 text-gray-500">{item.description}</p>
