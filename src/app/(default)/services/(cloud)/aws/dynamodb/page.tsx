@@ -33,7 +33,7 @@ const Page = () => {
       <SolutionCheckListEven
         background="dark"
         heading={`Benefits of Custom ${technology} Solutions`}
-        description=""
+        description="Custom DynamoDB solutions cater specifically to application demands, optimizing both performance and cost-efficiency. Here are some of the key benefits:"
         features={dataV1}
       />
       <SolutionIconListThrice

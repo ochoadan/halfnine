@@ -56,7 +56,7 @@ export const categories = [
       // -Hard To ID-  { name: "Nim", icon: "https://www.vectorlogo.zone/logos/nim-lang/nim-lang-icon.svg", url: "/services/software-development/nim" },
       { name: "APL", icon: "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/apl/apl-original.svg", url: "/services/software-development/apl" },
       // -Hard To ID- { name: "Flow", icon: "https://raw.githubusercontent.com/bestofjs/bestofjs/eb151f8eae67ee98fe070cd65284d11ccecaa20c/apps/bestofjs-nextjs/public/logos/flow.svg", url: "/services/software-development/flow" },
-      { name: "Raku", icon: "https://raw.githubusercontent.com/abrudz/logos/f9013546641680fba2a7c96272a80160f982c6cd/Raku.svg", url: "/services/software-development/raku" },
+      { name: "Raku", icon: "https://upload.wikimedia.org/wikipedia/commons/8/85/Camelia.svg", url: "/services/software-development/raku" },
 
       // ? {name: "Scheme", icon: "https://www.vectorlogo.zone/logos/scheme/scheme-icon.svg", url: "/services/software-development/scheme"},
       // ? {name: "Smalltalk", icon: "https://www.vectorlogo.zone/logos/smalltalk/smalltalk-icon.svg", url: "/services/software-development/smalltalk"},

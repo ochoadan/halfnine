@@ -33,19 +33,18 @@ const Page = () => {
       <SolutionCheckListEven
         background="dark"
         heading={`Benefits of Custom ${technology} Solutions`}
-        description=""
+        description="Custom PostgreSQL solutions provide a tailored approach to database management, which is crucial for businesses aiming to enhance performance and efficiency. Here are the key benefits:"
         features={dataV1}
       />
       <SolutionIconListThrice
         background="light"
         heading={`Key ${technology} Development Services`}
-        description=""
         features={dataV2}
       />
       <SolutionBaseListOnce
         background="dark"
         heading={`The ${technology} Ecosystem`}
-        description=""
+        description="PostgreSQL boasts a robust and vibrant ecosystem, characterized by a large, active community and a comprehensive suite of tools and services that cater to a wide range of applications. This ecosystem is not only supported by extensive documentation and community resources but also enhanced by significant contributions from major entities such as EDB. Here’s an exploration of the key components and offerings within this ecosystem:"
         features={dataV3}
       />
       <ServicesFAQ features={dataFAQ} />

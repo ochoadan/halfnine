@@ -58,6 +58,7 @@ const TechnologyInfo: React.FC<TechnologyInfoProps> = ({
             <Image
               src={`${imgSrc ? imgSrc : "/img/hero.svg"}`}
               alt={`Software developer working with ${technology}`}
+              // className="object-contain w-[32rem]"
               // className="w-[20rem] max-w-none p-5 rounded-xl shadow ring-1 ring-gray-400/10 sm:w-[30rem] md:-ml-4 lg:-ml-0"
               width={500}
               height={363}
