@@ -1,11 +1,11 @@
-import TechnologyInfoHero from "@/components/services/technologyInfoHero";
-import SolutionCheckListEven from "@/components/services/solutionCheckListEven";
-import SolutionIconListThrice from "@/components/services/solutionIconListThrice";
-import SolutionBaseListOnce from "@/components/services/solutionBaseListOnce";
+import TechnologyInfoHero from "@/components/services/TechnologyHero";
+import SolutionCheckListEven from "@/components/services/list/SolutionCheckListEven";
+import SolutionIconListThrice from "@/components/services/list/SolutionIconListThrice";
+import SolutionBaseListOnce from "@/components/services/list/SolutionBaseListOnce";
 import ContactBar from "@/components/services/contactBar";
 import { Metadata } from "next";
 import { dataV1, dataV2, dataV3, dataFAQ } from "./pageData";
-import ServicesFAQ from "@/components/services/faq";
+import ServicesFAQ from "@/components/services/ServicesFAQ";
 
 const technology = "Express";
 const slug = "express";

@@ -1,10 +1,10 @@
 import CustomHero from "@/components/services/CustomHero";
-import ServicesFAQ from "@/components/services/faq";
+import ServicesFAQ from "@/components/services/ServicesFAQ";
 import { Metadata } from "next";
 import { Data1, Data2, Data3, FAQData } from "./pageData";
-import SolutionCheckListEven from "@/components/services/solutionCheckListEven";
-import SolutionIconListThrice from "@/components/services/solutionIconListThrice";
-import SolutionBaseListOnce from "@/components/services/solutionBaseListOnce";
+import SolutionCheckListEven from "@/components/services/list/SolutionCheckListEven";
+import SolutionIconListThrice from "@/components/services/list/SolutionIconListThrice";
+import SolutionBaseListOnce from "@/components/services/list/SolutionBaseListOnce";
 
 const slug = "consulting";
 
