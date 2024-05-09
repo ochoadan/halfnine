@@ -1,7 +1,7 @@
-import TechnologyInfoHero from "@/components/services/TechnologyInfoHero";
-import SolutionCheckListEven from "@/components/services/SolutionCheckListEven";
-import SolutionIconListThrice from "@/components/services/SolutionIconListThrice";
-import SolutionBaseListOnce from "@/components/services/SolutionBaseListOnce";
+import TechnologyInfoHero from "@/components/services/technologyInfoHero";
+import SolutionCheckListEven from "@/components/services/solutionCheckListEven";
+import SolutionIconListThrice from "@/components/services/solutionIconListThrice";
+import SolutionBaseListOnce from "@/components/services/solutionBaseListOnce";
 import ContactBar from "@/components/services/contactBar";
 import { Metadata } from "next";
 import { dataV1, dataV2, dataV3, dataFAQ } from "./pageData";
