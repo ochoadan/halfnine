@@ -1,7 +1,7 @@
-import TechnologyInfo from "@/components/services/technologyInfoHero";
-import SolutionCheckListEven from "@/components/services/solutionCheckListTwice";
-import SolutionIconListThrice from "@/components/services/solutionIconListThrice";
-import SolutionBaseListOnce from "@/components/services/solutionBaseListOnce";
+import TechnologyInfoHero from "@/components/services/TechnologyInfoHero";
+import SolutionCheckListEven from "@/components/services/SolutionCheckListEven";
+import SolutionIconListThrice from "@/components/services/SolutionIconListThrice";
+import SolutionBaseListOnce from "@/components/services/SolutionBaseListOnce";
 import ContactBar from "@/components/services/contactBar";
 import { Metadata } from "next";
 import { dataV1, dataV2, dataV3, dataFAQ } from "./pageData";
@@ -25,13 +25,13 @@ const Page = () => {
   const message = `I need professional ${technology} development services.`;
   return (
     <>
-      <TechnologyInfo
+      <TechnologyInfoHero
         technology={technology}
         message={message}
         imgSrc={`/img/services/${slug}.svg`}
       />
       <SolutionCheckListEven
-        background="dark"
+        background="gray"
         heading={`Benefits of Custom ${technology} Solutions`}
         features={dataV1}
       />
@@ -41,7 +41,7 @@ const Page = () => {
         features={dataV2}
       />
       <SolutionBaseListOnce
-        background="dark"
+        background="gray"
         heading={`The ${technology} Ecosystem`}
         description="MATLAB is widely recognized as a comprehensive platform for numerical computing, widely utilized by engineers and scientists. Central to its appeal is the MATLAB language, which excels in matrix and array mathematics, pivotal for data analysis and algorithm development. The desktop environment of MATLAB, integrated with its programming capabilities, forms a robust foundation for various scientific and engineering tasks."
         features={dataV3}

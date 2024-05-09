@@ -1,7 +1,7 @@
-import TechnologyInfo from "@/components/services/technologyInfoHero";
-import SolutionCheckListEven from "@/components/services/solutionCheckListTwice";
-import SolutionIconListThrice from "@/components/services/solutionIconListThrice";
-import SolutionBaseListOnce from "@/components/services/solutionBaseListOnce";
+import TechnologyInfoHero from "@/components/services/TechnologyInfoHero";
+import SolutionCheckListEven from "@/components/services/SolutionCheckListEven";
+import SolutionIconListThrice from "@/components/services/SolutionIconListThrice";
+import SolutionBaseListOnce from "@/components/services/SolutionBaseListOnce";
 import ContactBar from "@/components/services/contactBar";
 import { Metadata } from "next";
 import { dataV1, dataV2, dataV3, dataFAQ } from "./pageData";
@@ -25,13 +25,13 @@ const Page = () => {
   const message = `I need professional ${technology} development services.`;
   return (
     <>
-      <TechnologyInfo
+      <TechnologyInfoHero
         technology={technology}
         message={message}
         imgSrc={`/img/services/${slug}.svg`}
       />
       <SolutionCheckListEven
-        background="dark"
+        background="gray"
         heading={`Benefits of Custom ${technology} Solutions`}
         description="Rust's rise as the most loved language since 2016, according to Stack Overflow Developer Surveys, highlights its significant appeal among developers. A staggering 86.1% of developers currently using Rust express a desire to continue utilizing it in the upcoming year. This preference stems from Rust's unique features, such as its memory safety in a compiled, real systems programming language without the need for garbage collection or a complex runtime system."
         features={dataV1}
@@ -42,7 +42,7 @@ const Page = () => {
         features={dataV2}
       />
       <SolutionBaseListOnce
-        background="dark"
+        background="gray"
         heading={`The ${technology} Ecosystem`}
         description="The Rust Ecosystem is a robust framework supporting the development and deployment of applications across various platforms. Central to this ecosystem is the Rust compiler, rustc, which efficiently compiles .rs files into binaries and other intermediate formats, ensuring high performance and security. Developers rely on Cargo, the Rust dependency manager and build tool, for managing project dependencies from sources like https://crates.io, and for utilizing its built-in test runner to execute unit tests."
         features={dataV3}

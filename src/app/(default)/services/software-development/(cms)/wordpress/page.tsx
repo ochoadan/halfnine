@@ -1,7 +1,7 @@
-import TechnologyInfo from "@/components/services/technologyInfoHero";
-import SolutionCheckListEven from "@/components/services/solutionCheckListTwice";
-import SolutionIconListThrice from "@/components/services/solutionIconListThrice";
-import SolutionBaseListOnce from "@/components/services/solutionBaseListOnce";
+import TechnologyInfoHero from "@/components/services/TechnologyInfoHero";
+import SolutionCheckListEven from "@/components/services/SolutionCheckListEven";
+import SolutionIconListThrice from "@/components/services/SolutionIconListThrice";
+import SolutionBaseListOnce from "@/components/services/SolutionBaseListOnce";
 import ContactBar from "@/components/services/contactBar";
 import { Metadata } from "next";
 import { dataV1, dataV2, dataV3, dataFAQ } from "./pageData";
@@ -25,13 +25,13 @@ const Page = () => {
   const message = `I need professional ${technology} development services.`;
   return (
     <>
-      <TechnologyInfo
+      <TechnologyInfoHero
         technology={technology}
         message={message}
         imgSrc={`/img/services/${slug}.svg`}
       />
       <SolutionCheckListEven
-        background="dark"
+        background="gray"
         heading={`Benefits of Custom ${technology} Solutions`}
         description="Custom WordPress solutions are tailored to align with a brand’s identity, offering a unique and professional-looking design that sets businesses apart from competitors. These solutions provide enhanced functionality, flexibility, and performance, allowing for a website that meets specific business needs. Here are some key benefits:"
         features={dataV1}
@@ -42,7 +42,7 @@ const Page = () => {
         features={dataV2}
       />
       <SolutionBaseListOnce
-        background="dark"
+        background="gray"
         heading={`The ${technology} Ecosystem`}
         description="WordPress has evolved into a comprehensive ecosystem that supports a wide range of web development and business needs. At the core, WordPress.org offers a self-hosted platform, allowing full control over websites with the ability to install on personal servers or through hosting providers. This flexibility has made WordPress a popular choice, used by 42.7% of all websites."
         features={dataV3}

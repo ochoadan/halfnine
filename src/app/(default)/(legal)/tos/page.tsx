@@ -3,6 +3,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Terms of Service",
     alternates: { canonical: "https://www.halfnine.com/tos" },
+    openGraph: { url: "https://www.halfnine.com/tos" },
 };
   
 const TermsOfService = () => {

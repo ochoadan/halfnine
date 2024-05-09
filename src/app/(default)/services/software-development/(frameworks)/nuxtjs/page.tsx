@@ -1,7 +1,7 @@
-import TechnologyInfo from "@/components/services/technologyInfoHero";
-import SolutionCheckListEven from "@/components/services/solutionCheckListTwice";
-import SolutionIconListThrice from "@/components/services/solutionIconListThrice";
-import SolutionBaseListOnce from "@/components/services/solutionBaseListOnce";
+import TechnologyInfoHero from "@/components/services/TechnologyInfoHero";
+import SolutionCheckListEven from "@/components/services/SolutionCheckListEven";
+import SolutionIconListThrice from "@/components/services/SolutionIconListThrice";
+import SolutionBaseListOnce from "@/components/services/SolutionBaseListOnce";
 import ContactBar from "@/components/services/contactBar";
 import { Metadata } from "next";
 import { dataV1, dataV2, dataV3, dataFAQ } from "./pageData";
@@ -25,13 +25,13 @@ const Page = () => {
   const message = `I need professional ${technology} development services.`;
   return (
     <>
-      <TechnologyInfo
+      <TechnologyInfoHero
         technology={technology}
         message={message}
         imgSrc={`/img/services/${slug}.svg`}
       />
       <SolutionCheckListEven
-        background="dark"
+        background="gray"
         heading={`Benefits of Custom ${technology} Solutions`}
         description="Nuxt.js, as a framework, offers a suite of advantages for businesses seeking customized web solutions. Its ability to streamline the development process through automated features like code splitting and server-side rendering directly contributes to enhanced performance and improved SEO outcomes. This not only aids in faster loading times but also ensures that web applications are more accessible and performant across various devices and network conditions."
         features={dataV1}
@@ -42,7 +42,7 @@ const Page = () => {
         features={dataV2}
       />
       <SolutionBaseListOnce
-        background="dark"
+        background="gray"
         heading={`The ${technology} Ecosystem`}
         description="The Nuxt Ecosystem is a robust framework developed by an international team, supported by a growing community of contributors and developer advocates. This ecosystem is structured around a well-defined directory that not only facilitates easy navigation but also promotes the adoption of best practices for scalable application development."
         features={dataV3}

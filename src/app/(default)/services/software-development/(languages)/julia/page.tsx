@@ -1,7 +1,7 @@
-import TechnologyInfo from "@/components/services/technologyInfoHero";
-import SolutionCheckListEven from "@/components/services/solutionCheckListTwice";
-import SolutionIconListThrice from "@/components/services/solutionIconListThrice";
-import SolutionBaseListOnce from "@/components/services/solutionBaseListOnce";
+import TechnologyInfoHero from "@/components/services/TechnologyInfoHero";
+import SolutionCheckListEven from "@/components/services/SolutionCheckListEven";
+import SolutionIconListThrice from "@/components/services/SolutionIconListThrice";
+import SolutionBaseListOnce from "@/components/services/SolutionBaseListOnce";
 import ContactBar from "@/components/services/contactBar";
 import { Metadata } from "next";
 import { dataV1, dataV2, dataV3, dataFAQ } from "./pageData";
@@ -25,13 +25,13 @@ const Page = () => {
   const message = `I need professional ${technology} development services.`;
   return (
     <>
-      <TechnologyInfo
+      <TechnologyInfoHero
         technology={technology}
         message={message}
         imgSrc={`/img/services/${slug}.svg`}
       />
       <SolutionCheckListEven
-        background="dark"
+        background="gray"
         heading={`Benefits of Custom ${technology} Solutions`}
         features={dataV1}
       />
@@ -41,7 +41,7 @@ const Page = () => {
         features={dataV2}
       />
       <SolutionBaseListOnce
-        background="dark"
+        background="gray"
         heading={`The ${technology} Ecosystem`}
         description="Julia’s ecosystem is richly endowed with tools and libraries that cater to a wide range of computing needs. From data visualization to scientific computing, Julia provides an extensive and deeply integrated environment designed to meet the diverse needs of its users."
         features={dataV3}

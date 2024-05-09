@@ -1,7 +1,7 @@
-import TechnologyInfo from "@/components/services/technologyInfoHero";
-import SolutionCheckListEven from "@/components/services/solutionCheckListTwice";
-import SolutionIconListThrice from "@/components/services/solutionIconListThrice";
-import SolutionBaseListOnce from "@/components/services/solutionBaseListOnce";
+import TechnologyInfoHero from "@/components/services/TechnologyInfoHero";
+import SolutionCheckListEven from "@/components/services/SolutionCheckListEven";
+import SolutionIconListThrice from "@/components/services/SolutionIconListThrice";
+import SolutionBaseListOnce from "@/components/services/SolutionBaseListOnce";
 import ContactBar from "@/components/services/contactBar";
 import { Metadata } from "next";
 import { dataV1, dataV2, dataV3, dataFAQ } from "./pageData";
@@ -25,13 +25,13 @@ const Page = () => {
   const message = `I need professional ${technology} development services.`;
   return (
     <>
-      <TechnologyInfo
+      <TechnologyInfoHero
         technology={technology}
         message={message}
         imgSrc={`/img/services/${slug}.svg`}
       />
       <SolutionCheckListEven
-        background="dark"
+        background="gray"
         heading={`Benefits of Custom ${technology} Solutions`}
         description="Deno's architecture is designed with security at its core, making it an ideal solution for businesses prioritizing safe and reliable software environments. By default, Deno does not allow access to files, the network, or the environment without explicit permission, significantly minimizing potential security risks. This secure-by-design approach ensures that applications are safeguarded against unauthorized access and data breaches."
         features={dataV1}
@@ -42,7 +42,7 @@ const Page = () => {
         features={dataV2}
       />
       <SolutionBaseListOnce
-        background="dark"
+        background="gray"
         heading={`The ${technology} Ecosystem`}
         description="Deno's ecosystem, while less mature than Node.js, offers unique advantages and challenges for developers. The runtime's security model is robust, requiring explicit permissions for access to the file system, network, and environment, which, while intended to enhance security, may not offer significant practical benefits as these permissions are typically granted at startup."
         features={dataV3}

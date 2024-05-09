@@ -1,16 +1,28 @@
 import CustomHero from "@/components/services/CustomHero";
+import { Metadata } from "next";
+
+const slug = "cloud";
+
+export const metadata: Metadata = {
+  title: `Cloud Managed Services Company`,
+  description: `We provide cloud managed services to help you manage your cloud infrastructure and applications, ensuring they are secure, scalable, and optimized for performance`,
+  alternates: {
+    canonical: `https://www.halfnine.com/services/${slug}`,
+  },
+  openGraph: {
+    url: `https://www.halfnine.com/services/${slug}`,
+  },
+};
 
 const Page = () => {
   return (
-    <div className="bg-white py-12 md:py-24">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <CustomHero
-          heading="Cloud Managed Services Company"
-          technology="Cloud"
-          imgSrc="/img/index/cloudhero.svg"
-        />
-      </div>
-    </div>
+    <>
+      <CustomHero
+        heading="Cloud Managed Services Company"
+        technology="Cloud"
+        imgSrc="/img/index/cloudhero.svg"
+      />
+    </>
   );
 };
 

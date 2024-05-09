@@ -23,10 +23,10 @@ const statsData = [
 ];
 
 const IdealClient = () => (
-  <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-6">
+  <div className="space-y-6">
     <div className="text-center">
       <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-        Facing Challanges?
+        Facing Challenges?
       </h2>
       <p className="mt-4 text-lg text-gray-700 max-w-2xl mx-auto">
         {`Let us help you reverse the effects of declining sales, increased competition, or consolidating markets. We deliver success to the struggling.`}

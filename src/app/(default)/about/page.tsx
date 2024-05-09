@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   description:
     "Halfnine emerged from a vision to assist businesses in leveraging technology solutions to transform opportunities and ideas into a reality.",
   alternates: { canonical: "https://www.halfnine.com/about" },
+  openGraph: { url: "https://www.halfnine.com/about" },
 };
 
 const projects = [
@@ -20,7 +21,7 @@ const projects = [
     name: "Surveyr.io",
     status: "Acquisition",
     description:
-      "A platform for monitoring backend cron jobs for Laravel and php Applications.",
+      "A platform for monitoring backend cron jobs for Laravel and PHP Applications.",
     link: { href: "https://surveyr.io", label: "surveyr.io" },
     logo: logoSurveyr,
   },
@@ -36,7 +37,7 @@ const projects = [
     name: "Dynamic QR Codes",
     status: "Developed (Demo)",
     description:
-      "This is a Demo Application for allows companies to generate dynamic QR codes for their users to update.",
+      "This is a Demo Application allows companies to generate dynamic QR codes for their users to update.",
     link: { href: "https://qrdemo.halfnine.com", label: "qrdemo.halfnine.com" },
     logo: logoCasente,
   },

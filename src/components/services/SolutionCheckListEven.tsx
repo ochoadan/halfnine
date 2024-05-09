@@ -8,16 +8,16 @@ type SolutionCheckListEvenProps = {
     description?: string;
     furtherList?: { name: string; description?: string }[];
   }[];
-  background: "light" | "dark";
+  background?: "light" | "gray";
 };
 
 const SolutionCheckListEven = ({
   heading,
   description,
   features,
-  background,
+  background = "light",
 }: SolutionCheckListEvenProps) => {
-  const containerClassName = background === "dark" ? "bg-gray-50" : "bg-white";
+  const containerClassName = background === "gray" ? "bg-gray-50" : "bg-white";
   return (
     <div className={`${containerClassName} py-24 sm:py-32`}>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">

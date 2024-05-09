@@ -2,7 +2,33 @@
 
 import Link from "next/link";
 import { FaLinkedin, FaXTwitter, FaFacebook, FaGithub } from "react-icons/fa6";
+import Logo from "./Logo";
 const navigation = {
+  solutions: [
+    { name: "Software Development", href: "/services/software-development" },
+    { name: "Deployment & Integration", href: "/services/cloud" },
+    { name: "Support & Maintenance", href: "/services/support" },
+    // { name: "Web Development", href: "/services/web-development" },
+    // { name: "Mobile Development", href: "/services/mobile-development" },
+    // { name: "DevOps", href: "/services/devops" },
+    // { name: "Cloud Computing", href: "/services/cloud-computing" },
+    // { name: "IT Consulting", href: "/services/it-consulting" },
+  ],
+  consulting: [
+    { name: "Information Technology", href: "/services/consulting" },
+    { name: "Enterprise Architecture", href: "/services/architecture" },
+    { name: "Security & Compliance", href: "/services/security" },
+  ],
+  company: [
+    { name: "About", href: "/about" },
+    { name: "Blog", href: "/blog" },
+    { name: "Services", href: "/services" },
+  ],
+  legal: [
+    { name: "Privacy", href: "/privacy" },
+    { name: "Terms", href: "/tos" },
+    { name: "Contact", href: "/contact" },
+  ],
   main: [
     { name: "About", href: "/about" },
     { name: "Investors", href: "/investors" },
@@ -16,91 +42,205 @@ const navigation = {
     // { name: "Accessibility", href: "#" },
     // { name: "Partners", href: "#" },
   ],
-  // social: [
-  //   {
-  //     name: "GitHub",
-  //     href: "https://github.com/halfnineus",
-  //     icon: (props: any) => (
-  //       <svg fill="currentColor" viewBox="0 0 496 512" {...props}>
-  //         <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
-  //       </svg>
-  //     ),
-  //   },
-  // ],
 };
 
 export default function GlobalFooter() {
   return (
-    <footer className="bg-white border-gray-200 border-t-[2px]">
-      <div className="mx-auto max-w-7xl overflow-hidden px-6 py-12 sm:py-14 lg:px-8">
-        <nav
-          className="-mb-6 columns-2 sm:flex sm:justify-center sm:gap-x-12"
-          aria-label="Footer"
-        >
-          {navigation.main.map((item) => (
-            <div key={item.name} className="pb-6">
+    // <footer className="bg-white border-gray-200 border-t-[2px]">
+    <footer className="bg-white border-gray-200 border-t-[2px]" aria-labelledby="footer-heading">
+      <h2 id="footer-heading" className="sr-only">
+        Footer
+      </h2>
+      <div className="mx-auto max-w-7xl px-6 pb-8 pt-12 sm:pt-16 lg:px-8 lg:pt-24">
+        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
+          <div className="space-y-8">
+            <Logo className="h-10" />
+            {/* <img
+              className="h-7"
+              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+              alt="Company name"
+            /> */}
+            <p className="text-sm leading-6 text-gray-600">
+              Providing IT services that empower you to build the future.
+            </p>
+            <div className="flex space-x-6">
               <Link
-                href={item.href}
-                className="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                href="https://www.linkedin.com/company/halfnine-llc/"
+                target="_blank"
+                className="text-gray-400 hover:text-[#0077B5] scale-95 hover:scale-{1.02}"
               >
-                {item.name}
+                <span className="sr-only">LinkedIn</span>
+                <FaLinkedin className="h-6 w-6" aria-hidden="true" />
+              </Link>
+              <Link
+                href="https://twitter.com/halfnine"
+                target="_blank"
+                className="text-gray-400 hover:text-black scale-100 hover:scale-{1.02}"
+              >
+                <span className="sr-only">Twitter</span>
+                <FaXTwitter className="h-6 w-6" aria-hidden="true" />
+              </Link>
+              <Link
+                href="https://www.facebook.com/halfnineus"
+                target="_blank"
+                className="text-gray-400 hover:text-[#0165E1] scale-100 hover:scale-{1.02}"
+              >
+                <span className="sr-only">Facebook</span>
+                <FaFacebook className="h-6 w-6" aria-hidden="true" />
+              </Link>
+              <Link
+                href="https://github.com/halfnineus"
+                target="_blank"
+                className="text-gray-400 hover:text-black scale-100 hover:scale-{1.02}"
+              >
+                <span className="sr-only">GitHub</span>
+                <FaGithub className="h-6 w-6" aria-hidden="true" />
               </Link>
             </div>
-          ))}
-        </nav>
-        <div className="mt-10 flex justify-center gap-x-10">
-          {/* {navigation.social.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              target={"_blank"}
-              className="text-gray-400 hover:text-gray-500"
-            >
-              <span className="sr-only">{item.name}</span>
-              <item.icon className="h-6 w-6" aria-hidden="true" />
-            </Link>
-          ))} */}
-          <Link
-            href="https://www.linkedin.com/company/halfnine-llc/"
-            target="_blank"
-            className="text-gray-400 hover:text-[#0077B5] scale-95 hover:scale-{1.02}"
-          >
-            <span className="sr-only">LinkedIn</span>
-            <FaLinkedin className="h-6 w-6" aria-hidden="true" />
-          </Link>
-          <Link
-            href="https://twitter.com/halfnine"
-            target="_blank"
-            className="text-gray-400 hover:text-black scale-100 hover:scale-{1.02}"
-          >
-            <span className="sr-only">Twitter</span>
-            <FaXTwitter className="h-6 w-6" aria-hidden="true" />
-          </Link>
-          <Link
-            href="https://www.facebook.com/halfnineus"
-            target="_blank"
-            className="text-gray-400 hover:text-[#0165E1] scale-100 hover:scale-{1.02}"
-          >
-            <span className="sr-only">Facebook</span>
-            <FaFacebook className="h-6 w-6" aria-hidden="true" />
-          </Link>
-          <Link
-            href="https://github.com/halfnineus"
-            target="_blank"
-            className="text-gray-400 hover:text-black scale-100 hover:scale-{1.02}"
-          >
-            <span className="sr-only">GitHub</span>
-            <FaGithub className="h-6 w-6" aria-hidden="true" />
-          </Link>
+          </div>
+          <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+            <div className="md:grid md:grid-cols-2 md:gap-8">
+              <div>
+                <h3 className="text-sm font-semibold leading-6 text-gray-900">
+                  Solutions
+                </h3>
+                <ul role="list" className="mt-6 space-y-4">
+                  {navigation.solutions.map((item) => (
+                    <li key={item.name}>
+                      <a
+                        href={item.href}
+                        className="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                      >
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="mt-10 md:mt-0">
+                <h3 className="text-sm font-semibold leading-6 text-gray-900">
+                  Consulting
+                </h3>
+                <ul role="list" className="mt-6 space-y-4">
+                  {navigation.consulting.map((item) => (
+                    <li key={item.name}>
+                      <a
+                        href={item.href}
+                        className="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                      >
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <div className="md:grid md:grid-cols-2 md:gap-8">
+              <div>
+                <h3 className="text-sm font-semibold leading-6 text-gray-900">
+                  Company
+                </h3>
+                <ul role="list" className="mt-6 space-y-4">
+                  {navigation.company.map((item) => (
+                    <li key={item.name}>
+                      <a
+                        href={item.href}
+                        className="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                      >
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="mt-10 md:mt-0">
+                <h3 className="text-sm font-semibold leading-6 text-gray-900">
+                  Legal
+                </h3>
+                <ul role="list" className="mt-6 space-y-4">
+                  {navigation.legal.map((item) => (
+                    <li key={item.name}>
+                      <a
+                        href={item.href}
+                        className="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                      >
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-        <p className="mt-10 text-center text-xs leading-5 text-gray-500">
-          &copy; {new Date().getFullYear()}{" "}
-          <Link href="https://www.halfnine.com" target="_blank">
-            Halfnine
-          </Link>{" "}
-          LLC. All rights reserved.
-        </p>
+        <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
+          <p className="text-xs leading-5 text-gray-500">
+            &copy; {new Date().getFullYear()}{" "}
+            <Link href="https://www.halfnine.com" target="_blank">
+              Halfnine
+            </Link>{" "}
+            LLC. All rights reserved.
+          </p>
+        </div>
       </div>
     </footer>
   );
 }
+// <div className="mx-auto max-w-7xl overflow-hidden px-6 py-12 sm:py-14 lg:px-8">
+//   <nav
+//     className="-mb-6 columns-2 sm:flex sm:justify-center sm:gap-x-12"
+//     aria-label="Footer"
+//   >
+//     {navigation.main.map((item) => (
+//       <div key={item.name} className="pb-6">
+//         <Link
+//           href={item.href}
+//           className="text-sm leading-6 text-gray-600 hover:text-gray-900"
+//         >
+//           {item.name}
+//         </Link>
+//       </div>
+//     ))}
+//   </nav>
+//   <div className="mt-10 flex justify-center gap-x-10">
+//     <Link
+//       href="https://www.linkedin.com/company/halfnine-llc/"
+//       target="_blank"
+//       className="text-gray-400 hover:text-[#0077B5] scale-95 hover:scale-{1.02}"
+//     >
+//       <span className="sr-only">LinkedIn</span>
+//       <FaLinkedin className="h-6 w-6" aria-hidden="true" />
+//     </Link>
+//     <Link
+//       href="https://twitter.com/halfnine"
+//       target="_blank"
+//       className="text-gray-400 hover:text-black scale-100 hover:scale-{1.02}"
+//     >
+//       <span className="sr-only">Twitter</span>
+//       <FaXTwitter className="h-6 w-6" aria-hidden="true" />
+//     </Link>
+//     <Link
+//       href="https://www.facebook.com/halfnineus"
+//       target="_blank"
+//       className="text-gray-400 hover:text-[#0165E1] scale-100 hover:scale-{1.02}"
+//     >
+//       <span className="sr-only">Facebook</span>
+//       <FaFacebook className="h-6 w-6" aria-hidden="true" />
+//     </Link>
+//     <Link
+//       href="https://github.com/halfnineus"
+//       target="_blank"
+//       className="text-gray-400 hover:text-black scale-100 hover:scale-{1.02}"
+//     >
+//       <span className="sr-only">GitHub</span>
+//       <FaGithub className="h-6 w-6" aria-hidden="true" />
+//     </Link>
+//   </div>
+//   <p className="mt-10 text-center text-xs leading-5 text-gray-500">
+//     &copy; {new Date().getFullYear()}{" "}
+//     <Link href="https://www.halfnine.com" target="_blank">
+//       Halfnine
+//     </Link>{" "}
+//     LLC. All rights reserved.
+//   </p>
+// </div>

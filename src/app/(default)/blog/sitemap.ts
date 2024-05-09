@@ -1,8 +1,7 @@
 import { MetadataRoute } from "next";
 import getSitemapData from "@/lib/queries/getSitemapData";
 
-// export const revalidate = 60 * 60;
-export const revalidate = 60 * 20;
+export const revalidate = 60 * 60 * 12;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const pageLength = 15;

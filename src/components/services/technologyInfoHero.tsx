@@ -9,7 +9,7 @@ interface TechnologyInfoProps {
   message: string;
 }
 
-const TechnologyInfo: React.FC<TechnologyInfoProps> = ({
+const TechnologyInfoHero: React.FC<TechnologyInfoProps> = ({
   technology,
   imgSrc,
   message,
@@ -70,4 +70,4 @@ const TechnologyInfo: React.FC<TechnologyInfoProps> = ({
   );
 };
 
-export default TechnologyInfo;
+export default TechnologyInfoHero;

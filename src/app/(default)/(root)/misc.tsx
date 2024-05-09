@@ -84,7 +84,7 @@ const Misc = () => {
           <div
             key={index}
             className={clsx(
-              "mx-auto max-w-7xl px-6 lg:px-8",
+              // "mx-auto max-w-7xl px-6 lg:px-8",
               index === 0
                 ? "pb-12"
                 : index === data.length - 1

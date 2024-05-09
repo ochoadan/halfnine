@@ -9,25 +9,25 @@ type SolutionCheckListEvenProps = {
     description?: string;
     furtherList?: { name: string; description?: string }[];
   }[];
-  background: "light" | "dark";
+  background?: "light" | "gray";
 };
 
 const SolutionIconListThrice = ({
   heading,
   description,
   features,
-  background,
+  background = "light",
 }: SolutionCheckListEvenProps) => {
-  const containerClassName = background === "dark" ? "bg-gray-50" : "bg-white";
+  const containerClassName = background === "gray" ? "bg-gray-50" : "bg-white";
   return (
     <div className={`${containerClassName} py-24 sm:py-32`}>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl lg:text-center">
+        <div className="mx-auto max-w-5xl lg:text-center">
           <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
             {heading}
           </h2>
           {description && (
-            <p className="mt-6 mb-12 text-lg leading-8 text-gray-600">
+            <p className="mt-6 mb-12 text-base leading-8 text-gray-600">
               {description}
             </p>
           )}

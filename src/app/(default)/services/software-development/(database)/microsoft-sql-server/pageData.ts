@@ -2,7 +2,7 @@ import { PuzzlePieceIcon } from "@heroicons/react/20/solid";
 import { FaRegFileCode } from "react-icons/fa6";
 import { GiSpeedometer } from "react-icons/gi";
 import { MdOutlineSecurity } from "react-icons/md";
-import { RiEarthquakeFill } from "react-icons/ri";
+import { RiEarthquakeLine } from "react-icons/ri";
 import { TbTransfer } from "react-icons/tb";
 
 export const dataV1 = [
@@ -73,7 +73,7 @@ export const dataV2 = [
     {
         name: "SQL Server Disaster Recovery Planning",
         description: "Our services include strategic disaster recovery solutions to ensure data integrity and availability in the event of system failures or external threats.",
-        icon: RiEarthquakeFill,
+        icon: RiEarthquakeLine,
     },
 ];
 

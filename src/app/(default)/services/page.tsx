@@ -1,8 +1,6 @@
 import PageHero from "@/components/Global/PageHero";
 import { RootOffering } from "../(root)";
 import { Metadata } from "next";
-import { FadeIn } from "@/components/Global/FadeIn";
-import Image from "next/image";
 import CustomHero from "@/components/services/CustomHero";
 
 export const metadata: Metadata = {
@@ -49,6 +47,8 @@ const SnC = () => (
     imgAlt="User finding the right path to success with a roadmap"
     buttonRef="/services/consulting"
     buttonText="Learn more"
+    turnToH2
+    container={false}
   />
 );
 
@@ -62,6 +62,8 @@ const DnP = () => (
     buttonRef="/services/architecture"
     buttonText="Learn more"
     isReverse
+    turnToH2
+    container={false}
   />
 );
 
@@ -74,6 +76,8 @@ const DnT = () => (
     imgAlt="Developers clicking an application"
     buttonRef="/services/software-development"
     buttonText="Learn more"
+    turnToH2
+    container={false}
   />
 );
 
@@ -87,6 +91,8 @@ const DnI = () => (
     buttonRef="/services/cloud"
     buttonText="Learn more"
     isReverse
+    turnToH2
+    container={false}
   />
 );
 
@@ -99,6 +105,8 @@ const SnM = () => (
     imgAlt="Woman showing other woman how to use a solution"
     buttonRef="/services/support"
     buttonText="Learn more"
+    turnToH2
+    container={false}
   />
 );
 
@@ -112,5 +120,7 @@ const SnC2 = () => (
     buttonRef="/services/security"
     buttonText="Learn more"
     isReverse
+    turnToH2
+    container={false}
   />
 );

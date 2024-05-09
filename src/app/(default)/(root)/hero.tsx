@@ -5,25 +5,39 @@ import {
   ServerIcon,
 } from "@heroicons/react/20/solid";
 import Image from "next/image";
+import { FaArrowsToCircle, FaFlagUsa } from "react-icons/fa6";
+import { MdOutlineAutoGraph } from "react-icons/md";
 
 const features = [
   {
+    name: "United States Based",
+    description:
+      "Don't worry about intellectual property, legal, or communication issues.",
+    icon: FaFlagUsa,
+  },
+  // {
+  //   name: "Full-Service",
+  //   description:
+  //     "We provide a full range of services to meet all of your technology needs and goals.",
+  //   icon: ServerIcon,
+  // },
+  {
     name: "ROI Focused",
     description:
-      "We will not work with you unless we believe we can deliver a positive return on investment.",
-    icon: CloudArrowUpIcon,
+      "Your success is our success. We are committed to delivering a positive return on investment.",
+    icon: MdOutlineAutoGraph,
   },
-  {
-    name: "Success-Based Consulting",
-    description:
-      "We are only successful when you are successful. We are committed to your success.",
-    icon: LockClosedIcon,
-  },
+  // {
+  //   name: "Success-Based Consulting",
+  //   description:
+  //     "We are only successful when you are successful. We are committed to your success.",
+  //   icon: LockClosedIcon,
+  // },
   {
     name: "Complete Coverage",
     description:
       "We provide a full range of services to meet all of your technology needs and goals.",
-    icon: ServerIcon,
+    icon: FaArrowsToCircle,
   },
 ];
 

@@ -6,6 +6,7 @@ import clsx from "clsx";
 
 interface TechnologyInfoProps {
   heading: string;
+  turnToH2?: boolean;
   subtext?: string;
   description?: string;
   technology?: string;
@@ -15,10 +16,12 @@ interface TechnologyInfoProps {
   buttonRef?: string;
   buttonText?: string;
   isReverse?: boolean;
+  container?: boolean;
 }
 
-const TechnologyInfo: React.FC<TechnologyInfoProps> = ({
+const CustomHero: React.FC<TechnologyInfoProps> = ({
   heading,
+  turnToH2,
   subtext,
   description,
   imgSrc,
@@ -28,16 +31,23 @@ const TechnologyInfo: React.FC<TechnologyInfoProps> = ({
   buttonRef,
   buttonText,
   isReverse,
+  container = true,
 }) => {
-  return (
+  const headingClassName = "text-base font-semibold leading-7 text-brand-600";
+  const Container = ({ children }: any) => (
+    <div className="bg-white py-12 md:py-24 md:pt-12">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">{children}</div>
+    </div>
+  );
+  const Content = () => (
     <div className="grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2 mx-auto">
-      <div className={clsx(
-        isReverse ? "order-last lg:pl-8" : " lg:pr-8"
-      )}>
+      <div className={clsx(isReverse ? "order-last lg:pl-8" : " lg:pr-8")}>
         <div className="lg:max-w-xl">
-          <h1 className="text-base font-semibold leading-7 text-brand-600">
-            {heading}
-          </h1>
+          {turnToH2 ? (
+            <h2 className={headingClassName}>{heading}</h2>
+          ) : (
+            <h1 className={headingClassName}>{heading}</h1>
+          )}
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             {subtext
               ? subtext
@@ -75,6 +85,17 @@ const TechnologyInfo: React.FC<TechnologyInfoProps> = ({
       </FadeIn>
     </div>
   );
+  return (
+    <>
+      {container ? (
+        <Container>
+          <Content />
+        </Container>
+      ) : (
+        <Content />
+      )}
+    </>
+  );
 };
 
-export default TechnologyInfo;
+export default CustomHero;

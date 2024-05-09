@@ -10,11 +10,12 @@ export const metadata: Metadata = {
   description:
     "The tech industry is still growing and evolving, most companies are overvalued. Investing in the markets is a gamble. Don't gamble in tech anymore. Invest in responsible strategies that deliver results",
   alternates: { canonical: "https://www.halfnine.com/investors" },
+  openGraph: { url: "https://www.halfnine.com/investors" },
 };
 
 const features = [
   {
-    name: "Divirsified Portfolio",
+    name: "Diversified Portfolio",
     description:
       "We don't put all our eggs in one basket. We invest in a variety of digital assets to minimize risk and maximize returns.",
   },
@@ -231,7 +232,7 @@ const Page = () => {
             ROI, even if growth goals aren&apos;t met. */}
       {/* We acquire underperforming digital assets, optimizing operations and marketing to boost value. Existing profits secure ROI, even if growth goals aren't met. */}
       {/* We acquire underperforming digital assets with challenges or room to grow, while rebuilding their operations and marketing to increase their value. If we don't meet our growth goals, the asset's existing profits ensure a return on investment. */}
-      {/* We acquire underperforming digital assets with challanges or room to grow, while rebuilding their operations and marketing to grow their value. If we don't meet our growth goals, the asset's existing profits ensure a return on investment. */}
+      {/* We acquire underperforming digital assets with challenges or room to grow, while rebuilding their operations and marketing to grow their value. If we don't meet our growth goals, the asset's existing profits ensure a return on investment. */}
       {/* {`We acquire profitable digital assets facing challenges or room to grow, then boost operations and marketing. Existing profits guarantee ROI even if growth goals aren't met.`} */}
       {/* We acquire profitable digital assets with growth challenges or untapped potential. Then, we optimize their operations and improve marketing strategies. If we don't meet our growth goals, our existing profits ensure a return on investment. */}
       {/* We acquire profitable digital assets with growth challenges or untapped potential. Then, we enhance, update, and revitalize them. If we don't meet our goals, our existing profits ensure a return on investment. */}

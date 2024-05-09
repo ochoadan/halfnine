@@ -6,7 +6,7 @@ import getAllPostsForBlogPages from "@/lib/queries/getAllPostsForBlogPages";
 import he from "he";
 import sanitizeHtml from "sanitize-html";
 
-export const revalidate = 3600;
+export const revalidate = 60 * 60 * 24;
 
 const pageLength = 15;
 

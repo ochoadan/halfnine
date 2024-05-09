@@ -3,6 +3,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Privacy Policy",
     alternates: { canonical: "https://www.halfnine.com/privacy" },
+    openGraph: { url: "https://www.halfnine.com/privacy" },
 };
 
 const TermsOfService = () => {

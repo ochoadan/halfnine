@@ -1,7 +1,7 @@
-import TechnologyInfo from "@/components/services/technologyInfoHero";
-import SolutionCheckListEven from "@/components/services/solutionCheckListTwice";
-import SolutionIconListThrice from "@/components/services/solutionIconListThrice";
-import SolutionBaseListOnce from "@/components/services/solutionBaseListOnce";
+import TechnologyInfoHero from "@/components/services/TechnologyInfoHero";
+import SolutionCheckListEven from "@/components/services/SolutionCheckListEven";
+import SolutionIconListThrice from "@/components/services/SolutionIconListThrice";
+import SolutionBaseListOnce from "@/components/services/SolutionBaseListOnce";
 import ContactBar from "@/components/services/contactBar";
 import { Metadata } from "next";
 import { dataV1, dataV2, dataV3, dataFAQ } from "./pageData";
@@ -25,13 +25,13 @@ const Page = () => {
   const message = `I need professional ${technology} development services.`;
   return (
     <>
-      <TechnologyInfo
+      <TechnologyInfoHero
         technology={technology}
         message={message}
         imgSrc={`/img/services/${slug}.svg`}
       />
       <SolutionCheckListEven
-        background="dark"
+        background="gray"
         heading={`Benefits of Custom ${technology} Solutions`}
         description="Custom Qwik Solutions are tailored software systems that streamline operations, support growth, and offer long-term cost-effectiveness. They provide businesses with dedicated support, enhanced security, and a competitive edge through innovative, unique features. These solutions are designed to meet the specific needs of each business, offering a personalized approach to business process management."
         features={dataV1}
@@ -43,7 +43,7 @@ const Page = () => {
         features={dataV2}
       />
       <SolutionBaseListOnce
-        background="dark"
+        background="gray"
         heading={`The ${technology} Ecosystem`}
         description="The Qwik Ecosystem is a robust framework that empowers developers with a suite of tools and functionalities to enhance web application performance significantly. At the core of this ecosystem is the Qwik compiler, which ingeniously breaks down the application into numerous small pieces called symbols. These symbols, identifiable by the $ symbol, are even smaller than components, allowing for more granular optimization and faster load times."
         features={dataV3}
