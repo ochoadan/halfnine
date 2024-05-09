@@ -1,6 +1,9 @@
 import PageHero from "@/components/Global/PageHero";
 import { RootOffering } from "../(root)";
 import { Metadata } from "next";
+import { FadeIn } from "@/components/Global/FadeIn";
+import Image from "next/image";
+import CustomHero from "@/components/services/CustomHero";
 
 export const metadata: Metadata = {
   title: "Software Development Services • Halfnine",
@@ -19,7 +22,7 @@ const Page = () => {
         heading="Full-Service IT Development & Consulting"
         description="Our solutions are customized to your needs and goals"
       />
-      {[RootOffering].map((Component, index) => (
+      {[SnC, DnP, DnT, RootOffering, DnI, SnM, SnC2].map((Component, index) => (
         <div
           key={index}
           className={`${
@@ -36,3 +39,78 @@ const Page = () => {
 };
 
 export default Page;
+
+const SnC = () => (
+  <CustomHero
+    heading="Strategy and Consulting"
+    subtext="Find your roadmap to success"
+    description="Don't get lost or stuck by the overwhelming amount of options and technologies. We help you find the right path to success by creating a roadmap that is tailored to your business goals and needs."
+    imgSrc="/img/index/roadmap.svg"
+    imgAlt="User finding the right path to success with a roadmap"
+    buttonRef="/services/consulting"
+    buttonText="Learn more"
+  />
+);
+
+const DnP = () => (
+  <CustomHero
+    heading="Design and Planning"
+    subtext="Blueprint your ideal solution"
+    description="Find the right solution for your business by creating a blueprint that outlines the features and functionalities that will help you achieve your goals."
+    imgSrc="/img/index/scalemodel.svg"
+    imgAlt="Woman showing a scale model of a building"
+    buttonRef="/services/architecture"
+    buttonText="Learn more"
+    isReverse
+  />
+);
+
+const DnT = () => (
+  <CustomHero
+    heading="Development and Testing"
+    subtext="Build and test your solution"
+    description="Our team of developers will build and test your solution to ensure it meets your requirements and goals."
+    imgSrc="/img/index/application.svg"
+    imgAlt="Developers clicking an application"
+    buttonRef="/services/software-development"
+    buttonText="Learn more"
+  />
+);
+
+const DnI = () => (
+  <CustomHero
+    heading="Deployment and Integration"
+    subtext="Launch and integrate your solution"
+    description="We help you launch and integrate your solution with your existing systems and processes to ensure a seamless transition."
+    imgSrc="/img/index/onservers.svg"
+    imgAlt="Man deploying a solution on servers"
+    buttonRef="/services/cloud"
+    buttonText="Learn more"
+    isReverse
+  />
+);
+
+const SnM = () => (
+  <CustomHero
+    heading="Support and Maintenance"
+    subtext="Keep your solution running smoothly"
+    description="We provide ongoing support and maintenance to ensure your solution continues to run smoothly and meets your business needs."
+    imgSrc="/img/index/supporting.svg"
+    imgAlt="Woman showing other woman how to use a solution"
+    buttonRef="/services/support"
+    buttonText="Learn more"
+  />
+);
+
+const SnC2 = () => (
+  <CustomHero
+    heading="Security and Compliance"
+    subtext="Stop unwanted surprises"
+    description="We help you keep your data safe and secure by implementing the latest security measures and ensuring compliance with industry standards."
+    imgSrc="/img/index/security.svg"
+    imgAlt="Man and shield icon protecting application"
+    buttonRef="/services/security"
+    buttonText="Learn more"
+    isReverse
+  />
+);

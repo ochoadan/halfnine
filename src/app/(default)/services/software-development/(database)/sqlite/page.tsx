@@ -7,17 +7,17 @@ import { Metadata } from "next";
 import { dataV1, dataV2, dataV3, dataFAQ } from "./pageData";
 import ServicesFAQ from "@/components/services/faq";
 
-const technology = "DynamoDB";
-const slug = "dynamodb";
+const technology = "SQLite";
+const slug = "sqlite";
 
 export const metadata: Metadata = {
   title: `${technology} Software Development Company | Custom ${technology} Solutions`,
   description: `Looking for a ${technology} development Partner? Our team builds secure, scalable enterprise applications using the latest ${technology} technologies.`,
   alternates: {
-    canonical: `https://www.halfnine.com/services/aws/${slug}`,
+    canonical: `https://www.halfnine.com/services/software-development/${slug}`,
   },
   openGraph: {
-    url: `https://www.halfnine.com/services/aws/${slug}`,
+    url: `https://www.halfnine.com/services/software-development/${slug}`,
   },
 };
 
@@ -33,7 +33,7 @@ const Page = () => {
       <SolutionCheckListEven
         background="dark"
         heading={`Benefits of Custom ${technology} Solutions`}
-        description="Custom DynamoDB solutions cater specifically to application demands, optimizing both performance and cost-efficiency. Here are some of the key benefits:"
+        description="SQLite development companies offer a plethora of advantages that streamline and enhance software solutions across various platforms. Here are some pivotal benefits:"
         features={dataV1}
       />
       <SolutionIconListThrice
@@ -44,7 +44,7 @@ const Page = () => {
       <SolutionBaseListOnce
         background="dark"
         heading={`The ${technology} Ecosystem`}
-        description="DynamoDB, a robust component of the AWS ecosystem, provides a comprehensive suite of features designed for high performance and security. It is a versatile solution for enterprises requiring extensive data analysis and management capabilities."
+        description="SQLite's ecosystem is vast and integral to numerous industries, highlighting its versatility and robustness as a database engine. It is embedded in a wide array of devices and platforms, from smartphones and computers to web browsers and automobiles. This extensive deployment underscores its reliability and the trust that developers and corporations place in its technology."
         features={dataV3}
       />
       <ServicesFAQ features={dataFAQ} />

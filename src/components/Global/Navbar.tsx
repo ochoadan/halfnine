@@ -20,63 +20,86 @@ import {
   FaCloud,
   FaCode,
   FaHeadset,
-  FaLifeRing,
   FaRegCompass,
   FaRegEnvelope,
-  FaRegIdCard,
+  FaShield,
 } from "react-icons/fa6";
 import { GoChecklist } from "react-icons/go";
-import { GiUpgrade } from "react-icons/gi";
-import { GrVmMaintenance } from "react-icons/gr";
 
 const products = [
+  // {
+  //   name: "Strategy",
+  //   description: "Crafting and executing technical roadmaps",
+  //   href: "#",
+  //   icon: FaRegCompass,
+  // },
+  // {
+  //   name: "Planning",
+  //   description: "Defining requirements and timelines",
+  //   href: "#",
+  //   icon: GoChecklist,
+  // },
+  // {
+  //   name: "Development",
+  //   description: "Building and testing software systems",
+  //   href: "/services/software-development",
+  //   icon: FaCode,
+  // },
+  // {
+  //   name: "Deployment",
+  //   description: "Deploying and configuring systems",
+  //   href: "/services/cloud",
+  //   icon: FaCloud,
+  // },
+  // {
+  //   name: "Support",
+  //   description: "Training and troubleshooting systems",
+  //   href: "#",
+  //   icon: FaHeadset,
+  // },
+  // {
+  //   name: "Maintenance",
+  //   description: "Monitoring and updating systems",
+  //   href: "#",
+  //   icon: GrVmMaintenance,
+  // },
   {
-    name: "Strategy",
-    description: "Crafting and executing technical roadmaps",
-    href: "#",
+    name: "Strategy & Consulting",
+    description: "Crafting technical roadmaps and providing expert advice",
+    href: "/services/consulting",
     icon: FaRegCompass,
   },
   {
-    name: "Planning",
-    description: "Defining requirements and timelines",
-    href: "#",
+    name: "Design & Planning",
+    description: "Defining requirements, timelines, and system design",
+    href: "/services/architecture",
     icon: GoChecklist,
   },
-  // {
-  //   name: "Architecture and Design",
-  // },
   {
-    name: "Development",
-    description: "Building and testing software systems",
+    name: "Development & Testing",
+    description: "Building, testing, and ensuring quality of software systems",
     href: "/services/software-development",
     icon: FaCode,
   },
   {
-    name: "Deployment",
-    description: "Deploying and configuring systems",
-    href: "#",
+    name: "Deployment & Integration",
+    description: "Deploying, configuring, and integrating systems",
+    href: "/services/cloud",
     icon: FaCloud,
   },
   {
-    name: "Support",
-    description: "Training and troubleshooting systems",
-    href: "#",
+    name: "Support & Maintenance",
+    description: "Training, troubleshooting, monitoring, and updating systems",
+    href: "/services/support",
     icon: FaHeadset,
-    // icon: FaRegLifeRing,
   },
   {
-    name: "Maintenance",
-    description: "Monitoring and updating systems",
-    href: "#",
-    icon: GrVmMaintenance,
+    name: "Security & Compliance",
+    description:
+      "Ensuring the safety, integrity, and regulatory compliance of systems",
+    href: "/services/security",
+    icon: FaShield,
   },
-  // {
-  //   name: "Managed Services",
-  //   description:
-  //     "Systems, network and cybersecurity administration with continuity",
-  //   href: "#",
-  //   icon: FaRegIdCard,
-  // },
 ];
 
 const callsToAction = [

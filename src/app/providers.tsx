@@ -36,9 +36,8 @@ function Hotjar() {
 
 function ChatBubble() {
   return (
-    <>
-      <Script id="chatwoot-script">
-        {`
+    <Script id="chatwoot-script">
+      {`
           (function(d,t) {
             var BASE_URL="https://app.chatwoot.com";
             var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
@@ -54,14 +53,24 @@ function ChatBubble() {
             }
           })(document,"script");
         `}
-      </Script>
-    </>
+    </Script>
+  );
+}
+
+function ConsentManager() {
+  return (
+    <Script
+      id="cookieyes"
+      type="text/javascript"
+      src="https://cdn-cookieyes.com/client_data/3ce44eae20ab5879b7b13311/script.js"
+    />
   );
 }
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <>
+      {/* <ConsentManager /> */}
       <GoogleAnalytics />
       <ChatBubble />
       <Hotjar />

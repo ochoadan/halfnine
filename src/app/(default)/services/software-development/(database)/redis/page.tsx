@@ -7,17 +7,17 @@ import { Metadata } from "next";
 import { dataV1, dataV2, dataV3, dataFAQ } from "./pageData";
 import ServicesFAQ from "@/components/services/faq";
 
-const technology = "DynamoDB";
-const slug = "dynamodb";
+const technology = "Redis";
+const slug = "redis";
 
 export const metadata: Metadata = {
   title: `${technology} Software Development Company | Custom ${technology} Solutions`,
   description: `Looking for a ${technology} development Partner? Our team builds secure, scalable enterprise applications using the latest ${technology} technologies.`,
   alternates: {
-    canonical: `https://www.halfnine.com/services/aws/${slug}`,
+    canonical: `https://www.halfnine.com/services/software-development/${slug}`,
   },
   openGraph: {
-    url: `https://www.halfnine.com/services/aws/${slug}`,
+    url: `https://www.halfnine.com/services/software-development/${slug}`,
   },
 };
 
@@ -33,7 +33,6 @@ const Page = () => {
       <SolutionCheckListEven
         background="dark"
         heading={`Benefits of Custom ${technology} Solutions`}
-        description="Custom DynamoDB solutions cater specifically to application demands, optimizing both performance and cost-efficiency. Here are some of the key benefits:"
         features={dataV1}
       />
       <SolutionIconListThrice
@@ -44,7 +43,7 @@ const Page = () => {
       <SolutionBaseListOnce
         background="dark"
         heading={`The ${technology} Ecosystem`}
-        description="DynamoDB, a robust component of the AWS ecosystem, provides a comprehensive suite of features designed for high performance and security. It is a versatile solution for enterprises requiring extensive data analysis and management capabilities."
+        description="Redis, renowned for its versatility and high performance, forms a robust ecosystem that significantly enhances application development across various industries. This ecosystem is not only about the data structures it supports but also about the comprehensive tools and integrations that extend its capabilities."
         features={dataV3}
       />
       <ServicesFAQ features={dataFAQ} />

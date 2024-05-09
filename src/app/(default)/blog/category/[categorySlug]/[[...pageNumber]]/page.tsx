@@ -59,6 +59,11 @@ export async function generateMetadata({
         pageNumber > 0 ? `/${pageNumber}` : ""
       }`,
     },
+    openGraph: {
+      url: `https://www.halfnine.com/blog/category/${data.category.slug}${
+        pageNumber > 0 ? `/${pageNumber}` : ""
+      }`,
+    },
   };
 }
 

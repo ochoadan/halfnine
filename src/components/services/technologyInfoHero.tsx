@@ -30,7 +30,7 @@ const TechnologyInfo: React.FC<TechnologyInfoProps> = ({
                 {`Our team of ${technology} developers can help you build custom software solutions that meet your unique business requirements.`}
               </p>
             </div>
-            <div className="mt-10 flex items-center gap-x-6">
+            <div className="mt-5 flex items-center gap-x-6">
               <Link
                 // href={`/contact${message ? `?message=${message}` : ""}`}
                 href={`/contact`}
@@ -38,14 +38,14 @@ const TechnologyInfo: React.FC<TechnologyInfoProps> = ({
               >
                 Talk to our team
               </Link>
-              <div className="text-yellow-500">
+              {/* <div className="text-yellow-500">
                 <p className="text-sm font-semibold leading-6 text-gray-900">
                   {`Clients rate our ${technology} services`}
                 </p>
                 <p className="pr-2 text-yellow-500 font-bold">
                   4.9/5 - Excellent
                 </p>
-              </div>
+              </div> */}
               {/* <Link
           href="#"
           className="text-sm font-semibold leading-6 text-gray-900"

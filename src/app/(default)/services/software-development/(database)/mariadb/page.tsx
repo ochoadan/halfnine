@@ -7,17 +7,17 @@ import { Metadata } from "next";
 import { dataV1, dataV2, dataV3, dataFAQ } from "./pageData";
 import ServicesFAQ from "@/components/services/faq";
 
-const technology = "DynamoDB";
-const slug = "dynamodb";
+const technology = "MariaDB";
+const slug = "mariadb";
 
 export const metadata: Metadata = {
   title: `${technology} Software Development Company | Custom ${technology} Solutions`,
   description: `Looking for a ${technology} development Partner? Our team builds secure, scalable enterprise applications using the latest ${technology} technologies.`,
   alternates: {
-    canonical: `https://www.halfnine.com/services/aws/${slug}`,
+    canonical: `https://www.halfnine.com/services/software-development/${slug}`,
   },
   openGraph: {
-    url: `https://www.halfnine.com/services/aws/${slug}`,
+    url: `https://www.halfnine.com/services/software-development/${slug}`,
   },
 };
 
@@ -33,7 +33,6 @@ const Page = () => {
       <SolutionCheckListEven
         background="dark"
         heading={`Benefits of Custom ${technology} Solutions`}
-        description="Custom DynamoDB solutions cater specifically to application demands, optimizing both performance and cost-efficiency. Here are some of the key benefits:"
         features={dataV1}
       />
       <SolutionIconListThrice
@@ -44,7 +43,7 @@ const Page = () => {
       <SolutionBaseListOnce
         background="dark"
         heading={`The ${technology} Ecosystem`}
-        description="DynamoDB, a robust component of the AWS ecosystem, provides a comprehensive suite of features designed for high performance and security. It is a versatile solution for enterprises requiring extensive data analysis and management capabilities."
+        description="MariaDB is a versatile, general-purpose open-source relational database management system. It is widely recognized for its robust performance and broad applicability across various industries. Major platforms like Wikipedia, WordPress.com, and Google notably utilize MariaDB, which supports a vast range of applications from high-availability transaction data to complex analytics and embedded services."
         features={dataV3}
       />
       <ServicesFAQ features={dataFAQ} />
