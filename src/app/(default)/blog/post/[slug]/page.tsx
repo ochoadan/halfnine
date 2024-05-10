@@ -8,6 +8,7 @@ import { Post } from "@/lib/types";
 import he from "he";
 import clsx from "clsx";
 import { Prose } from "@/components/Prose";
+import Latest3Posts from "@/components/Latest3Posts";
 
 export const revalidate = 60 * 60 * 24;
 
@@ -41,7 +42,7 @@ export async function generateStaticParams() {
   const redirectSlugs = response.redirection.redirects.map(
     (redirect: { origin: string }) => slugify(redirect.origin)
   );
-  return [...postSlugs].map((slug) => ({
+  return [...postSlugs, ...redirectSlugs].map((slug) => ({
     slug,
   }));
 }
@@ -126,9 +127,12 @@ const Page = async ({ params }: PostPageParams) => {
     content = content.replace(
       /<h[1-6].*?>(.*?)<\/h[1-6]>/g,
       function (match, p1) {
-      const level = match.charAt(2);
-      const id = p1.toLowerCase().replace(/<\/?[^>]+(>|$)/g, "").replace(/ /g, "-");
-      return `<h${level} id="${id}">${p1}</h${level}>`;
+        const level = match.charAt(2);
+        const id = p1
+          .toLowerCase()
+          .replace(/<\/?[^>]+(>|$)/g, "")
+          .replace(/ /g, "-");
+        return `<h${level} id="${id}">${p1}</h${level}>`;
       }
     );
     return content;
@@ -229,12 +233,21 @@ const Page = async ({ params }: PostPageParams) => {
     </div>
   );
   return (
-    <div className="relative mx-auto flex w-full max-w-8xl flex-auto justify-center sm:px-2 lg:px-8 xl:px-12">
-      <div className="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-4xl lg:pl-8 lg:pr-0 xl:px-16">
-        <Content />
+    <>
+      <div className="relative mx-auto flex w-full max-w-7xl flex-auto justify-center sm:px-2 lg:px-8 xl:px-12">
+        <div className="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-4xl lg:pl-8 lg:pr-0 xl:px-16">
+          <Content />
+        </div>
+        <TableOfContents />
       </div>
-      <TableOfContents />
-    </div>
+      <div className="flex justify-center w-full max-w-5xl mx-auto px-4 py-8">
+        <div className="w-full mb-4">
+          <div className="border-t border-gray-300" />
+          <h3 className="text-2xl font-bold my-2">Latest Posts:</h3>
+          <Latest3Posts />
+        </div>
+      </div>
+    </>
   );
 };
 

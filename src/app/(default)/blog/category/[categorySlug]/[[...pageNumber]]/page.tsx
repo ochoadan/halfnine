@@ -31,14 +31,30 @@ export async function generateStaticParams() {
   );
   const pageNumbers = totalPagesPerCategory
     .flat()
-    .map(({ categorySlug, pageNumber }: { categorySlug: string, pageNumber?: number }) => ({
-      categorySlug ,
-      pageNumber: pageNumber === 0 ? undefined : [String(pageNumber)],
-    }))
-    .map(({ categorySlug, pageNumber }: { categorySlug: string, pageNumber?: number }) => ({
-      categorySlug,
-      pageNumber,
-    }));
+    .map(
+      ({
+        categorySlug,
+        pageNumber,
+      }: {
+        categorySlug: string;
+        pageNumber?: number;
+      }) => ({
+        categorySlug,
+        pageNumber: pageNumber === 0 ? undefined : [String(pageNumber)],
+      })
+    )
+    .map(
+      ({
+        categorySlug,
+        pageNumber,
+      }: {
+        categorySlug: string;
+        pageNumber?: number;
+      }) => ({
+        categorySlug,
+        pageNumber,
+      })
+    );
   return pageNumbers;
 }
 
@@ -49,6 +65,14 @@ export async function generateMetadata({
 }) {
   const pageNumber = parseInt(String(params.pageNumber)) || 0;
   const data = await fetchCategoryData(params.categorySlug);
+
+  if (
+    data.category === null ||
+    !data.category ||
+    Object.keys(data.category).length === 0
+  ) {
+    return null;
+  }
   return {
     title: `Learn more about ${data.category.name}${
       pageNumber > 0 ? ` category | Page ${pageNumber} ` : ""
@@ -74,8 +98,11 @@ const Page = async ({
 }) => {
   const data = await fetchCategoryData(params.categorySlug);
 
-  // if (!data.category || Object.keys(data.category).length === 0) {
-  if (!data.category) {
+  if (
+    data.category === null ||
+    !data.category ||
+    Object.keys(data.category).length === 0
+  ) {
     return notFound();
   }
 
