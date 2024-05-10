@@ -126,9 +126,9 @@ const Page = async ({ params }: PostPageParams) => {
     content = content.replace(
       /<h[1-6].*?>(.*?)<\/h[1-6]>/g,
       function (match, p1) {
-        const level = match.charAt(2);
-        const id = p1.toLowerCase().replace(/ /g, "-");
-        return `<h${level} id="${id}">${p1}</h${level}>`;
+      const level = match.charAt(2);
+      const id = p1.toLowerCase().replace(/<\/?[^>]+(>|$)/g, "").replace(/ /g, "-");
+      return `<h${level} id="${id}">${p1}</h${level}>`;
       }
     );
     return content;
