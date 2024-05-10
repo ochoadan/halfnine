@@ -2,6 +2,7 @@ import PageHero from "@/components/Global/PageHero";
 import { RootOffering } from "../(root)";
 import { Metadata } from "next";
 import CustomHero from "@/components/services/CustomHero";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Software Development Services • Halfnine",
@@ -13,6 +14,17 @@ export const metadata: Metadata = {
   },
 };
 
+const service = [
+  {
+    name: "IT Outsourcing Services",
+    role: "Outsource your IT needs to us",
+    url: "/services/it-outsourcing",
+  },
+  // {
+  //   name: "AWS Managed Services", 
+  // }
+];
+
 const Page = () => {
   return (
     <>
@@ -20,23 +32,49 @@ const Page = () => {
         heading="Full-Service IT Development & Consulting"
         description="Our solutions are customized to your needs and goals"
       />
-      {[SnC, DnP, DnT, RootOffering, DnI, SnM, SnC2].map((Component, index) => (
-        <div
-          key={index}
-          className={`${
-            index % 2 === 0 ? "bg-white" : "bg-gray-50"
-          } py-12 md:py-24`}
-        >
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <Component />
+      {[SnC, DnP, DnT, AdditionalServices, RootOffering, DnI, SnM, SnC2].map(
+        (Component, index) => (
+          <div
+            key={index}
+            className={`${
+              index % 2 === 0 ? "bg-white" : "bg-gray-50"
+            } py-12 md:py-24`}
+          >
+            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+              <Component />
+            </div>
           </div>
-        </div>
-      ))}
+        )
+      )}
     </>
   );
 };
 
 export default Page;
+
+const AdditionalServices = () => (
+  <>
+    <h2 className="text-3xl font-bold text-gray-900">Additional Services</h2>
+    <div className="mt-2 grid grid-cols-1 gap-4 sm:grid-cols-2">
+      {service.map((servicex) => (
+        <div
+          key={servicex.name}
+          className="relative flex items-center space-x-3 rounded-lg border border-gray-300 bg-white px-6 py-5 shadow-sm focus-within:ring-2 focus-within:ring-brand-500 focus-within:ring-offset-2 hover:border-gray-400"
+        >
+          <div className="min-w-0 flex-1">
+            <Link href={servicex.url} className="focus:outline-none">
+              <span className="absolute inset-0" aria-hidden="true" />
+              <p className="text-sm font-medium text-gray-900">
+                {servicex.name}
+              </p>
+              <p className="truncate text-sm text-gray-500">{servicex.role}</p>
+            </Link>
+          </div>
+        </div>
+      ))}
+    </div>
+  </>
+);
 
 const SnC = () => (
   <CustomHero
