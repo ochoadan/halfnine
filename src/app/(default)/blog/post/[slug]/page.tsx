@@ -6,9 +6,10 @@ import slugify from "slugify";
 import Image from "next/image";
 import { Post } from "@/lib/types";
 import he from "he";
-import BlogCTA from "@/components/Global/BlogCTA";
+import clsx from "clsx";
+import { Prose } from "@/components/Prose";
 
-export const revalidate = 3600;
+export const revalidate = 60 * 60 * 24;
 
 interface PostPageParams {
   params: {
@@ -101,7 +102,9 @@ const Page = async ({ params }: PostPageParams) => {
 
   if (redirectMatch) {
     const targetSlug = slugify(
-      redirectMatch.target.replace(/.*hyleon.com\//, "").replace(/.*cms.halfnine.com\//, "")
+      redirectMatch.target
+        .replace(/.*hyleon.com\//, "")
+        .replace(/.*cms.halfnine.com\//, "")
     );
     const redirectUrl = `/blog/post/${targetSlug}`;
     return redirect(redirectUrl);
@@ -120,101 +123,118 @@ const Page = async ({ params }: PostPageParams) => {
         }
       }
     );
-    // content = content.replace(
-    //   /<h[1-6].*?>(.*?)<\/h[1-6]>/g,
-    //   function (match, p1) {
-    //     const level = match.charAt(2);
-    //     const id = p1.toLowerCase().replace(/ /g, "-");
-    //     return `<h${level} id="${id}">${p1}</h${level}>`;
-    //   }
-    // );
+    content = content.replace(
+      /<h[1-6].*?>(.*?)<\/h[1-6]>/g,
+      function (match, p1) {
+        const level = match.charAt(2);
+        const id = p1.toLowerCase().replace(/ /g, "-");
+        return `<h${level} id="${id}">${p1}</h${level}>`;
+      }
+    );
     return content;
   }
 
-  // const generateTableOfContents = (content: string) => {
-  //   const headings = content.match(/<h2.*?>.*?<\/h2>/g);
-  //   if (!headings) {
-  //     return [];
-  //   }
-  //   const tableOfContents = headings.map((heading) => {
-  //     const level = 2;
-  //     // const headings = content.match(/<h[1-6].*?>.*?<\/h[1-6]>/g);
-  //     // if (!headings) {
-  //     //   return [];
-  //     // }
-  //     // const tableOfContents = headings.map((heading) => {
-  //     //   const level = parseInt(heading.charAt(2));
-  //     const text = heading.replace(/<\/?[^>]+(>|$)/g, "");
-  //     const id = text.toLowerCase().replace(/ /g, "-");
-  //     return { level, text, id };
-  //   });
-  //   return tableOfContents;
-  // };
+  const generateTableOfContents = (content: string) => {
+    const headings = content.match(/<h2.*?>.*?<\/h2>/g);
+    if (!headings) {
+      return [];
+    }
+    const tableOfContents = headings.map((heading) => {
+      const level = 1;
+      // const headings = content.match(/<h[1-6].*?>.*?<\/h[1-6]>/g);
+      // if (!headings) {
+      //   return [];
+      // }
+      // const tableOfContents = headings.map((heading) => {
+      //   const level = parseInt(heading.charAt(2));
+      const text = heading.replace(/<\/?[^>]+(>|$)/g, "");
+      const id = text.toLowerCase().replace(/ /g, "-");
+      return { level, text, id };
+    });
+    return tableOfContents;
+  };
 
-  // const tableOfContents = generateTableOfContents(post.content);
-  return (
+  const tableOfContents = generateTableOfContents(post.content);
+  const Content = () => (
     <>
-      {/* {JSON.stringify(tableOfContents)} */}
-      {/* <BlogCTA /> */}
-      <div className="mx-auto flex w-full max-w-[50rem] items-start gap-x-8 px-4 py-10 sm:px-6 lg:px-8">
-        <main className="flex-1 prose prose-lg text-[1.08rem] prose-neutral leading-relaxed max-w-none">
-          <div className="flex flex-col space-y-4">
-            <div>
-              <Image
-                // width={post.featuredImage.node.mediaDetails.width}
-                // height={post.featuredImage.node.mediaDetails.height}
-                width={740}
-                height={416.25}
-                className="aspect-video rounded-2xl bg-gray-50 object-cover mx-auto mt-0 mb-8"
-                src={
-                  post.featuredImage.node.sourceUrl ||
-                  "https://via.placeholder.com/640x400"
-                }
-                alt={post.featuredImage.node.altText}
-              />
-              <h1
-                className="text-3xl sm:text-4xl font-extrabold text-neutral-800 text-center"
-                dangerouslySetInnerHTML={{ __html: post.title }}
-              />
-              <div className="relative py-2">
-                <div
-                  className="absolute inset-0 flex items-center"
-                  aria-hidden="true"
-                >
-                  <div className="w-full border-t border-gray-300" />
-                </div>
-                <div className="relative flex justify-center">
-                  <span className="bg-white px-2 text-sm text-gray-500">
-                    Posted on{" "}
-                    <time>
-                      {new Date(post.date).toLocaleDateString("en-US", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
-                    </time>{" "}
-                    by{" "}
-                    {/* <Link
-                    href={`/blog/author/${
-                      (post.authorData as { slug: string }).slug
-                    }`}
-                    className="no-underline text-gray-500 text-sm font-thin"
-                  > */}
-                    {post.author.node.name}
-                    {/* </Link> */}
-                  </span>
-                </div>
-              </div>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: addNofollowContent(post.content),
-                }}
-              />
-            </div>
+      <Image
+        width={740}
+        height={416.25}
+        className="aspect-video rounded-2xl bg-gray-50 object-cover mx-auto mt-0 mb-8"
+        src={
+          post.featuredImage.node.sourceUrl ||
+          "https://via.placeholder.com/640x400"
+        }
+        alt={post.featuredImage.node.altText}
+      />
+      <h1
+        className="text-3xl sm:text-4xl font-bold text-neutral-800 text-center mb-2"
+        dangerouslySetInnerHTML={{ __html: post.title }}
+      />
+      <Prose>
+        <div className="relative py-2">
+          <div
+            className="absolute inset-0 flex items-center"
+            aria-hidden="true"
+          >
+            <div className="w-full border-t border-gray-300" />
           </div>
-        </main>
-      </div>
+          <div className="relative flex justify-center">
+            <span className="bg-white px-2 text-sm text-gray-500">
+              Posted on{" "}
+              <time>
+                {new Date(post.date).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </time>{" "}
+              by {post.author.node.name}
+            </span>
+          </div>
+        </div>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: addNofollowContent(post.content),
+          }}
+        />
+      </Prose>
     </>
+  );
+  const TableOfContents = () => (
+    // <div className="sticky top-20">
+    //   <div className="space-y-4">
+    // <div className="hidden xl:sticky xl:top-[4.75rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.75rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6">
+    <div className="hidden xl:sticky xl:top-[1.75rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.75rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6">
+      <nav aria-labelledby="on-this-page-title" className="w-56">
+        <h2 className="text-lg font-bold text-neutral-800 mb-2">
+          Table of Contents
+        </h2>
+        <ul className="space-y-2">
+          {tableOfContents.map((heading) => (
+            <li key={heading.id}>
+              <a
+                href={`#${heading.id}`}
+                className={clsx(
+                  "text-sm text-neutral-600 hover:text-neutral-800",
+                  `pl-${heading.level * 2}`
+                )}
+              >
+                {heading.text}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
+  );
+  return (
+    <div className="relative mx-auto flex w-full max-w-8xl flex-auto justify-center sm:px-2 lg:px-8 xl:px-12">
+      <div className="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-4xl lg:pl-8 lg:pr-0 xl:px-16">
+        <Content />
+      </div>
+      <TableOfContents />
+    </div>
   );
 };
 
