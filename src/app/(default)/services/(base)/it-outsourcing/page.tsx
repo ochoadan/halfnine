@@ -35,7 +35,6 @@ const Page = () => {
         features={Data1}
       />
       <SolutionIconListThrice
-        background="light"
         heading="Key Benefits of IT Outsourcing"
         features={Data2}
       />

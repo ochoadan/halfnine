@@ -36,7 +36,6 @@ const Page = () => {
         features={Data1}
       />
       <SolutionIconListThrice
-        background="light"
         heading="Types of IT Consulting Services"
         description="IT consulting encompasses a diverse range of services designed to address various aspects of technology within an organization. Each type of service focuses on specific areas of IT to enhance business operations, mitigate risks, and drive innovation. Here, we explore the primary categories of IT consulting services that can help organizations meet their technological and strategic needs."
         features={Data2}

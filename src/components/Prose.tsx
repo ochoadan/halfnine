@@ -15,7 +15,7 @@ export function Prose<T extends React.ElementType = "div">({
         className,
         "prose prose-slate max-w-none",
         // headings
-        "prose-headings:scroll-mt-28 prose-headings:font-display prose-headings:font-semibold lg:prose-headings:scroll-mt-[5rem]",
+        "prose-headings:scroll-mt-28 prose-headings:font-display prose-headings:font-semibold lg:prose-headings:scroll-mt-[5rem] prose-h2:font-bold",
         // 'prose-headings:scroll-mt-28 prose-headings:font-display prose-headings:font-semibold lg:prose-headings:scroll-mt-[8.5rem]',
         // lead
         "prose-lead:text-slate-500",

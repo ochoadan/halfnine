@@ -37,7 +37,6 @@ const Page = () => {
         features={dataV1}
       />
       <SolutionIconListThrice
-        background="light"
         heading={`Key ${technology} Development Services`}
         description="A .NET software development company offers a wide array of services designed to cater to various business needs, ensuring custom solutions that enhance operational efficiency and strategic growth. Below is a detailed look at the key .NET development services available:"
         features={dataV2}

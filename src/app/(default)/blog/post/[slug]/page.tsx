@@ -165,12 +165,12 @@ const Page = async ({ params }: PostPageParams) => {
   const Content = () => (
     <>
       <Image
-        width={740}
-        height={416.25}
+        width={896}
+        height={504}
         className="aspect-video rounded-2xl bg-gray-50 object-cover mx-auto mt-0 mb-8"
         src={
           post.featuredImage.node.sourceUrl ||
-          "https://via.placeholder.com/640x400"
+          "https://via.placeholder.com/896x504"
         }
         alt={post.featuredImage.node.altText}
       />

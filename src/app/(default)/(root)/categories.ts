@@ -118,7 +118,7 @@ export const categories = [
       { name: "Redis", icon: "https://www.vectorlogo.zone/logos/redis/redis-icon.svg", url: "/services/software-development/redis" },
       { name: "MariaDB", icon: "https://www.vectorlogo.zone/logos/mariadb/mariadb-icon.svg", url: "/services/software-development/mariadb" },
       { name: "Elasticsearch", icon: "https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/elasticsearch.svg", url: "/services/software-development/elasticsearch" },
-      // { name: "Oracle Database", icon: "https://www.vectorlogo.zone/logos/oracle/oracle-icon.svg", url: "/services/software-development/oracle" },
+      { name: "Oracle Database", icon: "https://raw.githubusercontent.com/dochne/wappalyzer/471c2fb0b093973c098bd1855b89c8cde4997479/src/images/icons/Oracle.svg", url: "/services/oracle/database" },
       { name: "DynamoDB", icon: "https://raw.githubusercontent.com/detain/svg-logos/07e36b4aa0691f3015886624395e083395e528c5/svg/a/aws-dynamodb.svg", url: "/services/aws/dynamodb" },
       // { name: "Firebase Realtime Database", icon: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg", url: "/services/software-development/firebase-realtime-database" },
       // { name: "Cloud Firestore", icon: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg", url: "/services/software-development/cloud-firestore" },
@@ -173,6 +173,7 @@ export const categories = [
       { name: "Google Cloud", icon: "https://raw.githubusercontent.com/gilbarbara/logos/52addcaa18dfecb4df77f3ee0753dca6b98187ad/logos/google-cloud.svg" },
       { name: "Akamai Cloud", icon: "https://raw.githubusercontent.com/dochne/wappalyzer/471c2fb0b093973c098bd1855b89c8cde4997479/src/images/icons/Akamai.svg" },
       { name: "DigitalOcean", icon: "https://raw.githubusercontent.com/gilbarbara/logos/52addcaa18dfecb4df77f3ee0753dca6b98187ad/logos/digital-ocean-icon.svg" },
+      { name: "Self Hosting", icon: "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/9fe9b31ddce5804ae4e6cf4d1bda5d5ee5ae6192/docs/images/game_servers.svg" },
     ],
   },
   {

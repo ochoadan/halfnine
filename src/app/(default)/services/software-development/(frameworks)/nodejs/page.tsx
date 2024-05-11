@@ -37,7 +37,6 @@ const Page = () => {
         features={dataV1}
       />
       <SolutionIconListThrice
-        background="light"
         heading={`Key ${technology} Development Services`}
         description="Offering a full spectrum of Node.js development services, we cater to all your web and mobile application needs. Our expertise spans across various domains, ensuring robust, scalable, and efficient solutions tailored to meet your business requirements."
         features={dataV2}

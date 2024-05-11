@@ -36,7 +36,6 @@ const Page = () => {
         features={dataV1}
       />
       <SolutionIconListThrice
-        background="light"
         heading={`Key ${technology} Development Services`}
         features={dataV2}
       />
