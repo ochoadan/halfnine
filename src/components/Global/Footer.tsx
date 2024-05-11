@@ -21,8 +21,9 @@ const navigation = {
   ],
   company: [
     { name: "About", href: "/about" },
-    { name: "Blog", href: "/blog" },
+    { name: "Investors", href: "/investors" },
     { name: "Services", href: "/services" },
+    { name: "Blog", href: "/blog" },
   ],
   legal: [
     { name: "Privacy", href: "/privacy" },
@@ -47,7 +48,10 @@ const navigation = {
 export default function GlobalFooter() {
   return (
     // <footer className="bg-white border-gray-200 border-t-[2px]">
-    <footer className="bg-white border-gray-200 border-t-[2px]" aria-labelledby="footer-heading">
+    <footer
+      className="bg-white border-gray-200 border-t-[2px]"
+      aria-labelledby="footer-heading"
+    >
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>

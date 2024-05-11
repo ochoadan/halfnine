@@ -4,7 +4,7 @@ import Image from "next/image";
 import he from "he";
 import sanitizeHtml from "sanitize-html";
 
-export const revalidate = 60 * 30;
+export const revalidate = 86400;
 
 const Latest3Posts = async () => {
   const response = await getLast3Posts();

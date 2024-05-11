@@ -12,7 +12,7 @@ function GoogleAnalytics() {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'G-WS1H53CBCV');
+          gtag('config', 'G-WS1H53CBCV', { 'anonymize_ip': true });
         `}
       </Script>
     </>
@@ -70,7 +70,7 @@ function ConsentManager() {
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <ConsentManager />
+      {/* <ConsentManager /> */}
       <GoogleAnalytics />
       <ChatBubble />
       <Hotjar />

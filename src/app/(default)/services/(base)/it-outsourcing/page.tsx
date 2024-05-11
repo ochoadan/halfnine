@@ -36,14 +36,12 @@ const Page = () => {
       />
       <SolutionIconListThrice
         background="light"
-        heading=""
-        description=""
+        heading="Key Benefits of IT Outsourcing"
         features={Data2}
       />
       <SolutionBaseListOnce
         background="gray"
-        heading=""
-        description=""
+        heading="IT Outsourcing as a Solution"
         features={Data3}
       />
       <ServicesFAQ features={FAQData} />

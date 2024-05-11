@@ -33,19 +33,16 @@ const Page = () => {
       <SolutionCheckListEven
         background="gray"
         heading={`Benefits of Custom ${technology} Solutions`}
-        description=""
         features={dataV1}
       />
       <SolutionIconListThrice
         background="light"
         heading={`Key ${technology} Development Services`}
-        description=""
         features={dataV2}
       />
       <SolutionBaseListOnce
         background="gray"
         heading={`The ${technology} Ecosystem`}
-        description=""
         features={dataV3}
       />
       <ServicesFAQ features={dataFAQ} />

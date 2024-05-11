@@ -10,7 +10,7 @@ import clsx from "clsx";
 import { Prose } from "@/components/Prose";
 import Latest3Posts from "@/components/Latest3Posts";
 
-export const revalidate = 60 * 60 * 24;
+export const revalidate = 86400;
 
 interface PostPageParams {
   params: {
@@ -57,6 +57,8 @@ export async function generateMetadata({ params }: PostPageParams) {
     alternates: {
       canonical: `https://www.halfnine.com/blog/post/${params.slug}`,
     },
+    publishedTime: post.date,
+    modifiedTime: post.modified,
     openGraph: {
       title: post.title,
       description: he.decode(post.description),
@@ -65,6 +67,7 @@ export async function generateMetadata({ params }: PostPageParams) {
       sitename: "Halfnine",
       locale: "en_US",
       publishedTime: post.date,
+      modifiedTime: post.modified,
       authors: post.author.node.name,
       images: [
         {
@@ -235,12 +238,12 @@ const Page = async ({ params }: PostPageParams) => {
   return (
     <>
       <div className="relative mx-auto flex w-full max-w-7xl flex-auto justify-center sm:px-2 lg:px-8 xl:px-12">
-        <div className="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-4xl lg:pl-8 lg:pr-0 xl:px-16">
+        <div className="min-w-0 max-w-2xl flex-auto px-4 pt-16 lg:max-w-4xl lg:pl-8 lg:pr-0 xl:px-16">
           <Content />
         </div>
         <TableOfContents />
       </div>
-      <div className="flex justify-center w-full max-w-5xl mx-auto px-4 py-8">
+      <div className="flex justify-center w-full max-w-5xl mx-auto px-4 py-8 sm:py-12">
         <div className="w-full mb-4">
           <div className="border-t border-gray-300" />
           <h3 className="text-2xl font-bold my-2">Latest Posts:</h3>
