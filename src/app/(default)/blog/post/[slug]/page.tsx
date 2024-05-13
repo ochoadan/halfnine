@@ -227,7 +227,7 @@ const Page = async ({ params }: PostPageParams) => {
                   `pl-${heading.level * 2}`
                 )}
               >
-                {heading.text}
+                {he.decode(heading.text)}
               </a>
             </li>
           ))}
