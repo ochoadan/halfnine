@@ -4,7 +4,7 @@ import getSitemapData from "@/lib/queries/getSitemapData";
 export const revalidate = 43200;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const pageLength = 15;
+  const pageLength = 30;
   const { posts, categories } = await getSitemapData();
 
   const blogPages = Array.from(

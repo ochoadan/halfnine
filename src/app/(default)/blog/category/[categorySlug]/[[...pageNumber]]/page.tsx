@@ -10,7 +10,7 @@ import sanitizeHtml from "sanitize-html";
 
 export const revalidate = 86400;
 
-const pageLength = 15;
+const pageLength = 30;
 
 async function fetchCategoryData(categorySlug: string) {
   const response = await getCategoryData(categorySlug);
