@@ -10,6 +10,7 @@ type SolutionCheckListEvenProps = {
     furtherList?: { name: string; description?: string }[];
   }[];
   background?: "light" | "gray";
+  noContact?: boolean;
 };
 
 const SolutionIconListThrice = ({
@@ -17,6 +18,7 @@ const SolutionIconListThrice = ({
   description,
   features,
   background = "light",
+  noContact,
 }: SolutionCheckListEvenProps) => {
   const containerClassName = background === "gray" ? "bg-gray-50" : "bg-white";
   return (
@@ -73,17 +75,19 @@ const SolutionIconListThrice = ({
             ))}
           </dl>
         </div>
-        <div className="mt-8 flex justify-center">
-          <p className="relative rounded-full bg-white px-4 py-1.5 text-sm leading-6 text-gray-700 ring-2 ring-inset ring-gray-900/10">
-            Need a service not listed here?{" "}
-            <Link
-              href="/contact"
-              className="text-brand-600 hover:text-brand-500 hover:underline"
-            >
-              Contact us
-            </Link>
-          </p>
-        </div>
+        {noContact || (
+          <div className="mt-8 flex justify-center">
+            <p className="relative rounded-full bg-white px-4 py-1.5 text-sm leading-6 text-gray-700 ring-2 ring-inset ring-gray-900/10">
+              Need a service not listed here?{" "}
+              <Link
+                href="/contact"
+                className="text-brand-600 hover:text-brand-500 hover:underline"
+              >
+                Contact us
+              </Link>
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );

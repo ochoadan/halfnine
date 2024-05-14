@@ -6,11 +6,11 @@ import SolutionCheckListEven from "@/components/services/list/SolutionCheckListE
 import SolutionIconListThrice from "@/components/services/list/SolutionIconListThrice";
 import SolutionBaseListOnce from "@/components/services/list/SolutionBaseListOnce";
 
-const slug = "it-outsourcing";
+const slug = "cloud-migration";
 
 export const metadata: Metadata = {
-  title: `IT Outsourcing Services • Halfnine`,
-  description: `Let Halfnine take care of your IT needs through our IT outsourcing services. We provide a range of services to help you focus on your business.`,
+  title: `Cloud Migration Services • Halfnine`,
+  description: ``,
   alternates: {
     canonical: `https://www.halfnine.com/services/${slug}`,
   },
@@ -23,24 +23,25 @@ const Page = () => {
   return (
     <>
       <CustomHero
-        heading="IT Outsourcing Services"
-        subtext={`Let Halfnine take care of "IT"`}
-        description="Let Halfnine take care of your IT needs through our IT outsourcing services. We provide a range of services to help you focus on your business."
-        imgSrc="/img/index/remote-working.svg"
+        heading="Cloud Migration Services"
+        subtext={`Transfer to and From With Ease`}
+        description="Our team can assist with data and application transfers between different clouds or on-premises environments."
+        imgSrc="/img/index/cloudhero.svg"
         imgAlt=""
       />
       <SolutionCheckListEven
         background="gray"
-        heading="Types of IT Outsourcing"
+        heading="Benefits of Cloud Migration Services"
         features={Data1}
       />
       <SolutionIconListThrice
-        heading="Key Benefits of IT Outsourcing"
+        heading="Key Cloud Migration Services"
         features={Data2}
       />
       <SolutionBaseListOnce
         background="gray"
-        heading="IT Outsourcing as a Solution"
+        heading="The Cloud Migration Ecosystem"
+        description="The cloud migration ecosystem encompasses a comprehensive network of services, strategies, and technologies designed to facilitate the seamless transition of business operations to the cloud. This ecosystem is critical for ensuring that organizations can leverage the full spectrum of benefits offered by cloud computing, including enhanced scalability, flexibility, and security."
         features={Data3}
       />
       <ServicesFAQ features={FAQData} />

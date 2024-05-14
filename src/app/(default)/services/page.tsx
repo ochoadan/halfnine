@@ -20,9 +20,26 @@ const service = [
     role: "Outsource your IT needs to us",
     url: "/services/it-outsourcing",
   },
+  {
+    name: "Software Development Outsourcing Services",
+    role: "Outsource your software development needs to us",
+    url: "/services/software-development/outsourcing",
+  },
+  {
+    name: "Cloud Migration Services",
+    role: "Migrate your business to the cloud",
+    url: "/services/cloud-migration",
+  },
+  {
+    name: "Web Development Services",
+    role: "Develop your website with us",
+    url: "/services/web-development",
+  },
   // {
-  //   name: "AWS Managed Services", 
-  // }
+  //   name: "Mobile App Development Services",
+  //   role: "Develop your mobile app with us",
+  //   url: "/services/mobile-app-development",
+  // },
 ];
 
 const Page = () => {
