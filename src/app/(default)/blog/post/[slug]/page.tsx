@@ -25,15 +25,15 @@ async function slugsFetcher() {
 
 async function returnPostPage(params: { slug: string }) {
   const post = await getPostBySlug(params.slug);
+  if (!post) {
+    return null;
+  }
   const description = post?.excerpt
     ? sanitizeHtml(post.excerpt.replace(/\n/g, ""), {
         allowedTags: [],
         allowedAttributes: {},
       })
     : "Error: Missing Description";
-  if (!post) {
-    return notFound();
-  }
   return { ...post, description };
 }
 export async function generateStaticParams() {
@@ -49,7 +49,9 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: PostPageParams) {
   const post = await returnPostPage(params);
-
+  if (!post) {
+    return null;
+  }
   return {
     metadataBase: "https://www.halfnine.com",
     title: post.title,
@@ -115,6 +117,10 @@ const Page = async ({ params }: PostPageParams) => {
   }
 
   const post = await returnPostPage(params);
+  
+  if (!post) {
+    return notFound();
+  }
 
   function addNofollowContent(content: string) {
     content = content.replace(

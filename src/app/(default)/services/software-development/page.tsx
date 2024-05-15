@@ -1,6 +1,7 @@
 import PageHero from "@/components/Global/PageHero";
 import { RootOffering } from "../../(root)";
 import { Metadata } from "next";
+import CustomHero from "@/components/services/CustomHero";
 
 export const metadata: Metadata = {
   title: "Software Development Services • Halfnine",
@@ -15,9 +16,12 @@ export const metadata: Metadata = {
 const Page = () => {
   return (
     <>
-      <PageHero
+      <CustomHero
         heading="Software Development Services"
-        description="Full-Service Software Development and Consulting Solutions"
+        subtext="Let's build something great together."
+        description="Our team is ready and excited to help you build the software you need to grow your business. We offer full-service software development solutions that are tailored to your unique needs."
+        imgSrc="/img/index/developer.svg"
+        imgAlt="software developer working on a laptop"
       />
       {[RootOffering].map((Component, index) => (
         <div

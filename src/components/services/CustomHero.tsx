@@ -78,7 +78,7 @@ const CustomHero: React.FC<TechnologyInfoProps> = ({
         <Image
           src={`${imgSrc ? imgSrc : "/img/hero.svg"}`}
           alt={imgAlt ? imgAlt : "Custom Solutions"}
-          className="object-contain max-w-[500px] max-h-[375px]"
+          className="object-contain w-[500px] h-[375px] max-w-screen"
           width={500}
           height={375}
         />

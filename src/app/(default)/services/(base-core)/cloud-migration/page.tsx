@@ -10,7 +10,7 @@ const slug = "cloud-migration";
 
 export const metadata: Metadata = {
   title: `Cloud Migration Services • Halfnine`,
-  description: ``,
+  description: `Our team can assist with data and application transfers between different clouds or on-premises environments.`,
   alternates: {
     canonical: `https://www.halfnine.com/services/${slug}`,
   },
@@ -24,7 +24,7 @@ const Page = () => {
     <>
       <CustomHero
         heading="Cloud Migration Services"
-        subtext={`Transfer to and From With Ease`}
+        subtext="Transfer to and From With Ease"
         description="Our team can assist with data and application transfers between different clouds or on-premises environments."
         imgSrc="/img/index/cloudhero.svg"
         imgAlt=""

@@ -24,7 +24,7 @@ const Page = () => {
     <>
       <CustomHero
         heading="Software Development Outsourcing Services"
-        subtext={`Focus on your core business`}
+        subtext="Focus on your core business"
         description="Our team of experts can help you with software development your software development needs."
         imgSrc="/img/index/remote-working.svg"
         imgAlt="Woman working on a laptop in a remote location."

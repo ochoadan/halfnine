@@ -10,7 +10,7 @@ const slug = "web-development";
 
 export const metadata: Metadata = {
   title: `Web Development Services • Halfnine`,
-  description: ``,
+  description: `We develop websites that are tailored to your business needs. Contact us to learn more about how we can help you grow.`,
   alternates: {
     canonical: `https://www.halfnine.com/services/${slug}`,
   },
@@ -24,7 +24,7 @@ const Page = () => {
     <>
       <CustomHero
         heading="Web Development Services"
-        subtext={`Develop your website with us`}
+        subtext="Develop your website with us"
         description="Our web development services are designed to help you create a website or web application for your business needs and goals."
         imgSrc="/img/hero.svg"
         imgAlt="Woman coding on a laptop with a cup of coffee on her hand with a html tag icon in the cup"

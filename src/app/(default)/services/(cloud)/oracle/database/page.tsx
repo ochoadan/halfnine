@@ -10,7 +10,7 @@ const slug = "oracle/database";
 
 export const metadata: Metadata = {
   title: `Oracle Managed Database Consulting Services`,
-  description: ``,
+  description: `Let us handle your Oracle database so you can focus on your applications and business.`,
   alternates: {
     canonical: `https://www.halfnine.com/services/${slug}`,
   },

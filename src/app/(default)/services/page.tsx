@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import CustomHero from "@/components/services/CustomHero";
 import Link from "next/link";
 import clsx from "clsx";
+import { services } from "./pageData";
 
 export const metadata: Metadata = {
   title: "Software Development Services • Halfnine",
@@ -14,34 +15,6 @@ export const metadata: Metadata = {
     url: "https://www.halfnine.com/services",
   },
 };
-
-const service = [
-  {
-    name: "IT Outsourcing Services",
-    role: "Outsource your IT needs to us",
-    url: "/services/it-outsourcing",
-  },
-  {
-    name: "Software Development Outsourcing Services",
-    role: "Outsource your software development needs to us",
-    url: "/services/software-development/outsourcing",
-  },
-  {
-    name: "Cloud Migration Services",
-    role: "Migrate your business to the cloud",
-    url: "/services/cloud-migration",
-  },
-  {
-    name: "Web Development Services",
-    role: "Develop your website with us",
-    url: "/services/web-development",
-  },
-  // {
-  //   name: "Mobile App Development Services",
-  //   role: "Develop your mobile app with us",
-  //   url: "/services/mobile-app-development",
-  // },
-];
 
 const Page = () => {
   return (
@@ -73,20 +46,18 @@ export default Page;
 const AdditionalServices = () => (
   <>
     <h2 className="text-3xl font-bold text-gray-900">Additional Services</h2>
-    <div className="divide-y divide-gray-200 overflow-hidden rounded-lg bg-gray-200 shadow sm:grid sm:grid-cols-2 sm:gap-px sm:divide-y-0 mt-2">
-      {service.map((servicex, actionIdx) => (
+    <div className="divide-y divide-gray-200 overflow-hidden rounded-lg bg-gray-200 shadow sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-px sm:divide-y-0 mt-2">
+      {services.map((servicex, actionIdx) => (
         <div
           key={servicex.name}
           className={clsx(
-            actionIdx === 0
-              ? "rounded-tl-lg rounded-tr-lg sm:rounded-tr-none"
-              : "",
-            actionIdx === 1 ? "sm:rounded-tr-lg" : "",
-            actionIdx === service.length - 2 ? "sm:rounded-bl-lg" : "",
-            actionIdx === service.length - 1
-              ? "rounded-bl-lg rounded-br-lg sm:rounded-bl-none"
-              : "",
-            "group relative bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-brand-500"
+            actionIdx === 0 ? "rounded-tl-lg rounded-tr-lg sm:rounded-tr-none" : "",
+            actionIdx === 1 ? "sm:rounded-tr-lg lg:rounded-tr-none" : "",
+            actionIdx === 2 ? "lg:rounded-tr-lg" : "",
+            actionIdx === services.length - 3 ? "lg:rounded-bl-lg" : "",
+            actionIdx === services.length - 2 ? "sm:rounded-bl-lg lg:rounded-bl-none" : "",
+            actionIdx === services.length - 1 ? "rounded-bl-lg rounded-br-lg sm:rounded-bl-none" : "",
+            "group relative bg-white p-4 px-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-brand-500 hover:bg-gray-50 transition-colors"
           )}
         >
           <div className="min-w-0 flex-1">
