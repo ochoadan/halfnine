@@ -3,6 +3,7 @@ import { RootOffering } from "../(root)";
 import { Metadata } from "next";
 import CustomHero from "@/components/services/CustomHero";
 import Link from "next/link";
+import clsx from "clsx";
 
 export const metadata: Metadata = {
   title: "Software Development Services • Halfnine",
@@ -72,21 +73,39 @@ export default Page;
 const AdditionalServices = () => (
   <>
     <h2 className="text-3xl font-bold text-gray-900">Additional Services</h2>
-    <div className="mt-2 grid grid-cols-1 gap-4 sm:grid-cols-2">
-      {service.map((servicex) => (
+    <div className="divide-y divide-gray-200 overflow-hidden rounded-lg bg-gray-200 shadow sm:grid sm:grid-cols-2 sm:gap-px sm:divide-y-0 mt-2">
+      {service.map((servicex, actionIdx) => (
         <div
           key={servicex.name}
-          className="relative flex items-center space-x-3 rounded-lg border border-gray-300 bg-white px-6 py-5 shadow-sm focus-within:ring-2 focus-within:ring-brand-500 focus-within:ring-offset-2 hover:border-gray-400"
+          className={clsx(
+            actionIdx === 0
+              ? "rounded-tl-lg rounded-tr-lg sm:rounded-tr-none"
+              : "",
+            actionIdx === 1 ? "sm:rounded-tr-lg" : "",
+            actionIdx === service.length - 2 ? "sm:rounded-bl-lg" : "",
+            actionIdx === service.length - 1
+              ? "rounded-bl-lg rounded-br-lg sm:rounded-bl-none"
+              : "",
+            "group relative bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-brand-500"
+          )}
         >
           <div className="min-w-0 flex-1">
-            <Link href={servicex.url} className="focus:outline-none">
-              <span className="absolute inset-0" aria-hidden="true" />
-              <p className="text-sm font-medium text-gray-900">
+            <Link href={servicex.url}>
+              <h3 className="text-base font-semibold leading-6 text-gray-900">
                 {servicex.name}
-              </p>
-              <p className="truncate text-sm text-gray-500">{servicex.role}</p>
+                <span className="absolute inset-0" aria-hidden="true" />
+              </h3>
+              <p className="mt-2 text-sm text-gray-500">{servicex.role}</p>
             </Link>
           </div>
+          {/* <span
+            className="pointer-events-none absolute right-6 top-6 text-gray-300 group-hover:text-gray-400"
+            aria-hidden="true"
+          >
+            <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20 4h1a1 1 0 00-1-1v1zm-1 12a1 1 0 102 0h-2zM8 3a1 1 0 000 2V3zM3.293 19.293a1 1 0 101.414 1.414l-1.414-1.414zM19 4v12h2V4h-2zm1-1H8v2h12V3zm-.707.293l-16 16 1.414 1.414 16-16-1.414-1.414z" />
+            </svg>
+          </span> */}
         </div>
       ))}
     </div>
