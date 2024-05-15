@@ -1,6 +1,7 @@
 type SolutionCheckListEvenProps = {
   heading: string;
   description?: string;
+  conclusion?: string;
   features: {
     name?: string;
     description?: string;
@@ -10,12 +11,13 @@ type SolutionCheckListEvenProps = {
       furtherList?: { name: string; description?: string }[];
     }[];
   }[];
-    background?: "light" | "gray";
+  background?: "light" | "gray";
 };
 
 const SolutionCheckListEven = ({
   heading,
   description,
+  conclusion,
   features,
   background = "light",
 }: SolutionCheckListEvenProps) => {
@@ -81,6 +83,9 @@ const SolutionCheckListEven = ({
             </div>
           ))}
         </dl>
+        {conclusion && (
+          <p className="mt-6 text-base leading-7 text-gray-600">{conclusion}</p>
+        )}
       </div>
     </div>
   );

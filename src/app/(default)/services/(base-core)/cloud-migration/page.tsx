@@ -27,7 +27,7 @@ const Page = () => {
         subtext="Transfer to and From With Ease"
         description="Our team can assist with data and application transfers between different clouds or on-premises environments."
         imgSrc="/img/index/cloudhero.svg"
-        imgAlt=""
+        imgAlt="person holding squares with icons of popular cloud providers"
       />
       <SolutionCheckListEven
         background="gray"

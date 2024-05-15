@@ -33,33 +33,34 @@ export const services = [
   },
   // outsourced it services
   // crm services
-  // {
-  //   name: "Cloud Consulting Services",
-  //   role: "Consult with us about cloud services",
-  //   url: "/services/cloud-consulting",
-  // },
-  // {
-  //   name: "Data Analytics Services",
-  //   role: "Analyze your data with us",
-  //   url: "/services/data-analytics",
-  // },
-  // // Data Management Services
-  // {
-  //   name: "Staff Augmentation Services",
-  //   role: "Augment your staff with us",
-  //   url: "/services/staff-augmentation",
-  // },
-  // // Web Application Development Services
+  // ! {
+  // !   name: "Cloud Consulting Services",
+  // !  Cloud Managed Services Company
+  // !   role: "Consult with us about cloud services",
+  // !   url: "/services/cloud-consulting",
+  // ! },
+  {
+    name: "Data Analytics Services",
+    role: "Analyze your data with us",
+    url: "/services/data-analytics",
+  },
+  // Data Management Services
+  {
+    name: "Staff Augmentation Services",
+    role: "Augment your staff with us",
+    url: "/services/staff-augmentation",
+  },
+  // Web Application Development Services
   // {
   //   name: "UI/UX Design Services",
   //   role: "Design your UI/UX with us",
   //   url: "/services/ui-ux-design",
   // },
-  // {
-  //   name: "Ecommerce Services",
-  //   role: "Build your e-commerce platform with us",
-  //   url: "/services/ecommerce",
-  // },
+  {
+    name: "Ecommerce Services",
+    role: "Build your e-commerce platform with us",
+    url: "/services/ecommerce",
+  },
   // // Android App Development Services
   // {
   //   name: "Marketing Automation Services",
