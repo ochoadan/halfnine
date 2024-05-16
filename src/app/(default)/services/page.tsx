@@ -104,7 +104,7 @@ const DnP = () => (
     description="Find the right solution for your business by creating a blueprint that outlines the features and functionalities that will help you achieve your goals."
     imgSrc="/img/index/scalemodel.svg"
     imgAlt="Woman showing a scale model of a building"
-    buttonRef="/services/architecture"
+    buttonRef="/services/design"
     buttonText="Learn more"
     isReverse
     turnToH2

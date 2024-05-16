@@ -70,9 +70,9 @@ const products = [
     icon: FaRegCompass,
   },
   {
-    name: "Design & Planning",
+    name: "Design & Experience",
     description: "Defining requirements, timelines, and system design",
-    href: "/services/architecture",
+    href: "/services/design",
     icon: GoChecklist,
   },
   {

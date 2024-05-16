@@ -25,6 +25,16 @@ const nextConfig = {
         destination: "/blog",
         permanent: true,
       },
+      {
+        source: "/services/managed-it-support",
+        destination: "/services/support",
+        permanent: false,
+      },
+      {
+        source: "/services/architecture",
+        destination: "/services/design",
+        permanent: false,
+      },
       // {
       //   source: "/blog/posts",
       //   destination: "/blog",

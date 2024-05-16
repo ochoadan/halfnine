@@ -26,11 +26,11 @@ export const services = [
   },
   // Website Development Services
   // Custom Software Development Services
-  {
-    name: "Managed IT Support Services",
-    role: "Get managed IT support from us",
-    url: "/services/managed-it-support",
-  },
+  // !{
+  // !  name: "Managed IT Support Services",
+  // !  role: "Get managed IT support from us",
+  // !  url: "/services/managed-it-support",
+  // !},
   // outsourced it services
   // crm services
   // ! {
@@ -51,11 +51,11 @@ export const services = [
     url: "/services/staff-augmentation",
   },
   // Web Application Development Services
-  // {
-  //   name: "UI/UX Design Services",
-  //   role: "Design your UI/UX with us",
-  //   url: "/services/ui-ux-design",
-  // },
+  // ! {
+  // !   name: "UI/UX Design Services",
+  // !   role: "Design your UI/UX with us",
+  // !   url: "/services/ui-ux-design",
+  // ! },
   {
     name: "Ecommerce Services",
     role: "Build your e-commerce platform with us",
@@ -67,6 +67,12 @@ export const services = [
   //   role: "Automate your marketing with us",
   //   url: "/services/marketing-automation",
   // },
+  {
+    // name: "Business Intelligence Services",
+    name: "Blockchain Development Services",
+    role: "Develop your blockchain with us",
+    url: "/services/blockchain-development",
+  }
   // mobile application development services
   // software services
   // salesforce services

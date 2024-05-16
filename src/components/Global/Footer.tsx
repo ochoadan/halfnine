@@ -6,8 +6,8 @@ import Logo from "./Logo";
 const navigation = {
   solutions: [
     { name: "Software Development", href: "/services/software-development" },
+    { name: "User Experience", href: "/services/design" },
     { name: "Deployment & Integration", href: "/services/cloud" },
-    { name: "Support & Maintenance", href: "/services/support" },
     // { name: "Web Development", href: "/services/web-development" },
     // { name: "Mobile Development", href: "/services/mobile-development" },
     // { name: "DevOps", href: "/services/devops" },
@@ -16,7 +16,7 @@ const navigation = {
   ],
   consulting: [
     { name: "Information Technology", href: "/services/consulting" },
-    { name: "Enterprise Architecture", href: "/services/architecture" },
+    { name: "Support & Maintenance", href: "/services/support" },
     { name: "Security & Compliance", href: "/services/security" },
   ],
   company: [
