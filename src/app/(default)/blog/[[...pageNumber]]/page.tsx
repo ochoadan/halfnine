@@ -112,12 +112,12 @@ export default async function Home({
                 <div className="relative w-full">
                   <Image
                     src={
-                      post.featuredImage.node.sourceUrl ||
+                      post.featuredImage?.node.sourceUrl ||
                       "https://via.placeholder.com/640x360"
                     }
                     width={640}
                     height={360}
-                    alt={post.featuredImage.node.altText}
+                    alt={post.featuredImage?.node.altText}
                     className="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
                   />
                   <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />

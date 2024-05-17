@@ -72,7 +72,25 @@ export const services = [
     name: "Blockchain Development Services",
     role: "Develop your blockchain with us",
     url: "/services/blockchain-development",
-  }
+  },
+  {
+    name: "MVP Development Services",
+    role: "Develop your MVP with us",
+    url: "/services/mvp",
+  },
+  // {
+  //   name: "Medical Software Development Services",
+  // }
+  {
+    name: "Hybrid App Development Services",
+    role: "Develop your hybrid app with us",
+    url: "/services/hybrid-app-development",
+  },
+  {
+    name: "Data Visualization Services",
+    role: "Visualize your data with us",
+    url: "/services/data-visualization",
+  },
   // mobile application development services
   // software services
   // salesforce services

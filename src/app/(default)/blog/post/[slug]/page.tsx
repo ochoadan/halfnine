@@ -73,10 +73,10 @@ export async function generateMetadata({ params }: PostPageParams) {
       authors: post.author.node.name,
       images: [
         {
-          url: post.featuredImage.node.sourceUrl || "https://via.placeholder.com/896x504",
-          width: post.featuredImage.node.mediaDetails.width || 896,
-          height: post.featuredImage.node.mediaDetails.height || 504,
-          alt: post.featuredImage.node.altText || "Placeholder",
+          url: post.featuredImage?.node.sourceUrl || "https://via.placeholder.com/896x504",
+          width: post.featuredImage?.node.mediaDetails.width || 896,
+          height: post.featuredImage?.node.mediaDetails.height || 504,
+          alt: post.featuredImage?.node.altText || "Placeholder",
         },
       ],
     },
@@ -90,10 +90,10 @@ export async function generateMetadata({ params }: PostPageParams) {
       creator: "@halfnine",
       images: [
         {
-          url: post.featuredImage.node.sourceUrl || "https://via.placeholder.com/896x504",
-          width: post.featuredImage.node.mediaDetails.width || 896,
-          height: post.featuredImage.node.mediaDetails.height || 504,
-          alt: post.featuredImage.node.altText || "Placeholder",
+          url: post.featuredImage?.node.sourceUrl || "https://via.placeholder.com/896x504",
+          width: post.featuredImage?.node.mediaDetails.width || 896,
+          height: post.featuredImage?.node.mediaDetails.height || 504,
+          alt: post.featuredImage?.node.altText || "Placeholder",
         },
       ],
     },
@@ -175,10 +175,10 @@ const Page = async ({ params }: PostPageParams) => {
         height={504}
         className="aspect-video rounded-2xl bg-gray-50 object-cover mx-auto mt-0 mb-8"
         src={
-          post.featuredImage.node.sourceUrl ||
+          post.featuredImage?.node.sourceUrl ||
           "https://via.placeholder.com/896x504"
         }
-        alt={post.featuredImage.node.altText || "Placeholder"}
+        alt={post.featuredImage?.node.altText || "Placeholder"}
       />
       <h1
         className="text-3xl sm:text-4xl font-bold text-neutral-800 text-center mb-2"
