@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { categories } from "./categories";
 import Link from "next/link";
 import Image from "next/image";
@@ -23,7 +23,7 @@ const CategoryItem: React.FC<CategoryItemProps> = ({ item }) => {
           <span className="flex min-w-0 flex-1 items-center space-x-2">
             <span className="block flex-shrink-0 rounded-md overflow-hidden">
               <Image
-                loading="lazy"
+                priority
                 quality={10}
                 src={item.icon || "/icons/error.svg"}
                 alt={item.name + " icon"}
@@ -44,7 +44,7 @@ const CategoryItem: React.FC<CategoryItemProps> = ({ item }) => {
           <span className="flex min-w-0 flex-1 items-center space-x-2">
             <span className="block flex-shrink-0 rounded-md overflow-hidden">
               <Image
-                loading="lazy"
+                priority
                 quality={10}
                 src={item.icon || "/icons/error.svg"}
                 alt={item.name + " icon"}
@@ -91,7 +91,11 @@ const Category: React.FC<CategoryProps> = ({ category }) => {
       <ul
         role="list"
         className={`my-2 gap-x-4 gap-y-3 flex flex-wrap ${
-          showMore ? "" : "max-h-[80px] overflow-hidden"
+          category.items.length > 22
+            ? showMore
+              ? ""
+              : "max-h-[80px] overflow-hidden"
+            : ""
         }`}
       >
         {category.items.map((item, itemIdx) => (

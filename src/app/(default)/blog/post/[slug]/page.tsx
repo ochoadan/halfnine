@@ -10,6 +10,16 @@ import clsx from "clsx";
 import { Prose } from "@/components/Prose";
 import Latest3Posts from "@/components/Latest3Posts";
 
+// export const revalidate = async (params: { slug: string }) => {
+//   const post = await getPostBySlug(params.slug);
+//   if (!post) {
+//     return null;
+//   }
+//   if (post.featuredImage === null) {
+//     return 5;
+//   }
+//   return 86400;
+// };
 export const revalidate = 86400;
 
 interface PostPageParams {
@@ -122,7 +132,7 @@ const Page = async ({ params }: PostPageParams) => {
     return notFound();
   }
 
-  function addNofollowContent(content: string) {
+  function modifyContent(content: string) {
     content = content.replace(
       /<a[^>]*href=["|'](http[^"']*)["|'][^>]*>(.*?)<\/a>/gi,
       function (match, p1, p2) {
@@ -208,7 +218,7 @@ const Page = async ({ params }: PostPageParams) => {
         </div>
         <div
           dangerouslySetInnerHTML={{
-            __html: addNofollowContent(post.content),
+            __html: modifyContent(post.content),
           }}
         />
       </Prose>

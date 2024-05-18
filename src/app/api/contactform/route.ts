@@ -14,9 +14,9 @@ export async function POST(request: Request, response: Response) {
   });
 
   let mailOptions = {
-    from: "contact-form@halfnine.com",
+    from: "ping@notifications.halfnine.com",
     to: "diogamb@gmail.com",
-    subject: `Message From Halfnine: ${name}`,
+    subject: `Message From ${name} to Halfnine`,
     text: message + " | Sent from: " + email,
     html: `
       <div>

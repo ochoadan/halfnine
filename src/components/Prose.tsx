@@ -20,7 +20,7 @@ export function Prose<T extends React.ElementType = "div">({
         // lead
         "prose-lead:text-slate-500",
         // links
-        "prose-a:font-semibold",
+        "prose-a:font-semibold prose-a:prose-h2:font-bold",
         // link underline
         "prose-a:no-underline prose-a:shadow-[inset_0_-2px_0_0_var(--tw-prose-background,#fff),inset_0_calc(-1*(var(--tw-prose-underline-size,4px)+2px))_0_0_var(--tw-prose-underline,theme(colors.sky.300))] hover:prose-a:[--tw-prose-underline-size:6px]",
         // pre
