@@ -57,7 +57,7 @@ export const categories = [
       { name: "APL", icon: "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/apl/apl-original.svg", url: "/services/software-development/apl" },
       // -Hard To ID- { name: "Flow", icon: "https://raw.githubusercontent.com/bestofjs/bestofjs/eb151f8eae67ee98fe070cd65284d11ccecaa20c/apps/bestofjs-nextjs/public/logos/flow.svg", url: "/services/software-development/flow" },
       { name: "Raku", icon: "https://upload.wikimedia.org/wikipedia/commons/8/85/Camelia.svg", url: "/services/software-development/raku" },
-
+      // { name: "Vanilla JS", icon: "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/javascript/javascript-original.svg", url: "/services/software-development/vanilla-js" },
       // ? {name: "Scheme", icon: "https://www.vectorlogo.zone/logos/scheme/scheme-icon.svg", url: "/services/software-development/scheme"},
       // ? {name: "Smalltalk", icon: "https://www.vectorlogo.zone/logos/smalltalk/smalltalk-icon.svg", url: "/services/software-development/smalltalk"},
       // ? {name: "Verilog", icon: "https://www.vectorlogo.zone/logos/verilog/verilog-icon.svg", url: "/services/software-development/verilog"},

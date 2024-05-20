@@ -28,7 +28,8 @@ const TechnologyInfoHero: React.FC<TechnologyInfoProps> = ({
               </p>
               <p className="mt-6 text-lg leading-8 text-gray-600">
                 {/* {`Our team of ${technology} developers can help you build custom software solutions that meet your unique business requirements.`} */}
-                {`Halfnine offers ${technology} development services to help you build scalable, secure, and high-performance applications.`}
+                {/* {`Halfnine offers ${technology} development services to help you build scalable, secure, and high-performance applications.`} */}
+                {`Halfnine offers ${technology} development services and hire our ${technology} developers for your needs and projects.`}
               </p>
             </div>
             <div className="mt-5 flex items-center gap-x-6">

@@ -77,7 +77,7 @@ export default function GlobalFooter() {
                 <FaLinkedin className="h-6 w-6" aria-hidden="true" />
               </Link>
               <Link
-                href="https://twitter.com/halfnine"
+                href="https://x.com/halfnine"
                 target="_blank"
                 className="text-gray-400 hover:text-black scale-100 hover:scale-{1.02}"
               >
@@ -216,7 +216,7 @@ export default function GlobalFooter() {
 //       <FaLinkedin className="h-6 w-6" aria-hidden="true" />
 //     </Link>
 //     <Link
-//       href="https://twitter.com/halfnine"
+//       href="https://x.com/halfnine"
 //       target="_blank"
 //       className="text-gray-400 hover:text-black scale-100 hover:scale-{1.02}"
 //     >

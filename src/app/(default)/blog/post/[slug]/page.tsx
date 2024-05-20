@@ -36,7 +36,7 @@ async function slugsFetcher() {
 async function returnPostPage(params: { slug: string }) {
   const post = await getPostBySlug(params.slug);
   if (!post) {
-    return null;
+    return;
   }
   const description = post?.excerpt
     ? sanitizeHtml(post.excerpt.replace(/\n/g, ""), {
@@ -60,7 +60,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PostPageParams) {
   const post = await returnPostPage(params);
   if (!post) {
-    return null;
+    return;
   }
   return {
     metadataBase: "https://www.halfnine.com",
@@ -83,7 +83,9 @@ export async function generateMetadata({ params }: PostPageParams) {
       authors: post.author.node.name,
       images: [
         {
-          url: post.featuredImage?.node.sourceUrl || "https://via.placeholder.com/896x504",
+          url:
+            post.featuredImage?.node.sourceUrl ||
+            "https://via.placeholder.com/896x504",
           width: post.featuredImage?.node.mediaDetails.width || 896,
           height: post.featuredImage?.node.mediaDetails.height || 504,
           alt: post.featuredImage?.node.altText || "Placeholder",
@@ -100,7 +102,9 @@ export async function generateMetadata({ params }: PostPageParams) {
       creator: "@halfnine",
       images: [
         {
-          url: post.featuredImage?.node.sourceUrl || "https://via.placeholder.com/896x504",
+          url:
+            post.featuredImage?.node.sourceUrl ||
+            "https://via.placeholder.com/896x504",
           width: post.featuredImage?.node.mediaDetails.width || 896,
           height: post.featuredImage?.node.mediaDetails.height || 504,
           alt: post.featuredImage?.node.altText || "Placeholder",
