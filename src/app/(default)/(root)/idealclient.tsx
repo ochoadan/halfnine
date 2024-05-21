@@ -6,19 +6,19 @@ const statsData = [
     icon: "/icons/loss-graph-finance.svg",
     title: "Declining Profits",
     description:
-      "We Build Turnaround Strategies, Cost Optimization, and Revenue Growth.",
+      "We Leverage Sales and Marketing Automation and Improve Customer Experience to Reduce Churn and Increase Sales",
   },
   {
     icon: "/icons/first-pedestal-place.svg",
     title: "Increased Competition",
     description:
-      "We make you stand out in a competitive environment with strategic positioning.",
+      "We Use Data Analytics and Market Research to Help You Stay Ahead of the Competition and Increase Market Share",
   },
   {
     icon: "/icons/merge.svg",
     title: "Consolidating Markets",
     description:
-      "We help you grow faster in a competitive and consolidating market.",
+      "We Help You Identify New Markets and Develop New Products and Services to Increase Revenue and Profitability",
   },
 ];
 
@@ -26,10 +26,12 @@ const IdealClient = () => (
   <div className="space-y-6">
     <div className="text-center">
       <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-        Facing IT Challenges?
+        Facing Challenges? IT Services Can Help!
       </h2>
       <p className="mt-4 text-lg text-gray-700 max-w-2xl mx-auto">
-        {`Let us help you reverse the effects of declining sales, increased competition, or consolidating markets. We deliver success to the struggling.`}
+        {/* {`Let us help you reverse the effects of declining sales, increased competition, or consolidating markets. We deliver success to the struggling.`} */}
+        {/* {`Start Leveraging Technology to Reverse the Effects of Declining Sales, Increased Competition, or Consolidating Markets. We Deliver Success to the Struggling.`} */}
+        Leverage Technology to Reverse Negative Trends in Your Business, We Deliver Success to the Struggling
       </p>
     </div>
     <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-3">
