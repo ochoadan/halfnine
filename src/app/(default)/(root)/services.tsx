@@ -134,7 +134,7 @@ const Services = () => {
         </Link>
       </div>
       <div className="mt-8 flex justify-center">
-        <p className="relative rounded-full bg-white px-4 py-1.5 text-sm sm:text-base leading-6 text-gray-700 ring-2 ring-inset ring-gray-900/10">
+        <p className="relative rounded-full bg-white px-4 py-1.5 text-xs sm:text-sm md:text-base leading-6 text-gray-700 ring-2 ring-inset ring-gray-900/10">
           {"For tailored solutions, don't hesitate to "}
           <Link
             href="/contact"

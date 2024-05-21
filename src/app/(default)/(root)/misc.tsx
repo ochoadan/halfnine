@@ -1,52 +1,45 @@
-import { FadeIn } from "@/components/Global/FadeIn";
 import { TagList, TagListItem } from "@/components/Global/TagList";
 import clsx from "clsx";
-import Image from "next/image";
 import Link from "next/link";
 
 const Misc = () => {
   const data = [
     {
-      title: "Startup Advisory: Accelerate Growth",
-      cost: "$10,000+",
+      title: "Software Startup Advisory: Accelerate Growth",
       description:
-        "Startups face unique challenges as they navigate the complexities of growth. Our experts provide strategic guidance to help startups achieve their full potential. We offer tailored solutions to optimize capital access, mitigate risks, and improve overall performance.",
+        "Startups in the software development sector face unique challenges as they navigate the complexities of growth in a rapidly evolving industry. Our experts provide strategic guidance to help these startups achieve their full potential.",
       offering: [
-        "Business plan development",
-        "Financial modeling",
-        "Market analysis",
-        "Capital structure optimization",
-        "Risk mitigation strategies",
+        "Software Architecture Design",
+        "Product Development Strategy",
+        "Technology Stack Selection",
+        "Scalability Planning",
+        "Market Analysis",
+        "Financial Modeling",
+        "Risk Prevention, Mitigation, and Management",
       ],
     },
     {
-      title: "Company Advisory: Revitalize the Business",
-      cost: "$20,000+",
+      title: "Software Company Advisory: Revitalize the Business",
       description:
-        "When a company encounters major challenges, swift action is crucial. Early diagnosis of distress streamlines the turnaround process. Our experts collaborate with management to gauge business viability and solvency risk, assess options, and devise a strategic plan for optimal recovery.",
+        "When a software company encounters major challenges, swift action is crucial. Our experts collaborate with management to gauge business viability and solvency risk, assess options, and devise a strategic plan for optimal recovery.",
       offering: [
-        "Liquidity management",
-        "Operational improvement",
-        "Turnaround strategy development and execution",
-        "Debt restructuring",
+        "IT Automation Sales Strategy",
+        "Product Development Strategy",
+        "Competitive and Market Analysis",
+        "Cost Reduction Strategy",
+        "Cloud to On-Premise Migration",
       ],
     },
     {
-      title: "Lender Advisory: Reduce Risk",
-      cost: "$15,000+",
+      title: "Lender Advisory for Software Companies: Reduce Risks",
       description:
-        "Our collaborative approach with lenders involves assessing risks, encompassing both the actual and potential collateral of borrowers. Additionally, we offer tailored recommendations to minimize exposure to loss risks. These suggestions are rooted in thorough evaluations of industry dynamics, competitive landscapes, as well as the business plans, conditions, and projections of borrowers.",
+        "Our collaborative approach with lenders involves assessing risks, encompassing both the actual and potential collateral of borrowers in the IT sector.",
       offering: [
-        "3-statement modeling",
-        "13-week cash flow modeling",
-        "EBITDA adjustments grasp",
-        "Working capital inputs",
-        "Covenant review in credit agreement",
-        "Business plan review",
-        "Working capital analysis",
-        "Strategic options identification",
-        "Management competency assessment",
-        "Industry analysis",
+        "IT Company Due Diligence",
+        "IT Company Valuation",
+        "IT Company Risk Assessment",
+        "IT Company Financial Analysis",
+        "IT Company Recovery Strategy",
       ],
     },
     // {
@@ -68,14 +61,14 @@ const Misc = () => {
     <>
       <div className="mx-auto max-w-4xl text-center mb-16">
         <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-          Need Advice?
+          IT Consulting: Need Advice?
         </h2>
         <hr className="border-brand-600 opacity-90 border-b-[2px] mx-auto w-28 my-2" />
         <p className="text-lg text-gray-600">
-          Both companies and lenders face rapid financial changes. Our
-          Consulting Services team assists in mitigating risks, optimizing
-          capital access, and improving overall performance for long-term
-          success.
+          Facing rapid technological changes, both software development
+          companies and lenders face unique challenges. Our Consultation
+          Services team assists in mitigating risks, optimizing resource
+          allocation, and improving overall performance for long-term success.
         </p>
       </div>
 
@@ -105,9 +98,7 @@ const Misc = () => {
                   /> */}
                 </h2>
                 <p className="mt-4 text-base leading-7 text-gray-600">
-                  <span className="">
-                    {`Don't wait to get started!`}{" "}
-                  </span>
+                  <span className="">{`Don't wait to get started!`} </span>
                   <Link
                     href="/contact"
                     className="text-brand-600 hover:text-brand-500 hover:underline font-semibold"
