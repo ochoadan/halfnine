@@ -69,6 +69,19 @@ export const categories = [
       // ? {name: "Pascal", icon: "https://www.vectorlogo.zone/logos/pascal/pascal-icon.svg", url: "/services/software-development/pascal"},
     ],
   },
+  // {
+  //   title: "SDKs & Libraries",
+  //   items: [
+  //       {name: "XCode", icon: "https://www.vectorlogo.zone/logos/apple_xcode/apple_xcode-icon.svg", url: "/services/software-development/xcode"},
+  // {name:" MQTT"},
+  // tableau
+  // zend
+  // ajax
+  // axios
+  // JAMstack
+  // appypie
+  //   ]
+  // },
   {
     // title: "Full-Stack & Cross-platform Frameworks",
     title: "Web frameworks and technologies ",
@@ -80,7 +93,7 @@ export const categories = [
       { name: "Angular", icon: "https://www.vectorlogo.zone/logos/angular/angular-icon.svg", url: "/services/software-development/angular" },
       { name: "Next.js", icon: "https://cdn.worldvectorlogo.com/logos/next-js.svg", url: "/services/software-development/nextjs" },
       { name: "Microsoft .NET", icon: "https://raw.githubusercontent.com/gilbarbara/logos/52addcaa18dfecb4df77f3ee0753dca6b98187ad/logos/dotnet.svg", url: "/services/software-development/dotnet" },
-      { name: "Vue.js", icon: 'https://raw.githubusercontent.com/gilbarbara/logos/52addcaa18dfecb4df77f3ee0753dca6b98187ad/logos/vue.svg', url: "/services/software-development/vuejs" },
+      { name: "Vue", icon: 'https://raw.githubusercontent.com/gilbarbara/logos/52addcaa18dfecb4df77f3ee0753dca6b98187ad/logos/vue.svg', url: "/services/software-development/vue" },
       { name: "Flask", icon: "https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg", url: "/services/software-development/flask" },
       { name: "Spring", icon: "https://www.vectorlogo.zone/logos/springio/springio-icon.svg", url: "/services/software-development/spring" },
       { name: "Django", icon: "https://www.vectorlogo.zone/logos/djangoproject/djangoproject-icon.svg", url: "/services/software-development/django" },
@@ -102,6 +115,12 @@ export const categories = [
       { name: "Play Framework", icon: "https://raw.githubusercontent.com/dochne/wappalyzer/471c2fb0b093973c098bd1855b89c8cde4997479/src/images/icons/Play.svg", url: "/services/software-development/play-framework" },
       { name: "Lit", icon: "https://raw.githubusercontent.com/dochne/wappalyzer/471c2fb0b093973c098bd1855b89c8cde4997479/src/images/icons/Lit.svg", url: "/services/software-development/lit" },
       { name: "Qwik", icon: "https://raw.githubusercontent.com/dochne/wappalyzer/471c2fb0b093973c098bd1855b89c8cde4997479/src/images/icons/Qwik.svg", url: "/services/software-development/qwik" },
+      // {name: "Yii", icon: "https://www.vectorlogo.zone/logos/yiisoft/yiisoft-icon.svg", url: "/services/software-development/yii"},
+      // {name: "Meteor", icon: "https://www.vectorlogo.zone/logos/meteor/meteor-icon.svg", url: "/services/software-development/meteor"},
+      // {name: "Sapper", icon: "https://www.vectorlogo.zone/logos/sapper/sapper-icon.svg", url: "/services/software-development/sapper"},
+      // {name: "Sails", icon: "https://www.vectorlogo.zone/logos/sails/sails-icon.svg", url: "/services/software-development/sails"},
+      // {name: "Blade", icon: "https://www.vectorlogo.zone/logos/laravel/laravel-icon.svg", url: "/services/software-development/blade"},
+      // { name: "Hugo", icon: "https://www.vectorlogo.zone/logos/gohugoio/gohugoio-icon.svg", url: "/services/software-development/hugo" },
       // // TODO: Move Flutter to Mobile Development
       // { name: "Flutter", icon: FlutterIcon },
       // { name: "And More", icon: BsThreeDots },
@@ -120,6 +139,7 @@ export const categories = [
       { name: "Elasticsearch", icon: "https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/elasticsearch.svg", url: "/services/software-development/elasticsearch" },
       { name: "Oracle Database", icon: "https://raw.githubusercontent.com/dochne/wappalyzer/471c2fb0b093973c098bd1855b89c8cde4997479/src/images/icons/Oracle.svg", url: "/services/oracle/database" },
       { name: "DynamoDB", icon: "https://raw.githubusercontent.com/detain/svg-logos/07e36b4aa0691f3015886624395e083395e528c5/svg/a/aws-dynamodb.svg", url: "/services/aws/dynamodb" },
+      // newsql
       // { name: "Firebase Realtime Database", icon: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg", url: "/services/software-development/firebase-realtime-database" },
       // { name: "Cloud Firestore", icon: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg", url: "/services/software-development/cloud-firestore" },
       // { name: "BigQuery", icon: "https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg", url: "/services/software-development/bigquery" },
@@ -149,11 +169,45 @@ export const categories = [
     items: [
       { name: "WordPress", icon: "https://raw.githubusercontent.com/gilbarbara/logos/52addcaa18dfecb4df77f3ee0753dca6b98187ad/logos/wordpress-icon.svg", url: "/services/software-development/wordpress" },
       { name: "Drupal", icon: "https://raw.githubusercontent.com/gilbarbara/logos/52addcaa18dfecb4df77f3ee0753dca6b98187ad/logos/drupal-icon.svg", url: "/services/software-development/drupal" },
+      // { name: "DotNetNuke", icon: "https://www.vectorlogo.zone/logos/dotnetnuke/dotnetnuke-icon.svg", url: "/services/software-development/dotnetnuke" },
+      // { name: "ExpressionEngine", icon: "https://www.vectorlogo.zone/logos/expressionengine/expressionengine-icon.svg", url: "/services/software-development/expressionengine" },
+      // { name: "Joomla", icon: "https://www.vectorlogo.zone/logos/joomla/joomla-icon.svg", url: "/services/software-development/joomla" },
+      // { name: "Magento", icon: "https://www.vectorlogo.zone/logos/magento/magento-icon.svg", url: "/services/software-development/magento" },
+      // { name: "Shopify", icon: "https://www.vectorlogo.zone/logos/shopify/shopify-icon.svg", url: "/services/software-development/shopify" },
+      // { name: "WooCommerce", icon: "https://www.vectorlogo.zone/logos/woocommerce/woocommerce-icon.svg", url: "/services/software-development/woocommerce" },
+      // { name: "PrestaShop", icon: "https://www.vectorlogo.zone/logos/prestashop/prestashop-icon.svg", url: "/services/software-development/prestashop" },
+      // { name: "OpenCart", icon: "https://www.vectorlogo.zone/logos/opencart/opencart-icon.svg", url: "/services/software-development/opencart" },
+      // { name: "BigCommerce", icon: "https://www.vectorlogo.zone/logos/bigcommerce/bigcommerce-icon.svg", url: "/services/software-development/bigcommerce" },
+      // { name: "Squarespace", icon: "https://www.vectorlogo.zone/logos/squarespace/squarespace-icon.svg", url: "/services/software-development/squarespace" },
+      // { name: "Wix", icon: "https://www.vectorlogo.zone/logos/wix/wix-icon.svg", url: "/services/software-development/wix" },
+      // { name: "Weebly", icon: "https://www.vectorlogo.zone/logos/weebly/weebly-icon.svg", url: "/services/software-development/weebly" },
+      // { name: "Webflow", icon: "https://www.vectorlogo.zone/logos/webflow/webflow-icon.svg", url: "/services/software-development/webflow" },
+      // { name: "Ghost", icon: "https://www.vectorlogo.zone/logos/ghost/ghost-icon.svg", url: "/services/software-development/ghost" },
+      // { name: "Contentful", icon: "https://www.vectorlogo.zone/logos/contentful/contentful-icon.svg", url: "/services/software-development/contentful" },
+      // { name: "Strapi", icon: "https://www.vectorlogo.zone/logos/strapi/strapi-icon.svg", url: "/services/software-development/strapi" },
+      // { name: "Netlify CMS", icon: "https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg", url: "/services/software-development/netlify-cms" },
+      // { name: "Sanity", icon: "https://www.vectorlogo.zone/logos/sanity/sanity-icon.svg", url: "/services/software-development/sanity" },
+      // { name: "Prismic", icon: "https://www.vectorlogo.zone/logos/prismic/prismic-icon.svg", url: "/services/software-development/prismic" },
+      // { name: "Craft CMS", icon: "https://www.vectorlogo.zone/logos/craftcms/craftcms-icon.svg", url: "/services/software-development/craft-cms" },
+      // { name: "Umbraco", icon: "https://www.vectorlogo.zone/logos/umbraco/umbraco-icon.svg", url: "/services/software-development/umbraco" },
+      // { name: "Kentico", icon: "https://www.vectorlogo.zone/logos/kentico/kentico-icon.svg", url: "/services/software-development/kentico" },
+      // { name: "Sitecore", icon: "https://www.vectorlogo.zone/logos/sitecore/sitecore-icon.svg", url: "/services/software-development/sitecore" },
+      // { name: "Shopware", icon: "https://www.vectorlogo.zone/logos/shopware/shopware-icon.svg", url: "/services/software-development/shopware" },
+      // { name: "MODX", icon: "https://www.vectorlogo.zone/logos/modx/modx-icon.svg", url: "/services/software-development/modx" },
+      // { name: "Textpattern", icon: "https://www.vectorlogo.zone/logos/textpattern/textpattern-icon.svg", url: "/services/software-development/textpattern" },
+      // { name: "Bolt", icon: "https://www.vectorlogo.zone/logos/boltcms/boltcms-icon.svg", url: "/services/software-development/bolt" },
+      // { name: "October CMS", icon: "https://www.vectorlogo.zone/logos/octobercms/octobercms-icon.svg", url: "/services/software-development/october-cms" },
+      // { name: "Grav", icon: "https://www.vectorlogo.zone/logos/getgrav/getgrav-icon.svg", url: "/services/software-development/grav" },
+      // { name: "Statamic", icon: "https://www.vectorlogo.zone/logos/statamic/statamic-icon.svg", url: "/services/software-development/statamic" },
+      // cs-cart
+      // 3d cart
+      // volusion
     ],
   },
   // {
   //   title: "UI/UX & Frontend Tools, Technologies & Libraries",
   // NativeWind, TamaGUI, TailwindCSS, ETC.
+  // UIKit, SwiftUI
   // },
   {
     title: "DevOps",
@@ -163,6 +217,25 @@ export const categories = [
       { name: "GitLab CI/CD", icon: "https://raw.githubusercontent.com/gilbarbara/logos/52addcaa18dfecb4df77f3ee0753dca6b98187ad/logos/gitlab.svg" },
       { name: "OpenShift", icon: "https://raw.githubusercontent.com/gilbarbara/logos/52addcaa18dfecb4df77f3ee0753dca6b98187ad/logos/openshift.svg" },
       { name: "Grafana", icon: "https://raw.githubusercontent.com/gilbarbara/logos/52addcaa18dfecb4df77f3ee0753dca6b98187ad/logos/grafana.svg" },
+      // Stata
+      // { name: "Jenkins", icon: "https://raw.githubusercontent.com/cncf/landscape/a543f0ff114e9726d0818a22bbff0c1ac61dd3d1/hosted_logos/jenkins.svg" },
+      // { name: "Prometheus", icon: "https://raw.githubusercontent.com/cncf/landscape/a543f0ff114e9726d0818a22bbff0c1ac61dd3d1/hosted_logos/prometheus.svg" },
+      // { name: "Terraform", icon: "https://raw.githubusercontent.com/cncf/landscape/a543f0ff114e9726d0818a22bbff0c1ac61dd3d1/hosted_logos/terraform.svg" },
+      // { name: "Ansible", icon: "https://raw.githubusercontent.com/cncf/landscape/a543f0ff114e9726d0818a22bbff0c1ac61dd3d1/hosted_logos/ansible.svg" },
+      // { name: "Puppet", icon: "https://raw.githubusercontent.com/cncf/landscape/a543f0ff114e9726d0818a22bbff0c1ac61dd3d1/hosted_logos/puppet.svg" },
+      // { name: "Chef", icon: "https://raw.githubusercontent.com/cncf/landscape/a543f0ff114e9726d0818a22bbff0c1ac61dd3d1/hosted_logos/chef.svg" },
+      // { name: "Vagrant", icon: "https://raw.githubusercontent.com/cncf/landscape/a543f0ff114e9726d0818a22bbff0c1ac61dd3d1/hosted_logos/vagrant.svg" },
+      // { name: "Helm", icon: "https://raw.githubusercontent.com/cncf/landscape/a543f0ff114e9726d0818a22bbff0c1ac61dd3d1/hosted_logos/helm.svg" },
+      // { name: "Rancher", icon: "https://raw.githubusercontent.com/cncf/landscape/a543f0ff114e9726d0818a22bbff0c1ac61dd3d1/hosted_logos/rancher.svg" },
+      // { name: "Spinnaker", icon: "https://raw.githubusercontent.com/cncf/landscape/a543f0ff114e9726d0818a22bbff0c1ac61dd3d1/hosted_logos/spinnaker.svg" },
+      // { name: "ArgoCD", icon: "https://raw.githubusercontent.com/argoproj/argo-cd/master/docs/assets/argocd-logo.png" },
+      // { name: "Argo Workflows", icon: "https://raw.githubusercontent.com/argoproj/argo/master/docs/assets/argo.png" },
+      // { name: "Argo Events", icon: "https://raw.githubusercontent.com/argoproj/argo-events/master/docs/assets/argo-events.png" },
+      // { name: "Argo Rollouts", icon: "https://raw.githubusercontent.com/argoproj/argo-rollouts/master/docs/assets/argo-rollouts.png" },
+      // { name: "Argo Tunnel", icon: "https://raw.githubusercontent.com/argoproj/argo-tunnel/master/docs/assets/argo-tunnel.png" },
+      // { name: "Argo CD", icon: "https://raw.githubusercontent.com/argoproj/argo-cd/master/docs/assets/argocd-logo.png" },
+      // { name: "Argo Rollouts", icon: "https://raw.githubusercontent.com/argoproj/argo-rollouts/master/docs/assets/argo-rollouts.png" },
+      // { name: "Argo Events", icon: "https://raw.githubusercontent.com/argoproj/argo-events/master/docs/assets/argo-events.png" },
     ],
   },
   {

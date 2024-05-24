@@ -8,7 +8,7 @@ import { dataV1, dataV2, dataV3, dataFAQ } from "./pageData";
 import ServicesFAQ from "@/components/services/ServicesFAQ";
 
 const technology = "Vue.js";
-const slug = "vuejs";
+const slug = "vue";
 
 export const metadata: Metadata = {
   title: `${technology} Software Development Company | Custom ${technology} Solutions`,
