@@ -35,6 +35,10 @@ async function slugsFetcher() {
 
 async function returnPostPage(params: { slug: string }) {
   const post = await getPostBySlug(params.slug);
+  if (!post) {
+    // Deleting Causes Critical Build Error
+    return null;
+  }
   const description = post?.excerpt
     ? sanitizeHtml(post.excerpt.replace(/\n/g, ""), {
         allowedTags: [],
@@ -56,6 +60,9 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: PostPageParams) {
   const post = await returnPostPage(params);
+  if (!post) {
+    return null;
+  }
   return {
     metadataBase: "https://www.halfnine.com",
     title: post.title,
