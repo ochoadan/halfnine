@@ -10,7 +10,7 @@ import { GiSpeedometer, GiUpgrade } from "react-icons/gi";
 import { TbTransfer } from "react-icons/tb";
 const services = [
   {
-    name: "Software Development",
+    name: "Custom Software Development",
     description:
       "We create custom software solutions that drive your business forward.",
     icon: FaCode,
@@ -18,62 +18,62 @@ const services = [
   {
     name: "Managed IT Services",
     description:
-      "Get the support you need to keep your IT infrastructure running smoothly.",
+      "Outsource your IT needs to us and focus on your core business.",
     icon: FaChartLine,
   },
   {
     name: "IT Cost Optimization",
     description:
-      "Reduce your IT costs without compromising on reliability or performance.",
+      "Reduce Cloud and Workforce costs with our guidance.",
     icon: FaMoneyCheckDollar,
   },
-  {
-    name: "Service Migration",
-    description:
-      "Migrate your services with continuous delivery and minimal downtime.",
-    icon: TbTransfer,
-  },
+  // {
+  //   name: "Service Migration",
+  //   description:
+  //     "Migrate your services with continuous delivery and minimal downtime.",
+  //   icon: TbTransfer,
+  // },
   // {
   //   name: "Enterprise Architecture",
   //   description:
   //     "Design a robust architecture that aligns with your business goals.",
   //   icon: FaCode,
   // },
+  // {
+  //   name: "Nearshore Development",
+  //   description: "Reduce costs by choosing to work with a nearshore team.",
+  //   icon: FaPeopleGroup,
+  // },
+  // // {
+  // //   name: "Local Development",
+  // //   description:
+  // //     "Work with a local team to ensure clear communication and collaboration.",
+  // //   icon: FaPeopleGroup,
+  // // },
+  // {
+  //   name: "Performance Optimization",
+  //   description:
+  //     "Optimize your systems for maximum performance and efficiency.",
+  //   icon: GiSpeedometer,
+  // },
+  // {
+  //   name: "Legacy System Modernization",
+  //   description:
+  //     // "Upgrade your legacy systems to keep up with the demands of modern business.",
+  //     "Upgrade to keep up with modern security, compliance, and performance standards.",
+  //   icon: GiUpgrade,
+  // },
+  // {
+  //   name: "Security & Compliance",
+  //   description:
+  //     "Protect your data and ensure compliance with industry regulations.",
+  //   icon: FaBuildingShield,
+  // },
   {
-    name: "Nearshore Development",
-    description: "Reduce costs by choosing to work with a nearshore team.",
+    name: "IT Consulting",
+    description: "Navigate the complex IT landscape with our expert guidance.",
     icon: FaPeopleGroup,
   },
-  // {
-  //   name: "Local Development",
-  //   description:
-  //     "Work with a local team to ensure clear communication and collaboration.",
-  //   icon: FaPeopleGroup,
-  // },
-  {
-    name: "Performance Optimization",
-    description:
-      "Optimize your systems for maximum performance and efficiency.",
-    icon: GiSpeedometer,
-  },
-  {
-    name: "Legacy System Modernization",
-    description:
-      // "Upgrade your legacy systems to keep up with the demands of modern business.",
-      "Upgrade to keep up with modern security, compliance, and performance standards.",
-    icon: GiUpgrade,
-  },
-  {
-    name: "Security & Compliance",
-    description:
-      "Protect your data and ensure compliance with industry regulations.",
-    icon: FaBuildingShield,
-  },
-  // {
-  //   name: "IT Consulting",
-  //   description: "Navigate the complex IT landscape with our expert guidance.",
-  //   icon: FaPeopleGroup,
-  // },
   // {
   //   name: "Cloud Services",
   //   description:
@@ -88,10 +88,18 @@ const services = [
   // },
 ];
 
-const Services = () => {
+type ServicesProps = {
+  disableAdditionalServices?: boolean;
+  description?: string;
+};
+
+const Services = ({
+  disableAdditionalServices,
+  description,
+}: ServicesProps) => {
   return (
     <>
-      <h2 className="text-3xl font-bold">Our Service Offerings</h2>
+      <h2 className="text-3xl font-bold">Our Main Services</h2>
       {/* <div className="mx-auto max-w-2xl lg:text-center">
         <h2 className="text-base font-semibold leading-7 text-brand-600">
           Deploy faster
@@ -105,6 +113,9 @@ const Services = () => {
           In mi viverra elit nunc.
         </p>
       </div> */}
+      {description && (
+        <p className="mt-6 text-lg leading-8 text-gray-600">{description}</p>
+      )}
       <div className="mt-6">
         <dl className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-2 lg:gap-y-8">
           {services.map((feature) => (
@@ -133,17 +144,19 @@ const Services = () => {
           View all services
         </Link>
       </div>
-      <div className="mt-8 flex justify-center">
-        <p className="relative rounded-full bg-white px-4 py-1.5 text-xs sm:text-sm md:text-base leading-6 text-gray-700 ring-2 ring-inset ring-gray-900/10">
-          {"For tailored solutions, don't hesitate to "}
-          <Link
-            href="/contact"
-            className="text-brand-600 hover:text-brand-500 hover:underline"
-          >
-            Contact us
-          </Link>
-        </p>
-      </div>
+      {disableAdditionalServices ? null : (
+        <div className="mt-8 flex justify-center">
+          <p className="relative rounded-full bg-white px-4 py-1.5 text-xs sm:text-sm md:text-base leading-6 text-gray-700 ring-2 ring-inset ring-gray-900/10">
+            {"For tailored solutions, don't hesitate to "}
+            <Link
+              href="/contact"
+              className="text-brand-600 hover:text-brand-500 hover:underline"
+            >
+              Contact us
+            </Link>
+          </p>
+        </div>
+      )}
     </>
   );
 };

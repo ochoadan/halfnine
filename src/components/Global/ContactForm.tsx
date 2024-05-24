@@ -93,7 +93,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
 
       if (response.status === 200) {
         setMessageSuccess(true);
-        router.push("/contact/thank-you")
+        router.push("/contact/thank-you");
         return;
       } else {
         console.log(response);
@@ -121,177 +121,177 @@ const ContactForm: React.FC<ContactFormProps> = ({
       )}
     >
       <div className="mx-auto max-w-7xl px-0 md:px-6 lg:px-8">
-        <div className="bg-gray-50 rounded-none md:rounded-xl p-6 md:p-10 shadow-none md:shadow-md">
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            {title || "Let's talk solutions"}
-            <hr className="border-brand-600 opacity-90 border-b-[2px] w-24 my-2" />
-          </h2>
-          <p className="mt-2 leading-8 text-gray-700">
-            {description || "Our team is ready to answer your questions and help you find the best solution for your needs"}
-          </p>
-          <form onSubmit={handleSubmit}>
-            <div className="space-y-5 mt-6">
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 w-full">
-                <div className="space-y-1">
-                  <label>
-                    Name
-                    <span className="text-red-600 ml-1 select-none">*</span>
-                  </label>
-                  <div className="relative">
-                    <span className="text-slate-600 absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <FaRegUser />
-                    </span>
-                    <input
-                      // required
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      placeholder="Name"
-                      className={clsx(
-                        "pl-10 block w-full shadow-sm sm:text-sm rounded-lg focus:border-transparent focus:ring-2",
-                        {
-                          "border-red-300 focus:ring-red-500":
-                            submitted && formErrors.name,
-                          "border-slate-200 focus:ring-brand-500":
-                            !submitted || !formErrors.name,
-                        }
-                      )}
-                    />
-                  </div>
-                </div>
-                <div className="space-y-1">
-                  <label>
-                    Email
-                    <span className="text-red-600 ml-1 select-none">*</span>
-                  </label>
-                  <div className="relative">
-                    <span className="text-slate-600 absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <FaRegEnvelope />
-                    </span>
-                    <input
-                      type="text"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      placeholder="Email"
-                      // required
-                      className={clsx(
-                        "pl-10 block w-full shadow-sm sm:text-sm rounded-lg focus:border-transparent focus:ring-2",
-                        {
-                          "border-red-300 focus:ring-red-500":
-                            submitted && formErrors.email,
-                          "border-slate-200 focus:ring-brand-500":
-                            !submitted || !formErrors.email,
-                        }
-                      )}
-                    />
-                  </div>
-                </div>
-                <div className="space-y-1">
-                  <label>Company Name</label>
-                  <div className="relative">
-                    <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <FaRegBuilding color="slate.800" />
-                    </span>
-                    <input
-                      type="text"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleInputChange}
-                      placeholder="Company"
-                      className="pl-10 block w-full shadow-sm sm:text-sm border-slate-200 rounded-lg focus:border-transparent focus:ring-brand-500 focus:ring-2"
-                    />
-                  </div>
-                </div>
-                <div className="space-y-1">
-                  <label>Phone Number</label>
-                  <div className="relative">
-                    <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <FaPhone color="slate.800" />
-                    </span>
-                    <input
-                      type="text"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      placeholder="Phone"
-                      className="pl-10 block w-full shadow-sm sm:text-sm border-slate-200 rounded-lg focus:border-transparent focus:ring-brand-500 focus:ring-2"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="mt-2.5 space-y-1">
+        <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+          {title || "Let's Work Together!"}
+          <hr className="border-brand-600 opacity-90 border-b-[2px] w-24 my-2" />
+        </h2>
+        <p className="mt-2 leading-8 text-gray-700">
+          {description ||
+            "Our team is ready to answer your questions and help you find the best solution for your needs"}
+        </p>
+        <form onSubmit={handleSubmit}>
+          <div className="space-y-5 mt-6">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 w-full">
+              <div className="space-y-1">
                 <label>
-                  Detail your project or any questions you might have
+                  Name
                   <span className="text-red-600 ml-1 select-none">*</span>
                 </label>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  placeholder="Message"
-                  className={clsx(
-                    "block min-h-[80px] w-full shadow-sm sm:text-sm rounded-lg focus:border-transparent focus:ring-2",
-                    {
-                      "border-red-300 focus:ring-red-500":
-                        submitted && formErrors.message,
-                      "border-slate-200 focus:ring-brand-500":
-                        !submitted || !formErrors.message,
-                    }
-                  )}
-                />
+                <div className="relative">
+                  <span className="text-slate-600 absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <FaRegUser />
+                  </span>
+                  <input
+                    // required
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    placeholder="Name"
+                    className={clsx(
+                      "pl-10 block w-full shadow-sm sm:text-sm rounded-lg focus:border-transparent focus:ring-2",
+                      {
+                        "border-red-300 focus:ring-red-500":
+                          submitted && formErrors.name,
+                        "border-slate-200 focus:ring-brand-500":
+                          !submitted || !formErrors.name,
+                      }
+                    )}
+                  />
+                </div>
               </div>
-              {submitted &&
-                (formErrors.name || formErrors.email || formErrors.message ? (
-                  <div className="rounded-lg bg-red-50 border-red-200 border-[1px] px-4 py-3">
+              <div className="space-y-1">
+                <label>
+                  Email
+                  <span className="text-red-600 ml-1 select-none">*</span>
+                </label>
+                <div className="relative">
+                  <span className="text-slate-600 absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <FaRegEnvelope />
+                  </span>
+                  <input
+                    type="text"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    placeholder="Email"
+                    // required
+                    className={clsx(
+                      "pl-10 block w-full shadow-sm sm:text-sm rounded-lg focus:border-transparent focus:ring-2",
+                      {
+                        "border-red-300 focus:ring-red-500":
+                          submitted && formErrors.email,
+                        "border-slate-200 focus:ring-brand-500":
+                          !submitted || !formErrors.email,
+                      }
+                    )}
+                  />
+                </div>
+              </div>
+              <div className="space-y-1">
+                <label>Company Name</label>
+                <div className="relative">
+                  <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <FaRegBuilding color="slate.800" />
+                  </span>
+                  <input
+                    type="text"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleInputChange}
+                    placeholder="Company"
+                    className="pl-10 block w-full shadow-sm sm:text-sm border-slate-200 rounded-lg focus:border-transparent focus:ring-brand-500 focus:ring-2"
+                  />
+                </div>
+              </div>
+              <div className="space-y-1">
+                <label>Phone Number</label>
+                <div className="relative">
+                  <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <FaPhone color="slate.800" />
+                  </span>
+                  <input
+                    type="text"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    placeholder="Phone"
+                    className="pl-10 block w-full shadow-sm sm:text-sm border-slate-200 rounded-lg focus:border-transparent focus:ring-brand-500 focus:ring-2"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="mt-2.5 space-y-1">
+              <label>
+                Detail your project or any questions you might have
+                <span className="text-red-600 ml-1 select-none">*</span>
+              </label>
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleInputChange}
+                placeholder="Message"
+                className={clsx(
+                  "block min-h-[80px] w-full shadow-sm sm:text-sm rounded-lg focus:border-transparent focus:ring-2",
+                  {
+                    "border-red-300 focus:ring-red-500":
+                      submitted && formErrors.message,
+                    "border-slate-200 focus:ring-brand-500":
+                      !submitted || !formErrors.message,
+                  }
+                )}
+              />
+            </div>
+            {submitted &&
+              (formErrors.name || formErrors.email || formErrors.message ? (
+                <div className="rounded-lg bg-red-50 border-red-200 border-[1px] px-4 py-3">
+                  <div className="flex">
+                    <div className="flex-shrink-0">
+                      <XCircleIcon
+                        className="h-5 w-5 text-red-400"
+                        aria-hidden="true"
+                      />
+                    </div>
+                    <div className="ml-3">
+                      <h3 className="text-sm font-medium text-red-800">
+                        There are errors in the form
+                      </h3>
+                      <div className="mt-2 text-sm text-red-700">
+                        <ul role="list" className="list-disc space-y-1 pl-5">
+                          {formErrors.name && (
+                            <li>You must include a valid Name.</li>
+                          )}
+                          {formErrors.email && (
+                            <li>The email you input is not a valid email.</li>
+                          )}
+                          {formErrors.message && (
+                            <li>The message is not long enough.</li>
+                          )}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                messageSuccess && (
+                  <div className="rounded-lg bg-green-50 border-green-200 border-[1px] px-4 py-3">
                     <div className="flex">
                       <div className="flex-shrink-0">
-                        <XCircleIcon
-                          className="h-5 w-5 text-red-400"
+                        <CheckCircleIcon
+                          className="h-5 w-5 text-green-400"
                           aria-hidden="true"
                         />
                       </div>
                       <div className="ml-3">
-                        <h3 className="text-sm font-medium text-red-800">
-                          There are errors in the form
-                        </h3>
-                        <div className="mt-2 text-sm text-red-700">
-                          <ul role="list" className="list-disc space-y-1 pl-5">
-                            {formErrors.name && (
-                              <li>You must include a valid Name.</li>
-                            )}
-                            {formErrors.email && (
-                              <li>The email you input is not a valid email.</li>
-                            )}
-                            {formErrors.message && (
-                              <li>The message is not long enough.</li>
-                            )}
-                          </ul>
-                        </div>
+                        <p className="text-sm font-medium text-green-800">
+                          Your Message was Submitted Successfully
+                        </p>
                       </div>
                     </div>
                   </div>
-                ) : (
-                  messageSuccess && (
-                    <div className="rounded-lg bg-green-50 border-green-200 border-[1px] px-4 py-3">
-                      <div className="flex">
-                        <div className="flex-shrink-0">
-                          <CheckCircleIcon
-                            className="h-5 w-5 text-green-400"
-                            aria-hidden="true"
-                          />
-                        </div>
-                        <div className="ml-3">
-                          <p className="text-sm font-medium text-green-800">
-                            Your Message was Submitted Successfully
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  )
-                ))}
-              {/* {!turnstileSolved && (
+                )
+              ))}
+            {/* {!turnstileSolved && (
                   <>
                     <div color={"slate.600"}>
                       Solve the Challenge to Submit the Form
@@ -303,49 +303,48 @@ const ContactForm: React.FC<ContactFormProps> = ({
                   </>
                 )}
                 {turnstileSolved && ( */}
-              <button
-                type="submit"
-                disabled={awaitingResponse}
-                className={clsx(
-                  // "bg-brand-600 flex rounded-lg px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-slate-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500",
-                  "bg-brand-600 flex rounded-lg px-12 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-500 mx-auto",
-                  awaitingResponse &&
+            <button
+              type="submit"
+              disabled={awaitingResponse}
+              className={clsx(
+                // "bg-brand-600 flex rounded-lg px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-slate-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500",
+                "bg-brand-600 flex rounded-lg px-12 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-500 mx-auto",
+                awaitingResponse &&
                   "bg-slate-400 select-none hover:bg-slate-400"
-                )}
-              >
-                {awaitingResponse && (
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="mr-2"
+              )}
+            >
+              {awaitingResponse && (
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="mr-2"
+                >
+                  <path
+                    fill="#FFFFFF"
+                    d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z"
+                    opacity=".25"
+                  />
+                  <path
+                    fill="#FFFFFF"
+                    d="M10.14,1.16a11,11,0,0,0-9,8.92A1.59,1.59,0,0,0,2.46,12,1.52,1.52,0,0,0,4.11,10.7a8,8,0,0,1,6.66-6.61A1.42,1.42,0,0,0,12,2.69h0A1.57,1.57,0,0,0,10.14,1.16Z"
                   >
-                    <path
-                      fill="#FFFFFF"
-                      d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z"
-                      opacity=".25"
+                    <animateTransform
+                      attributeName="transform"
+                      type="rotate"
+                      dur="0.75s"
+                      values="0 12 12;360 12 12"
+                      repeatCount="indefinite"
                     />
-                    <path
-                      fill="#FFFFFF"
-                      d="M10.14,1.16a11,11,0,0,0-9,8.92A1.59,1.59,0,0,0,2.46,12,1.52,1.52,0,0,0,4.11,10.7a8,8,0,0,1,6.66-6.61A1.42,1.42,0,0,0,12,2.69h0A1.57,1.57,0,0,0,10.14,1.16Z"
-                    >
-                      <animateTransform
-                        attributeName="transform"
-                        type="rotate"
-                        dur="0.75s"
-                        values="0 12 12;360 12 12"
-                        repeatCount="indefinite"
-                      />
-                    </path>
-                  </svg>
-                )}
-                {awaitingResponse ? "Submitting..." : "Submit"}
-              </button>
-              {/* )} */}
-            </div>
-          </form>
-        </div>
+                  </path>
+                </svg>
+              )}
+              {awaitingResponse ? "Submitting..." : "Submit"}
+            </button>
+            {/* )} */}
+          </div>
+        </form>
       </div>
     </div>
   );

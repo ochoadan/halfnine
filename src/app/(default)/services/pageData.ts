@@ -96,6 +96,32 @@ export const services = [
   // salesforce services
   // custom web development services
   // help desk services
+  // {
+  // name: "Software Testing Services",
+  // name: "Software Quality Assurance Services",
+  // name:"System Integration Services",
+  // name: "Quality Assurance Services",
+  // },
+  {
+    name: "System Administration Services",
+    role: "Administrate your system with us",
+    url: "/services/system-administration",
+  },
+  {
+    // name: "Data Migration Services",
+    // name: "Database Development Services",
+    // name: "Database Management Services",
+    name: "Database Administration Services",
+    role: "Administrate your database with us",
+    url: "/services/database-administration",
+  },
+  {
+    // name: "Software Maintenance Services",
+    // name: "Software Support Services",
+    name: "Staff Augmentation Services",
+    role: "Augment your staff with us",
+    url: "/services/staff-augmentation",
+  },
 ];
 
 // Insurance Software Development Services
