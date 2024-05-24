@@ -39,7 +39,7 @@ const nextConfig = {
         source: "/services/software-development/vuejs",
         destination: "/services/software-development/vue",
         permanent: false,
-      }
+      },
       // {
       //   source: "/blog/posts",
       //   destination: "/blog",
