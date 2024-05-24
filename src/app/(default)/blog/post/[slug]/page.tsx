@@ -35,9 +35,6 @@ async function slugsFetcher() {
 
 async function returnPostPage(params: { slug: string }) {
   const post = await getPostBySlug(params.slug);
-  if (!post) {
-    return;
-  }
   const description = post?.excerpt
     ? sanitizeHtml(post.excerpt.replace(/\n/g, ""), {
         allowedTags: [],
@@ -59,9 +56,6 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: PostPageParams) {
   const post = await returnPostPage(params);
-  if (!post) {
-    return;
-  }
   return {
     metadataBase: "https://www.halfnine.com",
     title: post.title,
@@ -187,19 +181,19 @@ const Page = async ({ params }: PostPageParams) => {
       <Image
         width={896}
         height={504}
-        className="aspect-video rounded-2xl bg-gray-50 object-cover mx-auto mt-0 mb-8"
+        className="aspect-video rounded-2xl bg-gray-50 object-cover mx-auto mt-0 mb-4"
         src={
-          post.featuredImage?.node.sourceUrl ||
+          post?.featuredImage?.node?.sourceUrl ||
           "https://via.placeholder.com/896x504"
         }
-        alt={post.featuredImage?.node.altText || "Placeholder"}
+        alt={post?.featuredImage?.node?.altText || "Placeholder"}
       />
       <h1
         className="text-3xl sm:text-4xl font-bold text-neutral-800 text-center mb-2"
         dangerouslySetInnerHTML={{ __html: post.title }}
       />
       <Prose>
-        <div className="relative py-2">
+        <div className="relative mt-4">
           <div
             className="absolute inset-0 flex items-center"
             aria-hidden="true"
@@ -207,7 +201,7 @@ const Page = async ({ params }: PostPageParams) => {
             <div className="w-full border-t border-gray-300" />
           </div>
           <div className="relative flex justify-center">
-            <span className="bg-white px-2 text-sm text-gray-500">
+            <span className="bg-white px-4 text-sm text-gray-500">
               Posted on{" "}
               <time>
                 {new Date(post.date).toLocaleDateString("en-US", {
