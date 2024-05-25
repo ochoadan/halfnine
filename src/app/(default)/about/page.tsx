@@ -130,7 +130,7 @@ const Page = () => {
               profiles for anyone to review our work.
             </p>
           </div>
-          <div className="mx-auto grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-12 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+          <div className="mx-auto grid grid-cols-4 items-center gap-x-8 gap-y-12 sm:grid-cols-4 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:grid-cols-4">
             <Link
               href="https://clutch.co/profile/halfnine"
               rel="noopener noreferrer nofollow"
@@ -281,11 +281,11 @@ const Page = () => {
       </div>
       <div className="overflow-hidden bg-white py-14 md:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl mb-12 lg:text-center">
+          <div className="mx-auto mb-12 lg:text-center">
             <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
               Our Small Projects
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className="mt-6 text-lg leading-8 text-gray-600 max-w-3xl">
               We are just starting out, but this is proof of our commitment to
               making an impact in other businesses. We are proud of our
               innovative projects.
