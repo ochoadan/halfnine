@@ -113,7 +113,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
   return (
     <div
       className={clsx(
-        "overflow-hidden bg-white",
+        "overflow-hidden",
         paddingBottom && "pb-16 sm:pb-32",
         paddingTop && "pt-16 sm:pt-32",
         paddingNone && "",
