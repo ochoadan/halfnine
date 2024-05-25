@@ -12,6 +12,7 @@ module.exports = {
     "/blog/*",
     "/blog/post/*",
     "/blog/sitemap.xml",
+    "/investors",
   ],
   robotsTxtOptions: {
     additionalSitemaps: ["https://www.halfnine.com/blog/sitemap.xml"],
