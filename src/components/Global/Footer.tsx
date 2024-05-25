@@ -21,7 +21,7 @@ const navigation = {
   ],
   company: [
     { name: "About", href: "/about" },
-    { name: "Investors", href: "/investors" },
+    // { name: "Investors", href: "/investors" },
     { name: "Services", href: "/services" },
     { name: "Blog", href: "/blog" },
   ],
@@ -32,7 +32,7 @@ const navigation = {
   ],
   main: [
     { name: "About", href: "/about" },
-    { name: "Investors", href: "/investors" },
+    // { name: "Investors", href: "/investors" },
     { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
     { name: "Privacy", href: "/privacy" },

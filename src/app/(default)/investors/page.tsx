@@ -5,6 +5,7 @@ import { CheckIcon } from "@heroicons/react/24/outline";
 
 import { Metadata } from "next";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 export const metadata: Metadata = {
   title: "Investors",
   description:
@@ -56,6 +57,7 @@ const features = [
   //   },
 ];
 const Page = () => {
+  return notFound();
   return (
     <>
       <PageHero

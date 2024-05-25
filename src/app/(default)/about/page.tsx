@@ -10,13 +10,10 @@ import { FaChartLine, FaHandshake, FaUserAstronaut } from "react-icons/fa6";
 import { GiConqueror } from "react-icons/gi";
 import ContactForm from "@/components/Global/ContactForm";
 import Services from "../(root)/services";
-import Script from "next/script";
-import BadgeClutch from "@/components/BadgeClutch";
 
 export const metadata: Metadata = {
-  title: "Learn about how we empower your vision",
-  description:
-    "Halfnine emerged from a vision to assist businesses in leveraging technology solutions to transform opportunities and ideas into a reality.",
+  title: "About Halfnine • Your Partner for IT Project Success",
+  description: "Halfnine is a new company in the tech industry, passionate about empowering businesses through technology. We believe in the transformative potential of IT solutions and strive to be your trusted partner on the road to digital success",
   alternates: { canonical: "https://www.halfnine.com/about" },
   openGraph: { url: "https://www.halfnine.com/about" },
 };
