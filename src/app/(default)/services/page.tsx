@@ -76,7 +76,7 @@ const AdditionalServices = () => (
     </p>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       {services.map((servicex, actionIdx) => (
-        <div>
+        <div key={actionIdx}>
           {/* <div className="flex flex-col justify-center items-center"> */}
           {servicex?.url ? (
             <Link href={servicex?.url}>
@@ -93,7 +93,7 @@ const AdditionalServices = () => (
               className="my-2 gap-x-4 gap-y-3 flex flex-wrap"
             >
               {servicex.list.map((action, actionIdx) => (
-                <li>
+                <li key={actionIdx}>
                   <Link
                     href={action.url}
                     className="group flex w-full items-center justify-between space-x-3 rounded-lg py-1 px-1.5 border border-gray-100 text-left bg-white shadow-sm shadow-gray-100"
