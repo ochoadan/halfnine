@@ -2,39 +2,35 @@
 
 import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/24/outline";
 import { useEffect, useState } from "react";
-import { FaPhone } from "react-icons/fa6";
 import { FaRegBuilding, FaRegEnvelope, FaRegUser } from "react-icons/fa6";
 
 import clsx from "clsx";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 interface ContactFormProps {
-  paddingBottom?: boolean;
-  paddingTop?: string;
-  paddingNone?: boolean;
   title?: string;
   description?: string;
+  addPadding?: boolean;
 }
 
 const ContactForm: React.FC<ContactFormProps> = ({
-  paddingBottom,
-  paddingTop,
-  paddingNone,
   title,
   description,
+  addPadding,
 }) => {
   const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     company: "",
-    phone: "",
     message: "",
   });
 
   const [formErrors, setFormErrors] = useState({
     name: false,
     email: false,
+    company: false,
     message: false,
   });
 
@@ -50,6 +46,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
     const newFormErrors = {
       name: !nameRegex.test(formData.name),
       email: !emailRegex.test(formData.email),
+      company: formData.company.trim().length < 3,
       message: formData.message.trim().length < 20,
     };
     setFormErrors(newFormErrors);
@@ -111,15 +108,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
   };
 
   return (
-    <div
-      className={clsx(
-        "overflow-hidden",
-        paddingBottom && "pb-16 sm:pb-32",
-        paddingTop && "pt-16 sm:pt-32",
-        paddingNone && "",
-        !paddingBottom && !paddingTop && !paddingNone && "py-14 sm:py-28"
-      )}
-    >
+    <div className={clsx(addPadding && "py-14 sm:py-28")}>
       <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
         {title || "Let's Work Together!"}
         <hr className="border-brand-600 opacity-90 border-b-[2px] w-24 my-2" />
@@ -128,11 +117,11 @@ const ContactForm: React.FC<ContactFormProps> = ({
         {description ||
           "Our team is ready to answer your questions and help you find the best solution for your needs"}
       </p>
-      <form onSubmit={handleSubmit}>
-        <div className="space-y-5 mt-6">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 w-full">
+      <div className="lg:grid lg:grid-cols-2 space-x-8">
+        <form onSubmit={handleSubmit}>
+          <div className="space-y-3 mt-6">
             <div className="space-y-1">
-              <label>
+              <label className="block text-sm font-semibold leading-6 text-gray-900">
                 Name
                 <span className="text-red-600 ml-1 select-none">*</span>
               </label>
@@ -160,7 +149,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
               </div>
             </div>
             <div className="space-y-1">
-              <label>
+              <label className="block text-sm font-semibold leading-6 text-gray-900">
                 Email
                 <span className="text-red-600 ml-1 select-none">*</span>
               </label>
@@ -188,7 +177,10 @@ const ContactForm: React.FC<ContactFormProps> = ({
               </div>
             </div>
             <div className="space-y-1">
-              <label>Company Name</label>
+              <label className="block text-sm font-semibold leading-6 text-gray-900">
+                Company Name
+                <span className="text-red-600 ml-1 select-none">*</span>
+              </label>
               <div className="relative">
                 <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                   <FaRegBuilding color="slate.800" />
@@ -199,98 +191,108 @@ const ContactForm: React.FC<ContactFormProps> = ({
                   value={formData.company}
                   onChange={handleInputChange}
                   placeholder="Company"
-                  className="pl-10 block w-full shadow-sm sm:text-sm border-slate-200 rounded-lg focus:border-transparent focus:ring-brand-500 focus:ring-2"
+                  className={clsx(
+                    "pl-10 block w-full shadow-sm sm:text-sm rounded-lg focus:border-transparent focus:ring-2",
+                    {
+                      "border-red-300 focus:ring-red-500":
+                        submitted && formErrors.company,
+                      "border-slate-200 focus:ring-brand-500":
+                        !submitted || !formErrors.company,
+                    }
+                  )}
                 />
               </div>
+              {/* <div className="space-y-1">
+                <label>Phone Number</label>
+                <div className="relative">
+                  <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <FaPhone color="slate.800" />
+                  </span>
+                  <input
+                    type="text"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    placeholder="Phone"
+                    className="pl-10 block w-full shadow-sm sm:text-sm border-slate-200 rounded-lg focus:border-transparent focus:ring-brand-500 focus:ring-2"
+                  />
+                </div>
+              </div> */}
             </div>
             <div className="space-y-1">
-              <label>Phone Number</label>
-              <div className="relative">
-                <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <FaPhone color="slate.800" />
-                </span>
-                <input
-                  type="text"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  placeholder="Phone"
-                  className="pl-10 block w-full shadow-sm sm:text-sm border-slate-200 rounded-lg focus:border-transparent focus:ring-brand-500 focus:ring-2"
-                />
-              </div>
+              <label className="block text-sm font-semibold leading-6 text-gray-900">
+                How can we help you?
+                <span className="text-red-600 ml-1 select-none">*</span>
+              </label>
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleInputChange}
+                placeholder="Message"
+                className={clsx(
+                  "block min-h-[80px] w-full shadow-sm sm:text-sm rounded-lg focus:border-transparent focus:ring-2",
+                  {
+                    "border-red-300 focus:ring-red-500":
+                      submitted && formErrors.message,
+                    "border-slate-200 focus:ring-brand-500":
+                      !submitted || !formErrors.message,
+                  }
+                )}
+              />
             </div>
-          </div>
-          <div className="mt-2.5 space-y-1">
-            <label>
-              Detail your project or any questions you might have
-              <span className="text-red-600 ml-1 select-none">*</span>
-            </label>
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleInputChange}
-              placeholder="Message"
-              className={clsx(
-                "block min-h-[80px] w-full shadow-sm sm:text-sm rounded-lg focus:border-transparent focus:ring-2",
-                {
-                  "border-red-300 focus:ring-red-500":
-                    submitted && formErrors.message,
-                  "border-slate-200 focus:ring-brand-500":
-                    !submitted || !formErrors.message,
-                }
-              )}
-            />
-          </div>
-          {submitted &&
-            (formErrors.name || formErrors.email || formErrors.message ? (
-              <div className="rounded-lg bg-red-50 border-red-200 border-[1px] px-4 py-3">
-                <div className="flex">
-                  <div className="flex-shrink-0">
-                    <XCircleIcon
-                      className="h-5 w-5 text-red-400"
-                      aria-hidden="true"
-                    />
-                  </div>
-                  <div className="ml-3">
-                    <h3 className="text-sm font-medium text-red-800">
-                      There are errors in the form
-                    </h3>
-                    <div className="mt-2 text-sm text-red-700">
-                      <ul role="list" className="list-disc space-y-1 pl-5">
-                        {formErrors.name && (
-                          <li>You must include a valid Name.</li>
-                        )}
-                        {formErrors.email && (
-                          <li>The email you input is not a valid email.</li>
-                        )}
-                        {formErrors.message && (
-                          <li>The message is not long enough.</li>
-                        )}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ) : (
-              messageSuccess && (
-                <div className="rounded-lg bg-green-50 border-green-200 border-[1px] px-4 py-3">
+            {submitted &&
+              (formErrors.name || formErrors.email || formErrors.message ? (
+                <div className="rounded-lg bg-red-50 border-red-200 border-[1px] px-4 py-3">
                   <div className="flex">
                     <div className="flex-shrink-0">
-                      <CheckCircleIcon
-                        className="h-5 w-5 text-green-400"
+                      <XCircleIcon
+                        className="h-5 w-5 text-red-400"
                         aria-hidden="true"
                       />
                     </div>
                     <div className="ml-3">
-                      <p className="text-sm font-medium text-green-800">
-                        Your Message was Submitted Successfully
-                      </p>
+                      <h3 className="text-sm font-medium text-red-800">
+                        There are errors in the form
+                      </h3>
+                      <div className="mt-2 text-sm text-red-700">
+                        <ul role="list" className="list-disc space-y-1 pl-5">
+                          {formErrors.name && (
+                            <li>You must include a valid name</li>
+                          )}
+                          {formErrors.email && (
+                            <li>The email you input is not a valid email</li>
+                          )}
+                          {formErrors.company && (
+                            <li>The company name is too short</li>
+                          )}
+                          {formErrors.message && (
+                            <li>Your request is not long enough.</li>
+                          )}
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
-              )
-            ))}
-          {/* {!turnstileSolved && (
+              ) : (
+                messageSuccess && (
+                  <div className="rounded-lg bg-green-50 border-green-200 border-[1px] px-4 py-3">
+                    <div className="flex">
+                      <div className="flex-shrink-0">
+                        <CheckCircleIcon
+                          className="h-5 w-5 text-green-400"
+                          aria-hidden="true"
+                        />
+                      </div>
+                      <div className="ml-3">
+                        <p className="text-sm font-medium text-green-800">
+                          Your Message was Submitted Successfully
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )
+              ))}
+            {/* {!turnstileSolved && (
                   <>
                     <div color={"slate.600"}>
                       Solve the Challenge to Submit the Form
@@ -302,47 +304,64 @@ const ContactForm: React.FC<ContactFormProps> = ({
                   </>
                 )}
                 {turnstileSolved && ( */}
-          <button
-            type="submit"
-            disabled={awaitingResponse}
-            className={clsx(
-              // "bg-brand-600 flex rounded-lg px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-slate-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500",
-              "bg-brand-600 flex rounded-lg px-12 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-500 mx-auto",
-              awaitingResponse && "bg-slate-400 select-none hover:bg-slate-400"
-            )}
-          >
-            {awaitingResponse && (
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                className="mr-2"
+            <div className="mt-8 flex justify-end">
+              <button
+                type="submit"
+                disabled={awaitingResponse}
+                className={clsx(
+                  "bg-brand-600 flex rounded-lg px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-slate-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500",
+                  awaitingResponse &&
+                    "bg-slate-400 select-none hover:bg-slate-400"
+                )}
               >
-                <path
-                  fill="#FFFFFF"
-                  d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z"
-                  opacity=".25"
-                />
-                <path
-                  fill="#FFFFFF"
-                  d="M10.14,1.16a11,11,0,0,0-9,8.92A1.59,1.59,0,0,0,2.46,12,1.52,1.52,0,0,0,4.11,10.7a8,8,0,0,1,6.66-6.61A1.42,1.42,0,0,0,12,2.69h0A1.57,1.57,0,0,0,10.14,1.16Z"
-                >
-                  <animateTransform
-                    attributeName="transform"
-                    type="rotate"
-                    dur="0.75s"
-                    values="0 12 12;360 12 12"
-                    repeatCount="indefinite"
-                  />
-                </path>
-              </svg>
-            )}
-            {awaitingResponse ? "Submitting..." : "Submit"}
-          </button>
-          {/* )} */}
+                {awaitingResponse ? (
+                  <div className="flex items-center">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="mr-2 animate-spin"
+                    >
+                      <path
+                        fill="#FFFFFF"
+                        d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z"
+                        opacity=".25"
+                      />
+                      <path
+                        fill="#FFFFFF"
+                        d="M10.14,1.16a11,11,0,0,0-9,8.92A1.59,1.59,0,0,0,2.46,12,1.52,1.52,0,0,0,4.11,10.7a8,8,0,0,1,6.66-6.61A1.42,1.42,0,0,0,12,2.69h0A1.57,1.57,0,0,0,10.14,1.16Z"
+                      >
+                        <animateTransform
+                          attributeName="transform"
+                          type="rotate"
+                          dur="0.75s"
+                          values="0 12 12;360 12 12"
+                          repeatCount="indefinite"
+                        />
+                      </path>
+                    </svg>
+                    <span>Submitting...</span>
+                  </div>
+                ) : (
+                  <span>Submit Message</span>
+                )}
+              </button>
+              {/* )} */}
+            </div>
+          </div>
+        </form>
+        <div className="mx-autow hidden lg:block ">
+          <Image
+            className="object-contain w-[640px] h-[400px] max-w-screen"
+            src="/img/index/business-deal.svg"
+            // src="/img/index/business-decisions.svg"
+            alt="Contact Form"
+            width={640}
+            height={400}
+          />
         </div>
-      </form>
+      </div>
     </div>
   );
 };

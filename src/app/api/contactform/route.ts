@@ -1,7 +1,7 @@
 import nodemailer from "nodemailer";
 
 export async function POST(request: Request, response: Response) {
-  const { name, email, phone, company, message } = await request.json();
+  const { name, email, company, message } = await request.json();
 
   let transporter = nodemailer.createTransport({
     host: process.env.NEXT_PUBLIC_SMTP_HOST,
@@ -22,7 +22,6 @@ export async function POST(request: Request, response: Response) {
       <div>
         <p><strong>Message:</strong> ${message}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
         <p><strong>Company:</strong> ${company}</p>
       </div>
     `,

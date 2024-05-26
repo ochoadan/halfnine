@@ -278,11 +278,11 @@ const Page = () => {
       </div>
       <div className="overflow-hidden bg-gray-50 py-14 md:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto mb-12 lg:text-center">
+          <div className="mx-auto lg:max-w-3xl mb-12 lg:text-center">
             <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
               Our Small Projects
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600 max-w-3xl">
+            <p className="mt-6 text-lg leading-8 text-gray-600">
               We are just starting out, but this is proof of our commitment to
               making an impact in other businesses. We are proud of our
               innovative projects.
@@ -424,7 +424,7 @@ const Page = () => {
       </div> */}
       <div className="overflow-hidden bg-white py-14 md:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <ContactForm paddingNone />
+          <ContactForm />
         </div>
       </div>
     </>

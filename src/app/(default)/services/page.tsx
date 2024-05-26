@@ -9,7 +9,6 @@ import { GoDotFill } from "react-icons/go";
 import { SiGoogleanalytics } from "react-icons/si";
 import { PiStrategy } from "react-icons/pi";
 import { FaUserAstronaut } from "react-icons/fa6";
-import { url } from "inspector";
 
 export const metadata: Metadata = {
   title: "Full Service IT Development, Management & Consulting • Halfnine",
@@ -59,7 +58,7 @@ const Page = () => {
       ))}
       <div className="bg-white py-12 md:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <ContactForm paddingNone />
+          <ContactForm />
         </div>
       </div>
     </>

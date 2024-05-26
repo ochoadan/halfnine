@@ -33,13 +33,13 @@ export default function Example() {
     name: "",
     email: "",
     company: "",
-    phone: "",
     message: "",
   });
 
   const [formErrors, setFormErrors] = useState({
     name: false,
     email: false,
+    company: false,
     message: false,
   });
 
@@ -60,6 +60,7 @@ export default function Example() {
     const newFormErrors = {
       name: !nameRegex.test(formData.name),
       email: !emailRegex.test(formData.email),
+      company: formData.company.trim().length < 3,
       message: formData.message.trim().length < 20,
     };
     setFormErrors(newFormErrors);
@@ -254,7 +255,7 @@ export default function Example() {
           </div>
           <form
             onSubmit={handleSubmit}
-            className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"
+            className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-40"
           >
             {/* <form
           action="#"
@@ -318,6 +319,32 @@ export default function Example() {
                     />
                   </div>
                 </div>
+                <div className="sm:col-span-2">
+                  <label
+                    htmlFor="company"
+                    className="block text-sm font-semibold leading-6 text-gray-900"
+                  >
+                    Company
+                  </label>
+                  <div className="mt-2.5">
+                    <input
+                      type="text"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleInputChange}
+                      placeholder="Company"
+                      className={clsx(
+                        "block w-full shadow-sm sm:text-sm rounded-lg focus:border-transparent focus:ring-2",
+                        {
+                          "border-red-300 focus:ring-red-500":
+                            submitted && formErrors.company,
+                          "border-slate-200 focus:ring-brand-500":
+                            !submitted || !formErrors.company,
+                        }
+                      )}
+                    />
+                  </div>
+                </div>
                 {/* <div className="sm:col-span-2">
                 <label
                   htmlFor="phone-number"
@@ -340,7 +367,7 @@ export default function Example() {
                     htmlFor="message"
                     className="block text-sm font-semibold leading-6 text-gray-900"
                   >
-                    Message
+                    How can we help you?
                   </label>
                   <div className="mt-2.5">
                     <textarea
@@ -462,15 +489,18 @@ export default function Example() {
                               className="list-disc space-y-1 pl-5"
                             >
                               {formErrors.name && (
-                                <li>You must include a valid Name.</li>
+                                <li>You must include a valid name</li>
                               )}
                               {formErrors.email && (
                                 <li>
-                                  The email you input is not a valid email.
+                                  The email you input is not a valid email
                                 </li>
                               )}
+                              {formErrors.company && (
+                                <li>The company name is too short</li>
+                              )}
                               {formErrors.message && (
-                                <li>The message is not long enough.</li>
+                                <li>Your request is not long enough.</li>
                               )}
                             </ul>
                           </div>
