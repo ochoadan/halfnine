@@ -1,4 +1,4 @@
-import CustomHero from "@/components/services/CustomHero";
+import CustomHero from "@/components/Global/CustomHero";
 import ServicesFAQ from "@/components/services/ServicesFAQ";
 import { Metadata } from "next";
 import { Data1, Data2, Data3, FAQData } from "./pageData";

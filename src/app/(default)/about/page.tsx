@@ -5,7 +5,7 @@ import Link from "next/link";
 import { LinkIcon } from "@heroicons/react/20/solid";
 import logoSurveyr from "@/images/logos/surveyr.svg";
 import logoYournameis from "@/images/logos/yournameis.svg";
-import CustomHero from "@/components/services/CustomHero";
+import CustomHero from "@/components/Global/CustomHero";
 import { FaChartLine, FaHandshake, FaUserAstronaut } from "react-icons/fa6";
 import { GiConqueror } from "react-icons/gi";
 import ContactForm from "@/components/Global/ContactForm";

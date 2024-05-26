@@ -2,7 +2,7 @@ import TechnologyInfoHero from "@/components/services/TechnologyHero";
 import SolutionCheckListEven from "@/components/services/list/SolutionCheckListEven";
 import SolutionIconListThrice from "@/components/services/list/SolutionIconListThrice";
 import SolutionBaseListOnce from "@/components/services/list/SolutionBaseListOnce";
-import ContactBar from "@/components/services/contactBar";
+import ContactForm from "@/components/Global/ContactForm";
 import { Metadata } from "next";
 import { dataV1, dataV2, dataV3, dataFAQ } from "./pageData";
 import ServicesFAQ from "@/components/services/ServicesFAQ";
@@ -46,7 +46,7 @@ const Page = () => {
         features={dataV3}
       />
       <ServicesFAQ features={dataFAQ} />
-      <ContactBar technology={technology} message={message} />
+      <ContactForm addContainer addPadding addDivider="top" />
     </>
   );
 };

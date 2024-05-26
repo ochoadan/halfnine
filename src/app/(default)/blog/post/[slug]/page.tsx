@@ -9,6 +9,7 @@ import he from "he";
 import clsx from "clsx";
 import { Prose } from "@/components/Prose";
 import Latest3Posts from "@/components/Latest3Posts";
+import ContactForm from "@/components/Global/ContactForm";
 
 // export const revalidate = async (params: { slug: string }) => {
 //   const post = await getPostBySlug(params.slug);
@@ -267,10 +268,11 @@ const Page = async ({ params }: PostPageParams) => {
       <div className="flex justify-center w-full max-w-5xl mx-auto px-4 py-8 sm:py-12">
         <div className="w-full mb-4">
           <div className="border-t border-gray-300" />
-          <h3 className="text-2xl font-bold my-2">Latest Posts:</h3>
+          <h3 className="text-2xl font-bold my-2 mt-4">Latest Posts:</h3>
           <Latest3Posts />
         </div>
       </div>
+      <ContactForm addContainer="tight" addPadding="bottom" />
     </>
   );
 };

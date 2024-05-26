@@ -11,13 +11,17 @@ import Image from "next/image";
 interface ContactFormProps {
   title?: string;
   description?: string;
-  addPadding?: boolean;
+  addPadding?: "top" | "bottom" | boolean;
+  addDivider?: "top" | "bottom" | boolean;
+  addContainer?: "tight" | boolean;
 }
 
 const ContactForm: React.FC<ContactFormProps> = ({
   title,
   description,
   addPadding,
+  addContainer,
+  addDivider,
 }) => {
   const router = useRouter();
   const [formData, setFormData] = useState({
@@ -108,8 +112,18 @@ const ContactForm: React.FC<ContactFormProps> = ({
   };
 
   return (
-    <div className={clsx(addPadding && "py-14 sm:py-28")}>
-      <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+    <div
+      className={clsx(
+        addPadding === "top" && "py-14 sm:py-28",
+        addPadding === "bottom" && "pb-14 sm:pb-28",
+        addPadding === true && "py-14 sm:py-28",
+        addDivider === "top" && "border-t border-gray-300",
+        addDivider === "bottom" && "border-b border-gray-200",
+        addContainer === true && "mx-auto max-w-7xl px-6 lg:px-8",
+        addContainer === "tight" && "mx-auto max-w-5xl px-4 pt-4"
+      )}
+    >
+      <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">
         {title || "Let's Work Together!"}
         <hr className="border-brand-600 opacity-90 border-b-[2px] w-24 my-2" />
       </h2>

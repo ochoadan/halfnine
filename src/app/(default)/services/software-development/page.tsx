@@ -1,7 +1,7 @@
 import PageHero from "@/components/Global/PageHero";
 import { RootOffering } from "../../(root)";
 import { Metadata } from "next";
-import CustomHero from "@/components/services/CustomHero";
+import CustomHero from "@/components/Global/CustomHero";
 
 export const metadata: Metadata = {
   title: "Software Development Services • Halfnine",

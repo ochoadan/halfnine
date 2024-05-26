@@ -1,6 +1,6 @@
 import { RootOffering } from "../(root)";
 import { Metadata } from "next";
-import CustomHero from "@/components/services/CustomHero";
+import CustomHero from "@/components/Global/CustomHero";
 import Link from "next/link";
 import { services } from "./pageData";
 import ContactForm from "@/components/Global/ContactForm";

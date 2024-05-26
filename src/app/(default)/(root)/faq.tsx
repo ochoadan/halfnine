@@ -21,12 +21,12 @@ const faqs = [
 ];
 const GlobalFAQ = () => {
   return (
-    <div className="mx-auto max-w-5xl">
+    <div className="mx-auto max-w-7xl">
       <div className="text-3xl font-extrabold leading-10 text-gray-900">
         <h2>Frequently asked questions:</h2>
         <hr className="border-brand-600 opacity-90 border-b-[2px] w-20 my-2" />
       </div>
-      <dl className="mt-10 divide-y divide-gray-900/10">
+      <dl className="mt-4 divide-y divide-gray-900/10">
         {faqs.map((faq) => (
           <Disclosure as="div" key={faq.question}>
             {({ open }) => (

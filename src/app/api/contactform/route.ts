@@ -20,12 +20,16 @@ export async function POST(request: Request, response: Response) {
     text: message + " | Sent from: " + email,
     html: `
       <div>
-        <p><strong>Message:</strong> ${message}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Company:</strong> ${company}</p>
+        <p><strong>Message:</strong> ${escapeHtml(message)}</p>
+        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+        <p><strong>Company:</strong> ${escapeHtml(company)}</p>
       </div>
     `,
   };
+
+  function escapeHtml(text: string): string {
+    return text.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
 
   try {
     await transporter.sendMail(mailOptions);

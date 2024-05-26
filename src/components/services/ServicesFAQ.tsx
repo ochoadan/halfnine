@@ -8,13 +8,13 @@ const ServicesFAQ = ({ features }: any) => {
   // const containerClassName = background === "dark" ? "bg-gray-50" : "bg-white";
 
   return (
-    <div className="bg-white py-24 sm:py-32">
-      <div className="mx-auto max-w-4xl px-6 lg:px-8">
+    <div className="bg-white py-12 md:py-24">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="text-3xl font-extrabold leading-10 text-gray-900">
           <h2>Frequently asked questions:</h2>
           <hr className="border-brand-600 opacity-90 border-b-[2px] w-20 my-2" />
         </div>
-        <dl className="mt-10 divide-y divide-gray-900/10">
+        <dl className="mt-4 divide-y divide-gray-900/10">
           {features.map((faq: any) => (
             <Disclosure as="div" key={faq.question}>
               {({ open }) => (
