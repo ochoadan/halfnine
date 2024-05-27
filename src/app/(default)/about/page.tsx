@@ -1,19 +1,19 @@
 import { Metadata } from "next";
 import Image from "next/image";
-import { features, supportLinks } from "./content";
 import Link from "next/link";
 import { LinkIcon } from "@heroicons/react/20/solid";
 import logoSurveyr from "@/images/logos/surveyr.svg";
 import logoYournameis from "@/images/logos/yournameis.svg";
 import CustomHero from "@/components/Global/CustomHero";
-import { FaChartLine, FaHandshake, FaUserAstronaut } from "react-icons/fa6";
+import { FaChartLine, FaHandshake, FaLinkedinIn } from "react-icons/fa6";
 import { GiConqueror } from "react-icons/gi";
 import ContactForm from "@/components/Global/ContactForm";
 import Services from "../(root)/services";
 
 export const metadata: Metadata = {
   title: "About Halfnine • Your Partner for IT Project Success",
-  description: "Halfnine is a new company in the tech industry, passionate about empowering businesses through technology. We believe in the transformative potential of IT solutions and strive to be your trusted partner on the road to digital success",
+  description:
+    "Halfnine is a new company in the tech industry, passionate about empowering businesses through technology. We believe in the transformative potential of IT solutions and strive to be your trusted partner on the road to digital success",
   alternates: { canonical: "https://www.halfnine.com/about" },
   openGraph: { url: "https://www.halfnine.com/about" },
 };
@@ -60,13 +60,39 @@ const missionFeatures = [
   },
 ];
 
+const people = [
+  {
+    name: "Dan Ochoa",
+    role: "Founder / Operations",
+    imageUrl:
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.licdn.com%2Fdms%2Fimage%2FD4E03AQF8MU-TcKJ59A%2Fprofile-displayphoto-shrink_200_200%2F0%2F1710594024201%3Fe%3D1722470400%26v%3Dbeta%26t%3DDm8Zn0WzTUT594T8b74sAsrMgfAnxko35StVCyZKEFQ",
+    linkedInUrl: "https://www.linkedin.com/in/dan-ochoa-998a5b190/",
+  },
+  {
+    name: "Rodolfo Ochoa",
+    role: "Project Manager / Consultant",
+    imageUrl:
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.licdn.com%2Fdms%2Fimage%2FD4E03AQGJyD43psafiQ%2Fprofile-displayphoto-shrink_200_200%2F0%2F1691182469993%3Fe%3D1722470400%26v%3Dbeta%26t%3DQ1G_6HXiTJRz3ehZmU7YPrLz8LZ55PE5No9Ond_XpRk",
+    linkedInUrl: "https://www.linkedin.com/in/rodolfoochoa/",
+  },
+  // {
+  //   name: "Phillip Livengood",
+  //   role: "Senior Cyber Engineer",
+  // },
+  // {
+  //   name: "Steven Bapple",
+  //   role: ".NET Team Lead",
+  // }
+];
+
 const Page = () => {
   return (
     <>
       <CustomHero
         heading="About Halfnine"
         subtext="Your Partner for Project Success"
-        description="Halfnine is a new company in the tech industry, passionate about empowering businesses through technology. We believe in the transformative potential of IT solutions and strive to be your trusted partner on the road to digital success."
+        description="Halfinne is a new technology service provider, we empower businesses through technology. Our solutions are tailored to your needs and goals, and include full-cycle development, from discovery, development, and deployment."
+        // description="Halfnine is a new company in the tech industry, passionate about empowering businesses through technology. We believe in the transformative potential of IT solutions and strive to be your trusted partner on the road to digital success."
         // description="Halfnine is a company passionate about empowering businesses through technology. We believe in the transformative potential of IT solutions and strive to be your trusted partner on the road to digital success."
         imgSrc="/img/index/team-spirit.svg"
         imgAlt="three people standing holding pieces of an application to build a project together"
@@ -74,19 +100,17 @@ const Page = () => {
       />
       <div className="bg-gray-50 py-14 md:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto lg:text-center lg:max-w-2xl">
-            <h2 className="text-base font-semibold leading-7 text-brand-600">
-              Our Mission
-            </h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Empowering your vision
-            </p>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Our mission is to bridge the gap between business and their goals,
-              by using technology to solve problems, achieve goals and drive
-              success.
-            </p>
-          </div>
+          <h2 className="text-base font-semibold leading-7 text-brand-600">
+            Our Mission
+          </h2>
+          <p className="mt-1 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            Empowering your vision
+          </p>
+          <p className="mt-2 text-lg leading-8 text-gray-600">
+            Our mission is to bridge the gap between business and their goals,
+            by using technology to solve problems, achieve goals and drive
+            success.
+          </p>
           <div className="mx-auto mt-16 sm:mt-8 lg:mt-12">
             <dl className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-3">
               {missionFeatures.map((feature) => (
@@ -115,7 +139,49 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div className="overflow-hidden bg-white py-14 md:py-28">
+      <div className="bg-white py-14 md:py-28">
+        <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Our Team
+            </h2>
+            {/* <p className="mt-6 text-lg leading-8 text-gray-600">
+              We are not many but we are strong. 
+              Our team is made of professionals who are passionate about technology and itspotential to transform businesses.
+            </p> */}
+          </div>
+          <ul
+            role="list"
+            className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2"
+          >
+            {people.map((person) => (
+              <li key={person.name}>
+                <div className="flex items-center gap-x-6">
+                  <img
+                    className="h-16 w-16 rounded-full"
+                    src={person.imageUrl || `https://ui-avatars.com/api/?name=${person.name}` }
+                    alt={`Profile picture of ${person.name}`}
+                  />
+                  <div className="grid grid-cols-1 ">
+                    <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">
+                      {person.name}
+                    </h3>
+                    <p className="text-sm font-semibold leading-6 text-brand-600 -mt-0.5">
+                      {person.role}
+                    </p>
+                    {person.linkedInUrl && (
+                      <Link href={person.linkedInUrl} target="_blank">
+                        <FaLinkedinIn className="h-4 w-4 text-brand-600 mt-0.5" />
+                      </Link>
+                    )}
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <div className="overflow-hidden bg-gray-50 py-14 md:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl mb-12 lg:text-center">
             <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
@@ -276,7 +342,7 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div className="overflow-hidden bg-gray-50 py-14 md:py-28">
+      <div className="overflow-hidden bg-white py-14 md:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto lg:max-w-3xl mb-12 lg:text-center">
             <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
@@ -328,7 +394,7 @@ const Page = () => {
           </ul>
         </div>
       </div>
-      <div className="overflow-hidden bg-white py-14 md:py-28">
+      <div className="overflow-hidden bg-gray-50 py-14 md:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <Services disableAdditionalServices />
         </div>

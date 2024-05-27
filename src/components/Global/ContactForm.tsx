@@ -129,7 +129,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
       </h2>
       <p className="mt-2 leading-8 text-gray-700">
         {description ||
-          "Our team is ready to answer your questions and help you find the best solution for your needs"}
+          "Our team is ready to answer your questions and help you find the best solution for your software & technology needs."}
       </p>
       <div className="lg:grid lg:grid-cols-2 space-x-8">
         <form onSubmit={handleSubmit}>

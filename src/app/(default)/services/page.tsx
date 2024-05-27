@@ -227,7 +227,7 @@ const DiscoveryPhase = () => (
 const DefinePhase = () => (
   <GridCards
     heading="Define Phase"
-    description=""
+    description="Our define phase is designed to help you blueprint your ideal solution."
     cardData={[
       {
         icon: <FaUserAstronaut className="h-6 w-6 text-white" />,
