@@ -104,8 +104,8 @@ const products = [
 
 const callsToAction = [
   // { name: "Watch demo", href: "#", icon: PlayCircleIcon },
-  // { name: "View all services", href: "/services", icon: RectangleGroupIcon },
-  { name: "And more...", href: "/services", icon: RectangleGroupIcon },
+  { name: "View all services", href: "/services", icon: RectangleGroupIcon },
+  // { name: "And more...", href: "/services", icon: RectangleGroupIcon },
   { name: "Contact us", href: "/contact", icon: PhoneIcon },
 ];
 

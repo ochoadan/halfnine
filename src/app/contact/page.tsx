@@ -15,6 +15,7 @@ import Cal, { getCalApi } from "@calcom/embed-react";
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 import GlobalFooter from "@/components/Global/Footer";
+import { FaRegBuilding, FaRegEnvelope, FaRegUser } from "react-icons/fa6";
 
 export default function Example() {
   useEffect(() => {
@@ -264,22 +265,26 @@ export default function Example() {
         > */}
             <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
               <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-                <div className="sm:col-span-2">
+                <div className="sm:col-span-2 space-y-1">
                   <label
                     htmlFor="email"
                     className="block text-sm font-semibold leading-6 text-gray-900"
                   >
                     Name
+                    <span className="text-red-600 ml-1 select-none">*</span>
                   </label>
-                  <div className="mt-2.5">
+                  <div className="mt-2.5 relative">
+                    <span className="text-slate-600 absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <FaRegUser />
+                    </span>
                     <input
                       type="text"
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      placeholder="Name"
+                      placeholder="Jhon Doe"
                       className={clsx(
-                        "block w-full shadow-sm sm:text-sm rounded-lg focus:border-transparent focus:ring-2",
+                        "pl-10 block w-full shadow-sm sm:text-sm rounded-lg focus:border-transparent focus:ring-2",
                         {
                           "border-red-300 focus:ring-red-500":
                             submitted && formErrors.name,
@@ -292,22 +297,26 @@ export default function Example() {
                     />
                   </div>
                 </div>
-                <div className="sm:col-span-2">
+                <div className="sm:col-span-2 space-y-1">
                   <label
                     htmlFor="email"
                     className="block text-sm font-semibold leading-6 text-gray-900"
                   >
                     Email
+                    <span className="text-red-600 ml-1 select-none">*</span>
                   </label>
-                  <div className="mt-2.5">
+                  <div className="mt-2.5 relative">
+                    <span className="text-slate-600 absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <FaRegEnvelope />
+                    </span>
                     <input
                       type="email"
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      placeholder="Email"
+                      placeholder="first.last@company.com"
                       className={clsx(
-                        "block w-full shadow-sm sm:text-sm rounded-lg focus:border-transparent focus:ring-2",
+                        "pl-10 block w-full shadow-sm sm:text-sm rounded-lg focus:border-transparent focus:ring-2",
                         {
                           "border-red-300 focus:ring-red-500":
                             submitted && formErrors.email,
@@ -319,22 +328,27 @@ export default function Example() {
                     />
                   </div>
                 </div>
-                <div className="sm:col-span-2">
+                <div className="sm:col-span-2 space-y-1">
                   <label
                     htmlFor="company"
                     className="block text-sm font-semibold leading-6 text-gray-900"
                   >
-                    Company
+                    Company Name
+                    <span className="text-red-600 ml-1 select-none">*</span>
                   </label>
-                  <div className="mt-2.5">
+                  <div className="mt-2.5 relative">
+                    <span className="text-slate-600 absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <FaRegBuilding />
+                    </span>
+
                     <input
                       type="text"
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
-                      placeholder="Company"
+                      placeholder="Example, LLC"
                       className={clsx(
-                        "block w-full shadow-sm sm:text-sm rounded-lg focus:border-transparent focus:ring-2",
+                        "pl-10 block w-full shadow-sm sm:text-sm rounded-lg focus:border-transparent focus:ring-2",
                         {
                           "border-red-300 focus:ring-red-500":
                             submitted && formErrors.company,
@@ -362,12 +376,13 @@ export default function Example() {
                   />
                 </div>
               </div> */}
-                <div className="sm:col-span-2">
+                <div className="sm:col-span-2 space-y-1">
                   <label
                     htmlFor="message"
                     className="block text-sm font-semibold leading-6 text-gray-900"
                   >
                     How can we help you?
+                    <span className="text-red-600 ml-1 select-none">*</span>
                   </label>
                   <div className="mt-2.5">
                     <textarea

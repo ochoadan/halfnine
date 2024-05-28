@@ -196,8 +196,8 @@ const ContactForm: React.FC<ContactFormProps> = ({
                 <span className="text-red-600 ml-1 select-none">*</span>
               </label>
               <div className="relative">
-                <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <FaRegBuilding color="slate.800" />
+                <span className="text-slate-600 absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <FaRegBuilding />
                 </span>
                 <input
                   type="text"

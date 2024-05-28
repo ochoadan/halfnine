@@ -3,6 +3,7 @@ import { categories } from "./categories";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import clsx from "clsx";
 
 interface CategoryItemProps {
   item: {
@@ -66,6 +67,7 @@ const CategoryItem: React.FC<CategoryItemProps> = ({ item }) => {
 };
 
 interface CategoryProps {
+  gridView?: boolean;
   category: {
     title: string;
     items: {
@@ -76,7 +78,7 @@ interface CategoryProps {
   };
 }
 
-const Category: React.FC<CategoryProps> = ({ category }) => {
+const Category: React.FC<CategoryProps> = ({ category, gridView }) => {
   const [showMore, setShowMore] = useState(false);
 
   const toggleShowMore = () => {
@@ -90,19 +92,20 @@ const Category: React.FC<CategoryProps> = ({ category }) => {
       </h3>
       <ul
         role="list"
-        className={`my-2 gap-x-4 gap-y-3 flex flex-wrap ${
-          category.items.length > 22
-            ? showMore
-              ? ""
-              : "max-h-[80px] overflow-hidden"
-            : ""
-        }`}
+        className={clsx(
+          "my-2 gap-x-4 gap-y-3 flex flex-wrap",
+          // category.items.length > (gridView ? 8 : 22) &&
+          category.items.length > (gridView ? 4 : 22) &&
+            !showMore &&
+            // "max-h-[80px] overflow-hidden"
+            (gridView ? "max-h-[40px]" : "max-h-[80px]") + " overflow-hidden"
+        )}
       >
         {category.items.map((item, itemIdx) => (
           <CategoryItem key={itemIdx} item={item} />
         ))}
       </ul>
-      {category.items.length > 22 && (
+      {category.items.length > (gridView ? 4 : 22) && (
         <button
           className="text-brand-600 hover:text-brand-500 hover:underline"
           onClick={toggleShowMore}
@@ -114,7 +117,11 @@ const Category: React.FC<CategoryProps> = ({ category }) => {
   );
 };
 
-export default function Offering() {
+interface OfferingProps {
+  gridView?: boolean;
+}
+
+export default function Offering({ gridView }: OfferingProps) {
   return (
     <>
       <div className="mx-auto lg:mx-0">
@@ -123,9 +130,13 @@ export default function Offering() {
           <hr className="border-brand-600 opacity-90 border-b-[2px] w-24 my-2" />
         </h2>
       </div>
-      <div className="divide-y divide-gray-200">
+      <div
+        className={clsx(
+          gridView ? "grid grid-cols-2 gap-0" : "divide-y divide-gray-200"
+        )}
+      >
         {categories.map((category, index) => (
-          <Category key={index} category={category} />
+          <Category key={index} category={category} gridView={gridView} />
         ))}
       </div>
       <div className="pt-4 sm:pt-6 md:flex md:items-center">

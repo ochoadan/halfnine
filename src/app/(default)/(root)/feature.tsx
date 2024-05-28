@@ -5,21 +5,21 @@ const features = [
   {
     name: "Simplicity in Complexity",
     description:
-      "Complex applications can be challenging to modify or to educate users. Yet, by leveraging proven technologies and frameworks, we can simplify the user experience",
+      "We specialize in complex systems and can help you navigate the challenges of integrating new technologies, systems, and processes into your existing infrastructure",
     href: "#",
     icon: FaGears,
   },
   {
     name: "Regulatory Adherence",
     description:
-      "Compliance with regulations like GDPR, CCPA, SOC 2, HIPAA, PCI, ISO 27001 is crucial in app development. Non-compliance risks penalties. We prioritize regulatory compliance in our technology",
+      "We understand the importance of regulatory compliance and data privacy. Our team is well-versed in the latest regulations and can help you navigate the complexities of compliance",
     href: "#",
     icon: FaClipboardCheck,
   },
   {
     name: "Robust Security",
     description:
-      "Given daily vulnerabilities, updating software assets, protecting accounts, guarding users against social engineering is vital. Our developer team is skilled and security-aware, a key factor for any app",
+      "Security is a top priority for us. We implement best practices to ensure that your data is secure and protected from unauthorized access, data breaches, and other security threats",
     href: "#",
     icon: FaUserLock,
   },
