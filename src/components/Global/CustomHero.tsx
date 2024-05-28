@@ -35,7 +35,7 @@ const CustomHero: React.FC<TechnologyInfoProps> = ({
 }) => {
   const headingClassName = "text-base font-semibold leading-7 text-brand-600";
   const Container = ({ children }: any) => (
-    <div className="bg-white py-12 md:py-24 md:pt-12">
+    <div className="bg-white py-12 md:py-24 md:pt-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">{children}</div>
     </div>
   );

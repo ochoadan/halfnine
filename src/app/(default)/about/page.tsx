@@ -157,7 +157,7 @@ const Page = () => {
             {people.map((person) => (
               <li key={person.name}>
                 <div className="flex items-center gap-x-6">
-                  <img
+                  <Image
                     className="h-16 w-16 rounded-full"
                     src={person.imageUrl || `https://ui-avatars.com/api/?name=${person.name}` }
                     alt={`Profile picture of ${person.name}`}

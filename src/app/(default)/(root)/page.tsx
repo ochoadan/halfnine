@@ -32,13 +32,13 @@ const Page = () => (
       RootServices,
       // RootMisc,
       IdealClient,
-      <RootOffering gridView={true} />,
+      <RootOffering gridView={true} key="offering" />,
       // RootStats,
       // RootFeatureGrid,
       RootDevProcess,
       // RootFeature,
-      <RootFAQ />,
-      <ContactForm />,
+      <RootFAQ key="faq" />,
+      <ContactForm key="contact" />,
     ].map((Component, index) => (
       <div
         key={index}
