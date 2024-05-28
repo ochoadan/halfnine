@@ -93,7 +93,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
     <>
       {/* <ConsentManager /> */}
       <GoogleAnalytics />
-      <ChatBubble />
+      {/* <ChatBubble /> */}
       <Hotjar />
       <ApolloTracker />
       {children}

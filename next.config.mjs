@@ -12,6 +12,7 @@ const nextConfig = {
       { hostname: "www.vectorlogo.zone" },
       { hostname: "upload.wikimedia.org" },
       { hostname: "cdn.worldvectorlogo.com" },
+      { hostname: "external-content.duckduckgo.com" },
     ],
     dangerouslyAllowSVG: true,
     contentDispositionType: "attachment",

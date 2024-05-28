@@ -300,7 +300,7 @@ export default function GlobalNavbar() {
                 <Logo />
               ) : (
                 <Link href="/" className="-m-1.5 p-1.5">
-                  <span className="sr-only">Halfnine LLC</span>
+                  <span className="sr-only">Home</span>
                   <Logo />
                 </Link>
               )}

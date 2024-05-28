@@ -58,7 +58,10 @@ export default function GlobalFooter() {
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-12 sm:pt-16 lg:px-8 lg:pt-24">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
-            <Logo className="h-10" />
+            <Link href="/">
+              <span className="sr-only">Home</span>
+              <Logo className="h-10" />
+            </Link>
             {/* <img
               className="h-7"
               src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"

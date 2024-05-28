@@ -152,6 +152,7 @@ export default function Example() {
           <div className="relative lg:static px-6 lg:px-8">
             <div className="mx-auto max-w-xl">
               <Link href="/" className="-m-1.5 p-1.5">
+                <span className="sr-only">Home</span>
                 <Logo />
               </Link>
             </div>

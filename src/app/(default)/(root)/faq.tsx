@@ -8,7 +8,7 @@ import clsx from "clsx";
 const faqs = [
   {
     question: "What Services Do You Offer?",
-    answer: `We offer "Full-Service Technology Solutions", Meaning we can help you with any technology-related project, from start to finish.`,
+    answer: `We offer "Full-Service Technology Solutions", Which means we can help you with everything from the initial idea to the final product. We can help you with software development, user experience, deployment & integration, and much more.`,
   },
   {
     question: "How Much Do You Charge?",
