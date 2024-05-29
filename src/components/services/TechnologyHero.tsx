@@ -5,7 +5,7 @@ import Image from "next/image";
 
 interface TechnologyInfoProps {
   technology: string;
-  isCompany: boolean;
+  isCompany?: boolean;
   imgSrc: string;
   message: string;
 }
