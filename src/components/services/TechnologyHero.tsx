@@ -5,12 +5,14 @@ import Image from "next/image";
 
 interface TechnologyInfoProps {
   technology: string;
+  isCompany: boolean;
   imgSrc: string;
   message: string;
 }
 
 const TechnologyInfoHero: React.FC<TechnologyInfoProps> = ({
   technology,
+  isCompany,
   imgSrc,
 }) => {
   return (
@@ -19,6 +21,12 @@ const TechnologyInfoHero: React.FC<TechnologyInfoProps> = ({
         <div className="grid items-center gap-x-16 gap-y-10 grid-cols-12 mx-auto">
           <div className="lg:pr-8 col-span-12 lg:col-span-6 xl:col-span-7">
             {/* <h1 className="text-base font-semibold leading-7 text-brand-600"> */}
+            <p className="text-base font-semibold leading-7 text-brand-600">
+              {isCompany
+                ? `Halfnine ${technology} development company`
+                : `Halfnine's ${technology} development services`}
+              {/* {`Halfnine's ${technology} development services`} */}
+            </p>
             <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               {`${technology} Development Company`}
             </h1>
