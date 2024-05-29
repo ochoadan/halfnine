@@ -86,7 +86,7 @@ const Category: React.FC<CategoryProps> = ({ category, gridView }) => {
   };
 
   return (
-    <div className="py-4">
+    <div className="py-2">
       <h3 className="text-base sm:text-xl font-bold text-gray-900">
         {category.title}
       </h3>
@@ -98,7 +98,7 @@ const Category: React.FC<CategoryProps> = ({ category, gridView }) => {
           category.items.length > (gridView ? 4 : 22) &&
             !showMore &&
             // "max-h-[80px] overflow-hidden"
-            (gridView ? "max-h-[40px]" : "max-h-[80px]") + " overflow-hidden"
+            (gridView ? "max-h-[36px]" : "max-h-[80px]") + " overflow-hidden"
         )}
       >
         {category.items.map((item, itemIdx) => (
@@ -107,7 +107,7 @@ const Category: React.FC<CategoryProps> = ({ category, gridView }) => {
       </ul>
       {category.items.length > (gridView ? 4 : 22) && (
         <button
-          className="text-brand-600 hover:text-brand-500 hover:underline"
+          className="text-brand-600 hover:text-brand-500 hover:underline text-sm font-medium"
           onClick={toggleShowMore}
         >
           {showMore ? "Show less" : "Show more"}
@@ -129,17 +129,23 @@ export default function Offering({ gridView }: OfferingProps) {
           Our Technical Capabilities
           <hr className="border-brand-600 opacity-90 border-b-[2px] w-24 my-2" />
         </h2>
+        <p className="text-lg text-gray-900">
+          We are capable of providing solutions with the following technologies:
+        </p>
       </div>
       <div
         className={clsx(
-          gridView ? "grid grid-cols-2 gap-0" : "divide-y divide-gray-200"
+          gridView
+            ? "grid grid-cols-1 md:grid-cols-2 md:gap-x-4"
+            : "divide-y divide-gray-200",
+          "py-2"
         )}
       >
         {categories.map((category, index) => (
           <Category key={index} category={category} gridView={gridView} />
         ))}
       </div>
-      <div className="pt-4 sm:pt-6 md:flex md:items-center">
+      <div className="pt-2 sm:pt-4 md:flex md:items-center">
         <h3 className="text-lg font-bold text-gray-900 sm:text-xl">
           Find a solution not listed here? <span>We might work with it! </span>
           <span>

@@ -21,6 +21,9 @@ import ContactForm from "@/components/Global/ContactForm";
 //   }
 //   return 86400;
 // };
+
+export const runtime = 'edge';
+
 export const revalidate = 86400;
 
 interface PostPageParams {
@@ -189,7 +192,7 @@ const Page = async ({ params }: PostPageParams) => {
       <Image
         width={896}
         height={504}
-        className="aspect-video rounded-2xl bg-gray-50 object-cover mx-auto mt-0 mb-4"
+        className="aspect-video rounded-2xl bg-gray-50 object-cover mx-auto xl:mt-0 mb-4 -mt-6 "
         src={
           post?.featuredImage?.node?.sourceUrl ||
           "https://via.placeholder.com/896x504"

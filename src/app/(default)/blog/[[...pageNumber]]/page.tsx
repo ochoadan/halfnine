@@ -6,6 +6,8 @@ import getAllPostsForBlogPages from "@/lib/queries/getAllPostsForBlogPages";
 import he from "he";
 import sanitizeHtml from "sanitize-html";
 
+export const runtime = 'edge';
+
 export const revalidate = 86400;
 
 const pageLength = 30;
