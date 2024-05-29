@@ -27,6 +27,9 @@ const TechnologyInfoHero: React.FC<TechnologyInfoProps> = ({
                 : `Halfnine's ${technology} development services`}
               {/* {`Halfnine's ${technology} development services`} */}
             </p>
+            <p className="sr-only">
+              {`Custom ${technology} services and solutions`}
+            </p>
             <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               {`${technology} Development Company`}
             </h1>
@@ -37,7 +40,8 @@ const TechnologyInfoHero: React.FC<TechnologyInfoProps> = ({
               {/* {`Our team of ${technology} developers can help you build custom software solutions that meet your unique business requirements.`} */}
               {/* {`Halfnine offers ${technology} development services to help you build scalable, secure, and high-performance applications.`} */}
               {/* {`Halfnine offers ${technology} development services and hire our ${technology} developers for your needs and projects.`} */}
-              {`Custom ${technology} software develoment services from Halfnine. Hire our ${technology} developers for your needs and projects.`}
+              {/* {`Custom ${technology} software develoment services from Halfnine. Hire our ${technology} developers for your needs and projects.`} */}
+              {`Do you need professional ${technology} development services? Hire our ${technology} developers for your needs and projects.`}
             </p>
             <div className="mt-5 flex items-center">
               <Link
