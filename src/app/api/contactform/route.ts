@@ -1,7 +1,5 @@
 import nodemailer from "nodemailer";
 
-export const runtime = 'edge';
-
 export async function POST(request: Request, response: Response) {
   const { name, email, company, message } = await request.json();
 
