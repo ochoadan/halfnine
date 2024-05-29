@@ -8,8 +8,6 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 import he from "he";
 import sanitizeHtml from "sanitize-html";
 
-export const runtime = 'edge';
-
 export const revalidate = 86400;
 
 const pageLength = 30;

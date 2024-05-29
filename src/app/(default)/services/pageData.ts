@@ -7,11 +7,20 @@ export const services = [
     url: "/services/software-development",
     list: [
       { name: "Web Development", url: "/services/web-development", },
-      { name: "Mobile App Development", url: "/services/mobile-app-development", },
-      { name: "Hybrid App Development", url: "/services/hybrid-app-development", },
       { name: "Ecommerce Development", url: "/services/ecommerce", },
       { name: "MVP Development", url: "/services/mvp", },
       { name: "Blockchain Development", url: "/services/blockchain-development", },
+      { name: "Mobile App Development", url: "/services/mobile-app-development", },
+      { name: "Hybrid App Development", url: "/services/hybrid-app-development", },
+      { name: "iOS App Development", url: "/services/software-development/ios", },
+      // { name: "Android App Development", url: "/services/software-development/android", },
+      // { name: "IoT Development", url: "/services/iot", },
+      // { name: "AR/VR Development", url: "/services/ar-vr", },
+      // { name: "AI/ML Development", url: "/services/ai-ml", },
+      // { name: "Chatbot Development", url: "/services/chatbot", },
+      // { name: "Game Development", url: "/services/game-development", },
+      // { name: "Custom Software Development", url: "/services/custom-software", },
+      // { name: "Software Development", url: "/services/software-development", },
     ]
   },
   {
@@ -61,7 +70,8 @@ export const services = [
     list: [
       { name: "Cybersecurity", url: "/services/security", },
     ]
-  }
+  },
+
 ];
 
 export const oldServices = [

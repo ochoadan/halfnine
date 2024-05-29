@@ -24,8 +24,6 @@ import { FaChevronLeft, FaChevronRight, FaLeftLong } from "react-icons/fa6";
 //   return 86400;
 // };
 
-export const runtime = "edge";
-
 export const revalidate = 86400;
 
 interface PostPageParams {

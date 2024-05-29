@@ -1,4 +1,4 @@
-import TechnologyInfoHero from "@/components/services/TechnologyHero";
+import TechnologyInfo from "@/components/services/TechnologyHero";
 import SolutionCheckListEven from "@/components/services/list/SolutionCheckListEven";
 import SolutionIconListThrice from "@/components/services/list/SolutionIconListThrice";
 import SolutionBaseListOnce from "@/components/services/list/SolutionBaseListOnce";
@@ -7,8 +7,8 @@ import { Metadata } from "next";
 import { dataV1, dataV2, dataV3, dataFAQ } from "./pageData";
 import ServicesFAQ from "@/components/services/ServicesFAQ";
 
-const technology = "Symfony";
-const slug = "symfony";
+const technology = "iOS App";
+const slug = "ios";
 
 export const metadata: Metadata = {
   title: `${technology} Development Company | Halfnine`,
@@ -25,25 +25,25 @@ const Page = () => {
   const message = `I need professional ${technology} development services.`;
   return (
     <>
-      <TechnologyInfoHero
+      <TechnologyInfo
         technology={technology}
         message={message}
         imgSrc={`/img/services/${slug}.svg`}
       />
       <SolutionCheckListEven
         background="gray"
-        heading={`Benefits of Custom ${technology} Solutions`}
-        description="Symfony, as a PHP framework, provides an array of benefits tailored for developing custom solutions, especially for complex and enterprise-level projects. Its robust structure, supported by Sensio Labs, ensures reliability and maturity, making it a top choice for businesses and startups alike."
+        heading={`Benefits of ${technology} Development Companies`}
+        description="In the realm of mobile technology, iOS app development stands as a beacon for quality, security, and innovation. Companies that align with iOS app development companies can reap a multitude of benefits, pivotal for both the business and its clientele. Here's a closer examination of these advantages:"
         features={dataV1}
       />
       <SolutionIconListThrice
-        heading={`Key ${technology} Development Services`}
+        heading={`Key Services Offered by an ${technology} Development Company`}
         features={dataV2}
       />
       <SolutionBaseListOnce
         background="gray"
-        heading={`The ${technology} Ecosystem`}
-        description="Symfony, a pivotal element of the web development sphere, operates under the robust umbrella of the Symfony ecosystem. This ecosystem is supported by SensioLabs, which has been nurturing various open-source projects since 1998, ensuring that Symfony remains a top-tier choice for developers."
+        heading={`The ${technology} Development Services Ecosystem`}
+        description="The iOS App Development Services Ecosystem is a dynamic and evolving space that significantly impacts how businesses approach mobile app development. This ecosystem is shaped by various factors, including the latest technological trends, market demands, and the continuous need for innovative solutions. Here's an overview of how these elements interplay to form a robust environment for iOS app development:"
         features={dataV3}
       />
       <ServicesFAQ features={dataFAQ} />

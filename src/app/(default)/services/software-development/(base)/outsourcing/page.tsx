@@ -10,7 +10,7 @@ const slug = "software-development/outsourcing";
 
 export const metadata: Metadata = {
   title: `Software Development Outsourcing Services • Halfnine`,
-  description: `r team of experts can help you with software development your software development needs.`,
+  description: `Our team of experts can help you with software development your software development needs.`,
   alternates: {
     canonical: `https://www.halfnine.com/services/${slug}`,
   },

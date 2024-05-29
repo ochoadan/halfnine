@@ -34,8 +34,8 @@ const SolutionIconListThrice = ({
             </p>
           )}
         </div>
-        <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+        <div className="mx-auto mt-16 lg:max-w-none">
+          <dl className="grid sm:max-w-xl grid-cols-1 gap-x-8 gap-y-8 lg:gap-y-16 lg:max-w-none lg:grid-cols-3">
             {features.map((feature) => (
               <div key={feature.name} className="flex flex-col">
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">

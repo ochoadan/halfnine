@@ -247,6 +247,8 @@ export const categories = [
       { name: "Akamai Cloud", icon: "https://raw.githubusercontent.com/dochne/wappalyzer/471c2fb0b093973c098bd1855b89c8cde4997479/src/images/icons/Akamai.svg" },
       { name: "DigitalOcean", icon: "https://raw.githubusercontent.com/gilbarbara/logos/52addcaa18dfecb4df77f3ee0753dca6b98187ad/logos/digital-ocean-icon.svg" },
       { name: "Self Hosting", icon: "https://raw.githubusercontent.com/AwesomeLogos/google-cloud-icons/9fe9b31ddce5804ae4e6cf4d1bda5d5ee5ae6192/docs/images/game_servers.svg" },
+      { name: "OCI", icon: "https://raw.githubusercontent.com/dochne/wappalyzer/471c2fb0b093973c098bd1855b89c8cde4997479/src/images/icons/Oracle.svg", url: "/services/oracle" },
+      // { name: "Oracle Cloud Infrastructure", icon: "https://raw.githubusercontent.com/dochne/wappalyzer/471c2fb0b093973c098bd1855b89c8cde4997479/src/images/icons/Oracle.svg" },
     ],
   },
   {

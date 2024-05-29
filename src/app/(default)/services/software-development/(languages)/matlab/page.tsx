@@ -11,8 +11,8 @@ const technology = "MATLAB";
 const slug = "matlab";
 
 export const metadata: Metadata = {
-  title: `${technology} Software Development Company | Custom ${technology} Solutions`,
-  description: `Looking for a ${technology} development Partner? Our team builds secure, scalable enterprise applications using the latest ${technology} technologies.`,
+  title: `${technology} Development Company | Halfnine`,
+  description: `Looking for a ${technology} development Partner? Our professional ${technology} developers can build custom ${technology} solutions for your business.`,
   alternates: {
     canonical: `https://www.halfnine.com/services/software-development/${slug}`,
   },
