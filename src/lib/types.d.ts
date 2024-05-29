@@ -137,6 +137,8 @@ export interface SearchResults {
         }
       ]
     }
+    next: Post
+    previous: Post
   }
   
   export interface Book {

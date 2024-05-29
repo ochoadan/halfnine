@@ -3,8 +3,6 @@ import getSitemapData from "@/lib/queries/getSitemapData";
 
 export const revalidate = 3600;
 
-export const runtime = 'edge';
-
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const pageLength = 30;
   const { posts, categories } = await getSitemapData();

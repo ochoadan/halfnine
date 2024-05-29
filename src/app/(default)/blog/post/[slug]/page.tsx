@@ -8,8 +8,10 @@ import { Post } from "@/lib/types";
 import he from "he";
 import clsx from "clsx";
 import { Prose } from "@/components/Prose";
-import Latest3Posts from "@/components/Latest3Posts";
+// import Latest3Posts from "@/components/Latest3Posts";
 import ContactForm from "@/components/Global/ContactForm";
+import Link from "next/link";
+import { FaChevronLeft, FaChevronRight, FaLeftLong } from "react-icons/fa6";
 
 // export const revalidate = async (params: { slug: string }) => {
 //   const post = await getPostBySlug(params.slug);
@@ -22,7 +24,7 @@ import ContactForm from "@/components/Global/ContactForm";
 //   return 86400;
 // };
 
-export const runtime = 'edge';
+export const runtime = "edge";
 
 export const revalidate = 86400;
 
@@ -260,6 +262,34 @@ const Page = async ({ params }: PostPageParams) => {
       </nav>
     </div>
   );
+  const PreviousAndNextPost = () => (
+    <div className="flex flex-1 justify-between">
+      {post?.previous && (
+        <Link
+          href={`/blog/post/${post.previous.slug}`}
+          className="relative flex items-center gap-x-4"
+        >
+          <FaChevronLeft className="w-6 h-6" />
+          <div className="text-sm leading-6 text-neutral-600 hover:text-neutral-800">
+            <p className="text-brand-600">Previous</p>
+            <p>{post.previous.title}</p>
+          </div>
+        </Link>
+      )}
+      {post?.next && (
+        <Link
+          href={`/blog/post/${post.next.slug}`}
+          className="relative flex items-center gap-x-4"
+        >
+          <div className="text-sm leading-6 text-neutral-600 hover:text-neutral-800">
+            <p className="text-brand-600 text-right">Next</p>
+            <p>{post.next.title}</p>
+          </div>
+          <FaChevronRight className="w-6 h-6" />
+        </Link>
+      )}
+    </div>
+  );
   return (
     <>
       <div className="relative mx-auto flex w-full max-w-7xl flex-auto justify-center sm:px-2 lg:px-8 xl:px-12">
@@ -269,10 +299,10 @@ const Page = async ({ params }: PostPageParams) => {
         <TableOfContents />
       </div>
       <div className="flex justify-center w-full max-w-5xl mx-auto px-4 py-8 sm:py-12">
-        <div className="w-full mb-4">
-          <div className="border-t border-gray-300" />
-          <h3 className="text-2xl font-bold my-2 mt-4">Latest Posts:</h3>
-          <Latest3Posts />
+        <div className="w-full">
+          {/* <h3 className="text-2xl font-bold my-2 mt-4">Latest Posts:</h3> */}
+          <PreviousAndNextPost />
+          {/* <div className="border-t border-gray-300" /> */}
         </div>
       </div>
       <ContactForm addContainer="tight" addPadding="bottom" />

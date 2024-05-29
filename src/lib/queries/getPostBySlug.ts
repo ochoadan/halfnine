@@ -27,6 +27,14 @@ export default async function getAllPosts(slug: string) {
             name
           }
         }
+        next {
+          title(format: RENDERED)
+          slug
+        }
+        previous {
+          title(format: RENDERED)
+          slug
+        }
       }
     }
   `;
