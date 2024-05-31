@@ -200,7 +200,7 @@ const Page = async ({ params }: PostPageParams) => {
         alt={post?.featuredImage?.node?.altText || "Placeholder"}
       />
       <h1
-        className="text-3xl sm:text-4xl font-bold text-neutral-800 text-center mb-2"
+        className="text-2xl sm:text-3xl md:text-4xl font-bold text-neutral-800 text-center mb-2"
         dangerouslySetInnerHTML={{ __html: post.title }}
       />
       <Prose>
@@ -270,7 +270,7 @@ const Page = async ({ params }: PostPageParams) => {
           <FaChevronLeft className="w-6 h-6" />
           <div className="text-sm leading-6 text-neutral-600 hover:text-neutral-800">
             <p className="text-brand-600">Previous</p>
-            <p>{post.previous.title}</p>
+            <p className="truncate max-w-28 sm:max-w-64 lg:max-w-96">{post.previous.title}</p>
           </div>
         </Link>
       )}
@@ -281,7 +281,7 @@ const Page = async ({ params }: PostPageParams) => {
         >
           <div className="text-sm leading-6 text-neutral-600 hover:text-neutral-800">
             <p className="text-brand-600 text-right">Next</p>
-            <p>{post.next.title}</p>
+            <p className="truncate max-w-28 sm:max-w-64 lg:max-w-96">{post.next.title}</p>
           </div>
           <FaChevronRight className="w-6 h-6" />
         </Link>

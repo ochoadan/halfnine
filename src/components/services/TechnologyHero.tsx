@@ -29,6 +29,8 @@ const TechnologyInfoHero: React.FC<TechnologyInfoProps> = ({
             </p>
             <p className="sr-only">
               {`Custom ${technology} services and solutions`}
+              <br />
+              {`Outsource ${technology} development`}
             </p>
             <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               {`${technology} Development Company`}

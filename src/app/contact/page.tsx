@@ -156,7 +156,7 @@ export default function Example() {
                 <Logo />
               </Link>
             </div>
-            <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg pb-20 pt-24 sm:pt-32 lg:py-28">
+            <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg pb-20 pt-8 lg:pt-32 lg:py-28">
               <div className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-gray-100 ring-1 ring-gray-900/10 lg:w-1/2">
                 <svg
                   className="absolute inset-0 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
@@ -257,7 +257,7 @@ export default function Example() {
           </div>
           <form
             onSubmit={handleSubmit}
-            className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-40"
+            className="px-6 py-16 lg:px-8 lg:py-40"
           >
             {/* <form
           action="#"
