@@ -139,7 +139,9 @@ export const categories = [
       { name: "Elasticsearch", icon: "https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/elasticsearch.svg", url: "/services/software-development/elasticsearch" },
       { name: "Oracle Database", icon: "https://raw.githubusercontent.com/dochne/wappalyzer/471c2fb0b093973c098bd1855b89c8cde4997479/src/images/icons/Oracle.svg", url: "/services/oracle/database" },
       { name: "DynamoDB", icon: "https://raw.githubusercontent.com/detain/svg-logos/07e36b4aa0691f3015886624395e083395e528c5/svg/a/aws-dynamodb.svg", url: "/services/aws/dynamodb" },
-      // newsql
+      // { name: "NoSQL", icon: "https://raw.githubusercontent.com/manuelbieh/logo-file-icons/6a172ce5a46ecfafe5db7f2ec624f4602cde9b8e/icons/database.svg", url: "/services/software-development/nosql" },
+      // { name: "NewSQL", icon: "https://raw.githubusercontent.com/manuelbieh/logo-file-icons/6a172ce5a46ecfafe5db7f2ec624f4602cde9b8e/icons/database.svg", url: "/services/software-development/newsql" },
+      // { name: "Neo4j", icon: "https://www.vectorlogo.zone/logos/neo4j/neo4j-icon.svg", url: "/services/software-development/neo4j" },
       // { name: "Firebase Realtime Database", icon: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg", url: "/services/software-development/firebase-realtime-database" },
       // { name: "Cloud Firestore", icon: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg", url: "/services/software-development/cloud-firestore" },
       // { name: "BigQuery", icon: "https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg", url: "/services/software-development/bigquery" },
@@ -261,4 +263,23 @@ export const categories = [
       { name: "Metasploit", icon: "https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/f68510f72ebaa446a4d19133f3e8eee6288f7420/Papirus/64x64/apps/metasploit.svg" },
     ],
   },
+  // {
+  //   title: "AI & Machine Learning",
+  // },
+  // {
+  //   title: "Data Science",
+  //   items: [
+  //     { name: "Jupyter", icon: "https://www.vectorlogo.zone/logos/jupyter/jupyter-icon.svg" },
+  //     { name: "Pandas", icon: "https://www.vectorlogo.zone/logos/pandas/pandas-icon.svg" },
+  //     { name: "NumPy", icon: "https://www.vectorlogo.zone/logos/numpy/numpy-icon.svg" },
+  //     { name: "Matplotlib", icon: "https://www.vectorlogo.zone/logos/matplotlib/matplotlib-icon.svg" },
+  //     { name: "Scikit-learn", icon: "https://www.vectorlogo.zone/logos/scikit-learn/scikit-learn-icon.svg" },
+  //     { name: "TensorFlow", icon: "https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" },
+  //     { name: "PyTorch", icon: "https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" },
+  //     { name: "Keras", icon: "https://www.vectorlogo.zone/logos/keras/keras-icon.svg" },
+  //     { name: "Seaborn", icon: "https://www.vectorlogo.zone/logos/seaborn/seaborn-icon.svg" },
+  //     { name: "Plotly", icon: "https://www.vectorlogo.zone/logos/plotly/plotly-icon.svg" },
+  //   ]
+  // }
+
 ];

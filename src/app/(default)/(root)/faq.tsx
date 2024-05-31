@@ -1,6 +1,5 @@
 "use client";
 
-import { FadeIn } from "@/components/Global/FadeIn";
 import { Disclosure } from "@headlessui/react";
 import { MinusIcon, PlusIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";

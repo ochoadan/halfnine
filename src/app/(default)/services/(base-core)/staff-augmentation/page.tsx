@@ -9,7 +9,7 @@ import SolutionBaseListOnce from "@/components/services/list/SolutionBaseListOnc
 const slug = "staff-augmentation";
 
 export const metadata: Metadata = {
-  title: `IT Staff Augmentation Services • Halfnine`,
+  title: `IT Staff Augmentation Company • Halfnine`,
   description: `We provide IT staff augmentation services to help you scale your team and meet your project deadlines. Our staff augmentation services are designed to provide you with the right talent at the right time.`,
   alternates: {
     canonical: `https://www.halfnine.com/services/${slug}`,
@@ -23,7 +23,7 @@ const Page = () => {
   return (
     <>
       <CustomHero
-        heading="IT Staff Augmentation Services"
+        heading="IT Staff Augmentation Company"
         subtext="Flexible Staffing for Projects"
         description="We provide IT staff augmentation services to help you scale your team and meet your project deadlines."
         imgSrc="/img/index/add-user.svg"

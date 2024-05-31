@@ -35,12 +35,12 @@ const CustomHero: React.FC<TechnologyInfoProps> = ({
 }) => {
   const headingClassName = "text-base font-semibold leading-7 text-brand-600";
   const Container = ({ children }: any) => (
-    <div className="bg-white py-12 md:py-24 md:pt-16">
+    <div className="bg-white pt-8 py-12 lg:py-24 lg:pt-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">{children}</div>
     </div>
   );
   const Content = () => (
-    <div className="grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2 mx-auto">
+    <div className="grid grid-cols-1 items-center gap-x-16 gap-y-4 lg:grid-cols-2 mx-auto">
       <div className={clsx(isReverse ? "order-last lg:pl-8" : " lg:pr-8")}>
         <div className="lg:max-w-xl">
           {turnToH2 ? (

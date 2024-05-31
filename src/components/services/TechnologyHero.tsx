@@ -16,10 +16,10 @@ const TechnologyInfoHero: React.FC<TechnologyInfoProps> = ({
   imgSrc,
 }) => {
   return (
-    <div className="bg-white py-12 md:py-24 md:pt-12">
+    <div className="bg-white pt-8 py-12 lg:py-24 lg:pt-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid items-center gap-x-16 gap-y-10 grid-cols-12 mx-auto">
-          <div className="lg:pr-8 col-span-12 lg:col-span-6 xl:col-span-7">
+        <div className="grid grid-cols-1 items-center gap-x-16 gap-y-4 lg:grid-cols-2 mx-auto">
+          <div className="lg:pr-8">
             {/* <h1 className="text-base font-semibold leading-7 text-brand-600"> */}
             <p className="text-base font-semibold leading-7 text-brand-600">
               {isCompany
@@ -33,14 +33,7 @@ const TechnologyInfoHero: React.FC<TechnologyInfoProps> = ({
             <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               {`${technology} Development Company`}
             </h1>
-            {/* <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                {`Custom ${technology} Software Solutions`}
-              </p> */}
-            <p className="mt-4 text-lg leading-8 text-gray-600">
-              {/* {`Our team of ${technology} developers can help you build custom software solutions that meet your unique business requirements.`} */}
-              {/* {`Halfnine offers ${technology} development services to help you build scalable, secure, and high-performance applications.`} */}
-              {/* {`Halfnine offers ${technology} development services and hire our ${technology} developers for your needs and projects.`} */}
-              {/* {`Custom ${technology} software develoment services from Halfnine. Hire our ${technology} developers for your needs and projects.`} */}
+            <p className="mt-4 text-lg leading-8 text-gray-600 max-w-lg lg:max-w-none">
               {`Do you need professional ${technology} development services? Hire our ${technology} developers for your needs and projects.`}
             </p>
             <div className="mt-5 flex items-center">
@@ -51,28 +44,19 @@ const TechnologyInfoHero: React.FC<TechnologyInfoProps> = ({
               >
                 Talk to our team
               </Link>
-              {/* <div className="text-yellow-500">
-                <p className="text-sm font-semibold leading-6 text-gray-900">
-                  {`Clients rate our ${technology} services`}
-                </p>
-                <p className="pr-2 text-yellow-500 font-bold">
-                  4.9/5 - Excellent
-                </p>
-              </div> */}
               {/* <Link
                 href="#"
                 className="text-sm font-semibold leading-6 text-gray-900"
               >
-                View on GitHub <span aria-hidden="true">→</span>
+                GapText CTA <span aria-hidden="true">→</span>
               </Link> */}
             </div>
           </div>
-          <FadeIn className="mx-auto col-span-12 lg:col-span-6 xl:col-span-5">
+          <FadeIn className="mx-auto">
             <Image
               src={`${imgSrc ? imgSrc : "/img/hero.svg"}`}
               alt={`Software developer working with ${technology}`}
-              // className="object-contain w-[32rem]"
-              // className="w-[20rem] max-w-none p-5 rounded-xl shadow ring-1 ring-gray-400/10 sm:w-[30rem] md:-ml-4 lg:-ml-0"
+              className="object-contain w-[500px] h-[363px] max-w-screen"
               width={500}
               height={363}
             />
