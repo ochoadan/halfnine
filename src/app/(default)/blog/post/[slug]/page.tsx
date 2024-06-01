@@ -24,7 +24,7 @@ import { FaChevronLeft, FaChevronRight, FaLeftLong } from "react-icons/fa6";
 //   return 86400;
 // };
 
-export const revalidate = 86400;
+export const revalidate = 3600;
 
 interface PostPageParams {
   params: {

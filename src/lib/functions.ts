@@ -42,9 +42,10 @@ export async function fetchGraphQL<T = any>(
         query,
         variables,
       }),
-      cache,
+      cache: "force-cache",
       next: {
         tags: ["graphql"],
+        revalidate: 3600,
       },
     });
 
