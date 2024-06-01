@@ -211,25 +211,25 @@ export const categories = [
   // NativeWind, TamaGUI, TailwindCSS, ETC.
   // UIKit, SwiftUI
   // },
-  {
-    name: "Other framworks and libraries",
-    items: [
-      { name: "React Native", icon: "https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg", url: "/services/software-development/react-native" },
-      // { name: "Tailwind CSS", icon: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg", url: "/services/software-development/tailwindcss" },
-      // { name: "Bootstrap", icon: "https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-icon.svg", url: "/services/software-development/bootstrap" },
-      // { name: "Material-UI", icon: "https://www.vectorlogo.zone/logos/material-ui/material-ui-icon.svg", url: "/services/software-development/material-ui" },
-      // { name: "Ant Design", icon: "https://www.vectorlogo.zone/logos/ant_design/ant_design-icon.svg", url: "/services/software-development/ant-design" },
-      // { name: "Chakra UI", icon: "https://www.vectorlogo.zone/logos/chakra-ui/chakra-ui-icon.svg", url: "/services/software-development/chakra-ui" },
-      // { name: "Vuetify", icon: "https://www.vectorlogo.zone/logos/vuetify/vuetify-icon.svg", url: "/services/software-development/vuetify" },
-      // { name: "Bulma", icon: "https://www.vectorlogo.zone/logos/bulma/bulma-icon.svg", url: "/services/software-development/bulma" },
-      // { name: "Semantic UI", icon: "https://www.vectorlogo.zone/logos/semantic-ui/semantic-ui-icon.svg", url: "/services/software-development/semantic-ui" },
-      // { name: "Foundation", icon: "https://www.vectorlogo.zone/logos/zurb/zurb-icon.svg", url: "/services/software-development/foundation" },
-      // { name: "Grommet", icon: "https://www.vectorlogo.zone/logos/grommet/grommet-icon.svg", url: "/services/software-development/grommet" },
-      // { name: "Tailwind CSS", icon: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg", url: "/services/software-development/tailwindcss" },
-      // { name: "Buefy", icon: "https://www.vectorlogo.zone/logos/buefy/buefy-icon.svg", url: "/services/software-development/buefy" },
-      // { name: "Quasar", icon: "https://www.vectorlogo.zone/logos/quasar-framework/quasar-framework
-    ],
-  },
+  // {
+  //   title: "Other framworks and libraries",
+  //   items: [
+  //     { name: "React Native", icon: "https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg", url: "/services/software-development/react-native" },
+  //     // { name: "Tailwind CSS", icon: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg", url: "/services/software-development/tailwindcss" },
+  //     // { name: "Bootstrap", icon: "https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-icon.svg", url: "/services/software-development/bootstrap" },
+  //     // { name: "Material-UI", icon: "https://www.vectorlogo.zone/logos/material-ui/material-ui-icon.svg", url: "/services/software-development/material-ui" },
+  //     // { name: "Ant Design", icon: "https://www.vectorlogo.zone/logos/ant_design/ant_design-icon.svg", url: "/services/software-development/ant-design" },
+  //     // { name: "Chakra UI", icon: "https://www.vectorlogo.zone/logos/chakra-ui/chakra-ui-icon.svg", url: "/services/software-development/chakra-ui" },
+  //     // { name: "Vuetify", icon: "https://www.vectorlogo.zone/logos/vuetify/vuetify-icon.svg", url: "/services/software-development/vuetify" },
+  //     // { name: "Bulma", icon: "https://www.vectorlogo.zone/logos/bulma/bulma-icon.svg", url: "/services/software-development/bulma" },
+  //     // { name: "Semantic UI", icon: "https://www.vectorlogo.zone/logos/semantic-ui/semantic-ui-icon.svg", url: "/services/software-development/semantic-ui" },
+  //     // { name: "Foundation", icon: "https://www.vectorlogo.zone/logos/zurb/zurb-icon.svg", url: "/services/software-development/foundation" },
+  //     // { name: "Grommet", icon: "https://www.vectorlogo.zone/logos/grommet/grommet-icon.svg", url: "/services/software-development/grommet" },
+  //     // { name: "Tailwind CSS", icon: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg", url: "/services/software-development/tailwindcss" },
+  //     // { name: "Buefy", icon: "https://www.vectorlogo.zone/logos/buefy/buefy-icon.svg", url: "/services/software-development/buefy" },
+  //     // { name: "Quasar", icon: "https://www.vectorlogo.zone/logos/quasar-framework/quasar-framework
+  //   ],
+  // },
   {
     title: "DevOps",
     items: [
