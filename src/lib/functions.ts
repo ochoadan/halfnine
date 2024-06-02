@@ -15,7 +15,7 @@ export async function fetchGraphQL<T = any>(
       throw new Error("Missing WordPress GraphQL URL environment variable!");
     }
 
-    const refreshToken = process.env.NEXT_PUBLIC_NEXTJS_AUTH_REFRESH_TOKEN;
+    const refreshToken = process.env.NEXTJS_AUTH_REFRESH_TOKEN;
     if (!refreshToken) {
       throw new Error("Missing refresh token!");
     }
@@ -82,13 +82,13 @@ export async function searchQuery(query: string): Promise<SearchResults[]> {
 
   try {
     // If there is no URL, throw an error.
-    if (!process.env.NEXT_PUBLIC_WORDPRESS_REST_API_URL) {
+    if (!process.env.WORDPRESS_REST_API_URL) {
       throw new Error("Missing WordPress REST API URL environment variable!");
     }
 
     // Always fetch fresh search results.
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_WORDPRESS_REST_API_URL}/search?search=${query}&subtype=any&per_page=100`
+      `${process.env.WORDPRESS_REST_API_URL}/search?search=${query}&subtype=any&per_page=100`
     );
 
     // If the response status is not 200, throw an error.
