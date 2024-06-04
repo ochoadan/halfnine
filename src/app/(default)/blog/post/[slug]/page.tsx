@@ -180,7 +180,7 @@ const Page = async ({ params }: PostPageParams) => {
       // const tableOfContents = headings.map((heading) => {
       //   const level = parseInt(heading.charAt(2));
       const text = heading.replace(/<\/?[^>]+(>|$)/g, "");
-      const id = text.toLowerCase().replace(/ /g, "-");
+      const id = he.decode(text.toLowerCase().replace(/ /g, "-"));
       return { level, text, id };
     });
     return tableOfContents;
@@ -203,28 +203,28 @@ const Page = async ({ params }: PostPageParams) => {
         className="text-2xl sm:text-3xl md:text-4xl font-bold text-neutral-800 text-center mb-2"
         dangerouslySetInnerHTML={{ __html: post.title }}
       />
-      <Prose>
-        <div className="relative mt-4">
-          <div
-            className="absolute inset-0 flex items-center"
-            aria-hidden="true"
-          >
-            <div className="w-full border-t border-gray-300" />
-          </div>
-          <div className="relative flex justify-center">
-            <span className="bg-white px-4 text-sm text-gray-500">
-              Posted on{" "}
-              <time>
-                {new Date(post.date).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
-              </time>{" "}
-              by {post.author.node.name}
-            </span>
-          </div>
+      <div className="relative mt-4">
+        <div className="absolute inset-0 flex items-center" aria-hidden="true">
+          <div className="w-full border-t border-gray-300" />
         </div>
+        <div className="relative flex justify-center">
+          <span className="bg-white px-4 text-sm text-gray-500">
+            Posted on{" "}
+            <time>
+              {new Date(post.date).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </time>{" "}
+            by{" "}
+            <Link href="https://www.linkedin.com/in/daniob/" target="_blank">
+              {post.author.node.name}
+            </Link>
+          </span>
+        </div>
+      </div>
+      <Prose>
         <div
           dangerouslySetInnerHTML={{
             __html: modifyContent(post.content),
