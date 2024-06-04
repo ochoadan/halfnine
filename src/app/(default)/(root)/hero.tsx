@@ -5,15 +5,32 @@ import {
   ServerIcon,
 } from "@heroicons/react/20/solid";
 import Image from "next/image";
-import { FaArrowsToCircle, FaFlagUsa } from "react-icons/fa6";
-import { MdOutlineAutoGraph } from "react-icons/md";
+import {
+  FaArrowsToCircle,
+  FaFlagUsa,
+  FaMoneyBillTrendUp,
+  FaRegFileCode,
+} from "react-icons/fa6";
+import { MdManageAccounts, MdOutlineAutoGraph } from "react-icons/md";
 
 const features = [
   {
-    name: "United States Based",
+    name: "Cost Optimization",
     description:
-      "Don't worry about intellectual property, legal, or communication issues.",
-    icon: FaFlagUsa,
+      "Don't let technology costs hold your business back. Leverage alternative solutions without compromises.",
+    icon: FaMoneyBillTrendUp,
+  },
+  {
+    name: "Custom Development",
+    description:
+      "We develop custom software including minimum viable products, web applications, and mobile apps.",
+    icon: FaRegFileCode,
+  },
+  {
+    name: "Managed Services",
+    description:
+      "Let us manage your technology from simple tasks to complex projects. Focus on your business, not technology.",
+    icon: MdManageAccounts,
   },
   // {
   //   name: "Full-Service",
@@ -21,24 +38,24 @@ const features = [
   //     "We provide a full range of services to meet all of your technology needs and goals.",
   //   icon: ServerIcon,
   // },
-  {
-    name: "ROI Focused",
-    description:
-      "Your success is our success. We are committed to delivering a positive return on investment.",
-    icon: MdOutlineAutoGraph,
-  },
+  // {
+  //   name: "ROI Focused",
+  //   description:
+  //     "Your success is our success. We are committed to delivering a positive return on investment.",
+  //   icon: MdOutlineAutoGraph,
+  // },
   // {
   //   name: "Success-Based Consulting",
   //   description:
   //     "We are only successful when you are successful. We are committed to your success.",
   //   icon: LockClosedIcon,
   // },
-  {
-    name: "Complete Coverage",
-    description:
-      "We provide a full range of services to meet all of your technology needs and goals.",
-    icon: FaArrowsToCircle,
-  },
+  // {
+  //   name: "Complete Coverage",
+  //   description:
+  //     "We provide a full range of services to meet all of your technology needs and goals.",
+  //   icon: FaArrowsToCircle,
+  // },
 ];
 
 const Hero = () => {
@@ -49,20 +66,22 @@ const Hero = () => {
         <div className="grid grid-cols-1 items-center gap-x-16 gap-y-16 lg:gap-y-0 lg:grid-cols-2 mx-auto">
           <div className="lg:pr-8">
             <div className="lg:max-w-xl">
-              <h1 className="text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                US-Based Software Development Company
-                {/* Delivering Full-Service Technology Solutions */}
-                {/* Delivering Comprehensive Technology Solutions */}
-              </h1>
-              <p className="text-base font-semibold leading-7 text-brand-600 mt-4">
-                Full-Service Technology Solutions
+              <h1 className="text-base font-semibold leading-7 text-brand-600">
+                Software Development Company
                 {/* tailored to your needs and goals. */}
+              </h1>
+              <p className="text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                Realize your digital success
               </p>
-              {/* <p className="mt-6 text-xs text-gray-600">
+              <p className="mt-4 text-gray-600">
+                Digital success looks different for every business. Choose a partner
+                that understands your needs and goals.
+                {/* <p className="mt-6 text-gray-600">
                 We Provide Full-Service Technology Solutions tailored to meet your
                 needs and goals.
                  We are committed to your success and will not work with you unless we believe we can deliver a positive return on investment.
               </p> */}
+              </p>
               <dl className="mt-6 max-w-xl space-y-6 text-base leading-7 text-gray-600 lg:max-w-none">
                 {features.map((feature) => (
                   <div key={feature.name} className="relative pl-9">

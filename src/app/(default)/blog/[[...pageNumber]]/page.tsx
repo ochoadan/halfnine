@@ -80,10 +80,11 @@ export default async function Home({
       <div className="max-w-7xl mx-auto px-6 lg:px-8 my-8">
         <div className="mx-auto max-w-2xl text-center">
           <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            From the blog
+            Digital Success Blog Posts
           </h1>
           <p className="mt-2 text-lg leading-8 text-gray-600">
-            Learn how to grow your business with our expert advice.
+            Learn more about how technology can help you succeed in your
+            business.
           </p>
         </div>
         <div className="flex flex-wrap justify-center my-2">
