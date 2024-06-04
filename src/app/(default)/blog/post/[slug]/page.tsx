@@ -264,14 +264,14 @@ const Page = async ({ params }: PostPageParams) => {
           <ContactForm st />
         </div>
       </div> */}
-      <div className="border-t border-gray-300 my-2 py-2">
+      {/* <div className="border-t border-gray-300 my-2 py-2">
         <p>
-          Let's Work Together!{" "}
+          Let&apos;s Work Together!{" "}
           <Link href="/contact" className="text-brand-600">
             Contact Us
           </Link>
         </p>
-      </div>
+      </div> */}
     </div>
   );
   const PreviousAndNextPost = () => (
