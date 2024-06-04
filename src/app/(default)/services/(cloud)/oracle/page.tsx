@@ -10,7 +10,7 @@ const slug = "oracle";
 
 export const metadata: Metadata = {
   title: `Oracle Cloud Services • Halfnine`,
-  description: ``,
+  description: `Oracle Cloud Infrastructure: the elasticity of public cloud with the control, security, and predictability of on-premises infrastructure.`,
   alternates: {
     canonical: `https://www.halfnine.com/services/${slug}`,
   },

@@ -36,6 +36,15 @@ export const services = [
     name: "Staffing Services",
     list: [
       { name: "Staff Augmentation", url: "/services/staff-augmentation", },
+      // { name: "Top Developers", url: "/services/top-developers", },
+      // { name: "Top 1% Developers", url: "/services/top-1-percent", },
+      // { name: "Top 2% Developers", url: "/services/top-2-percent", },
+      // { name: "Top 3% Developers", url: "/services/top-3-percent", },
+      // { name: "Top 5% Developers", url: "/services/top-5-percent", },
+      // { name: "Top 10% Developers", url: "/services/top-10-percent", },
+      // { name: "Hire Developers", url: "/services/hire-developers",}
+      // { name: "Team Augmentation", url: "/services/team-augmentation", },
+      // { name: "Project Staffing", url: "/services/project-staffing", }
       // { name: "Nearshore Staffing", url: "/services/nearshore-staffing", },
       // { name: "Offshore Staffing", url: "/services/offshore-staffing", },
       // { name: "Dedicated Development Team", url: "/services/dedicated-development-team", },

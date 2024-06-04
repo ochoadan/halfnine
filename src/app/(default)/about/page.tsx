@@ -161,6 +161,8 @@ const Page = () => {
                     className="h-16 w-16 rounded-full"
                     src={person.imageUrl || `https://ui-avatars.com/api/?name=${person.name}` }
                     alt={`Profile picture of ${person.name}`}
+                    width={120}
+                    height={120}
                   />
                   <div className="grid grid-cols-1 ">
                     <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">

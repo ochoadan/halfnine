@@ -2,7 +2,7 @@
 
 import { Fragment, useState } from "react";
 
-import { Dialog, Popover, Transition } from "@headlessui/react";
+import { Dialog, Popover, PopoverButton, PopoverGroup, PopoverPanel, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { PiPhone } from "react-icons/pi";
 
@@ -102,6 +102,22 @@ const products = [
   },
 ];
 
+const solutions = [
+  { name: "ERP", href: "/solutions/erp" },
+  { name: "CRM", href: "/solutions/crm" },
+  { name: "BI", href: "/solutions/bi" },
+  { name: "Analytics", href: "/solutions/analytics" },
+  { name: "E-commerce", href: "/solutions/e-commerce" },
+  { name: "AI & Machine Learning", href: "/solutions/ai-machine-learning" },
+  { name: "Internet of Things", href: "/solutions/iot" },
+  { name: "Blockchain", href: "/solutions/blockchain" },
+  { name: "Cybersecurity", href: "/solutions/cybersecurity" },
+  { name: "Big Data", href: "/solutions/big-data" },
+  { name: "Virtual Reality", href: "/solutions/virtual-reality" },
+  { name: "Augmented Reality", href: "/solutions/augmented-reality" },
+  { name: "Cloud Computing", href: "/solutions/cloud-computing" },
+];
+
 const callsToAction = [
   // { name: "Watch demo", href: "#", icon: PlayCircleIcon },
   { name: "View all services", href: "/services", icon: RectangleGroupIcon },
@@ -109,12 +125,63 @@ const callsToAction = [
   { name: "Contact us", href: "/contact", icon: PhoneIcon },
 ];
 
+const industries = [
+  { name: "Healthcare", href: "/industries/healthcare" },
+  { name: "Finance", href: "/industries/finance" },
+  { name: "Retail", href: "/industries/retail" },
+  { name: "Education", href: "/industries/education" },
+  { name: "Manufacturing", href: "/industries/manufacturing" },
+  { name: "Nonprofit", href: "/industries/nonprofit" },
+];
+
+const services = [
+  { name: "Web Development", href: "/services/web-development" },
+  { name: "Mobile Development", href: "/services/mobile-development" },
+  { name: "Cloud Services", href: "/services/cloud" },
+  { name: "Data Services", href: "/services/data" },
+  { name: "Automation", href: "/services/automation" },
+  { name: "Integration", href: "/services/integration" },
+];
+
+const technologies = [
+  { name: "React", href: "/technologies/react" },
+  { name: "Node.js", href: "/technologies/nodejs" },
+  { name: "Python", href: "/technologies/python" },
+  { name: "Ruby", href: "/technologies/ruby" },
+  { name: "Java", href: "/technologies/java" },
+  { name: "PHP", href: "/technologies/php" },
+  { name: "C#", href: "/technologies/csharp" },
+  { name: "Go", href: "/technologies/go" },
+  { name: "Swift", href: "/technologies/swift" },
+  { name: "Kotlin", href: "/technologies/kotlin" },
+  { name: "Dart", href: "/technologies/dart" },
+  { name: "JavaScript", href: "/technologies/javascript" },
+  { name: "TypeScript", href: "/technologies/typescript" },
+  { name: "HTML", href: "/technologies/html" },
+  { name: "CSS", href: "/technologies/css" },
+  { name: "Sass", href: "/technologies/sass" },
+  { name: "Less", href: "/technologies/less" },
+  { name: "Tailwind CSS", href: "/technologies/tailwindcss" },
+  { name: "Bootstrap", href: "/technologies/bootstrap" },
+  { name: "Material-UI", href: "/technologies/material-ui" },
+  { name: "Ant Design", href: "/technologies/ant-design" },
+  { name: "Chakra UI", href: "/technologies/chakra-ui" },
+  { name: "Next.js", href: "/technologies/nextjs" },
+  { name: "Gatsby", href: "/technologies/gatsby" },
+  { name: "Nuxt.js", href: "/technologies/nuxtjs" },
+  { name: "Vue.js", href: "/technologies/vuejs" },
+  { name: "Angular", href: "/technologies/angular" },
+  { name: "Svelte", href: "/technologies/svelte" },
+  { name: "Ember.js", href: "/technologies/emberjs" },
+  { name: "React Native", href: "/technologies/react-native" },
+];
+
 function SolutionsPopover() {
   return (
     <Popover>
       {({ open }) => (
         <>
-          <Popover.Button className="group flex items-center gap-x-1 font-semibold leading-6 text-gray-500 hover:text-gray-900 -mr-3 outline-none">
+          <PopoverButton className="group flex items-center gap-x-1 font-semibold leading-6 text-gray-500 hover:text-gray-900 -mr-3 outline-none">
             {/* -mr-6 */}
             Solutions
             <ChevronDownIcon
@@ -123,7 +190,7 @@ function SolutionsPopover() {
               }`}
               aria-hidden="true"
             />
-          </Popover.Button>
+          </PopoverButton>
           <Transition
             as={Fragment}
             enter="transition ease-out duration-200"
@@ -139,10 +206,10 @@ function SolutionsPopover() {
             // leaveFrom="opacity-100 translate-y-0"
             // leaveTo="opacity-0 -translate-y-1"
           >
-            <Popover.Panel className="absolute inset-x-0 top-0 -z-10 bg-white mt-[68px] shadow-lg border-t-[1px] border-neutral-200">
+            <PopoverPanel className="absolute inset-x-0 top-0 -z-10 bg-white mt-[68px] shadow-lg border-t-[1px] border-neutral-200">
               <div className="mx-auto grid max-w-7xl grid-cols-3 gap-x-4 px-6 py-6 lg:px-8 xl:gap-x-8">
                 {products.map((item) => (
-                  <Popover.Button
+                  <PopoverButton
                     as={Link}
                     href={item.href}
                     key={item.name}
@@ -164,14 +231,14 @@ function SolutionsPopover() {
                       </a>
                       <p className="mt-1 text-gray-600">{item.description}</p>
                     </div>
-                  </Popover.Button>
+                  </PopoverButton>
                 ))}
               </div>
               <div className="bg-gray-50">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                   <div className="grid grid-cols-2 divide-x divide-gray-900/5 border-x border-gray-900/5">
                     {callsToAction.map((item) => (
-                      <Popover.Button
+                      <PopoverButton
                         as={Link}
                         key={item.name}
                         href={item.href}
@@ -182,12 +249,12 @@ function SolutionsPopover() {
                           aria-hidden="true"
                         />
                         {item.name}
-                      </Popover.Button>
+                      </PopoverButton>
                     ))}
                   </div>
                 </div>
               </div>
-            </Popover.Panel>
+            </PopoverPanel>
           </Transition>
         </>
       )}
@@ -196,6 +263,7 @@ function SolutionsPopover() {
 }
 
 const company = [
+  { name: "Services", href: "/services" },
   { name: "About", href: "/about" },
   { name: "Investors", href: "/investors" },
 ];
@@ -205,7 +273,7 @@ function CompanyPopover() {
     <Popover className="relative">
       {({ open }) => (
         <>
-          <Popover.Button className="group flex items-center gap-x-1 font-semibold leading-6 text-gray-500 hover:text-gray-900 -mr-3 outline-none">
+          <PopoverButton className="group flex items-center gap-x-1 font-semibold leading-6 text-gray-500 hover:text-gray-900 -mr-3 outline-none">
             <span>Company</span>
             <ChevronDownIcon
               className={`h-5 w-5 mt-1 flex-none text-gray-400 group-hover:text-gray-900 ${
@@ -213,7 +281,7 @@ function CompanyPopover() {
               }`}
               aria-hidden="true"
             />
-          </Popover.Button>
+          </PopoverButton>
 
           <Transition
             as={Fragment}
@@ -224,7 +292,7 @@ function CompanyPopover() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute left-1/2 z-10 mt-5 flex w-screen max-w-min -translate-x-1/2 px-4">
+            <PopoverPanel className="absolute left-1/2 z-10 mt-5 flex w-screen max-w-min -translate-x-1/2 px-4">
               <div className="w-56 shrink rounded-xl bg-white p-4 text-sm font-semibold leading-6 text-gray-900 shadow-lg ring-1 ring-gray-900/5">
                 {company.map((item) => (
                   <a
@@ -236,7 +304,7 @@ function CompanyPopover() {
                   </a>
                 ))}
               </div>
-            </Popover.Panel>
+            </PopoverPanel>
           </Transition>
         </>
       )}
@@ -338,20 +406,20 @@ export default function GlobalNavbar() {
                 )}
               </button>
             </div>
-            <Popover.Group className="hidden lg:flex lg:gap-x-10">
-              <SolutionsPopover />
+            <PopoverGroup className="hidden lg:flex lg:gap-x-10">
+              {/* <SolutionsPopover /> */}
               {/* <Link
               href="/process"
               className="font-semibold leading-6 text-gray-500 hover:text-gray-900 select-none"
             >
               Process
             </Link> */}
-              {/* <Link
+              <Link
                 href="/services"
                 className="font-semibold leading-6 text-gray-500 hover:text-gray-900 select-none"
               >
                 Services
-              </Link> */}
+              </Link>
               <Link
                 href="/about"
                 className="font-semibold leading-6 text-gray-500 hover:text-gray-900 select-none"
@@ -371,7 +439,7 @@ export default function GlobalNavbar() {
               >
                 Blog
               </Link>
-            </Popover.Group>
+            </PopoverGroup>
             <div className="hidden lg:flex lg:flex-1 lg:justify-end">
               <Link
                 href="/contact"

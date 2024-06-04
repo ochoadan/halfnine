@@ -74,7 +74,7 @@ const CustomHero: React.FC<TechnologyInfoProps> = ({
           </div>
         )}
       </div>
-      <FadeIn className="mx-auto">
+      <FadeIn className="mx-auto mt-6 lg:mt-0">
         <Image
           src={`${imgSrc ? imgSrc : "/img/hero.svg"}`}
           alt={imgAlt ? imgAlt : "Custom Solutions"}

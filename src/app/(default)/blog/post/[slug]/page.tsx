@@ -258,6 +258,20 @@ const Page = async ({ params }: PostPageParams) => {
           ))}
         </ul>
       </nav>
+      {/* <div className="border-t border-gray-300 my-2">
+        <div className="rounded-lg p-4 bg-gray-50">
+          <p className="text-sm text-neutral-600">Get in Touch!</p>
+          <ContactForm st />
+        </div>
+      </div> */}
+      <div className="border-t border-gray-300 my-2 py-2">
+        <p>
+          Let's Work Together!{" "}
+          <Link href="/contact" className="text-brand-600">
+            Contact Us
+          </Link>
+        </p>
+      </div>
     </div>
   );
   const PreviousAndNextPost = () => (
@@ -270,7 +284,9 @@ const Page = async ({ params }: PostPageParams) => {
           <FaChevronLeft className="w-6 h-6" />
           <div className="text-sm leading-6 text-neutral-600 hover:text-neutral-800">
             <p className="text-brand-600">Previous</p>
-            <p className="truncate max-w-28 sm:max-w-64 lg:max-w-96">{post.previous.title}</p>
+            <p className="truncate max-w-28 sm:max-w-64 lg:max-w-96">
+              {post.previous.title}
+            </p>
           </div>
         </Link>
       )}
@@ -281,7 +297,9 @@ const Page = async ({ params }: PostPageParams) => {
         >
           <div className="text-sm leading-6 text-neutral-600 hover:text-neutral-800">
             <p className="text-brand-600 text-right">Next</p>
-            <p className="truncate max-w-28 sm:max-w-64 lg:max-w-96">{post.next.title}</p>
+            <p className="truncate max-w-28 sm:max-w-64 lg:max-w-96">
+              {post.next.title}
+            </p>
           </div>
           <FaChevronRight className="w-6 h-6" />
         </Link>
