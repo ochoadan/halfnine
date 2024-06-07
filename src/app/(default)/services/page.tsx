@@ -69,9 +69,13 @@ export default Page;
 
 const AdditionalServices = () => (
   <>
-    <h2 className="text-3xl font-bold text-gray-900">Situational Services</h2>
+    <h2 className="text-3xl font-bold text-gray-900">
+      Services for Specific Needs
+    </h2>
     <p className="text-lg text-gray-700 pb-2">
-      Our situational services are designed to help you with specific needs.
+      We offer a variety of services to meet your specific needs. Whether you
+      need help with a specific project or want to outsource your entire IT
+      department, we have a solution for you.
     </p>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       {services.map((servicex, actionIdx) => (

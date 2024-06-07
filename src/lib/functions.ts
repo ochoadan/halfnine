@@ -15,7 +15,7 @@ export async function fetchGraphQL<T = any>(
       throw new Error("Missing WordPress GraphQL URL environment variable!");
     }
 
-    const refreshToken = process.env.NEXTJS_AUTH_REFRESH_TOKEN;
+    const refreshToken = process.env.NEXT_PUBLIC_NEXTJS_AUTH_REFRESH_TOKEN;
     if (!refreshToken) {
       throw new Error("Missing refresh token!");
     }
