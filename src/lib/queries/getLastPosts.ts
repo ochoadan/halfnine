@@ -4,7 +4,15 @@ import { Post } from "@/lib/types";
 export default async function getAllPosts() {
   const query = `
     query GetAllPosts {
-      posts(where: {status: PUBLISH}, first: 3) {
+      categories {
+        edges {
+          node {
+            name
+            slug
+          }
+        }
+      }
+      posts(where: {status: PUBLISH}, first: 12) {
         nodes {
           databaseId
           date
@@ -27,7 +35,15 @@ export default async function getAllPosts() {
     }
   `;
 
+  // const response = await fetchGraphQL(query);
+
+  // return response.data.posts.nodes as Post[];
   const response = await fetchGraphQL(query);
 
-  return response.data.posts.nodes as Post[];
+  const posts = response.data.posts.nodes.map((post: Post) => ({ ...post }));
+
+  return {
+    posts,
+    categories: response.data.categories.edges as { node: { slug: string, name: string } }[],
+  };
 }
