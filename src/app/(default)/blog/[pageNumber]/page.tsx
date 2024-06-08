@@ -22,7 +22,7 @@ export async function generateStaticParams() {
   const totalPages = Math.ceil(response.posts.length / pageLength);
   const pageNumbers = Array.from({ length: totalPages }, (_, index) => index);
   return pageNumbers.map((pageNum) => ({
-    pageNumber: [String(pageNum)],
+    pageNumber: String(pageNum),
   }));
 }
 
