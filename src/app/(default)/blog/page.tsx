@@ -44,7 +44,7 @@ export default async function Home() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 my-8">
         <div className="mx-auto max-w-2xl text-center">
           <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Halfnine's Digital Success Blog
+            Halfnine&apos;s Digital Success Blog
           </h1>
           <p className="mt-2 text-lg leading-8 text-gray-600">
             Learn more about how technology can help you succeed in your
