@@ -33,6 +33,7 @@ function Hotjar() {
     </Script>
   );
 }
+
 function Clarity() {
   return (
     <Script id="clarity-script">
