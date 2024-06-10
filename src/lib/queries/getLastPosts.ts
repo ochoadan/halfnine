@@ -12,7 +12,7 @@ export default async function getAllPosts() {
           }
         }
       }
-      posts(where: {status: PUBLISH}, first: 12) {
+      posts(where: {status: PUBLISH}, first: 30) {
         nodes {
           databaseId
           date
