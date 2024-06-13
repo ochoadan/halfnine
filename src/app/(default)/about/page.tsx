@@ -4,6 +4,7 @@ import Link from "next/link";
 import { LinkIcon } from "@heroicons/react/20/solid";
 import logoSurveyr from "@/images/logos/surveyr.svg";
 import logoYournameis from "@/images/logos/yournameis.svg";
+import logoAppealingDesign from "@/images/logos/appealing.svg";
 import CustomHero from "@/components/Global/CustomHero";
 import { FaChartLine, FaHandshake, FaLinkedinIn } from "react-icons/fa6";
 import { GiConqueror } from "react-icons/gi";
@@ -23,8 +24,8 @@ const projects = [
     name: "Surveyr.io",
     status: "Acquisition",
     description:
-      // "A platform for monitoring backend cron jobs for Laravel and PHP Applications.",
-      "This Software as a Service (SaaS) application is designed to monitor Laravel cron jobs, which are critical for backend tasks. Surveyr is the backbone of the application.",
+      "A platform for monitoring backend cron jobs for Laravel and PHP Applications.",
+      // "This Software as a Service (SaaS) application is designed to monitor Laravel cron jobs, which are critical for backend tasks. Surveyr is the backbone of the application.",
     link: { href: "https://surveyr.io", label: "surveyr.io" },
     logo: logoSurveyr,
   },
@@ -32,11 +33,20 @@ const projects = [
     name: "Yourname.is",
     status: "Developed",
     description:
-      "This Sofware as a Services (SaaS) application helps individuals create a professional business email address with their first and last name.",
+      // "This Sofware as a Services (SaaS) application helps individuals create a professional business email address with their first and last name.",
     // "An application that helps individuals create a professional business email address with their first and last name.",
+    "A small app that allows individuals create a professional business email address with their first and last name.",
     link: { href: "https://yourname.is", label: "yourname.is" },
     logo: logoYournameis,
   },
+  {
+    name: "Appealing Design",
+    status: "Active",
+    description:
+    "An agency that provides subscription-based design services for businesses.",
+    link: { href: "https://appealing.design", label: "appealing.design" },
+    logo: logoAppealingDesign,
+  }
 ];
 
 const missionFeatures = [
@@ -358,7 +368,7 @@ const Page = () => {
           </div>
           <ul
             role="list"
-            className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2"
+            className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-3"
           >
             {projects.map((project, index) => (
               <li
