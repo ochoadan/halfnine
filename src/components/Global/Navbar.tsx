@@ -376,7 +376,7 @@ export default function GlobalNavbar() {
             <div className="flex lg:hidden gap-x-5">
               <Link
                 type="button"
-                href="tel:+13213120362"
+                href="tel:+13213516474"
                 className="items-center rounded-lg px-3 py-2 text-xs font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 text-gray-700 hover:text-blue-600"
                 aria-label="Call Halfnine LLC"
               >
@@ -389,7 +389,7 @@ export default function GlobalNavbar() {
                     alt="USA Flag"
                     aria-hidden="true"
                   />
-                  +1 (321) 312-0362
+                  +1 (321) 351-6474
                 </span>
                 <PiPhone className="h-6 w-6 flex md:hidden hover:text-blue-800" />
               </Link>
