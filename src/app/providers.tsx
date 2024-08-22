@@ -109,7 +109,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
       <GoogleAnalytics />
       {/* <ChatBubble /> */}
       <Clarity />
-      <ApolloTracker />
+      {/* <ApolloTracker /> */}
       {children}
     </>
   );
